@@ -18,5 +18,6 @@ Route::get('/', function () {
 Route::middleware(['web'])->group(function () {
     Route::prefix('admin')->group(function () {
         Route::resource('dish', 'Admin\DishController');
+        Route::resource('diet', 'Admin\DietController');
     });
 });
