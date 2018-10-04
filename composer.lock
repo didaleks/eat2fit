@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e9aebe2417d2b98ce99010905db4af32",
+    "content-hash": "8940e8a91950d82be9e1a5482457a84c",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1519,10 +1519,11 @@
         {
             "name": "support/laravel-admin",
             "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@gitlab.molinos.ru:support/laravel-admin.git",
-                "reference": "85830f03fb478f6a7220b8aa5f8f6aa6c40ee618"
+            "dist": {
+                "type": "path",
+                "url": "/Users/i/Desktop/www/eattofit/laravel-admin",
+                "reference": "58a12dfdedf2977b2e62554fb67ed2c1b100fdda",
+                "shasum": null
             },
             "require": {
                 "intervention/image": "^2.4",
@@ -1552,8 +1553,7 @@
             "keywords": [
                 "admin",
                 "laravel"
-            ],
-            "time": "2018-10-01T11:50:59+00:00"
+            ]
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -2691,22 +2691,22 @@
     "packages-dev": [
         {
             "name": "beyondcode/laravel-dump-server",
-            "version": "1.2.1",
+            "version": "1.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/beyondcode/laravel-dump-server.git",
-                "reference": "d24b641e9c8db7c33ad6e4db7042bbd352b92ad1"
+                "reference": "8864b9efcb48e0a79e83014dd7f0a5481f5c808f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/beyondcode/laravel-dump-server/zipball/d24b641e9c8db7c33ad6e4db7042bbd352b92ad1",
-                "reference": "d24b641e9c8db7c33ad6e4db7042bbd352b92ad1",
+                "url": "https://api.github.com/repos/beyondcode/laravel-dump-server/zipball/8864b9efcb48e0a79e83014dd7f0a5481f5c808f",
+                "reference": "8864b9efcb48e0a79e83014dd7f0a5481f5c808f",
                 "shasum": ""
             },
             "require": {
-                "illuminate/console": "5.6.*|5.7.*",
-                "illuminate/http": "5.6.*|5.7.*",
-                "illuminate/support": "5.6.*|5.7.*",
+                "illuminate/console": "5.6.*|5.7.*|5.8.*",
+                "illuminate/http": "5.6.*|5.7.*|5.8.*",
+                "illuminate/support": "5.6.*|5.7.*|5.8.*",
                 "php": "^7.1",
                 "symfony/var-dumper": "^4.1.1"
             },
@@ -2748,7 +2748,7 @@
                 "beyondcode",
                 "laravel-dump-server"
             ],
-            "time": "2018-08-05T19:09:56+00:00"
+            "time": "2018-10-04T07:22:24+00:00"
         },
         {
             "name": "doctrine/instantiator",

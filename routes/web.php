@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::middleware(['web'])->group(function () {
+    Route::prefix('admin')->group(function () {
+        Route::resource('dish', 'Admin\DishController');
+    });
+});

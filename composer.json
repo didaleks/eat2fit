@@ -13,8 +13,8 @@
     },
     "repositories": [
         {
-            "type": "git",
-            "url":  "git@gitlab.molinos.ru:support/laravel-admin.git"
+            "type": "path",
+            "url":  "/Users/i/Desktop/www/eattofit/laravel-admin"
         }
     ],
     "require-dev": {

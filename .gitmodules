@@ -1,0 +1,3 @@
+[submodule "laravel-admin"]
+	path = laravel-admin
+	url = git@gitlab.molinos.ru:support/laravel-admin.git
