@@ -7,6 +7,7 @@ $factory->define(\App\Models\Diet::class, function (Faker $faker) {
         'name' => $faker->name,
         'published' => true,
         'content' => $faker->text(200),
-        'slug' => $faker->word,
+        'slug' => $faker->slug,
+        'days_count' => rand(1,30)
     ];
 });

@@ -16,8 +16,18 @@ Route::get('/', function () {
 });
 
 Route::middleware(['web'])->group(function () {
+
     Route::prefix('admin')->group(function () {
-        Route::resource('dish', 'Admin\DishController');
         Route::resource('diet', 'Admin\DietController');
+        Route::resource('dish', 'Admin\DishController');
+
+        Route::prefix('diet')->group(function () {
+            Route::get( 'copy/{id}',   add_controller_ns('DietController@copy'))->name("diet.copy");
+        });
+
+        Route::prefix('dish')->group(function () {
+            Route::get( 'copy/{id}',   add_controller_ns('DishController@copy'))->name("dish.copy");
+        });
     });
+
 });

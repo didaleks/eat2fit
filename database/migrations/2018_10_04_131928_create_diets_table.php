@@ -20,6 +20,7 @@ class CreateDietsTable extends Migration
             $table->string('name');
             $table->json('fields');
             $table->text('content')->nullable();
+            $table->integer('days_count')->nullable();
             $table->string('slug');
             $table->string('url')->default('');
             $table->string('meta_title')->nullable();

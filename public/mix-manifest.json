@@ -1,12 +1,10 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
-    "/css/common.css": "/css/common.css",
-    "/css/admin.css": "/css/admin.css",
     "/css/admin_custom.css": "/css/admin_custom.css",
     "/js/vendor.js": "/js/vendor.js",
     "/js/common.js": "/js/common.js",
-    "/js/admin.js": "/js/admin.js",
     "/js/admin_custom.js": "/js/admin_custom.js",
+    "/js/admin.js": "/js/admin.js",
     "/js/manifest.js": "/js/manifest.js"
 }
