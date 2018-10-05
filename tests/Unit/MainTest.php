@@ -32,4 +32,19 @@ class MainTest extends DuskTestCase
                 ->assertPathIs('/admin/page');
         });
     }
+
+    public function testDatabase()
+    {
+
+        $this->assertDatabaseHas('users', [
+            'email' => 'support@molinos.ru'
+        ]);
+    }
+
+    public function testDatabase2()
+    {
+        $this->assertDatabaseMissing('users', [
+            'email' => 'support1@molinos.ru'
+        ]);
+    }
 }
