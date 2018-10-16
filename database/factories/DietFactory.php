@@ -11,3 +11,9 @@ $factory->define(\App\Models\Diet::class, function (Faker $faker) {
         'days_count' => rand(1,30)
     ];
 });
+
+$factory->afterCreating(\App\Models\Diet::class, function ($diet, $faker) {
+    for ($i=1; $i<=$diet->days_count; $i++) {
+        $diet->days()->save(factory(\App\Models\Day::class)->create(['number' => $i]));
+    }
+});

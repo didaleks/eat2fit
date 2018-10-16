@@ -111,6 +111,11 @@ class Diet extends Page
         $this->attributes['slug'] = $value;
     }
 
+    public function days()
+    {
+        return $this->hasMany('App\Models\Day');
+    }
+
     public function parent()
     {
 
