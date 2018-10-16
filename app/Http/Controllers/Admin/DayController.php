@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 
-class DayController extends Controller
+class DayController extends \LaravelAdmin\Controllers\BaseAdminController
 {
     //
 }

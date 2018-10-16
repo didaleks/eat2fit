@@ -12,6 +12,7 @@ class CreateDaysTable extends Migration
             $table->increments('id');
             $table->integer('number');
             $table->integer('diet_id');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
