@@ -13,4 +13,9 @@ class Day extends Page
     {
         return $this->belongsTo('App\Models\Diet');
     }
+
+    public function eatings()
+    {
+        return $this->hasMany('App\Models\Eating');
+    }
 }
