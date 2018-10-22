@@ -21,6 +21,8 @@ Route::middleware(['web'])->group(function () {
         Route::resource('diet', 'Admin\DietController');
         Route::resource('dish', 'Admin\DishController');
         Route::resource('day', 'Admin\DayController');
+        Route::resource('eating', 'Admin\EatingController');
+        Route::resource('eating_type', 'Admin\EatingTypeController');
 
         Route::prefix('diet')->group(function () {
             Route::get( 'copy/{id}',   add_controller_ns('DietController@copy'))->name("diet.copy");
