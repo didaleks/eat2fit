@@ -48,9 +48,14 @@ class Eating extends Page
         return $this->belongsTo('App\Models\Day');
     }
 
-    public function eating()
+    public function eating_type()
     {
         return $this->belongsTo('App\Models\EatingType');
+    }
+
+    public function dishes()
+    {
+        return $this->belongsToMany('App\Models\Dish');
     }
 
     public function select_eating_types()

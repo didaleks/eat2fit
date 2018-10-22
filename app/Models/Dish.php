@@ -35,4 +35,9 @@ class Dish extends Page
 
         return $fields;
     }
+
+    public function eatings()
+    {
+        return $this->belongsToMany('App\Models\Eating');
+    }
 }
