@@ -17,6 +17,7 @@ class CreateDishEatingTable extends Migration
             $table->increments('id');
             $table->integer('dish_id');
             $table->integer('eating_id');
+            $table->integer('sort')->default(0);
         });
     }
 

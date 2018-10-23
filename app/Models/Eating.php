@@ -55,7 +55,25 @@ class Eating extends Page
 
     public function dishes()
     {
-        return $this->belongsToMany('App\Models\Dish');
+        return $this->belongsToMany('App\Models\Dish')->withPivot('sort');
+    }
+
+    public function getDishesIdsAttribute()
+    {
+        return $this->dishes->sortBy('pivot.sort')->pluck('id')->all();
+    }
+
+    /**
+     * Возвращает все Dish, но первыми идут связанные с
+     * моделью и отсортированные по pivot.sort
+     * @return \Illuminate\Support\Collection
+     */
+    public function getDishesSorted(){
+        $dishes_sorted = collect([]);
+        $dishes_sorted = $dishes_sorted->merge($this->dishes->sortBy('pivot.sort'));
+        $filtered = Dish::all()->except($this->getDishesIdsAttribute());
+        $dishes_sorted = $dishes_sorted->merge($filtered);
+        return $dishes_sorted;
     }
 
     public function select_eating_types()

@@ -1,4 +1,4 @@
-@extends('admin::layouts.admin_form')
+@extends('admin.layouts.admin_form')
 
 @section('action', route($name . '.update', ['id' => $model->id]))
 
@@ -9,14 +9,18 @@
 @section('fields')
     @includeFirst(["admin.{$name}._fields", "admin::{$name}._fields", "admin::base._fields"])
 
+    {{--todo перенести этот блок в ui--}}
+    <?php
 
-    <select multiple="multiple" id="my-select" name="my-select[]">
-        <option value='elem_1'>elem 1</option>
-        <option value='elem_2'>elem 2</option>
-        <option value='elem_3'>elem 3</option>
-        <option value='elem_4'>elem 4</option>
-        <option value='elem_100'>elem 100</option>
+    ?>
+    <select multiple="multiple" id="dishes-select" name="dishes[]" data-ids="[]">
+        @foreach($model->getDishesSorted() as $dish)
+            <option value='{{$dish->id}}' {{in_array($dish->id,$model->getDishesIdsAttribute())? 'selected' : ''}}>{{$dish->name}}</option>
+            {{--todo добавить selected если есть связь с dish c
+            таким id и по selected на multiselect init добавить обновление данных--}}
+        @endforeach
     </select>
+    <input type="hidden" class="dishes-select-ids" name="dishes-select-ids" value="{{implode (",", $model->getDishesIdsAttribute())}}">
 @endsection
 
 
