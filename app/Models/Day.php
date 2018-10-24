@@ -45,12 +45,12 @@ class Day extends Page
     public function dropDownEatingTypes($currrent_eating = null)
     {
         $eating_type_ids = $this->eatingTypes()->pluck('id')->all();
-        $filtered_ids = EatingType ::pluck('id')->filter(function ($value,$key) use ($eating_type_ids){
-            return !in_array($value,$eating_type_ids);
+        $filtered_ids = EatingType::pluck('id')->filter(function ($value, $key) use ($eating_type_ids) {
+            return !in_array($value, $eating_type_ids);
         });
         $plucked = EatingType::whereIn('id', $filtered_ids)->pluck('name', 'id')->all();
         //Если передан текущий eating то смотрим его тип и добавляем в список
-        if (!empty($currrent_eating)&&$currrent_eating->id != null) {
+        if (!empty($currrent_eating) && $currrent_eating->id != null) {
             $name = $currrent_eating->eating_type->name;
             $id = $currrent_eating->eating_type->id;
             $plucked[$id] = $name;
@@ -61,5 +61,14 @@ class Day extends Page
     public function getEatingsIdsAttribute()
     {
         return $this->eatings()->pluck('id');
+    }
+
+    public function eatingTypes()
+    {
+        $eating_types = collect([]);
+        foreach ($this->eatings as $eating){
+            $eating_types->push($eating->eating_type);
+        }
+        return $eating_types;
     }
 }
