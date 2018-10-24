@@ -10,15 +10,14 @@ class Eating extends Page
     protected $attributes = [];
 
     protected $fillable = [
-        'name',
-        'slug',
-        'sort'
+        'eating_type_id',
+        'day_id',
     ];
 
 
     public $logFields = [
-        'name',
-        'slug'
+        'eating_type_id',
+        'day_id'
     ];
 
     public function formFields()
@@ -34,7 +33,7 @@ class Eating extends Page
                 'name' => 'day_id',
                 'type' => 'input',
                 'custom' => ['readonly'],
-                'label' => 'Номер дня'
+                'label' => 'ID дня'
             ],
         ];
 
@@ -42,6 +41,10 @@ class Eating extends Page
         return $fields;
     }
 
+    public function getNameAttribute()
+    {
+        return $this->eating_type->name??'';
+    }
 
     public function day()
     {

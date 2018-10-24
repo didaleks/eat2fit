@@ -8,5 +8,18 @@
 
 @section('fields')
     @includeFirst(["admin.{$name}._fields", "admin::{$name}._fields", "admin::base._fields"])
-    {{--todo выпилить это и сделать форму формирования приемов пищи--}}
+@endsection
+
+@section('additional')
+    <div class="dd">
+        <ol class="dd-list">
+            @foreach($model->eatings as $eating)
+                @include('admin.eating._row',
+                ['model' => $eating,
+                'name'=>'eating'])
+            @endforeach
+        </ol>
+    </div>
+    {{-- Передаем сюда day.id чтобы при создании eating проставлялась связанная модель --}}
+    <a href="{{route('eating.create',['day_id' => $model->id])}}" class="btn btn-outline-primary" role="button" aria-pressed="true"><i class="fas fa-plus"></i> Добавить прием пищи</a>
 @endsection

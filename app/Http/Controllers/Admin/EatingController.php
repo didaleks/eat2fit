@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Day;
+use App\Models\Eating;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 
 class EatingController extends \LaravelAdmin\Controllers\BaseAdminController
 {
@@ -22,5 +25,27 @@ class EatingController extends \LaravelAdmin\Controllers\BaseAdminController
         $model->save();
 
         return redirect($this->redirectTo);
+    }
+
+    public function create()
+    {
+        $day = Day::findOrFail(Input::get('day_id'));
+        return view()->first(["admin.{$this->name}.create", "admin::{$this->name}.create", 'admin::base.create'], [
+            'name' => $this->name,
+            'action' => $this->action,
+            'model' => new $this->model,
+            'day'=>$day
+        ]);
+    }
+
+    public function edit($id = null)
+    {
+        $model = $this->model::findOrFail($id);
+        return view()->first(["admin.{$this->name}.edit", "admin::{$this->name}.edit", 'admin::base.edit'], [
+            'name' => $this->name,
+            'action' => $this->action,
+            'model' => $model,
+            'day' => $model->day ?? new Day
+        ]);
     }
 }
