@@ -48,14 +48,13 @@ class Day extends Page
         $filtered_ids = EatingType::pluck('id')->filter(function ($value, $key) use ($eating_type_ids) {
             return !in_array($value, $eating_type_ids);
         });
-        $plucked = EatingType::whereIn('id', $filtered_ids)->orderBy('sort')->pluck('name', 'id')->all();
+        $plucked = EatingType::whereIn('id', $filtered_ids)->get();
         //Если передан текущий eating то смотрим его тип и добавляем в список
         if (!empty($current_eating) && $current_eating->eating_type != null) {
-            $name = $current_eating->eating_type->name;
-            $id = $current_eating->eating_type->id;
-            $plucked[$id] = $name;
+
+            $plucked->push($current_eating->eating_type);
         }
-        return $plucked;
+        return $plucked->sortBy('sort');
     }
 
     public function getEatingsIdsAttribute()
