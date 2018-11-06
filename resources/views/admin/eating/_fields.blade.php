@@ -3,7 +3,7 @@
     <label for="eating_type_id" class="">Тип приема пищи</label>
     <select id="eating_type_id" name="eating_type_id" class="form-control chosen-select" data-placeholder="">
         @foreach($day->dropDownEatingTypes($model) as $id => $eating_name)
-            <option value="{{$id}}">{{$eating_name}}</option>
+            <option value="{{$id}}" {{isset($model->eating_type)?$model->eating_type->id==$id?'selected':'':''}}>{{$eating_name}}</option>
         @endforeach
     </select>
 </div>

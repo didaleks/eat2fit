@@ -2,10 +2,14 @@
 
 namespace App\Models;
 
+use App\Traits\BaseMethods;
 use Illuminate\Database\Eloquent\Model;
 use LaravelAdmin\Models\Page;
+
 class EatingType extends Page
 {
+    use BaseMethods;
+
     protected $fillable = [
         'name',
         'slug',

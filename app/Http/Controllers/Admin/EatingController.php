@@ -16,7 +16,7 @@ class EatingController extends \LaravelAdmin\Controllers\BaseAdminController
         $model->day_id = $request->day_id;
 
         $dishes_sync_data = []; //Массив в который добавляем данные по синхронизации связей
-        foreach (explode(',',$request['dishes-select-ids']) as $key => $dish_id) {
+        foreach (explode(',', $request['dishes-select-ids']) as $key => $dish_id) {
             // Полученные из скрытого инпута ids в заданном порядке берем и указываем им параметр sort
             // При синхронизации связи в таблице укажется параметр sort
             $dishes_sync_data[intval($dish_id)] = ['sort' => $key];
@@ -24,7 +24,7 @@ class EatingController extends \LaravelAdmin\Controllers\BaseAdminController
         $model->dishes()->sync($dishes_sync_data);
         $model->save();
 
-        return redirect($this->redirectTo);
+        return redirect(route('day.edit', $model->day_id));
     }
 
     public function create()
@@ -34,7 +34,7 @@ class EatingController extends \LaravelAdmin\Controllers\BaseAdminController
             'name' => $this->name,
             'action' => $this->action,
             'model' => new $this->model,
-            'day'=>$day
+            'day' => $day
         ]);
     }
 
@@ -47,5 +47,19 @@ class EatingController extends \LaravelAdmin\Controllers\BaseAdminController
             'model' => $model,
             'day' => $model->day ?? new Day
         ]);
+    }
+
+    public function destroy($id)
+    {
+        $model = $this->model::findOrFail($id);
+        $day_id = $model->day_id;
+        $model->delete();
+        return redirect(route('day.edit', $day_id));
+    }
+
+    public function store(Request $request)
+    {
+        $model = $this->model::create($request->all());
+        return redirect(route('eating.edit', $model->id));
     }
 }
