@@ -20,6 +20,10 @@
             @endforeach
         </ol>
     </div>
-    {{-- Передаем сюда day.id чтобы при создании eating проставлялась связанная модель --}}
-    <a href="{{route('eating.create',['day_id' => $model->id])}}" class="btn btn-outline-primary" role="button" aria-pressed="true"><i class="fas fa-plus"></i> Добавить прием пищи</a>
+    {{-- Кнопка доступна, если не все приемы пищи заполены --}}
+    @unless($model->hasAllEatingTypes())
+        {{-- Передаем сюда day.id чтобы при создании eating проставлялась связанная модель --}}
+        <a href="{{route('eating.create',['day_id' => $model->id])}}" class="btn btn-outline-primary" role="button"
+           aria-pressed="true"><i class="fas fa-plus"></i> Добавить прием пищи</a>
+    @endunless
 @endsection
