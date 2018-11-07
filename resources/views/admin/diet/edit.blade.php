@@ -11,7 +11,13 @@
 @endsection
 
 
-@for ($i=1;$i<=$model->days_count;$i++){
-    @include("admin.day._row")
-@endfor
+@section('additional')
+    <div class="dd">
+        <ol class="dd-list">
+            @foreach($model->daysList() as $day_item)
+                @include("admin.day._row", ['model' => $day_item, 'diet' => $model])
+            @endforeach
+        </ol>
+    </div>
+@endsection
 {{--todo добавить вывод ссылок на создание/редактирование дней соответсвенно количеству--}}

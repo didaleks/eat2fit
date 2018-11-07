@@ -41,11 +41,12 @@ class EatingController extends \LaravelAdmin\Controllers\BaseAdminController
     public function edit($id = null)
     {
         $model = $this->model::findOrFail($id);
+        $day = Day::findOrFail($model->day->id);
         return view()->first(["admin.{$this->name}.edit", "admin::{$this->name}.edit", 'admin::base.edit'], [
             'name' => $this->name,
             'action' => $this->action,
             'model' => $model,
-            'day' => $model->day ?? new Day
+            'day' => $day
         ]);
     }
 

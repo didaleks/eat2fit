@@ -116,6 +116,26 @@ class Diet extends Page
         return $this->hasMany('App\Models\Day');
     }
 
+    public function daysNumbers()
+    {
+        return $this->days()->pluck('number');
+    }
+
+    public function daysList()
+    {
+        $days = $this->days()->get()->sortBy('number');
+        $days_list = collect([]);
+        for ($i=1;$i<=$this->days_count;$i++) {
+            $days_list->push(
+                [
+                    'number'=> $i,
+                    'id' => $days->contains('number', $i) ? $days->where('number', $i)->first()->id : null
+                ]
+            );
+        }
+        return $days_list->sortBy('number');
+    }
+
     public function parent()
     {
 
