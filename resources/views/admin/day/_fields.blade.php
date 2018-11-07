@@ -23,7 +23,11 @@
             <label for="number" class="">
                 Номер дня(для отладки, потом скрыть)
             </label>
-            <input id="number" readonly required type="number" class="form-control " placeholder="" name="number" value="{{$number}}">
+            <input id="number"
+                   readonly
+                   required
+                   type="number" class="form-control " placeholder="" name="number"
+                   value="{{$number}}">
 
         </div>
     </div>
