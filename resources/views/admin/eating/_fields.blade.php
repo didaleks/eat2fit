@@ -13,13 +13,7 @@
                 @endforeach
             </select>
         </div>
-        <div class="form-group">
-            <label for="day_id" class="">
-                ID дня
-            </label>
-            <input id="day_id" type="input" class="form-control " placeholder="" name="day_id"
-                   value="{{$model->day->id??$day->id}}" readonly>
-            {{--todo скрыть инпут пока стоит для отладки--}}
-        </div>
+            <input id="day_id" type="input" class="form-control " hidden name="day_id"
+                   value="{{$model->day->id??$day->id}}">
     </div>
 </div>

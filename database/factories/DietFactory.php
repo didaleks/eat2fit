@@ -8,7 +8,8 @@ $factory->define(\App\Models\Diet::class, function (Faker $faker) {
         'published' => true,
         'content' => $faker->text(200),
         'slug' => $faker->slug,
-        'days_count' => rand(1,30)
+        'days_count' => rand(1,30),
+        'calories' => rand(1500,3000),
     ];
 });
 

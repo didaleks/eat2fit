@@ -72,6 +72,11 @@ class Diet extends Page
                 'type' => 'number',
                 'label' => 'Количество дней'
             ],
+            [
+                'name' => 'calories',
+                'type' => 'number',
+                'label' => 'Среднее число калорий'
+            ],
             'meta_title',
             'meta_description',
             'meta_keywords',
@@ -88,6 +93,7 @@ class Diet extends Page
             'name' => 'required|string|max:255',
             'slug' => 'nullable|string|max:255',
             'days_count' => 'required|integer|between:1,60',
+            'calories' => 'integer|between:500,6000',
             'fields' => 'array',
         ];
     }
@@ -152,7 +158,7 @@ class Diet extends Page
     /**
      * Синхронизизирует связи
      */
-    public function syncСategories()
+    public function syncCategories()
     {
         $data = request()->all();
         if (array_key_exists('categories', $data)) {
