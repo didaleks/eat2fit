@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Diet;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
@@ -29,6 +30,8 @@ class EventServiceProvider extends ServiceProvider
     {
         parent::boot();
 
-        //
+        Diet::saved(function ($model) {
+            $model->syncCategories();
+        });
     }
 }

@@ -8,6 +8,7 @@
 
 @section('fields')
     @includeFirst(["admin.{$name}._fields", "admin::{$name}._fields", "admin::base._fields"])
+    @include('admin.diet._categories')
 @endsection
 
 
@@ -20,4 +21,3 @@
         </ol>
     </div>
 @endsection
-{{--todo добавить вывод ссылок на создание/редактирование дней соответсвенно количеству--}}

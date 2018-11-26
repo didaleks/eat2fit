@@ -92,6 +92,11 @@ class Diet extends Page
         ];
     }
 
+    public function categories()
+    {
+        return $this->belongsToMany('App\Models\Category');
+    }
+
     public function setSlugAttribute($value)
     {
         if ($value != '/')
@@ -123,10 +128,10 @@ class Diet extends Page
     {
         $days = $this->days()->get()->sortBy('number');
         $days_list = collect([]);
-        for ($i=1;$i<=$this->days_count;$i++) {
+        for ($i = 1; $i <= $this->days_count; $i++) {
             $days_list->push(
                 [
-                    'number'=> $i,
+                    'number' => $i,
                     'id' => $days->contains('number', $i) ? $days->where('number', $i)->first()->id : null
                 ]
             );
@@ -142,5 +147,25 @@ class Diet extends Page
     public function childrens()
     {
 
+    }
+
+    /**
+     * Синхронизизирует связи
+     */
+    public function syncСategories()
+    {
+        $data = request()->all();
+        if (array_key_exists('categories', $data)) {
+            $this->categories()->sync($data['categories']);
+        }
+    }
+
+    /**
+     * Проверяет наличие связи между 2мя моделями
+     * @param $category
+     * @return mixed
+     */
+    public function hasCategory($category) {
+        return $this->categories->contains($category);
     }
 }
