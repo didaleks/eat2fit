@@ -81,8 +81,6 @@ class Diet extends Page
         return $fields;
     }
 
-
-
     public function validatorRules($data)
     {
         return [

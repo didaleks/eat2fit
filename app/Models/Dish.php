@@ -20,7 +20,7 @@ class Dish extends Page
                 'type' => 'checkbox',
                 'label' => 'Опубликован'
             ],
-            'image' =>  [
+            'image' => [
                 'name' => 'fields[image]',
                 'type' => 'image',
                 'label' => 'Картинка'
@@ -39,5 +39,13 @@ class Dish extends Page
     public function eatings()
     {
         return $this->belongsToMany('App\Models\Eating');
+    }
+
+    public function diets()
+    {
+        $diets = collect([]);
+        foreach ($this->eatings()->get() as $eating)
+            $diets->push($eating->day()->first()->diet()->get());
+        return $diets;
     }
 }
