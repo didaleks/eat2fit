@@ -1,0 +1,101 @@
+//
+// Custom Thumbnails
+// --------------------------------------------------
+
+.thumbnail{
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+
+  .caption{
+    padding: 0;
+    color: $black;
+  }
+}
+
+.img-thumbnail,
+.thumbnail{
+  box-shadow: none;
+}
+
+// Make thumbnails to fit entire container width
+.thumbnail-block {
+  display: block;
+
+  > img,
+  a > img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+// Thumbnail Classic
+// --------------------------------------------------
+
+.thumbnail-classic {
+  &-img-wrap {
+    display: inline-block;
+  }
+
+  @include media-breakpoint-up(xl) {
+    &-img-wrap {
+      position: relative;
+      overflow: hidden;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
+        background: rgba($black, .2);
+        transition: .3s all ease;
+        z-index: 1;
+      }
+
+      img {
+        transition: .6s all ease;
+      }
+    }
+
+    &:hover {
+      .thumbnail-classic-img-wrap:before {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      img {
+        transform: scale(1.06);
+      }
+    }
+  }
+}
+
+
+// Thumbnail Zoom
+// --------------------------------------------------
+
+.thumbnail-zoom {
+  &, &-img-wrap {
+    display: inline-block;
+  }
+
+  @include media-breakpoint-up(xl) {
+    &, img {
+      transition: .3s all ease;
+    }
+
+    &:hover {
+      box-shadow: $shadow-area-lg;
+
+      img {
+        transform: scale(1.03);
+      }
+    }
+  }
+}

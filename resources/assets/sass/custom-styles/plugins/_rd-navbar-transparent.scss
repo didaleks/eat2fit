@@ -1,0 +1,467 @@
+//
+// RD Navbar Transparent
+// --------------------------------------------------
+
+.rd-navbar-transparent {
+
+	// RD Navbar Transparent Fullwidth and Static
+	// --------------------------------------------------
+	&.rd-navbar-fullwidth,
+	&.rd-navbar-static {
+		background: transparent;
+
+		.rd-navbar-nav-wrap, .rd-navbar-panel-right {
+			display: inline-block;
+		}
+
+		.rd-navbar-inner {
+			padding-top: 20px;
+			max-width: none;
+		}
+
+		.rd-navbar-nav-wrap {
+			position: relative;
+			width: auto;
+			padding-right: 60px;
+
+			.rd-navbar-nav > li {
+				> a {
+					padding: 9px 16px;
+					border-radius: 50px;
+					color: $white;
+
+					&:hover, &:focus {
+						background: $primary;
+					}
+
+					@include media-breakpoint-up(xxl) {
+						padding: 14px 29px;
+					}
+				}
+
+				&.active > a, &.focus > a {
+					background: $primary;
+				}
+			}
+
+			@include media-breakpoint-up(xl) {
+				padding-right: 0;
+			}
+		}
+
+		.rd-navbar-megamenu, .rd-navbar-nav > li > .rd-navbar-dropdown {
+			margin-top: 20px;
+		}
+
+		.rd-navbar-megamenu {
+			//@media (min-width: $screen-lg-min) and (max-width: $screen-lg-min + 200) {
+			//  margin-left: 30px;
+			//}
+		}
+
+		.rd-navbar-panel-right {
+			position: relative;
+			top: 2px;
+			z-index: 9;
+			vertical-align: middle;
+
+			@include media-breakpoint-up(xl) {
+				margin-left: 50px;
+			}
+			@include media-breakpoint-up(xxxl) {
+				position: absolute;
+				top: 28px;
+				right: 25px;
+			}
+		}
+
+		// RD Navbar Toggle Search
+		.rd-navbar-toggle-search {
+			position: relative;
+			margin-right: 10px;
+
+			&:before, &:after {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transition: .3s all ease;
+				transform: translate(-50%, -50%);
+			}
+
+			&:after {
+				content: '\f00d';
+				font: 400 18px/18px "FontAwesome";
+				opacity: 0;
+				visibility: hidden;
+				transform: translate(-50%, -50%) scale(0);
+			}
+
+			&.active {
+				&:before {
+					opacity: 0;
+					visibility: hidden;
+					transform: translate(-50%, -50%) scale(0);
+				}
+
+				&:after {
+					opacity: 1;
+					visibility: visible;
+					transform: translate(-50%, -50%) scale(1);
+				}
+			}
+		}
+
+		// RD Navbar Collapse Toggle
+		.rd-navbar-collapse-toggle {
+			z-index: 9;
+
+			span, span:before, span:after {
+				background: $white;
+			}
+
+			@include media-breakpoint-up(xl) {
+				display: none;
+			}
+		}
+
+		// RD Navbar IS Stuck
+		&.rd-navbar--is-stuck {
+			background: $white;
+
+			.rd-navbar-nav > li {
+				> a {
+					color: $gray;
+				}
+
+				&.active > a,
+				&.focus > a,
+				> a:hover {
+					color: $white;
+				}
+			}
+
+			.rd-navbar-collapse-toggle {
+				span, span:before, span:after {
+					background: $gray;
+				}
+			}
+
+			.rd-navbar-search-toggle-fixed {
+				color: $gray;
+			}
+
+			.rd-navbar-megamenu, .rd-navbar-nav > li > .rd-navbar-dropdown {
+				margin-top: 12px;
+
+				@include media-breakpoint-up(xl) {
+					margin-top: 15px;
+				}
+				@include media-breakpoint-up(xxl) {
+					margin-top: 12px;
+				}
+			}
+
+			.rd-navbar-toggle-search.icon-white-transparent {
+				&:before, &:after {
+					transition: .3s transform ease;
+				}
+			}
+
+			.icon-white-transparent {
+				color: $primary;
+				background: $gray-lighter;
+			}
+
+			a.icon-white-transparent {
+				&:hover {
+					color: $white;
+					background: $primary;
+				}
+			}
+
+			.rd-navbar-inner {
+				padding-top: 12px;
+				padding-bottom: 12px;
+			}
+
+			.rd-navbar-search-wrap-fixed {
+				top: 58px;
+			}
+
+			@include media-breakpoint-up(xl) {
+				.rd-navbar-search-wrap {
+					top: 62px;
+				}
+			}
+
+			@include media-breakpoint-up(xxl) {
+				.rd-navbar-search-wrap {
+					top: 68px;
+				}
+			}
+			@include media-breakpoint-up(xxl) {
+				.rd-navbar-panel-right {
+					top: 16px;
+				}
+			}
+		}
+	}
+
+	// RD Navbar Transparent Static
+	// --------------------------------------------------
+	&.rd-navbar-static {
+		// RD Navbar Search
+		.rd-navbar-search-wrap {
+			position: absolute;
+			z-index: 9;
+			opacity: 0;
+			visibility: hidden;
+			transform: translateX(100%);
+			transition: .3s all ease;
+
+			&.active {
+				opacity: 1;
+				visibility: visible;
+				transform: translateX(0);
+			}
+		}
+	}
+
+	// RD Navbar Transparent Fixed and Fullwidth
+	// --------------------------------------------------
+	&.rd-navbar-fixed,
+	&.rd-navbar-fullwidth {
+		.rd-navbar-panel-right {
+			position: fixed;
+			top: 70px;
+			right: 20px;
+			z-index: 9;
+			width: 220px;
+			padding: 22px 20px 20px;
+			background: $white;
+			opacity: 0;
+			visibility: hidden;
+			box-shadow: $shadow-area-sm;
+			transform: translateX(100%);
+			transition: .3s all ease;
+
+			.icon-white-transparent {
+				color: $primary;
+				background: $gray-lighter;
+
+				&:hover {
+					color: $white;
+					background: $primary;
+				}
+			}
+
+			&.active {
+				opacity: 1;
+				visibility: visible;
+				transform: translateX(0);
+			}
+		}
+
+		.rd-navbar-search-wrap-fixed {
+			position: fixed;
+			top: 70px;
+			right: 20px;
+			z-index: 9;
+			opacity: 0;
+			visibility: hidden;
+			transform: translateX(100%);
+			transition: .3s all ease;
+
+			&.active {
+				opacity: 1;
+				visibility: visible;
+				transform: translateX(0);
+			}
+		}
+
+		.rd-navbar-collapse-toggle {
+			top: 5px;
+			right: 5px;
+			transition: .3s all ease;
+
+			@include media-breakpoint-up(lg) {
+				top: 14px;
+			}
+		}
+
+		.rd-navbar-search-toggle-fixed {
+			position: fixed;
+			top: 2px;
+			right: 41px;
+			z-index: 9;
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+			background: transparent;
+			border: none;
+			transition: .3s all ease;
+			color: $gray;
+
+			span {
+				position: relative;
+				display: inline-block;
+
+				&:before, &:after {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					font: 400 20px/20px "FontAwesome";
+					transform: translate(-50%, -50%);
+					transition: .3s all ease;
+				}
+
+				&:before {
+					content: '\f002';
+				}
+
+				&:after {
+					content: '\f00d';
+					opacity: 0;
+					visibility: hidden;
+					transform: translate(-50%, -50%) scale(0);
+				}
+			}
+
+			&.active {
+				span {
+					&:before {
+						opacity: 0;
+						visibility: hidden;
+						transform: translate(-50%, -50%) scale(0);
+					}
+
+					&:after {
+						opacity: 1;
+						visibility: visible;
+						transform: translate(-50%, -50%) scale(1);
+					}
+				}
+			}
+
+			@include media-breakpoint-up(lg) {
+				top: 11px;
+				right: 49px;
+				color: $white;
+			}
+		}
+	}
+
+	// RD Navbar Fullwidth
+	// --------------------------------------------------
+	&.rd-navbar-fullwidth {
+		&.rd-navbar--is-stuck {
+			.rd-navbar-search-toggle-fixed {
+				top: 10px;
+			}
+
+			.rd-navbar-collapse-toggle {
+				top: 6px;
+			}
+
+			.rd-navbar-panel-right {
+				top: 66px;
+			}
+
+			.rd-navbar-search-toggle {
+				top: 29px;
+			}
+		}
+	}
+
+	// RD Navbar Fixed
+	// --------------------------------------------------
+	&.rd-navbar-fixed {
+		.rd-navbar-brand {
+			margin-left: -10px;
+		}
+
+		.rd-navbar-nav-wrap {
+			z-index: -1;
+		}
+
+		.rd-navbar-toggle {
+			z-index: 99;
+		}
+	}
+
+	// RD Navbar
+	// --------------------------------------------------
+
+	// RD Navbar Search
+	.rd-navbar-search-wrap {
+		// Search Styling
+		&, .form-wrap, .rd-search {
+			width: 270px;
+		}
+
+		.form-search-submit {
+			position: absolute;
+			top: 0;
+			right: 10px;
+			bottom: 0;
+			color: $gray;
+			background: transparent;
+			border: none;
+			transition: .3s all ease;
+
+			&:hover {
+				color: $primary;
+			}
+		}
+
+		#rd-search-results-live #search-results {
+			padding: 15px;
+		}
+
+		.form-wrap {
+			margin-bottom: 0;
+		}
+
+		.form-input {
+			padding-left: 15px;
+			padding-right: 40px;
+		}
+
+		// Search Results
+		.search_title {
+			font-size: 18px;
+		}
+
+		.search_list {
+			padding-top: 10px;
+			padding-left: 0;
+			font-size: 14px;
+			padding-bottom: 20px;
+		}
+
+		.search-quick-result {
+			color: $gray;
+		}
+
+		@include media-breakpoint-up(xl) {
+			top: 84px;
+			right: 170px;
+		}
+	}
+}
+
+// Styling for tablet
+.tablet {
+	.rd-navbar-transparent.rd-navbar-fixed {
+		.rd-navbar-search-toggle-fixed {
+			top: 8px;
+			right: 41px;
+			color: $gray;
+		}
+
+		.rd-navbar-collapse-toggle {
+			top: 5px;
+			right: 5px;
+		}
+	}
+}

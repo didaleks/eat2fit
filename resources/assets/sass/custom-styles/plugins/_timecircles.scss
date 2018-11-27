@@ -1,0 +1,104 @@
+/**
+ *	This element is created inside your target element
+ *	It is used so that your own element will not need to be altered
+ **/
+.time_circles {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/**
+ *	This is all the elements used to house all text used
+ * in time circles
+ **/
+.time_circles > div {
+    position: absolute;
+    text-align: center;
+    font-family: $font-family-sec;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    -webkit-transform: translateY(-50%) !important;
+    margin-top: -3px;
+
+    @include media-breakpoint-up(sm) {
+        margin-top: -13px;
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    #DateCountdown {
+        width: 100%;
+    }
+}
+
+/**
+ *	Titles (Days, Hours, etc)
+ **/
+.time_circles > div > h4 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: $gray;
+    text-transform: lowercase;
+    font-size: 14px !important;
+    position: absolute;
+    bottom: -65px;
+    left: 0;
+    right: 0;
+    letter-spacing: -.025em;
+
+    & + * {
+        margin-top: 0;
+    }
+}
+
+/**
+ *	Time numbers, ie: 12
+ **/
+.time_circles > div > span {
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    color: $gray;
+    font-family: $font-family-sec;
+    letter-spacing: -.05em;
+
+    @include media-breakpoint-up(md) {
+        font-size: 30px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        font-size: 36px;
+    }
+}
+
+.time_circles {
+    color: $gray-dark;
+}
+
+.time_circles > div > h4 {
+    bottom: -52px;
+    font-weight: 700;
+
+    //@media (min-width: $screen-xs-min - 80) {
+    //    bottom: -70px;
+    //}
+    @include media-breakpoint-up(sm) {
+        bottom: -25px;
+    }
+    @include media-breakpoint-up(md) {
+        bottom: -38px;
+    }
+}
+
+.time_circles > div > span {
+    font-size: 24px !important;
+
+    @include media-breakpoint-up(sm) {
+        font-size: 26px !important;
+    }
+    @include media-breakpoint-up(md) {
+        font-size: 60px !important;
+    }
+}

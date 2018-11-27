@@ -1,0 +1,65 @@
+//
+// Pagination Custom
+// --------------------------------------------------
+
+
+// Pagination Classic
+// --------------------------------------------------
+
+.pagination-classic {
+  li {
+    display: inline-block;
+
+    a {
+      padding: 14px 20px;
+      font-weight: 700;
+      border-radius: 50%;
+      border: 1px solid $gray-lighter;
+      color: $gray-light;
+      transition: .3s all ease;
+    }
+
+    &+ li {
+      margin-left: 8px;
+    }
+  }
+
+  li {
+    &.pagination-classic-prev, &.pagination-classic-next {
+      a {
+        padding: 15px 30px;
+        border-radius: 50px;
+
+        @include media-breakpoint-up(sm) {
+          padding-left: 35px;
+          padding-right: 35px;
+        }
+      }
+    }
+  }
+
+  li.active a,
+  a:hover,
+  a:focus {
+    color: $white;
+    background: $primary;
+    border-color: $primary;
+  }
+
+  li.pagination-classic-prev a,
+  li.pagination-classic-next a {
+    color: $white;
+    background: $primary;
+    border-color: $primary;
+
+    &:hover,
+    &:focus {
+      background: darken($primary, 10%);
+      border-color: darken($primary, 10%);
+    }
+  }
+
+  li.active a {
+    pointer-events: none;
+  }
+}

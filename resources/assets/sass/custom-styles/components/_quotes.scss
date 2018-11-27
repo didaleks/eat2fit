@@ -1,0 +1,39 @@
+//
+// Quotes
+// --------------------------------------------------
+
+
+// Base Styles
+// --------------------------------------------------
+
+.quote {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  border: none
+}
+
+
+// Quote Classic
+// --------------------------------------------------
+
+.quote-classic {
+  padding-left: 30px;
+
+  > p {
+    position: relative;
+    quotes: "\201c" "\201d";
+
+    &:before, &:after {
+      font-family: $font-family-sec;
+      position: absolute;
+    }
+
+    &:before {
+      content: open-quote;
+      font-size: 100px;
+      top: -28px;
+      left: -38px;
+    }
+  }
+}
