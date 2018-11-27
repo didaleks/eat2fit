@@ -8,8 +8,6 @@
 
     @include('blocks.footer')
 
-    @include('blocks.modals')
-
     @include('blocks.js')
 
 @endsection

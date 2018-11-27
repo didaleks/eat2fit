@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\Diet;
+use App\Models\Page;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
@@ -21,6 +22,14 @@ class EventServiceProvider extends ServiceProvider
         ],
     ];
 
+    public static function setUrl($model)
+    {
+        $newUrl = $model->fullUrl();
+        if ($newUrl != $model->url) {
+            $model->url = $newUrl;
+        }
+    }
+
     /**
      * Register any events for your application.
      *
@@ -32,6 +41,10 @@ class EventServiceProvider extends ServiceProvider
 
         Diet::saved(function ($model) {
             $model->syncCategories();
+        });
+
+        Page::saving(function ($model) {
+            self::setUrl($model);
         });
     }
 }

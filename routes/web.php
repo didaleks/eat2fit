@@ -35,3 +35,5 @@ Route::middleware(['web'])->group(function () {
     });
 
 });
+
+Route::get('{url?}', 'PageController@show')->where('url', '[A-Za-z0-9/-]+')->name('page.show');
