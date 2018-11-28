@@ -7,10 +7,6 @@ use Illuminate\Support\Facades\Request;
 
 class PageController extends Controller
 {
-    public function index()
-    {
-        return view('page.index');
-    }
 
     public function show(Request $request, $url = '/')
     {
