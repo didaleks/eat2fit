@@ -2,6 +2,8 @@
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
     "/css/admin_custom.css": "/css/admin_custom.css",
+    "/css/libs/bootstrap.css": "/css/libs/bootstrap.css",
+    "/css/front.css": "/css/front.css",
     "/js/vendor.js": "/js/vendor.js",
     "/js/common.js": "/js/common.js",
     "/js/admin_custom.js": "/js/admin_custom.js",

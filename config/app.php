@@ -165,6 +165,10 @@ return [
         /*
          * Package Service Providers...
          */
+        LaravelAdmin\Providers\AdminServiceProvider::class,
+        LaravelAdmin\Providers\EventServiceProvider::class,
+        LaravelAdmin\Providers\BladeServiceProvider::class,
+        morphos\MorphosBladeProvider::class,
 
         /*
          * Application Service Providers...

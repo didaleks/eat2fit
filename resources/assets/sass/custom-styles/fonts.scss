@@ -1,0 +1,22 @@
+// Variables
+$icon-font-path:           "../fonts/";
+
+//** File name for all font files.
+$icon-font-name:           "glyphicons-halflings-regular";
+$icon-font-awesome:        "fontawesome-webfont";
+$icon-material-design:     "material-design";
+$icon-fl-great-icon-set:   "fl-great-icon-set";
+
+//** Element ID within SVG icon file.
+$icon-font-svg-id:         "glyphicons_halflingsregular";
+$icon-font-awesome-id:     "fontawesomeregular";
+$icon-material-design-id:  "materialdesigniconsregular";
+$icon-fl-great-icon-set-id:"flgreaticonset";
+
+/*
+* Fonts
+*/
+@import 'fonts/fl-great-icon-set';
+@import 'fonts/font-awesome';
+@import 'fonts/material-design';
+@import 'fonts/material-icons';

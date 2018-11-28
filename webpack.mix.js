@@ -19,5 +19,7 @@ mix.js('resources/js/app.js', 'public/js')
     .extract(['lodash', 'jquery', 'bootstrap'])
     .sass('vendor/support/laravel-admin/resources/assets/sass/common.scss', 'public/css')
     .sass('vendor/support/laravel-admin/resources/assets/sass/admin.scss', 'public/css')
-    .sass('resources/assets/sass/admin_custom.scss', 'public/css');
+    .sass('resources/assets/sass/admin_custom.scss', 'public/css')
+    .sass('resources/assets/sass/bootstrap/bootstrap.scss', 'public/css/libs/bootstrap.css')
+    .sass('resources/assets/sass/custom-styles/style.scss', 'public/css/front.css');
 

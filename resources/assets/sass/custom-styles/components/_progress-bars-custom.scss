@@ -1,0 +1,32 @@
+//
+// Custom Progress Bars
+// --------------------------------------------------
+
+
+// Linear Progress Bars
+// --------------------------------------------------
+
+.progress-linear {
+  position: relative;
+  height: 9px;
+
+  .progress-bar-linear-wrap, .progress-bar-linear {
+    height: 100%;
+    border-radius: 9px;
+  }
+
+  .progress-bar-linear-wrap {
+    background: $gray-lighter;
+  }
+
+  .progress-bar-linear {
+    width: 0;
+    @include transition(.5s all ease);
+  }
+
+  .progress-value{
+    &:after{
+      content:"%";
+    }
+  }
+}

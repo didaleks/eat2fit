@@ -11,9 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+use Illuminate\Support\Facades\Route;
+
 
 Route::middleware(['web'])->group(function () {
 
@@ -35,3 +34,5 @@ Route::middleware(['web'])->group(function () {
     });
 
 });
+
+Route::get('{url?}', 'PageController@show')->where('url', '[A-Za-z0-9/-]+')->name('page.show');

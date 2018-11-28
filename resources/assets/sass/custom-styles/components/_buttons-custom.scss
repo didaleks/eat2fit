@@ -1,0 +1,203 @@
+//
+// Custom Buttons Styles
+// --------------------------------------------------
+
+// Base styles
+// --------------------------------------------------
+
+.btn {
+  @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, 1.2, 50px);
+  border-width: 2px;
+  font-weight: 700;
+  min-width: 132px;
+  transition: .3s ease-out;
+
+
+  &:focus,
+  &:active,
+  &:active:focus{
+    outline: none;
+  }
+
+
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {
+
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &.focus {
+
+  }
+
+  &:active,
+  &.active {
+    box-shadow: none;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+
+  }
+}
+
+
+// Alternate buttons
+// --------------------------------------------------
+
+.btn-default {
+  @include button-variant-custom($gray-darker, transparent, $gray, $white, $gray-darker, $gray-darker);
+}
+
+.btn-primary {
+  @include button-variant-custom($white, $primary, $primary, $white, darken($primary, 15%), darken($primary, 15%));
+}
+
+.btn-white {
+  @include button-variant-custom($gray-light, $white, $white, $white, $gray-light, $gray-light);
+}
+
+.btn-white-outline {
+  @include button-variant-custom($white, transparent, $white, $gray, $white, $white);
+}
+
+.btn-white-gray-outline {
+  @include button-variant-custom($gray-light, $white, $brand-gallery, $white, $gray-light, $gray-light);
+
+  &:hover {
+    .icon.text-primary {
+      color: $white;
+    }
+  }
+}
+
+// Social Buttons
+
+.btn-facebook {
+  @include button-variant-custom($white, #2f6890, #2f6890, $white, darken(#2f6890, 15%), darken(#2f6890, 15%));
+}
+
+.btn-twitter {
+  @include button-variant-custom($white, $brand-info, $brand-info, $white, darken($brand-info, 15%), darken($brand-info, 15%));
+}
+
+.btn-google-plus {
+  @include button-variant-custom($white, $brand-danger, $brand-danger, $white, darken($brand-danger, 15%), darken($brand-danger, 15%));
+}
+
+.btn-primary-gray-outline {
+  @include button-variant-custom($primary, transparent, $gray-lighter, $white, $primary, $primary);
+}
+
+// Button Sizes
+// --------------------------------------------------
+
+.btn-xs {
+  @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-base, $line-height-base, 50px);
+  min-width: 100px;
+}
+
+.btn-lg {
+  @include button-size(15px, $padding-base-horizontal, 18px, $line-height-base, 50px);
+}
+
+.btn-xl {
+  @include button-size(19px, $padding-base-horizontal, 18px, $line-height-base, 50px);
+  min-width: 138px;
+}
+
+
+// Button Shapes
+// --------------------------------------------------
+
+.btn-rect {
+  border-radius: 0;
+}
+
+.btn-round {
+  border-radius: 8px;
+}
+
+
+// Button Widths
+// --------------------------------------------------
+
+.btn-width {
+  &-100 {
+    min-width: 100px;
+  }
+  &-160 {
+    min-width: 160px;
+  }
+  &-200 {
+    min-width: 200px;
+  }
+}
+
+
+// Button Icon styles
+// --------------------------------------------------
+
+.btn{
+  &.btn-icon {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .icon {
+      font-size: 30px;
+      line-height: 18px;
+      vertical-align: middle;
+      transition: 0s;
+    }
+
+    .icon-xs {
+      font-size: 20px;
+    }
+
+    &-left{
+      .icon{
+        float: left;
+        padding-right: 4px;
+      }
+    }
+
+    &-right{
+      .icon{
+        float: right;
+        padding-left: 4px;
+      }
+    }
+
+    &-variant-2 {
+      &.btn-icon-left {
+        padding-left: 14px;
+        padding-right: 26px;
+      }
+
+      &.btn-icon-right {
+        padding-right: 14px;
+        padding-left: 26px;
+      }
+    }
+  }
+}
+
+
+// Button Other styles
+// --------------------------------------------------
+
+.btn-white-gray-outline .icon.text-primary {
+  transition: .3s all ease;
+}
+
+.btn-tag {
+  padding: 3px 13px;
+  font-weight: 400;
+  min-width: 0;
+}
