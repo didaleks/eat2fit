@@ -20,6 +20,7 @@
                                 <li><a class="icon icon-xxs icon-circle icon-gray-lighter fa fa-pinterest-p" href="#"></a></li>
                                 <li><a class="icon icon-xxs icon-circle icon-gray-lighter fa fa-soundcloud" href="#"></a></li>
                                 <li><a class="icon icon-xxs icon-circle icon-gray-lighter fa fa-vimeo-square" href="#"></a></li>
+                                <li><a class="icon icon-xxs icon-circle icon-gray-lighter fa fa-shopping-basket" href="#"></a></li>
                             </ul>
                         </div>
                     </div>
@@ -30,8 +31,8 @@
                     <!-- RD Navbar Nav-->
                     <ul class="rd-navbar-nav">
                         @foreach($topMenu as $menuItem)
-                            <li class="{{ ($model->id == $menuItem->page->id) ? 'active' : '' }}">
-                                <a href="{{$menuItem->url ?? $menuItem->page->url}}">{{$menuItem->name}}</a>
+                            <li class="{{ ($model->url == $menuItem->getUrl()) ? 'active' : '' }}">
+                                <a href="{{$menuItem->getUrl()}}">{{$menuItem->name}}</a>
                                 @if (count($menuItem->childrens))
                                     <ul class="rd-navbar-dropdown">
                                         @foreach($menuItem->childrens as $subMenuItem)
