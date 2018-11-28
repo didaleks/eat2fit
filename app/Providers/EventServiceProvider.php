@@ -30,6 +30,14 @@ class EventServiceProvider extends ServiceProvider
         }
     }
 
+    public static function setChildrensUrl($model)
+    {
+        if (count($model->childrens))
+            foreach ($model->childrens as $children)
+                if ($children->url != $children->fullUrl())
+                    $children->save();
+    }
+
     /**
      * Register any events for your application.
      *
@@ -45,6 +53,10 @@ class EventServiceProvider extends ServiceProvider
 
         Page::saving(function ($model) {
             self::setUrl($model);
+        });
+
+        Page::saved(function ($model) {
+            self::setChildrensUrl($model);
         });
     }
 }
