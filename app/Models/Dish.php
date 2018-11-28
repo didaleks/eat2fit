@@ -4,9 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use LaravelAdmin\Models\Page;
+use App\Traits\BaseMethods;
 
 class Dish extends Page
 {
+    use BaseMethods;
+
     public function formFields()
     {
         $fields = [

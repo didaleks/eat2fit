@@ -4,9 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use LaravelAdmin\Models\Page;
+use App\Traits\BaseMethods;
 
 class Day extends Page
 {
+    use BaseMethods;
+
     protected $attributes = [];
 
     public function diet()
