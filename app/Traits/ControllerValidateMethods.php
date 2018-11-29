@@ -14,8 +14,8 @@ trait ControllerValidateMethods
         if ($validator->fails())
             return back()->withInput()->withErrors($validator);
 
-        $model = $this->model::findOrFail($id)->fill($request->all());
-        $model->save();
+        $this->model::findOrFail($id)->fill($request->all())->save();
+        session()->flash('flash_success', 'Успешно обновлено!');
         return redirect($this->redirectTo);
     }
 
@@ -30,6 +30,7 @@ trait ControllerValidateMethods
             return back()->withInput()->withErrors($validator);
 
         $this->model::create($request->all());
+        session()->flash('flash_success', 'Успешно создано!');
         return redirect($this->redirectTo);
     }
 
