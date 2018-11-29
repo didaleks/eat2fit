@@ -65,6 +65,7 @@
 	// Initialize scripts that require a finished document
 	$document.ready(function () {
 		isNoviBuilder = window.xMode;
+        $("input[name='phone']").mask("+7 (999) 999-9999");
 
 		/**
 		 * @desc Attach form validation to elements
