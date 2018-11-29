@@ -18,6 +18,7 @@ class Feedback extends Model
         'email',
         'phone',
         'message',
+        'type'
     ];
 
     public function validatorRules($data)
