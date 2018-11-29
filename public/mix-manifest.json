@@ -1,6 +1,8 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
+    "/css/common.css": "/css/common.css",
+    "/css/admin.css": "/css/admin.css",
     "/css/admin_custom.css": "/css/admin_custom.css",
     "/css/libs/bootstrap.css": "/css/libs/bootstrap.css",
     "/css/front.css": "/css/front.css",

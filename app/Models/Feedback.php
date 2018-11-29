@@ -26,7 +26,17 @@ class Feedback extends Model
             'name' => 'required|string|max:255',
             'email' => 'required|string|max:255|regex:/^.+@.+$/i',
             'phone' => 'required|string|max:255',
-            'privacy-policy' => 'required|boolean',
+            'privacy-policy' => 'required|accepted'
+        ];
+    }
+
+    public function validatorMessages($data)
+    {
+        return [
+            'name.required' => 'Имя обязательно для заполнения',
+            'email.required' => 'Телефон обязателен для заполнения',
+            'phone.required' => 'Email обязателен для заполнения',
+            'privacy-policy.accepted' => 'Необходимо согласиться с условиями обработки данных'
         ];
     }
 

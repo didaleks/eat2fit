@@ -23,7 +23,7 @@ Route::middleware(['web'])->group(function () {
         Route::resource('eating', 'Admin\EatingController');
         Route::resource('eating_type', 'Admin\EatingTypeController');
         Route::resource('category', 'Admin\CategoryController');
-        Route::resource('feedback', 'Admin\FeedbackController');
+        Route::get('feedback', 'Admin\FeedbackController@index')->name('feedback.index');
 
         Route::prefix('diet')->group(function () {
             Route::get( 'copy/{id}',   add_controller_ns('DietController@copy'))->name("diet.copy");
@@ -35,5 +35,8 @@ Route::middleware(['web'])->group(function () {
     });
 
 });
+
+// Feedback Form
+Route::post('/feedback/store', 'FeedbackController@store')->name('feedback.store');
 
 Route::get('{url?}', 'PageController@show')->where('url', '[A-Za-z0-9/-]+')->name('page.show');
