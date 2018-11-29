@@ -28,7 +28,7 @@ trait ControllerValidateMethods
 
     public function update(Request $request, $id)
     {
-        $rules = $this->model::find($id)->validatorRules($request);
+        $rules = $this->model::findOrFail($id)->validatorRules($request);
         $validator = Validator::make(Input::all(), $rules);
 
         if (!$this->isValid($validator)){
