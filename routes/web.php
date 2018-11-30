@@ -36,7 +36,7 @@ Route::middleware(['web'])->group(function () {
 
 });
 
-Route::get('catalog', 'DietController@index')->name('diet.index');
+Route::get('catalog', 'DietController@index')->name('catalog');
 
 // Feedback Form
 Route::post('/feedback/store', 'FeedbackController@store')->name('feedback.store');
