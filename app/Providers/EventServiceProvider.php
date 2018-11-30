@@ -47,6 +47,10 @@ class EventServiceProvider extends ServiceProvider
     {
         parent::boot();
 
+        Diet::saving(function ($model) {
+            self::setUrl($model);
+        });
+
         Diet::saved(function ($model) {
             $model->syncCategories();
         });

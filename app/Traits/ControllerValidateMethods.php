@@ -1,19 +1,14 @@
 <?php namespace App\Traits;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Validator;
 
 trait ControllerValidateMethods
 {
     public function isValid($validator)
     {
-        if ($validator->fails())
-        {
-            $this->generateFlashes($validator);
-            return false;
-        }
-        return true;
+        return ($validator->fails()) ? false : true;
     }
 
     public function generateFlashes($validator)
@@ -22,7 +17,7 @@ trait ControllerValidateMethods
         foreach ($validator->errors()->all() as $error)
             $errors[$error] = $error;
 
-        $info =  implode('</br>', $errors);
+        $info = implode('</br>', $errors);
         session()->flash('flash_error', $info);
     }
 
@@ -31,7 +26,8 @@ trait ControllerValidateMethods
         $rules = $this->model::findOrFail($id)->validatorRules($request);
         $validator = Validator::make(Input::all(), $rules);
 
-        if (!$this->isValid($validator)){
+        if (!$this->isValid($validator)) {
+            $this->generateFlashes($validator);
             return back()->withInput()->withErrors($validator);
         };
 
@@ -47,7 +43,8 @@ trait ControllerValidateMethods
         $rules = $model->validatorRules($request);
         $validator = Validator::make(Input::all(), $rules);
 
-        if (!$this->isValid($validator)){
+        if (!$this->isValid($validator)) {
+            $this->generateFlashes($validator);
             return back()->withInput()->withErrors($validator);
         };
 
