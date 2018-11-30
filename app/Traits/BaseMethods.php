@@ -25,7 +25,12 @@ trait BaseMethods
 
     public function scopePublished($query)
     {
-        return $query->where('published','=', 1)->get();
+        return $query->where('published', 1);
+    }
+
+    public function scopeWithoutParents($query)
+    {
+        return $query->where('parent_id', null);
     }
 
     public function preview_image()
