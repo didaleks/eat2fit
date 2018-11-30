@@ -31,8 +31,9 @@
                     <!-- RD Navbar Nav-->
                     <ul class="rd-navbar-nav">
                         @foreach($topMenu as $menuItem)
-                            <li class="{{ ($model->url == ($menuItem->url ?? $menuItem->page->url)) ? 'active' : '' }}">
-                                <a href="{{$menuItem->url ?? $menuItem->page->url}}">{{$menuItem->name}}</a>
+                            @php($menuItemUrl = (!empty($menuItem->url) ? $menuItem->url : $menuItem->page->url))
+                            <li class="{{ ($model->url == $menuItemUrl) ? 'active' : '' }}">
+                                <a href="{{$menuItemUrl}}">{{$menuItem->name}}</a>
                                 @if (count($menuItem->childrens))
                                     <ul class="rd-navbar-dropdown">
                                         @foreach($menuItem->childrens as $subMenuItem)
