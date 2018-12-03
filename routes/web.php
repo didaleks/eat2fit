@@ -26,17 +26,20 @@ Route::middleware(['web'])->group(function () {
         Route::get('feedback', 'Admin\FeedbackController@index')->name('feedback.index');
 
         Route::prefix('diet')->group(function () {
-            Route::get( 'copy/{id}',   add_controller_ns('DietController@copy'))->name("diet.copy");
+            Route::get('copy/{id}', add_controller_ns('DietController@copy'))->name("diet.copy");
         });
 
         Route::prefix('dish')->group(function () {
-            Route::get( 'copy/{id}',   add_controller_ns('DishController@copy'))->name("dish.copy");
+            Route::get('copy/{id}', add_controller_ns('DishController@copy'))->name("dish.copy");
         });
     });
 
 });
 
-Route::get('catalog', 'DietController@index')->name('catalog');
+Route::prefix('catalog')->group(function () {
+    Route::get('', 'CatalogController@index')->name('catalog');
+    Route::get("{url}", 'CatalogController@show')->where('url', '[A-Za-z0-9/-]+')->name('catalog.show');
+});
 
 // Feedback Form
 Route::post('/feedback/store', 'FeedbackController@store')->name('feedback.store');

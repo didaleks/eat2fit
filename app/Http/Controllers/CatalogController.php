@@ -6,7 +6,7 @@ use App\Models\Diet;
 use App\Models\Page;
 use Illuminate\Support\Facades\Request;
 
-class DietController extends Controller
+class CatalogController extends Controller
 {
     public function index(Request $request)
     {
@@ -29,18 +29,13 @@ class DietController extends Controller
     public function show(Request $request, $url = '/')
     {
         if ($url != '/')
-            $url = '/' . $url;
-        $model = Page::where(['published' => 1, 'url' => $url])->first();
+            $url = '/catalog/' . $url;
 
+        $model = Diet::published()->where(['url' => $url])->with('days.eatings.dishes')->first();
 
         if (!$model)
             abort(404, 'Страница не найдена');
-
-        $params = [
-            'model' => $model
-        ];
-        $view = (isset($model->behavior) && !empty($model->behavior)) ? "page.behaviors.".$model->behavior :  "page.behaviors.default";
-        return view($view, $params);
+        return view('page.behaviors.diet', ['model' => $model]);
     }
 
 }
