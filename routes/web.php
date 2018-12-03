@@ -36,6 +36,11 @@ Route::middleware(['web'])->group(function () {
 
 });
 
+//todo изменение состояния пусть будет post потом
+Route::get('cart-add/{id}/{days_count}', 'CartController@add')->name('cart.add');
+Route::get('cart', 'CartController@index')->name('cart.index');
+Route::get('cart-get', 'CartController@get')->name('cart.get');
+
 Route::prefix('catalog')->group(function () {
     Route::get('', 'CatalogController@index')->name('catalog');
     Route::get("{url}", 'CatalogController@show')->where('url', '[A-Za-z0-9/-]+')->name('catalog.show');
