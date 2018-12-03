@@ -2,9 +2,30 @@
 
 @section('content')
 
+    <!-- Parallax-->
+    <section class="section section-height-800 parallax-container context-dark bg-gray-darkest text-xl-left" data-parallax-img="/images/backgrounds/background-01-1920x900.jpg">
+        <div class="parallax-content">
+            <div class="bg-overlay-black">
+                <div class="container section-30 section-md-95 section-lg-top-120 section-lg-bottom-150">
+                    <div class="d-none d-lg-block">
+                        <h1>{{$model->name}}</h1>
+                    </div>
+                    <!-- List Inline-->
+                    <ul class="list-inline list-inline-dashed list-white text-big p offset-md-top-13">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="health-philosophy.html">About Me</a></li>
+                        <li>Health Coaching Philosophy
+                        </li>
+                    </ul>
+                    <div class="group-xs offset-top-20 offset-lg-top-40">
+                        <a class="btn btn-primary" href="group-coaching.html">Заказать рацион</a>
+                        <a class="btn btn-white-outline" href="contact-me.html">Пробный день</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <h1>Дефолтный шаблон</h1>
-{{--    @dd($model)--}}
     <p>{!! $model->content !!}</p>
     <!-- Page Content-->
     <main class="page-content">
@@ -12,7 +33,7 @@
         <section class="section-95">
             <div class="container">
                 <div class="row justify-content-sm-center">
-                    <div class="col-md-8 col-lg-6 order-lg-1"><img class="img-responsive center-block" src="images/pages/home-01-570x350.jpg" width="570" height="350" alt=""></div>
+                    <div class="col-md-8 col-lg-6 order-lg-1"><img class="img-responsive center-block" src="/images/pages/home-01-570x350.jpg" width="570" height="350" alt=""></div>
                     <div class="col-md-8 col-lg-6 offset-top-34 offset-md-top-0">
                         <div class="inset-lg-left-50 inset-lg-right-50 inset-xl-left-50 inset-xl-right-50">
                             <h1>{{$model->name}}</h1>
@@ -73,7 +94,7 @@
         </section>
         <!-- 3 months with a Health Coach-->
         <!-- Parallax-->
-        <section class="section section-height-800 parallax-container context-dark" data-parallax-img="images/backgrounds/background-15-1920x900.jpg">
+        <section class="section section-height-800 parallax-container context-dark" data-parallax-img="/images/backgrounds/background-15-1920x900.jpg">
             <div class="parallax-content">
                 <div class="bg-overlay-gray-darken">
                     <div class="container section-95">
@@ -153,7 +174,7 @@
             </div>
         </section>
         <!-- Our Skills-->
-        <section class="context-dark" style="background: #191919 url(images/backgrounds/background-03-1920x620.jpg) center/cover no-repeat;">
+        <section class="context-dark" style="background: #191919 url(/images/backgrounds/background-03-1920x620.jpg) center/cover no-repeat;">
             <div class="bg-overlay-green-leaf">
                 <div class="container section-120 section-md-140">
                     <div class="row justify-content-sm-center">
@@ -200,8 +221,8 @@
                 <div class="row justify-content-sm-center offset-top-40">
                     <div class="col-md-10 col-lg-8 col-xl-6">
                         <div class="row justify-content-sm-center">
-                            <div class="col-sm-6"><img class="img-responsive center-block" src="images/pages/praise-01-269x278.jpg" width="269" height="278" alt=""></div>
-                            <div class="col-sm-6 offset-top-30 offset-xs-top-0"><img class="img-responsive center-block" src="images/pages/praise-02-269x278.jpg" width="269" height="278" alt=""></div>
+                            <div class="col-sm-6"><img class="img-responsive center-block" src="/images/pages/praise-01-269x278.jpg" width="269" height="278" alt=""></div>
+                            <div class="col-sm-6 offset-top-30 offset-xs-top-0"><img class="img-responsive center-block" src="/images/pages/praise-02-269x278.jpg" width="269" height="278" alt=""></div>
                         </div>
                     </div>
                     <div class="col-md-10 col-lg-8 col-xl-6 offset-top-40 offset-lg-top-0 text-left">
@@ -275,7 +296,7 @@
         </section>
         <!-- Visit my shop-->
         <!-- Parallax-->
-        <section class="section section-height-800 parallax-container" data-parallax-img="images/backgrounds/background-07-1920x1019.jpg">
+        <section class="section section-height-800 parallax-container" data-parallax-img="/images/backgrounds/background-07-1920x1019.jpg">
             <div class="parallax-content">
                 <div class="container section-110">
                     <div class="row justify-content-sm-center">

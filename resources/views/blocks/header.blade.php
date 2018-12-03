@@ -11,7 +11,7 @@
                     <div class="rd-navbar-panel-inner">
                         <div class="rd-navbar-panel-inner-left">
                             <!-- RD Navbar Brand-->
-                            <div class="rd-navbar-brand"><a class="brand-name" href="index.html"><img class="img-responsive center-block" src="images/logo-134x42.png" width="134" height="42" alt=""></a></div>
+                            <div class="rd-navbar-brand"><a class="brand-name" href="index.html"><img class="img-responsive center-block" src="/images/logo-134x42.png" width="134" height="42" alt=""></a></div>
                         </div>
                         <div class="rd-navbar-panel-inner-right">
                             <!-- List Inline-->
