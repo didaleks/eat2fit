@@ -30,6 +30,7 @@ class Cart
 
         if ($this->items && array_key_exists($id, $this->items)) {
             $storedItem = $this->items[$id];
+            $storedItem['qty'] = $count;
             $storedItem['price'] = $item->price * $storedItem['qty'];
         }
 

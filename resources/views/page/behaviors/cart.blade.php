@@ -36,7 +36,7 @@
                                         <td class="text-gray">{{$item->price}}</td>
                                         <td>
                                             <div class="form-wrap form-wrap-border-none">
-                                                <input class="form-input input-sm" type="number" data-zeros="true"
+                                                <input class="form-input input-sm cart__item_qty" type="number" data-zeros="true"
                                                        value="{{$diet['qty']}}" min="1" max="60">
                                             </div>
                                         </td>

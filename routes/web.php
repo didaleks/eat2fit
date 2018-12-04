@@ -36,7 +36,7 @@ Route::middleware(['web'])->group(function () {
 
 });
 
-Route::post('cart-add/{id}/{days_count}', 'CartController@set')->name('cart.set');
+Route::match(array('GET', 'POST'),'cart-add/{id}/{days_count}', 'CartController@set')->name('cart.set');
 Route::post('cart-remove/{id}', 'CartController@remove')->name('cart.remove');
 Route::post('cart-clear', 'CartController@clear')->name('cart.clear');
 Route::get('cart', 'CartController@index')->name('cart.index');

@@ -2115,6 +2115,12 @@
 		}
     })
 
+	$('.cart-content input.cart__item_qty').change(function () {
+		let val = $(this).val(),
+			id = parseInt($(this).closest('tr').data('id'));
+		cartSet(id, val);
+    })
+
 
 
 }());

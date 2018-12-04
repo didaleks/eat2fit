@@ -42,7 +42,7 @@ class CartController extends Controller
         $cart = new Cart($oldCart);
         $cart->set($diet, $diet->id, $days_count);
         $request->session()->put('cart', $cart);
-        return redirect()->back();
+        return $this->getJsonData();
     }
 
     public function remove(Request $request, $id)
