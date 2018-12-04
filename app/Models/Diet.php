@@ -14,6 +14,7 @@ class Diet extends Page
         'published',
         'behavior',
         'days_count',
+        'price',
         'slug',
         'calories',
         'content',
@@ -76,6 +77,11 @@ class Diet extends Page
                 'label' => '*Количество дней'
             ],
             [
+                'name' => 'price',
+                'type' => 'number',
+                'label' => '*Минимальная цена за один день'
+            ],
+            [
                 'name' => 'calories',
                 'type' => 'number',
                 'label' => '*Среднее число калорий(от 500 до 6000)'
@@ -96,6 +102,7 @@ class Diet extends Page
             'name' => 'required|string|max:255',
             'slug' => 'nullable|string|max:255',
             'days_count' => 'required|integer|between:1,60',
+            'price' => 'required|integer|between:0,99999',
             'calories' => 'integer|between:500,6000',
             'fields' => 'array',
         ];

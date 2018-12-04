@@ -7,38 +7,65 @@
     <main class="page-content">
         <section class="section-95">
             <div class="container">
-                <h2>Корзина</h2>
                 @if($cart && count($cart->items))
-                @foreach(array_column($cart->items, 'item') as $model)
-                    <div class="row justify-content-sm-center offset-top-40">
-                        <div class="col-md-8 col-lg-4">
-                            <!-- Post Box Hover-->
-                            <article class="post-box-xs">
-                                <div class="post-box-xs-img-wrap">
-                                    <div class="bg-image bg-image-1"></div>
-                                </div>
-                                <div class="post-box-xs-caption bg-default">
-                                    <!-- List Inline-->
-                                    <ul class="list-inline list-inline-22 list-inline-dashed-vertical font-weight-bold">
-                                        <li><a class="text-gray text-hover-primary" href="blog-post.html"><span
-                                                        class="text-middle inset-right-7">Street workout</span><span
-                                                        class="icon icon-sm material-design-ico material-design-camera59 text-middle text-gray"></span></a>
-                                        </li>
-                                        <li>{{$model -> name}}</li>
-                                    </ul>
-                                    <div class="post-box-xs-hidden">
-                                        <p class="offset-top-13">Daily movement, in some form, will make you feel
-                                            better each and every day. Your body craves moment. It was built to
-                                            move. That means, we...</p>
-                                    </div>
-                                    <p class="text-big font-weight-bold offset-top-5">. . .</p>
-                                </div>
-                            </article>
+                    <div class="table-responsive offset-top-40">
+                        <table class="table table-custom-md table-default table-bordered-custom text-left">
+                            <tbody>
+                            <tr class="bg-accent">
+                                <th class="inset-xl-left-50 text-white">Название</th>
+                                <th class="text-white">Цена</th>
+                                <th class="text-white">Количество</th>
+                                <th class="text-white">Итого</th>
+                            </tr>
+
+                            @foreach($cart->items as $diet)
+                                @php($item = $diet['item'])
+                                <tr>
+                                    <td>
+                                        <div class="unit align-items-center flex-row unit-spacing-xs">
+                                            <div class="unit-left"><a class="text-silver-chalice" href="{{ route('cart.remove', ['id'=> $item->id ]) }}"><span class="icon icon-xs fa fa-trash text-hover-primary"></span></a></div>
+                                            <div class="unit-body">
+                                                <p><a class="link-decoration-none" href="{{$item->url}}">{{$item->name}}</a></p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="text-gray">{{$item->price}}</td>
+                                    <td>
+                                        <div class="form-wrap form-wrap-border-none">
+                                            <input class="form-input input-sm" type="number" data-zeros="true" value="{{$diet['qty']}}" min="1" max="60">
+                                        </div>
+                                    </td>
+                                    <td class="text-gray">{{$item->price * $diet['qty']}}</td>
+                                </tr>
+                            @endforeach
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row justify-content-sm-end offset-top-30 offset-lg-top-50">
+                        <div class="col-md-6 col-lg-5 col-xl-4">
+                            <div class="table-responsive">
+                                <table class="table table-custom-md table-default table-bordered-custom text-left">
+                                    <tbody>
+                                    <tr class="bg-gray-lighter">
+                                        <th class="font-weight-bold text-gray">Итоги заказа</th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <td>Количество дней:</td>
+                                        <td class="text-gray">{{$cart->getTotalQt()}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Итого к оплате:</td>
+                                        <td class="font-weight-bold text-gray">{{$cart->getTotalPrice()}}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div><a class="btn btn-block btn-primary offset-top-13" href="shop-checkout.html">Proceed to checkout</a>
                         </div>
-                    </div><a class="btn btn-width-200 btn-primary offset-top-13" href="{{route('cart.remove', ['id' => $model->id])}}">
-                        REMOVE
-                    </a>
-                @endforeach
+                    </div>
+                @else
+                    <h2>Ваша корзина пуста</h2>
                 @endif
             </div>
         </section>
