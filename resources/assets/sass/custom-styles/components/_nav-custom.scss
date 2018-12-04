@@ -627,3 +627,22 @@ $vertical-tab-offset: 10px;
 		}
 	}
 }
+
+.rd-navbar-panel {
+	.rd-navbar-panel-inner {
+		ul {
+			li.rd-navbar__cart {
+				sup {
+					border-radius: 50%;
+					width: 20px;
+					height: 20px;
+					display: inline-block;
+					line-height: 20px;
+					text-align: center;
+					top: -14px;
+					right: 13px;
+				}
+			}
+		}
+	}
+}

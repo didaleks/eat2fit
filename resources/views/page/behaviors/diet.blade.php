@@ -18,8 +18,8 @@
                         </li>
                     </ul>
                     <div class="group-xs offset-top-20 offset-lg-top-40">
-                        <a class="btn btn-primary" href="{{route('cart.add', ['id' => $model->id, 'days_count' => 7])}}">Заказать рацион</a>
-                        <a class="btn btn-white-outline" href="{{route('cart.add', ['id' => $model->id, 'days_count' => 1])}}">Пробный день</a>
+                        <a class="btn btn-primary" href="{{route('cart.set', ['id' => $model->id, 'days_count' => 7])}}">Заказать рацион</a>
+                        <a class="btn btn-white-outline" href="{{route('cart.set', ['id' => $model->id, 'days_count' => 1])}}">Пробный день</a>
                     </div>
                 </div>
             </div>

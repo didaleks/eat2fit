@@ -20,7 +20,14 @@
                                 <li><a class="icon icon-xxs icon-circle icon-gray-lighter fa fa-pinterest-p" href="#"></a></li>
                                 <li><a class="icon icon-xxs icon-circle icon-gray-lighter fa fa-soundcloud" href="#"></a></li>
                                 <li><a class="icon icon-xxs icon-circle icon-gray-lighter fa fa-vimeo-square" href="#"></a></li>
-                                <li><a class="icon icon-xxs icon-circle icon-gray-lighter fa fa-shopping-basket" href="#"></a></li>
+                                <li class="rd-navbar__cart">
+                                    <a class="icon icon-xxs icon-circle icon-gray-lighter" href="/cart">
+                                        <span class="white"><i class="fa fa-shopping-basket"></i></span>
+                                    </a>
+                                    <a href="/cart">
+                                        <sup class="title10 round dark bg-light">{{ \App\Models\Cart::getCountItems() }}</sup>
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -32,7 +39,7 @@
                     <ul class="rd-navbar-nav">
                         @foreach($topMenu as $menuItem)
                             @php($menuItemUrl = (!empty($menuItem->url) ? $menuItem->url : $menuItem->page->url))
-                            <li class="{{ ($model->url == $menuItemUrl) ? 'active' : '' }}">
+                            <li class="{{ (isset($model) && $model->url == $menuItemUrl) ? 'active' : '' }}">
                                 <a href="{{$menuItemUrl}}">{{$menuItem->name}}</a>
                                 @if (count($menuItem->childrens))
                                     <ul class="rd-navbar-dropdown">

@@ -13,4 +13,5 @@ yarn-error.log
 /template
 template.zip
 .env
+.idea
 .phpunit.result.cache
