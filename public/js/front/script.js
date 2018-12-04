@@ -2009,4 +2009,53 @@
 		}
 
 	});
+
+	//todo console.log убрать потом
+    function cartSet(id, days_count) {
+        $.ajax({
+            url: `/cart-add/${id}/${days_count}`,
+            method: 'POST',
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        console.log('product setted');
+    }
+
+    function cartRemove(id) {
+        $.ajax({
+            url: `/cart-remove/${id}`,
+            method: 'POST',
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        console.log('product removed');
+    }
+
+    function cartClear() {
+        $.ajax({
+            url: '/cart-clear',
+            method: 'POST',
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        $('.rd-navbar__cart sup.round').text(0);
+        console.log('liked products removed');
+    }
+    
+    function cartGetJson() {
+        $.ajax({
+            url: '/cart-get-json',
+            method: 'GET',
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+			success: function (response) {
+				return response;
+            }
+        });
+    }
+
 }());

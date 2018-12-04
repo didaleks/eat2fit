@@ -36,12 +36,12 @@ Route::middleware(['web'])->group(function () {
 
 });
 
-//todo изменение состояния пусть будет post потом
-Route::get('cart-add/{id}/{days_count}', 'CartController@set')->name('cart.set');
-Route::get('cart-remove/{id}', 'CartController@remove')->name('cart.remove');
-Route::get('cart-clear', 'CartController@clear')->name('cart.clear');
+Route::post('cart-add/{id}/{days_count}', 'CartController@set')->name('cart.set');
+Route::post('cart-remove/{id}', 'CartController@remove')->name('cart.remove');
+Route::post('cart-clear', 'CartController@clear')->name('cart.clear');
 Route::get('cart', 'CartController@index')->name('cart.index');
 Route::get('cart-get', 'CartController@get')->name('cart.get');
+Route::get('cart-get-json', 'CartController@getJsonData')->name('cart.get_json');
 
 Route::prefix('catalog')->group(function () {
     Route::get('', 'CatalogController@index')->name('catalog');

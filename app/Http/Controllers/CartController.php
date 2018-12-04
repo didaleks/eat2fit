@@ -31,6 +31,10 @@ class CartController extends Controller
         }
     }
 
+    public function getJsonData() {
+        return json_encode($this->get()->items, JSON_PRETTY_PRINT);
+    }
+
     public function set(Request $request, $id, $days_count)
     {
         $diet = Diet::find($id);
