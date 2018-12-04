@@ -1,0 +1,14 @@
+.cart {
+  .cart__message {
+    display: none;
+  }
+}
+
+.cart.empty {
+  .cart__message {
+    display: block;
+  }
+  .cart-content {
+    display: none;
+  }
+}
