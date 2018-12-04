@@ -22,77 +22,36 @@ class CartController extends Controller
 
     public function get()
     {
-        if (!Session::has('cart')){
-            return null;
-        } else {
+        if (Session::has('cart')){
             $oldCart = Session::get('cart');
             $cart = new Cart($oldCart);
             return $cart;
+        } else {
+            return null;
         }
     }
 
-
-    public function add(Request $request, $id, $days_count = 7)
+    public function set(Request $request, $id, $days_count)
     {
         $diet = Diet::find($id);
-        $oldCart =$request->session()->has('cart') ? $request->session()->get('cart') : null;
-//        dd($request->session()->get('cart'));
+        $oldCart = $this->get();
         $cart = new Cart($oldCart);
-        $cart->add($diet, $diet->id, $days_count);
+        $cart->set($diet, $diet->id, $days_count);
         $request->session()->put('cart', $cart);
         return redirect()->back();
     }
 
-
-
-
-    public function store(Request $request)
+    public function remove(Request $request, $id)
     {
-        //
+        $oldCart = $request->session()->has('cart') ? $request->session()->get('cart') : null;
+        $cart = new Cart($oldCart);
+        $cart->remove($id);
+        $request->session()->put('cart', $cart);
+        return redirect()->back();
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
+    public function clear()
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        Session::forget('cart');
     }
 }
