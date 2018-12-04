@@ -2017,9 +2017,12 @@
             method: 'POST',
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+			success: function () {
+                console.log('product setted');
             }
         });
-        console.log('product setted');
+
     }
 
     function cartRemove(id) {
@@ -2028,9 +2031,12 @@
             method: 'POST',
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+			success: function () {
+                console.log('product removed');
             }
         });
-        console.log('product removed');
+
     }
 
     function cartClear() {
@@ -2039,10 +2045,12 @@
             method: 'POST',
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+			success: function () {
+                console.log('cart empty');
             }
         });
         $('.rd-navbar__cart sup.round').text(0);
-        console.log('liked products removed');
     }
     
     function cartGetJson() {
@@ -2057,5 +2065,25 @@
             }
         });
     }
+
+    function switchProductButtons() {
+        $('.product-buttons').toggleClass('added');
+	}
+
+    $('.product-buttons__cart-full, .product-buttons__cart-test').click(function () {
+		let id = $(this).data('id'),
+			days_count = $(this).data('days-count'),
+			buttons = $(this).closest('.product-buttons');
+
+        switchProductButtons();
+
+		cartSet(id, days_count);
+    })
+	
+	$('.product-buttons__cart-remove').click(function () {
+        let id = $(this).data('id');
+        switchProductButtons();
+        cartRemove(id);
+    })
 
 }());

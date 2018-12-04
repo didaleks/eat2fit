@@ -17,9 +17,15 @@
                         <li>Health Coaching Philosophy
                         </li>
                     </ul>
-                    <div class="group-xs offset-top-20 offset-lg-top-40">
-                        <a class="btn btn-primary" href="{{route('cart.set', ['id' => $model->id, 'days_count' => 7])}}">Заказать рацион</a>
-                        <a class="btn btn-white-outline" href="{{route('cart.set', ['id' => $model->id, 'days_count' => 1])}}">Пробный день</a>
+                    <div class="group-xs offset-top-20 offset-lg-top-40 product-buttons {{ inCart($model->id)? 'added' : '' }}">
+                        <span class="btn btn-primary product-buttons__item product-buttons__cart-full"
+                              data-id="{{$model->id}}"
+                              data-days-count="7">Заказать рацион</span>
+                        <span class="btn btn-white-outline product-buttons__item product-buttons__cart-test"
+                              data-id="{{$model->id}}"
+                              data-days-count="1">Пробный день</span>
+                        <span class="btn btn-white-outline product-buttons__item product-buttons__cart-remove"
+                              data-id="{{$model->id}}">Убрать из корзины</span>
                     </div>
                 </div>
             </div>
