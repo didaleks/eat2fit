@@ -111,6 +111,24 @@ textarea.form-input {
 	color: #585858;
 }
 
+.form-time {
+	.stepper {
+		margin-bottom: 0px;
+	}
+}
+
+.datepicker-wrapper {
+	span.input-group-append {
+		button.btn {
+			max-width: 38px;
+			min-width: 38px;
+			padding: 0px;
+			border-radius: 0px;
+			height: 100%;
+		}
+	}
+}
+
 // Form validation
 // -------------------------
 .form-validation {

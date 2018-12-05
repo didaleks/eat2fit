@@ -2124,6 +2124,15 @@
 		cartSet(id, qty);
     })
 
+	$('#contact-us-time').change(function () {
+		let val = $(this).val();
+		(val > 59) ? $(this).val('00') : '';
+        (val == 0) ? $(this).val('00') : '';
+
+
+		// if ()
+    })
+
 
 
 }());

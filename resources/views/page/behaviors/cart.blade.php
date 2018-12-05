@@ -79,7 +79,7 @@
                 @csrf
                 <input type="hidden" name="type" value="cart">
                 {{--todo убрать дефолтные значения из полей --}}
-                <div class="row justify-content-sm-center">
+                <div class="row justify-content-sm-left">
                   <div class="col-sm-12 inset-sm-right-15 inset-sm-left-15">
                     <div class="form-wrap">
                       <label class="form-label-outside required"
@@ -140,15 +140,33 @@
                   <div class="col-sm-12 offset-top-10 text-xl-left">
                     <label class="form-label-outside">Дата доставки</label>
                   </div>
-                  <div class="col-sm-12 offset-top-10 text-xl-left">
-                  <input id="datepicker" width="276" />
-                  <script>
-                      $('#datepicker').datepicker({
-                          uiLibrary: 'bootstrap4',
-                          locale: 'ru-ru',
-                          format: 'dd mmm yyyy'
-                      });
-                  </script>
+                  <div class="col-sm-6 offset-top-10 text-xl-left datepicker-wrapper">
+                    <input class="form-input" id="datepicker" width="300"/>
+                    <script>
+                        $('#datepicker').datepicker({
+                            uiLibrary: 'bootstrap4',
+                            locale: 'ru-ru',
+                            format: 'dd mmm yyyy'
+                        });
+                    </script>
+                  </div>
+                  <div class="col-sm-6 offset-top-10 text-xl-left form-time">
+                    <div class="form-wrap">
+                      <label class="form-label-outside" for="contact-us-first-name">Время:</label>
+                      <input class="form-input" id="contact-us-email"
+                             type="number"
+                             min="09"
+                             max="22"
+                             data-check="^\d+$"
+                             value="09">
+                      <input class="form-input" id="contact-us-time"
+                             type="number"
+                             min="00"
+                             max="60"
+                             step="10"
+                             data-check="^\d+$"
+                             value="00">
+                    </div>
                   </div>
                   <div class="col-sm-12 offset-top-10 text-center text-xl-left">
                     <div class="form-wrap">
