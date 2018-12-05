@@ -1874,17 +1874,16 @@
 						}
 					},
 					error: function (result) {
-						if (result.responseText.length < 100) {
+						if (result.responseText.length < 400) {
                             var output = $("#" + $(plugins.rdMailForm[this.extraData.counter]).attr("data-form-output")),
                                 form = $(plugins.rdMailForm[this.extraData.counter]);
-                            output.text(result.responseText);
+                            output.html(result.responseText);
                             form.removeClass('form-in-process');
-
-                            setTimeout(function () {
-                                output.removeClass("active error success");
-                                form.removeClass('success');
-                            }, 3500);
                         }
+                        setTimeout(function () {
+                            output.removeClass("active error success");
+                            form.removeClass('success');
+                        }, 3500);
 					},
 					success: function (result) {
 						var form = $(plugins.rdMailForm[this.extraData.counter]),
