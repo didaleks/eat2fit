@@ -29,29 +29,24 @@
                     <div class="row justify-content-sm-center">
                         <div class="col-sm-12 inset-sm-right-15 inset-sm-left-15">
                             <div class="form-wrap">
-                                <label class="form-label" for="contact-us-first-name">Имя и фамилия</label>
-                                <input class="form-input" id="contact-us-first-name" type="text" name="name"
+                                <input class="form-input" id="contact-us-first-name" type="text" name="name" placeholder="Имя и фамилия"
                                        data-constraints="@Required" value="mail@demolink.org">
                             </div>
                         </div>
                         <div class="col-sm-6 offset-top-10 inset-sm-right-7">
                             <div class="form-wrap">
-                                <label class="form-label" for="contact-us-email">Email</label>
-                                <input class="form-input" id="contact-us-email" type="email" name="email"
+                                <input class="form-input" id="contact-us-email" type="email" name="email" placeholder="Email"
                                        data-constraints="@Email @Required" value="mail@demolink.org">
                             </div>
                         </div>
                         <div class="col-sm-6 offset-top-10 inset-sm-left-7">
                             <div class="form-wrap">
-                                <label class="form-label" for="contact-us-phone">Телефон</label>
-                                <input class="form-input" id="contact-us-phone" type="text" name="phone"
-                                       data-constraints="@Required" value="323232323">
+                                <input class="form-input" id="contact-us-phone" type="text" name="phone" placeholder="Телефон" required value="">
                             </div>
                         </div>
                         <div class="col-sm-12 offset-top-10 text-center text-xl-left">
                             <div class="form-wrap">
-                                <label class="form-label" for="contact-us-message">Сообщение(необязательно)</label>
-                                <textarea class="form-input" id="contact-us-message" name="message">mail@demolink.org</textarea>
+                                <textarea class="form-input" id="contact-us-message" name="message" placeholder="Ваше сообщение(необязательно)">mail@demolink.org</textarea>
                             </div>
                         </div>
                     </div>

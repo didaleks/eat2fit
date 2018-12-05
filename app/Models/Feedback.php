@@ -35,8 +35,8 @@ class Feedback extends Model
     {
         return [
             'name.required' => 'Имя обязательно для заполнения',
-            'email.required' => 'Телефон обязателен для заполнения',
-            'phone.required' => 'Email обязателен для заполнения',
+            'email.required' => 'Email обязателен для заполнения',
+            'phone.required' => 'Телефон обязателен для заполнения',
             'privacy-policy.accepted' => 'Необходимо согласиться с условиями обработки данных'
         ];
     }
