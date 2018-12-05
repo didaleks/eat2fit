@@ -63,7 +63,11 @@ class Cart
 
     public function getTotalPrice()
     {
-        return array_sum(array_column($this->items, 'price'));
+        $summ = 0;
+        foreach ($this->items as $diet) {
+            $summ += ($diet['qty'] * $diet['item']->price);
+        };
+        return $summ;
     }
 
     public static function getCountItems()

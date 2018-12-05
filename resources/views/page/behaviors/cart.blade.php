@@ -4,7 +4,7 @@
 
     <h1>Корзина</h1>
     <!-- Page Content-->
-    <main class="page-content cart {{count($cart->items)?: 'empty'}}">
+    <main class="page-content cart {{isset($cart) && count($cart->items)?: 'empty'}}">
         <section class="section-95">
             <div class="container">
                 <div class="cart-content">
@@ -33,14 +33,14 @@
                                                 </div>
                                             </div>
                                         </td>
-                                        <td class="text-gray">{{$item->price}}</td>
+                                        <td class="text-gray cart__item_price">{{$item->price}}</td>
                                         <td>
                                             <div class="form-wrap form-wrap-border-none">
                                                 <input class="form-input input-sm cart__item_qty" type="number" data-zeros="true"
                                                        value="{{$diet['qty']}}" min="1" max="60">
                                             </div>
                                         </td>
-                                        <td class="text-gray">{{$item->price * $diet['qty']}}</td>
+                                        <td class="text-gray cart__item_summ">{{$item->price * $diet['qty']}}</td>
                                     </tr>
                                 @endforeach
 
