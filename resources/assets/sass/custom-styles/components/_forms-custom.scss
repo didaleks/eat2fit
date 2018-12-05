@@ -98,6 +98,19 @@ textarea.form-input {
 	}
 }
 
+.form-label-outside.required:after {
+	content: "*";
+	color: $primary;
+	font-size: 17px;
+}
+
+.form-section-heading {
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.2;
+	color: #585858;
+}
+
 // Form validation
 // -------------------------
 .form-validation {
