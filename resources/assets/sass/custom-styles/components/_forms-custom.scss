@@ -117,7 +117,24 @@ textarea.form-input {
 	}
 }
 
+.box-xxs {
+  width: 33%;
+  border: 1px solid $gray-300;
+  &.active {
+	  border: 1px solid $primary;
+  }
+
+  &.box-pay {
+    .form-wrap {
+
+    }
+  }
+}
+
 .datepicker-wrapper {
+	input {
+		cursor: pointer;
+	}
 	span.input-group-append {
 		button.btn {
 			max-width: 38px;
@@ -125,6 +142,7 @@ textarea.form-input {
 			padding: 0px;
 			border-radius: 0px;
 			height: 100%;
+			cursor: pointer;
 		}
 	}
 }

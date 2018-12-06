@@ -2128,10 +2128,12 @@
 		let val = $(this).val();
 		(val > 59) ? $(this).val('00') : '';
         (val == 0) ? $(this).val('00') : '';
-
-
-		// if ()
     })
+
+	$('.box-xxs input[type=radio]').change(function () {
+		$('.box-xxs').toggleClass('active');
+        }
+	)
 
 
 

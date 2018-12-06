@@ -49,30 +49,6 @@
               </table>
             </div>
 
-            {{--<div class="row justify-content-sm-end offset-top-30 offset-lg-top-50">--}}
-            {{--<div class="col-md-6 col-lg-5 col-xl-4">--}}
-            {{--<div class="table-responsive">--}}
-            {{--<table class="table table-custom-md table-default table-bordered-custom text-left">--}}
-            {{--<tbody>--}}
-            {{--<tr class="bg-gray-lighter">--}}
-            {{--<th class="font-weight-bold text-gray">Итоги заказа</th>--}}
-            {{--<th></th>--}}
-            {{--</tr>--}}
-            {{--<tr>--}}
-            {{--<td>Количество дней:</td>--}}
-            {{--<td class="text-gray">{{$cart->getTotalQt()}}</td>--}}
-            {{--</tr>--}}
-            {{--<tr>--}}
-            {{--<td>Итого к оплате:</td>--}}
-            {{--<td class="font-weight-bold text-gray">{{$cart->getTotalPrice()}}</td>--}}
-            {{--</tr>--}}
-            {{--</tbody>--}}
-            {{--</table>--}}
-            {{--</div>--}}
-            {{--<a class="btn btn-block btn-primary offset-top-13" href="shop-checkout.html">Proceed to--}}
-            {{--checkout</a>--}}
-            {{--</div>--}}
-            {{--</div>--}}
 
             <div class="col-md-8 col-lg-8 offset-top-40 offset-md-top-0">
               <form class="text-left offset-top-20" method="post" action="{{ route('feedback.store') }}">
@@ -168,11 +144,59 @@
                              value="00">
                     </div>
                   </div>
+                  <div class="com-sm-4 ml-3 box-xxs box-pay text-left offset-top-20  active">
+                    <div class="form-wrap">
+                      <label class="radio-inline font-weight-bold text-gray">
+                        <input name="input-group-radio" value="radio-1" type="radio" checked>Cheque Payment
+                      </label>
+                      <p class="offset-top-20">Please send your cheque to Store Name, Store Street, Store Town, Store
+                        State / County, Store Postcode.</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 d-inline-block box-xxs box-pay text-left  offset-top-20">
+                    <div class="form-wrap">
+                      <label class="radio-inline font-weight-bold text-gray">
+                        <input name="input-group-radio" value="radio-2" type="radio">PayPal
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-sm-3 d-inline-block offset-top-20 ml-3 p-0">
+                    <a href="#">Подробности об оплате</a>
+                    <a href="#">Подробности о доставке</a>
+                  </div>
                   <div class="col-sm-12 offset-top-10 text-center text-xl-left">
                     <div class="form-wrap">
                       <label class="form-label-outside" for="contact-us-message">Комментарии к
                         заказу:</label>
                       <textarea class="form-input" id="contact-us-message" name="message">mail@demolink.org</textarea>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 offset-top-10 inset-sm-right-7">
+                    <div class="form-wrap">
+                      <label class="form-label-outside" for="contact-us-first-name">Есть купон?</label>
+                      <input class="form-input form-control-has-validation form-control-last-child" id="contact-us-"
+                             type="text" name="" placeholder="" value=""><span class="form-validation"></span>
+                    </div>
+                  </div>
+                  <div class="col-md-4"></div>
+                  <div class="col-md-4 col-lg-5 col-xl-4 offset-lg-top-40 justify-content-sm-end">
+                    <div class="table-responsive">
+                      <table class="table table-custom-md table-default table-bordered-custom text-left">
+                        <tbody>
+                        <tr class="bg-gray-lighter">
+                          <th class="font-weight-bold text-gray">Итоги заказа</th>
+                          <th></th>
+                        </tr>
+                        <tr>
+                          <td>Количество дней:</td>
+                          <td class="text-gray">{{$cart->getTotalQt()}}</td>
+                        </tr>
+                        <tr>
+                          <td>Итого к оплате:</td>
+                          <td class="font-weight-bold text-gray">{{$cart->getTotalPrice()}}</td>
+                        </tr>
+                        </tbody>
+                      </table>
                     </div>
                   </div>
                 </div>
@@ -188,7 +212,7 @@
                     </div>
                   </div>
                   <div class="text-center text-lg-right offset-top-10">
-                    <button class="btn btn-primary" type="submit">Отправить</button>
+                    <button class="btn btn-primary" type="submit">Подтвердить заказ</button>
                   </div>
                 </div>
               </form>
