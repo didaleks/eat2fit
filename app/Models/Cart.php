@@ -9,8 +9,8 @@ class Cart
     public $items;
 
     //I mean $totalQuantity
-    public $totalQt = 0; //Количество дней
-    public $totalItemsQt = 0; //Количество дней
+    public $totalQt = 0; //Количество дней из всех рационов в корзине
+    public $totalItemsQt = 0; //Количество рационов в корзине
     public $totalPrice = 0; //Цена за все дни
 
     public function __construct($oldCart)
