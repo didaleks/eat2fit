@@ -1,5 +1,5 @@
 <!-- Contact Us-->
-<section class="section-95 section-md-bottom-45">
+<section class="section-95 section-md-bottom-45 footer_contact_form">
     <div class="container">
         <div class="row justify-content-sm-center justify-content-lg-start text-lg-left">
             <div class="col-md-10 col-lg-3">

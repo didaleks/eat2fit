@@ -1,12 +1,31 @@
 @extends('layouts.app')
 
 @section('content')
+  <!-- Parallax-->
+  <section class="section section-height-800 parallax-container context-dark bg-gray-darkest text-xl-left" data-parallax-img="images/backgrounds/background-01-1920x900.jpg">
+    <div class="parallax-content">
+      <div class="bg-overlay-black">
+        <div class="container section-30 section-md-95 section-lg-top-120 section-lg-bottom-150">
+          <div class="d-none d-lg-block">
+            <h1>Shopping Cart</h1>
+          </div>
+          <!-- List Inline-->
+          <ul class="list-inline list-inline-dashed list-white text-big p offset-md-top-13">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop-category.html">Shop</a></li>
+            <li>Shopping Cart
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <h1>Корзина</h1>
   <!-- Page Content-->
-  <main class="page-content cart {{isset($cart) && count($cart->items)?: 'empty'}}">
+  <main class="page-content cart {{(isset($cart) && count($cart->items))? '': 'empty'}}">
     <section class="section-95">
       <div class="container">
+        <h2>Оформить заказ</h2>
         <div class="cart-content">
           @if($cart && count($cart->items))
             <div class="table-responsive offset-top-40">
@@ -50,7 +69,7 @@
             </div>
 
 
-            <div class="col-md-8 col-lg-8 offset-top-40 offset-md-top-0">
+            <div class="col-md-12 col-lg-8 offset-top-40 offset-md-top-0">
               <form class="text-left offset-top-20" method="post" action="{{ route('feedback.store') }}">
                 @csrf
                 <input type="hidden" name="type" value="cart">
@@ -144,7 +163,7 @@
                              value="00">
                     </div>
                   </div>
-                  <div class="com-sm-4 ml-3 box-xxs box-pay text-left offset-top-20  active">
+                  <div class="com-md-4 col-sm-6 ml-3 box-xxs box-pay text-left offset-top-20  active">
                     <div class="form-wrap">
                       <label class="radio-inline font-weight-bold text-gray">
                         <input name="input-group-radio" value="radio-1" type="radio" checked>Cheque Payment
@@ -153,7 +172,7 @@
                         State / County, Store Postcode.</p>
                     </div>
                   </div>
-                  <div class="col-sm-4 d-inline-block box-xxs box-pay text-left  offset-top-20">
+                  <div class="col-md-4 col-sm-6 d-inline-block box-xxs box-pay text-left  offset-top-20">
                     <div class="form-wrap">
                       <label class="radio-inline font-weight-bold text-gray">
                         <input name="input-group-radio" value="radio-2" type="radio">PayPal
@@ -179,7 +198,7 @@
                     </div>
                   </div>
                   <div class="col-md-4"></div>
-                  <div class="col-md-4 col-lg-5 col-xl-4 offset-lg-top-40 justify-content-sm-end">
+                  <div class="col-md-4 col-lg-5 col-xl-4 offset-top-40 justify-content-sm-end">
                     <div class="table-responsive">
                       <table class="table table-custom-md table-default table-bordered-custom text-left">
                         <tbody>
@@ -214,6 +233,9 @@
                   <div class="text-center text-lg-right offset-top-10">
                     <button class="btn btn-primary" type="submit">Подтвердить заказ</button>
                   </div>
+                </div>
+                <div class="col-md-12 p-0 d-flex offset-top-10">
+                  <p>Поля, отмеченные символом <label class="form-label-outside required"></label>, обязательны для заполнения</p>
                 </div>
               </form>
             </div>

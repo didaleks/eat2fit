@@ -14,6 +14,12 @@ label {
 	font-weight: 400;
 }
 
+form {
+	button.btn {
+		cursor: pointer;
+	}
+}
+
 // Common form controls
 // --------------------------------------------------
 
@@ -118,7 +124,6 @@ textarea.form-input {
 }
 
 .box-xxs {
-  width: 33%;
   border: 1px solid $gray-300;
   &.active {
 	  border: 1px solid $primary;
