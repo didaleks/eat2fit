@@ -150,12 +150,14 @@
                       <label class="form-label-outside" for="contact-us-first-name">Время:</label>
                       <input class="form-input" id="contact-us-email"
                              type="number"
+                             readonly
                              min="09"
                              max="22"
                              data-check="^\d+$"
                              value="09">
                       <input class="form-input" id="contact-us-time"
                              type="number"
+                             readonly
                              min="00"
                              max="60"
                              step="10"
@@ -163,7 +165,7 @@
                              value="00">
                     </div>
                   </div>
-                  <div class="com-md-4 col-sm-6 ml-3 box-xxs box-pay text-left offset-top-20  active">
+                  <div class="col-md-4 col-sm-6 ml-3 box-xxs box-pay text-left offset-top-20  active">
                     <div class="form-wrap">
                       <label class="radio-inline font-weight-bold text-gray">
                         <input name="input-group-radio" value="radio-1" type="radio" checked>Cheque Payment
@@ -172,7 +174,7 @@
                         State / County, Store Postcode.</p>
                     </div>
                   </div>
-                  <div class="col-md-4 col-sm-6 d-inline-block box-xxs box-pay text-left  offset-top-20">
+                  <div class="col-md-4 col-sm-6 ml-3 ml-md-0 d-inline-block box-xxs box-pay text-left offset-sm-top-20">
                     <div class="form-wrap">
                       <label class="radio-inline font-weight-bold text-gray">
                         <input name="input-group-radio" value="radio-2" type="radio">PayPal
@@ -199,7 +201,7 @@
                   </div>
                   <div class="col-md-4"></div>
                   <div class="col-md-4 col-lg-5 col-xl-4 offset-top-40 justify-content-sm-end">
-                    <div class="table-responsive">
+                    <div class="table-responsive total-cart">
                       <table class="table table-custom-md table-default table-bordered-custom text-left">
                         <tbody>
                         <tr class="bg-gray-lighter">
@@ -207,12 +209,8 @@
                           <th></th>
                         </tr>
                         <tr>
-                          <td>Количество дней:</td>
-                          <td class="text-gray">{{$cart->getTotalQt()}}</td>
-                        </tr>
-                        <tr>
                           <td>Итого к оплате:</td>
-                          <td class="font-weight-bold text-gray">{{$cart->getTotalPrice()}}</td>
+                          <td class="font-weight-bold text-gray total-cart__summ">{{$cart->getTotalPrice()}}</td>
                         </tr>
                         </tbody>
                       </table>

@@ -2,6 +2,11 @@
   .cart__message {
     display: none;
   }
+  form {
+    .form-input[readonly] {
+      background-color: inherit;
+    }
+  }
 }
 
 .cart.empty {
