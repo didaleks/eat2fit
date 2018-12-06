@@ -24,6 +24,13 @@ class EatingType extends Page
 
     protected $attributes = [];
 
+    public function validatorRules($data)
+    {
+        return [
+            'name' => 'required'
+        ];
+    }
+
     public function formFields()
     {
         $fields = [

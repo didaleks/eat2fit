@@ -1,0 +1,17 @@
+.product-buttons {
+  &__item {
+    cursor: pointer;
+  }
+  .product-buttons__cart-remove {
+    display: none;
+  }
+}
+
+.product-buttons.added {
+  .product-buttons__cart-full, .product-buttons__cart-test {
+    display: none;
+  }
+  .product-buttons__cart-remove {
+    display: inline-block;
+  }
+}

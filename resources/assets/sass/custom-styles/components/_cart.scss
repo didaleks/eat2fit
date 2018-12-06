@@ -1,0 +1,19 @@
+.cart {
+  .cart__message {
+    display: none;
+  }
+  form {
+    .form-input[readonly] {
+      background-color: inherit;
+    }
+  }
+}
+
+.cart.empty {
+  .cart__message {
+    display: block;
+  }
+  .cart-content {
+    display: none;
+  }
+}

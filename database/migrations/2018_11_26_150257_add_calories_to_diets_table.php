@@ -14,7 +14,7 @@ class AddCaloriesToDietsTable extends Migration
     public function up()
     {
         Schema::table('diets', function (Blueprint $table) {
-            //
+            $table->integer('calories')->nullable();
         });
     }
 

@@ -4,9 +4,18 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use LaravelAdmin\Models\Page;
+use App\Traits\BaseMethods;
+use Illuminate\Validation\Rule;
 
 class Day extends Page
 {
+    use BaseMethods;
+
+    protected $fillable = [
+        'diet_id',
+        'number'
+    ];
+
     protected $attributes = [];
 
     public function diet()
@@ -17,6 +26,21 @@ class Day extends Page
     public function eatings()
     {
         return $this->hasMany('App\Models\Eating');
+    }
+
+    /**
+     * Нельзя создать 2 одинаковых дня для одного рациона
+     * @param $data
+     * @return array
+     */
+    public function validatorRules($data)
+    {
+        return [
+            'diet_id' => 'required',
+            'number' => Rule::unique('days')->where(function ($query) use ($data) {
+                return $query->where('diet_id', $data->diet_id);
+            })
+        ];
     }
 
     public function formFields()

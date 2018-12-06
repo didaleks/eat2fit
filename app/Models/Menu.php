@@ -6,6 +6,8 @@ namespace App\Models;
 class Menu extends \LaravelAdmin\Models\Menu
 {
 //  todo Если особых изменений не будет, то можно подумать над тем чтобы вовсе удалить эту модель
+
+
     public function formFields()
     {
         $fields = [

@@ -2,12 +2,17 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Day;
 use App\Models\Diet;
+use App\Traits\ControllerValidateMethods;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class DayController extends \LaravelAdmin\Controllers\BaseAdminController
 {
+    use ControllerValidateMethods;
+
     public function create()
     {
         return view()->first(["admin.{$this->name}.create", "admin::{$this->name}.create", 'admin::base.create'], [
@@ -33,11 +38,25 @@ class DayController extends \LaravelAdmin\Controllers\BaseAdminController
 
     public function store(Request $request)
     {
-        $model = new $this->model;
-        $model->diet_id = $request->get('diet_id');
-        $model->number = $request->get('number');
-        $model->save();
+        $model = new Day();
+        $rules = $model->validatorRules($request);
+        $validator = Validator::make(Input::all(), $rules);
+        if ($validator->fails())
+        {
+            $errors = [];
+            foreach ($validator->errors()->all() as $error)
+                $errors[$error] = $error;
+
+            $info =  implode('</br>', $errors);
+
+            session()->flash('flash_error', $info);
+            return back();
+        }
+
+        $model->fill($request->all())->save();
+        session()->flash('flash_success', 'День успешно создан!');
         return redirect(route('day.edit', $model->id));
     }
+
 
 }

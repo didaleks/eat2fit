@@ -4,9 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use LaravelAdmin\Models\Page;
+use App\Traits\BaseMethods;
+use Illuminate\Validation\Rule;
 
 class Eating extends Page
 {
+    use BaseMethods;
+
     protected $attributes = [];
 
     protected $fillable = [
@@ -19,6 +23,16 @@ class Eating extends Page
         'eating_type_id',
         'day_id'
     ];
+
+    public function validatorRules($data)
+    {
+        return [
+            'day_id' => 'required',
+            'eating_type_id' => Rule::unique('eatings')->where(function ($query) use ($data) {
+                return $query->where('day_id', $data->day_id);
+            })
+        ];
+    }
 
     public function formFields()
     {

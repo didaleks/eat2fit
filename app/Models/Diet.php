@@ -2,17 +2,21 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use App\Traits\BaseMethods;
 use LaravelAdmin\Models\Page;
 
 class Diet extends Page
 {
+    use BaseMethods;
+
     protected $fillable = [
         'name',
         'published',
         'behavior',
         'days_count',
+        'price',
         'slug',
+        'calories',
         'content',
         'fields',
         'meta_title',
@@ -45,7 +49,7 @@ class Diet extends Page
             [
                 'name' => 'name',
                 'type' => 'input',
-                'label' => 'Название'
+                'label' => '*Название'
             ],
             [
                 'name' => 'published',
@@ -55,9 +59,9 @@ class Diet extends Page
             [
                 'name' => 'slug',
                 'type' => 'input',
-                'label' => 'Slug'
+                'label' => 'Slug(может быть сформирован автоматически)'
             ],
-            'image' =>  [
+            'image' => [
                 'name' => 'fields[image]',
                 'type' => 'image',
                 'label' => 'Картинка'
@@ -70,12 +74,17 @@ class Diet extends Page
             [
                 'name' => 'days_count',
                 'type' => 'number',
-                'label' => 'Количество дней'
+                'label' => '*Количество дней'
+            ],
+            [
+                'name' => 'price',
+                'type' => 'number',
+                'label' => '*Минимальная цена за один день'
             ],
             [
                 'name' => 'calories',
                 'type' => 'number',
-                'label' => 'Среднее число калорий'
+                'label' => '*Среднее число калорий(от 500 до 6000)'
             ],
             'meta_title',
             'meta_description',
@@ -93,6 +102,7 @@ class Diet extends Page
             'name' => 'required|string|max:255',
             'slug' => 'nullable|string|max:255',
             'days_count' => 'required|integer|between:1,60',
+            'price' => 'required|integer|between:0,99999',
             'calories' => 'integer|between:500,6000',
             'fields' => 'array',
         ];
@@ -155,6 +165,32 @@ class Diet extends Page
 
     }
 
+    public function scopeVegan($query)
+    {
+        return $query->whereHas('categories', function ($query) {
+            $query->where('slug', 'like', 'veg%');
+        });
+    }
+
+    public function scopeProtein($query)
+    {
+        return $query->whereHas('categories', function ($query) {
+            $query->where('slug', 'like', 'prote%');
+        });
+    }
+
+    public function scopeLowCalories($query)
+    {
+        return $query->whereHas('categories', function ($query) {
+            $query->where('slug', 'like', 'low-cal%');
+        });
+    }
+
+    public function fullUrl()
+    {
+        return '/' . 'catalog/' . trim($this->slug, '/');
+    }
+
     /**
      * Синхронизизирует связи
      */
@@ -171,7 +207,8 @@ class Diet extends Page
      * @param $category
      * @return mixed
      */
-    public function hasCategory($category) {
+    public function hasCategory($category)
+    {
         return $this->categories->contains($category);
     }
 }

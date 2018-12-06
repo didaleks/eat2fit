@@ -3,9 +3,12 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Traits\BaseMethods;
 
 class Page extends \LaravelAdmin\Models\Page
 {
+    use BaseMethods;
+
     public function formFields()
     {
         switch ($this->behavior) {

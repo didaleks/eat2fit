@@ -4,16 +4,27 @@ namespace App\Http\Controllers\Admin;
 
 use App\Models\Day;
 use App\Models\Eating;
+use App\Traits\ControllerValidateMethods;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Validator;
 
 class EatingController extends \LaravelAdmin\Controllers\BaseAdminController
 {
+    use ControllerValidateMethods;
+
     public function update(Request $request, $id)
     {
         $model = $this->model::findOrFail($id);
         $model->eating_type_id = $request->eating_type_id;
         $model->day_id = $request->day_id;
+
+        $rules = $this->model::find($id)->validatorRules($request);
+        $validator = Validator::make(Input::all(), $rules);
+
+        if (!$this->isValid($validator)){
+            return back()->withInput()->withErrors($validator);
+        };
 
         $dishes_sync_data = []; //Массив в который добавляем данные по синхронизации связей
         foreach (explode(',', $request['dishes-select-ids']) as $key => $dish_id) {
@@ -60,7 +71,16 @@ class EatingController extends \LaravelAdmin\Controllers\BaseAdminController
 
     public function store(Request $request)
     {
+        $model = new $this->model;
+        $rules = $model->validatorRules($request);
+        $validator = Validator::make(Input::all(), $rules);
+
+        if (!$this->isValid($validator)){
+            return back()->withInput()->withErrors($validator);
+        };
+
         $model = $this->model::create($request->all());
+        session()->flash('flash_success', 'Успешно создано!');
         return redirect(route('eating.edit', $model->id));
     }
 }

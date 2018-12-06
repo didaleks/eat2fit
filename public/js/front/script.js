@@ -65,6 +65,7 @@
 	// Initialize scripts that require a finished document
 	$document.ready(function () {
 		isNoviBuilder = window.xMode;
+        $("input[name='phone']").mask("+7 (999) 999-9999");
 
 		/**
 		 * @desc Attach form validation to elements
@@ -106,19 +107,19 @@
 			var regularConstraintsMessages = [
 				{
 					type: regula.Constraint.Required,
-					newMessage: "The text field is required."
+					newMessage: "Поле обязательно для заполнения."
 				},
 				{
 					type: regula.Constraint.Email,
-					newMessage: "The email is not a valid email."
+					newMessage: "Невалидный email."
 				},
 				{
 					type: regula.Constraint.Numeric,
-					newMessage: "Only numbers are required"
+					newMessage: "Невалидный номер телефона"
 				},
 				{
 					type: regula.Constraint.Selected,
-					newMessage: "Please choose an option."
+					newMessage: "Пожалуйста выберите вариант."
 				}
 			];
 
@@ -1852,9 +1853,6 @@
 						"counter": i
 					},
 					beforeSubmit: function (arr, $form, options) {
-						if (isNoviBuilder)
-							return;
-
 						var form = $(plugins.rdMailForm[this.extraData.counter]),
 								inputs = form.find("[data-constraints]"),
 								output = $("#" + form.attr("data-form-output")),
@@ -1865,49 +1863,10 @@
 
 						if (isValidated(inputs, captcha)) {
 
-							// veify reCaptcha
-							if (captcha.length) {
-								var captchaToken = captcha.find('.g-recaptcha-response').val(),
-										captchaMsg = {
-											'CPT001': 'Please, setup you "site key" and "secret key" of reCaptcha',
-											'CPT002': 'Something wrong with google reCaptcha'
-										};
-
-								formHasCaptcha = true;
-
-								$.ajax({
-									method: "POST",
-									url: "bat/reCaptcha.php",
-									data: {'g-recaptcha-response': captchaToken},
-									async: false
-								})
-								.done(function (responceCode) {
-									if (responceCode !== 'CPT000') {
-										if (output.hasClass("snackbars")) {
-											output.html('<p><span class="icon text-middle mdi mdi-check icon-xxs"></span><span>' + captchaMsg[responceCode] + '</span></p>')
-
-											setTimeout(function () {
-												output.removeClass("active");
-											}, 3500);
-
-											captchaFlag = false;
-										} else {
-											output.html(captchaMsg[responceCode]);
-										}
-
-										output.addClass("active");
-									}
-								});
-							}
-
-							if (!captchaFlag) {
-								return false;
-							}
-
 							form.addClass('form-in-process');
 
 							if (output.hasClass("snackbars")) {
-								output.html('<p><span class="icon text-middle fa fa-circle-o-notch fa-spin icon-xxs"></span><span>Sending</span></p>');
+								output.html('<p><span class="icon text-middle fa fa-circle-o-notch fa-spin icon-xxs"></span><span>Отправка</span></p>');
 								output.addClass("active");
 							}
 						} else {
@@ -1915,23 +1874,18 @@
 						}
 					},
 					error: function (result) {
-						if (isNoviBuilder)
-							return;
-
-						var output = $("#" + $(plugins.rdMailForm[this.extraData.counter]).attr("data-form-output")),
-								form = $(plugins.rdMailForm[this.extraData.counter]);
-
-						output.text(msg[result]);
-						form.removeClass('form-in-process');
-
-						if (formHasCaptcha) {
-							grecaptcha.reset();
-						}
+						if (result.responseText.length < 400) {
+                            var output = $("#" + $(plugins.rdMailForm[this.extraData.counter]).attr("data-form-output")),
+                                form = $(plugins.rdMailForm[this.extraData.counter]);
+                            output.html(result.responseText);
+                            form.removeClass('form-in-process');
+                        }
+                        setTimeout(function () {
+                            output.removeClass("active error success");
+                            form.removeClass('success');
+                        }, 3500);
 					},
 					success: function (result) {
-						if (isNoviBuilder)
-							return;
-
 						var form = $(plugins.rdMailForm[this.extraData.counter]),
 								output = $("#" + form.attr("data-form-output")),
 								select = form.find('select');
@@ -1940,25 +1894,13 @@
 						.addClass('success')
 						.removeClass('form-in-process');
 
-						if (formHasCaptcha) {
-							grecaptcha.reset();
-						}
+						output.text(result);
 
-						result = result.length === 5 ? result : 'MF255';
-						output.text(msg[result]);
 
-						if (result === "MF000") {
-							if (output.hasClass("snackbars")) {
-								output.html('<p><span class="icon text-middle mdi mdi-check icon-xxs"></span><span>' + msg[result] + '</span></p>');
-							} else {
-								output.addClass("active success");
-							}
+						if (output.hasClass("snackbars")) {
+							output.html('<p><span>' + result + '</span></p>');
 						} else {
-							if (output.hasClass("snackbars")) {
-								output.html(' <p class="snackbars-left"><span class="icon icon-xxs mdi mdi-alert-outline text-middle"></span><span>' + msg[result] + '</span></p>');
-							} else {
-								output.addClass("active error");
-							}
+							output.addClass("active success");
 						}
 
 						form.clearForm();
@@ -2066,4 +2008,145 @@
 		}
 
 	});
+
+	//todo console.log убрать потом
+    function cartSet(id, days_count) {
+        $.ajax({
+            url: `/cart-add/${id}/${days_count}`,
+            method: 'POST',
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+			success: function () {
+                console.log('product setted');
+            }
+        });
+
+    }
+
+    function cartRemove(id) {
+        $.ajax({
+            url: `/cart-remove/${id}`,
+            method: 'POST',
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+			success: function () {
+                console.log('product removed');
+            }
+        });
+
+    }
+
+    function cartClear() {
+        $.ajax({
+            url: '/cart-clear',
+            method: 'POST',
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+			success: function () {
+                console.log('cart empty');
+            }
+        });
+        $('.rd-navbar__cart sup.round').text(0);
+    }
+    
+    function cartGetJson() {
+        $.ajax({
+            url: '/cart-get-json',
+            method: 'GET',
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+			success: function (response) {
+				return response;
+            }
+        });
+    }
+
+    function switchProductButtons() {
+        $('.product-buttons').toggleClass('added');
+	}
+
+	function cartItemsCountIncrement()
+	{
+		let block = $('.rd-navbar__cart sup.round'),
+			count = parseInt(block.text());
+        block.text(count + 1);
+	}
+
+    function cartItemsCountDecrement()
+    {
+        let block = $('.rd-navbar__cart sup.round'),
+            count = parseInt(block.text());
+        if (count != 0) block.text(count - 1);
+    }
+
+    function getCartTotalSumm() {
+    	let summBlocks = $('.table-cart').find('.cart__item_summ'),
+    		summ = 0;
+        summBlocks.each(function () {
+			summ += parseInt($(this).text());
+        })
+		return summ;
+    }
+
+    $('.product-buttons__cart-full, .product-buttons__cart-test').click(function () {
+		let id = $(this).data('id'),
+			days_count = $(this).data('days-count'),
+			buttons = $(this).closest('.product-buttons');
+
+        switchProductButtons();
+        cartItemsCountIncrement();
+
+		cartSet(id, days_count);
+    })
+	
+	$('.product-buttons__cart-remove').click(function () {
+        let id = $(this).data('id');
+        switchProductButtons();
+        cartItemsCountDecrement();
+        cartRemove(id);
+    })
+
+	$('.table-cart .unit-left span.fa-trash').click(function () {
+		let tableItem = $(this).closest('tr'),
+			id = tableItem.data('id');
+
+		cartRemove(id);
+		tableItem.remove();
+        cartItemsCountDecrement();
+
+		if (!$('.table-cart tr').length <= 1) {
+			$('main.cart').toggleClass('empty');
+		}
+    })
+
+	$('.cart-content input.cart__item_qty').change(function () {
+		let qty = parseInt($(this).val()),
+			id = parseInt($(this).closest('tr').data('id')),
+        	tableItem = $(this).closest('tr'),
+			summBlock = tableItem.find('.cart__item_summ'),
+            price = parseInt(tableItem.find('.cart__item_price').text()),
+			totalSummBlock = $('.total-cart .total-cart__summ');
+
+		summBlock.text(qty * price);
+		totalSummBlock.text(getCartTotalSumm());
+		cartSet(id, qty);
+    })
+
+	$('#contact-us-time').change(function () {
+		let val = $(this).val();
+		(val > 59) ? $(this).val('00') : '';
+        (val == 0) ? $(this).val('00') : '';
+    })
+
+	$('.box-xxs input[type=radio]').change(function () {
+		$('.box-xxs').toggleClass('active');
+        }
+	)
+
+
+
 }());

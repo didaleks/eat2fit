@@ -96,3 +96,17 @@ if (! function_exists('set_atributes')) {
         }
     }
 }
+
+
+if (! function_exists('inCart')) {
+    function inCart($id){
+        $id = intval($id);
+        if (session()->has('cart')) {
+            $cart = session()->get('cart');
+            if ($cart->items && array_key_exists($id, $cart->items)) {
+                return true;
+            }
+        }
+        return false;
+    }
+}

@@ -25,7 +25,7 @@ class AppServiceProvider extends ServiceProvider
                 return "<?php echo App\Models\Page::getUrl({$id}); ?>";
             });
 
-            $topMenu = Menu::where(['parent_id' => 1, 'published' => 1])->get();
+            $topMenu = Menu::where(['parent_id' => 1, 'published' => 1])->with(['childrens', 'childrens.page', 'page'])->get();
             view()->share('topMenu', $topMenu);
 
             $settings = new Settings;

@@ -4,9 +4,19 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use LaravelAdmin\Models\Page;
+use App\Traits\BaseMethods;
 
 class Dish extends Page
 {
+    use BaseMethods;
+
+    protected $fillable = [
+        'name',
+        'published',
+        'fields',
+        'content',
+    ];
+
     public function formFields()
     {
         $fields = [
@@ -34,6 +44,14 @@ class Dish extends Page
 
 
         return $fields;
+    }
+
+    public function validatorRules($data)
+    {
+        return [
+            'name' => 'required|string|max:255',
+            'published' => 'boolean'
+        ];
     }
 
     public function eatings()
