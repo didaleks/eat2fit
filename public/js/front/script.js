@@ -2083,6 +2083,15 @@
         if (count != 0) block.text(count - 1);
     }
 
+    function getCartTotalSumm() {
+    	let summBlocks = $('.table-cart').find('.cart__item_summ'),
+    		summ = 0;
+        summBlocks.each(function () {
+			summ += parseInt($(this).text());
+        })
+		return summ;
+    }
+
     $('.product-buttons__cart-full, .product-buttons__cart-test').click(function () {
 		let id = $(this).data('id'),
 			days_count = $(this).data('days-count'),
@@ -2119,8 +2128,11 @@
 			id = parseInt($(this).closest('tr').data('id')),
         	tableItem = $(this).closest('tr'),
 			summBlock = tableItem.find('.cart__item_summ'),
-            price = parseInt(tableItem.find('.cart__item_price'));
-		    summBlock.text()
+            price = parseInt(tableItem.find('.cart__item_price').text()),
+			totalSummBlock = $('.total-cart .total-cart__summ');
+
+		summBlock.text(qty * price);
+		totalSummBlock.text(getCartTotalSumm());
 		cartSet(id, qty);
     })
 
