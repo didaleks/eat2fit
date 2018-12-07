@@ -12,6 +12,7 @@ class Cart
     public $totalQt = 0; //Количество дней из всех рационов в корзине
     public $totalItemsQt = 0; //Количество рационов в корзине
     public $totalPrice = 0; //Цена за все дни
+    public $shippingPrice = 1000; //Цена доставки
 
     public function __construct($oldCart)
     {
@@ -61,6 +62,10 @@ class Cart
         return count($this->items);
     }
 
+    /**
+     * Цена продуктов
+     * @return float|int
+     */
     public function getTotalPrice()
     {
         $summ = 0;
@@ -68,6 +73,15 @@ class Cart
             $summ += ($diet['qty'] * $diet['item']->price);
         };
         return $summ;
+    }
+
+    /**
+     * Цена продуктов с доставкой
+     * @return int
+     */
+    public function getFullPrice()
+    {
+        return intval($this->getTotalPrice() + $this->shippingPrice);
     }
 
     public static function getCountItems()

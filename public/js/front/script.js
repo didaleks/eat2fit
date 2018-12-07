@@ -2083,6 +2083,10 @@
         if (count != 0) block.text(count - 1);
     }
 
+    /**
+	 * Возвращает цену товаров
+     * @returns {number}
+     */
     function getCartTotalSumm() {
     	let summBlocks = $('.table-cart').find('.cart__item_summ'),
     		summ = 0;
@@ -2091,6 +2095,33 @@
         })
 		return summ;
     }
+
+    /**
+	 * Возвращает цену корзины с доставкой
+     * @returns {number}
+     */
+    function getCartFullPrice() {
+        let shipingPrice = 1000,
+			summ = getCartTotalSumm();
+        summ += shipingPrice;
+        return parseInt(summ);
+    }
+
+    function reloadCartTotalSumm() {
+    	let totalSummBlock = $('.total-cart .total-cart__full-summ');
+        totalSummBlock.text(getCartFullPrice());
+	}
+
+	function reloadCartItemsSumm() {
+    	let totalItemsBlock = $('.total-cart__items-summ');
+    	totalItemsBlock.text(getCartTotalSumm());
+	}
+
+	function reloadTotal()
+	{
+        reloadCartItemsSumm();
+        reloadCartTotalSumm();
+	}
 
     $('.product-buttons__cart-full, .product-buttons__cart-test').click(function () {
 		let id = $(this).data('id'),
@@ -2110,6 +2141,9 @@
         cartRemove(id);
     })
 
+    /**
+	 * Удаление из корзины
+     */
 	$('.table-cart .unit-left span.fa-trash').click(function () {
 		let tableItem = $(this).closest('tr'),
 			id = tableItem.data('id');
@@ -2117,8 +2151,9 @@
 		cartRemove(id);
 		tableItem.remove();
         cartItemsCountDecrement();
+        reloadTotal();
 
-		if (!$('.table-cart tr').length <= 1) {
+		if ($('.table-cart__item').length == 0) {
 			$('main.cart').toggleClass('empty');
 		}
     })
@@ -2128,11 +2163,10 @@
 			id = parseInt($(this).closest('tr').data('id')),
         	tableItem = $(this).closest('tr'),
 			summBlock = tableItem.find('.cart__item_summ'),
-            price = parseInt(tableItem.find('.cart__item_price').text()),
-			totalSummBlock = $('.total-cart .total-cart__summ');
+            price = parseInt(tableItem.find('.cart__item_price').text());
 
 		summBlock.text(qty * price);
-		totalSummBlock.text(getCartTotalSumm());
+        reloadTotal();
 		cartSet(id, qty);
     })
 
