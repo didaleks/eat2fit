@@ -3,21 +3,25 @@
 @section('content')
 
     <!-- Parallax-->
-    <section class="section section-height-800 parallax-container context-dark bg-gray-darkest text-xl-left" data-parallax-img="/images/backgrounds/background-01-1920x900.jpg">
+    <section class="section diet section-height-800 parallax-container context-dark bg-gray-darkest text-xl-left" data-parallax-img="/images/backgrounds/background-01-1920x900.jpg">
         <div class="parallax-content">
             <div class="bg-overlay-black">
                 <div class="container section-30 section-md-95 section-lg-top-120 section-lg-bottom-150">
-                    <div class="d-none d-lg-block">
-                        <h1>{{$model->name}}</h1>
-                    </div>
                     <!-- List Inline-->
-                    <ul class="list-inline list-inline-dashed list-white text-big p offset-md-top-13">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="health-philosophy.html">About Me</a></li>
-                        <li>Health Coaching Philosophy
+                    <ul class="list-inline list-inline-dashed list-white p offset-md-top-13">
+                        <li><a href="/">Главная</a></li>
+                        <li><a href="/catalog">Рационы</a></li>
+                        <li>{{$model->name}}
                         </li>
                     </ul>
-                    <div class="group-xs offset-top-20 offset-lg-top-40 product-buttons {{ inCart($model->id)? 'added' : '' }}">
+                    <div class="d-none d-lg-block offset-top-20">
+                        <h1>{{$model->name}}</h1>
+                    </div>
+                    <div class="diet__parallax-description">{!! $model->content !!}</div>
+
+                    <p class="offset-top-40">1 день питания - от <span class="diet__parallax-price-number">2900 &#x20bd;</span></p>
+
+                    <div class="group-xs offset-top-10 offset-lg-top-20 product-buttons {{ inCart($model->id)? 'added' : '' }}">
                         <span class="btn btn-primary product-buttons__item product-buttons__cart-full"
                               data-id="{{$model->id}}"
                               data-days-count="7">Заказать рацион</span>
