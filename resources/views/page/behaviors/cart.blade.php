@@ -25,22 +25,22 @@
   <main class="page-content cart {{(isset($cart) && count($cart->items))? '': 'empty'}}">
     <section class="section-95">
       <div class="container">
-        <h2>Оформить заказ</h2>
         <div class="cart-content">
           @if($cart && count($cart->items))
+            <h2>Оформить заказ</h2>
             <div class="table-responsive offset-top-40">
               <table class="table table-custom-md table-default table-bordered-custom text-left table-cart">
                 <tbody>
                 <tr class="bg-accent">
                   <th class="inset-xl-left-50 text-white">Название</th>
                   <th class="text-white">Цена</th>
-                  <th class="text-white">Количество</th>
+                  <th class="text-white">Количество дней</th>
                   <th class="text-white">Итого</th>
                 </tr>
 
                 @foreach($cart->items as $diet)
                   @php($item = $diet['item'])
-                  <tr data-id="{{$item->id}}">
+                  <tr data-id="{{$item->id}}" class="table-cart__item">
                     <td>
                       <div class="unit align-items-center flex-row unit-spacing-xs">
                         <div class="unit-left">
@@ -70,22 +70,21 @@
 
 
             <div class="col-md-12 col-lg-8 offset-top-40 offset-md-top-0">
-              <form class="text-left offset-top-20" method="post" action="{{ route('feedback.store') }}">
+              <form class="text-left offset-top-20 order-form" method="post" action="{{ route('order.store') }}">
                 @csrf
-                <input type="hidden" name="type" value="cart">
                 {{--todo убрать дефолтные значения из полей --}}
                 <div class="row justify-content-sm-left">
                   <div class="col-sm-12 inset-sm-right-15 inset-sm-left-15">
                     <div class="form-wrap">
                       <label class="form-label-outside required"
-                             for="contact-us-first-name">ФИО:</label>
-                      <input class="form-input" id="contact-us-first-name" type="text" name="name"
-                             value="mail@demolink.org" data-constraints="@Required">
+                             for="contact-us-name">ФИО:</label>
+                      <input class="form-input" id="contact-us-name" type="text" name="name"
+                             value="NAMENAME" data-constraints="@Required">
                     </div>
                   </div>
                   <div class="col-sm-6 offset-top-10 inset-sm-right-7">
                     <div class="form-wrap">
-                      <label class="form-label-outside required" for="contact-us-first-name">Телефон:</label>
+                      <label class="form-label-outside required" for="contact-us-phone">Телефон:</label>
                       <input class="form-input" id="contact-us-phone" type="text" name="phone"
                              placeholder="Телефон"
                              data-constraints="@Required" value="9999999999">
@@ -93,7 +92,7 @@
                   </div>
                   <div class="col-sm-6 offset-top-10 inset-sm-left-7">
                     <div class="form-wrap">
-                      <label class="form-label-outside required" for="contact-us-first-name">E-mail:</label>
+                      <label class="form-label-outside required" for="contact-us-email">E-mail:</label>
                       <input placeholder="E-mail" class="form-input" id="contact-us-email"
                              type="email" name="email"
                              data-constraints="@Required"
@@ -106,27 +105,28 @@
                   </div>
                   <div class="col-sm-4 offset-top-10 inset-sm-right-7">
                     <div class="form-wrap">
-                      <label class="form-label-outside required" for="contact-us-first-name">Улица:</label>
-                      <input class="form-input" id="contact-us-" type="text" name=""
+                      <label class="form-label-outside required" for="contact-us-street">Улица:</label>
+                      <input class="form-input" id="contact-us-street" type="text" name="street"
+                             value="пр.Просвещения"
                              placeholder=""
                              data-constraints="@Required" value="">
                     </div>
                   </div>
                   <div class="col-sm-4 offset-top-10 inset-sm-left-7">
                     <div class="form-wrap">
-                      <label class="form-label-outside required" for="contact-us-first-name">Дом:</label>
-                      <input placeholder="" class="form-input" id="contact-us-email"
-                             type="text" name="email"
+                      <label class="form-label-outside required" for="contact-us-home">Дом:</label>
+                      <input placeholder="" class="form-input" id="contact-us-home"
+                             type="text" name="home"
                              data-constraints="@Required"
-                             value="mail@demolink.org">
+                             value="64 к.5">
 
                     </div>
                   </div>
                   <div class="col-sm-4 offset-top-10 inset-sm-left-7">
                     <div class="form-wrap">
-                      <label class="form-label-outside required" for="contact-us-first-name">Квартира:</label>
-                      <input placeholder="" class="form-input" id="contact-us-email"
-                             type="text" name="email"
+                      <label class="form-label-outside required" for="contact-us-flat">Квартира:</label>
+                      <input placeholder="" class="form-input" id="contact-us-flat"
+                             type="text" name="flat"
                              data-constraints="@Required"
                              value="33">
 
@@ -136,7 +136,7 @@
                     <label class="form-label-outside">Дата доставки</label>
                   </div>
                   <div class="col-sm-6 offset-top-10 text-xl-left datepicker-wrapper">
-                    <input class="form-input" id="datepicker" width="300"/>
+                    <input required value="31 декабря" class="form-input" id="datepicker" width="300" name="shipping_date"/>
                     <script>
                         $('#datepicker').datepicker({
                             uiLibrary: 'bootstrap4',
@@ -149,6 +149,7 @@
                     <div class="form-wrap">
                       <label class="form-label-outside" for="contact-us-first-name">Время:</label>
                       <input class="form-input" id="contact-us-email"
+                             name="shipping_hour"
                              type="number"
                              readonly
                              min="09"
@@ -156,6 +157,7 @@
                              data-check="^\d+$"
                              value="09">
                       <input class="form-input" id="contact-us-time"
+                             name="shipping_minutes"
                              type="number"
                              readonly
                              min="00"
@@ -165,20 +167,20 @@
                              value="00">
                     </div>
                   </div>
-                  <div class="col-md-4 col-sm-6 ml-3 box-xxs box-pay text-left offset-top-20  active">
+                  <div class="col-md-4 col-sm-6 ml-3 box-xxs box-pay text-left offset-top-20 active">
                     <div class="form-wrap">
                       <label class="radio-inline font-weight-bold text-gray">
-                        <input name="input-group-radio" value="radio-1" type="radio" checked>Cheque Payment
+                        <input name="payment_type-radio" value="personally" type="radio" checked>При получении
                       </label>
-                      <p class="offset-top-20">Please send your cheque to Store Name, Store Street, Store Town, Store
-                        State / County, Store Postcode.</p>
+                      <p class="offset-top-20">Оплата картой или наличными при получении</p>
                     </div>
                   </div>
                   <div class="col-md-4 col-sm-6 ml-3 ml-md-0 d-inline-block box-xxs box-pay text-left offset-sm-top-20">
                     <div class="form-wrap">
                       <label class="radio-inline font-weight-bold text-gray">
-                        <input name="input-group-radio" value="radio-2" type="radio">PayPal
+                        <input name="payment_type-radio" value="online" type="radio">Онлайн-платеж
                       </label>
+                      <p class="offset-top-20">VISA/MasterCard/Мир</p>
                     </div>
                   </div>
                   <div class="col-sm-3 d-inline-block offset-top-20 ml-3 p-0">
@@ -196,7 +198,7 @@
                     <div class="form-wrap">
                       <label class="form-label-outside" for="contact-us-first-name">Есть купон?</label>
                       <input class="form-input form-control-has-validation form-control-last-child" id="contact-us-"
-                             type="text" name="" placeholder="" value=""><span class="form-validation"></span>
+                             type="text" name="coupon" placeholder="" value=""><span class="form-validation"></span>
                     </div>
                   </div>
                   <div class="col-md-4"></div>
@@ -209,8 +211,16 @@
                           <th></th>
                         </tr>
                         <tr>
+                          <td>Стоимость доставки:</td>
+                          <td class="font-weight-bold text-gray">{{$cart->shippingPrice}}</td>
+                        </tr>
+                        <tr>
+                          <td>Стоимость товаров:</td>
+                          <td class="font-weight-bold text-gray total-cart__items-summ">{{$cart->getTotalPrice()}}</td>
+                        </tr>
+                        <tr>
                           <td>Итого к оплате:</td>
-                          <td class="font-weight-bold text-gray total-cart__summ">{{$cart->getTotalPrice()}}</td>
+                          <td class="font-weight-bold text-gray total-cart__full-summ">{{$cart->getFullPrice()}}</td>
                         </tr>
                         </tbody>
                       </table>
@@ -233,7 +243,8 @@
                   </div>
                 </div>
                 <div class="col-md-12 p-0 d-flex offset-top-10">
-                  <p>Поля, отмеченные символом <label class="form-label-outside required"></label>, обязательны для заполнения</p>
+                  <p>Поля, отмеченные символом <label class="form-label-outside required"></label>, обязательны для
+                    заполнения</p>
                 </div>
               </form>
             </div>

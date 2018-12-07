@@ -36,6 +36,7 @@ Route::middleware(['web'])->group(function () {
 
 });
 
+//Cart routes
 Route::match(array('GET', 'POST'),'cart-add/{id}/{days_count}', 'CartController@set')->name('cart.set');
 Route::post('cart-remove/{id}', 'CartController@remove')->name('cart.remove');
 Route::post('cart-clear', 'CartController@clear')->name('cart.clear');
@@ -50,5 +51,8 @@ Route::prefix('catalog')->group(function () {
 
 // Feedback Form
 Route::post('/feedback/store', 'FeedbackController@store')->name('feedback.store');
+
+// Order Form on cart page
+Route::post('/order/store', 'OrderController@store')->name('order.store');
 
 Route::get('{url?}', 'PageController@show')->where('url', '[A-Za-z0-9/-]+')->name('page.show');

@@ -32,7 +32,7 @@ class CartController extends Controller
     }
 
     public function getJsonData() {
-        return json_encode($this->get()->items, JSON_PRETTY_PRINT);
+        return json_encode($this->get()->items);
     }
 
     public function set(Request $request, $id, $days_count)

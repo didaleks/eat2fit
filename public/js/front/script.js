@@ -2181,6 +2181,37 @@
         }
 	)
 
+    $('form.order-form').submit(function (event) {
+        event.preventDefault();
+        let form = $(this),
+            formData = form.serializeArray(),
+            street = formData.find(item => item.name === 'street').value,
+            home = formData.find(item => item.name === 'home').value,
+            flat = formData.find(item => item.name === 'flat').value,
+			shippingDate = formData.find(item => item.name === 'shipping_date').value,
+			shippingHour = formData.find(item => item.name === 'shipping_hour').value,
+            shippingMinutes = formData.find(item => item.name === 'shipping_minutes').value;
+
+        formData.push({name: 'address', value: `Улица: ${street}, Дом: ${home}, Квартира: ${flat}`});
+        formData.push({name: 'shipping_datetime', value: `Дата: ${shippingDate}, время: ${shippingHour}:${shippingMinutes}`});
+
+
+        $.ajax({
+            url: '/order/store',
+            method: 'POST',
+            dataType: 'json',
+            data: formData,
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            success: function (response) {
+                // remove_liked();
+				console.log('success motherfu**')
+                let order_number = response.order_number;
+            }
+        });
+    });
+
 
 
 }());
