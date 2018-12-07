@@ -29,7 +29,7 @@ class OrderController extends Controller
         } else {
             $cartController = new CartController();
             $model->fill($data);
-            $model->cart = $cartController->getJsonData();
+            $model->cart = json_encode($cartController->get());
             if ($model->save())
                 return response('Спасибо за заказ. Мы с Вами скоро свяжемся.')->setStatusCode(200);
 

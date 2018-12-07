@@ -24,6 +24,7 @@ Route::middleware(['web'])->group(function () {
         Route::resource('eating_type', 'Admin\EatingTypeController');
         Route::resource('category', 'Admin\CategoryController');
         Route::get('feedback', 'Admin\FeedbackController@index')->name('feedback.index');
+        Route::resource('order', 'Admin\OrderController')->only(['index', 'show']);
 
         Route::prefix('diet')->group(function () {
             Route::get('copy/{id}', add_controller_ns('DietController@copy'))->name("diet.copy");

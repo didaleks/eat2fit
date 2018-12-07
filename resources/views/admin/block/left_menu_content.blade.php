@@ -11,4 +11,10 @@
             Блюда
         </a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('order.index') }}">
+            <i class="far fa-credit-card"></i>
+            Заказы ({{\App\Models\Order::count()}})
+        </a>
+    </li>
 </ul>

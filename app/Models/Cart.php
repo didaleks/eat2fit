@@ -12,6 +12,7 @@ class Cart
     public $totalQt = 0; //Количество дней из всех рационов в корзине
     public $totalItemsQt = 0; //Количество рационов в корзине
     public $totalPrice = 0; //Цена за все дни
+    public $totalFullPrice = 0; //Цена за все дни + доставка
     public $shippingPrice = 1000; //Цена доставки
 
     public function __construct($oldCart)
@@ -21,6 +22,7 @@ class Cart
             $this->totalQt = $oldCart->totalQt;
             $this->totalItemsQt = $oldCart->totalItemsQt;
             $this->totalPrice = $oldCart->totalPrice;
+            $this->totalFullPrice = $this->getFullPrice();
         }
     }
 
