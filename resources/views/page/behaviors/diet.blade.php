@@ -57,6 +57,28 @@
                 </div>
             </div>
         </section>
+        <section class="section-95">
+            <div class="container">
+                <h2>Latest news</h2>
+                <div class="row no-gutters justify-content-sm-center offset-top-40 shadow-drop-sm">
+                    <div class="col-md-6 col-lg-4">
+                        <!-- Box-->
+                        <div class="box-xs inset-xl-left-35 inset-xl-right-35"><span class="icon fl-great-icon-set-ico fl-great-icon-set-crosshair15 text-primary"></span>
+                            <p class="text-big font-weight-bold"><a class="link-decoration-none" href="blog-post.html">Цель программы</a></p>
+                            <p>Предлагаем вашему вниманию специальное постное меню, которое обеспечит сбалансированное и разнообразное питание во время поста.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4"><img class="img-responsive img-fullwidth img-fullheight center-block" src="/images/pages/events-03-390x289.jpg" width="390" height="289" alt=""></div>
+                    <div class="col-md-6 col-lg-4">
+                        <!-- Box-->
+                        <div class="box-xs inset-xl-left-35 inset-xl-right-35"><span class="icon material-icons-person  fl-great-icon-set-pencil107 text-primary"></span>
+                            <p class="text-big font-weight-bold"><a class="link-decoration-none" href="blog-post.html">Индивидуальный подход</a></p>
+                            <p>Индивидуальные рекомендации для Вас. Мы подберем оптимальную программу. Вас ждет разнообразие вкусов и прекрасное самочувствие!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- Welcome!-->
         <section class="section-95">
             <div class="container">
