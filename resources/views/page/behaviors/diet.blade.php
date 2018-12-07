@@ -36,9 +36,27 @@
         </div>
     </section>
 
-    <p>{!! $model->content !!}</p>
     <!-- Page Content-->
-    <main class="page-content">
+    <main class="page-content diet__content">
+        <section class="section-95 recommend-section">
+            <div class="container">
+                <h2>Программа предназначена:</h2>
+                <div class="row d-flex offset-top-34">
+                    <div class="col-md-10 col-lg-4">
+                        <div class="col-2 p-0 text-big-80 font-weight-bold text-primary">1</div>
+                        <div class="col-9 p-0 ml-auto recommend-section__message">Для тех, кто соблюдает пост</div>
+                    </div>
+                    <div class="col-md-10 col-lg-4 offset-top-45 offset-md-top-0">
+                        <div class="col-2 p-0 text-big-80 font-weight-bold text-primary">2</div>
+                        <div class="col-9 p-0 ml-auto recommend-section__message">Для тех, кто питается продуктами исключительно растительного происхождения</div>
+                    </div>
+                    <div class="col-md-10 col-lg-4 offset-top-45 offset-md-top-0">
+                        <div class="col-2 p-0 text-big-80 font-weight-bold text-primary">3</div>
+                        <div class="col-9 p-0 ml-auto recommend-section__message">Кто совсем не имеет навыков приготовления специализированной еды</div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- Welcome!-->
         <section class="section-95">
             <div class="container">
