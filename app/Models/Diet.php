@@ -169,7 +169,7 @@ class Diet extends Page
     {
         $lastDayNum = $weekNum * 7;
         $firstDayNum = $lastDayNum - 6;
-        return $this->days()->whereBetween('number',array($firstDayNum,$lastDayNum))->orderBy('number')->get();
+        return $this->days()->whereBetween('number',array($firstDayNum,$lastDayNum))->orderBy('number')->with('eatings.dishes')->get();
     }
 
     public function parent()

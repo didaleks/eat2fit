@@ -117,6 +117,14 @@
                                                     <div class="tab-content text-left">
                                                         @foreach($model->getWeek($weekNum) as $day)
                                                             <div class="tab-pane fade {{($day->dayWeekNum()==1)?'show active':''}}" id="tabs-{{$j}}-{{$day->number}}">
+                                                                @foreach($day->eatings as $eating)
+                                                                    <p>{{$eating->name}}</p>
+                                                                    <ul>
+                                                                        @foreach($eating->dishes as $dish)
+                                                                            <li>{{$dish->name}}</li>
+                                                                        @endforeach
+                                                                    </ul>
+                                                                @endforeach
                                                                 <p>Неделя {{$weekNum}}, день недели {{$day->dayWeekNum()}}</p>
                                                             </div>
                                                         @endforeach
