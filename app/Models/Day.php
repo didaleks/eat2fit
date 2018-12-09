@@ -95,6 +95,11 @@ class Day extends Page
         return $eating_types->sortBy('sort');
     }
 
+    public function dayWeekNum()
+    {
+        return ($this->number <= 7)? $this->number : $this->number % 7;
+    }
+
     public function hasAllEatingTypes()
     {
         $ids = $this->eatingTypes()->pluck('id')->all();

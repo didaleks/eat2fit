@@ -165,6 +165,13 @@ class Diet extends Page
         return intval($weeksCount);
     }
 
+    public function getWeek(int $weekNum)
+    {
+        $lastDayNum = $weekNum * 7;
+        $firstDayNum = $lastDayNum - 6;
+        return $this->days()->whereBetween('number',array($firstDayNum,$lastDayNum))->orderBy('number')->get();
+    }
+
     public function parent()
     {
 

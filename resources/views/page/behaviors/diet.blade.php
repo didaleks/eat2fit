@@ -110,16 +110,16 @@
                                             <div class="col-md-10">
                                                 <div class="tabs-custom tabs-vertical tabs-corporate" id="tabs-{{$j}}">
                                                     <ul class="nav nav-link">
-                                                        @for ($dayNum = 1; $dayNum <= 7; $dayNum++)
-                                                            <li class="{{($dayNum==1)?'active':''}}"><a href="#tabs-{{$j}}-{{$dayNum}}" data-toggle="tab">{{$dayNum}} день</a></li>
-                                                        @endfor
+                                                        @foreach($model->getWeek($weekNum) as $day)
+                                                            <li class="{{($day->dayWeekNum()==1)?'active':''}}"><a href="#tabs-{{$j}}-{{$day->number}}" data-toggle="tab">{{$day->dayWeekNum()}} день</a></li>
+                                                        @endforeach
                                                     </ul>
                                                     <div class="tab-content text-left">
-                                                        @for ($dayNum = 1; $dayNum <= 7; $dayNum++)
-                                                            <div class="tab-pane fade {{($dayNum==1)?'show active':''}}" id="tabs-{{$j}}-{{$dayNum}}">
-                                                                <p>Неделя {{$weekNum}}, день недели {{$dayNum}}</p>
+                                                        @foreach($model->getWeek($weekNum) as $day)
+                                                            <div class="tab-pane fade {{($day->dayWeekNum()==1)?'show active':''}}" id="tabs-{{$j}}-{{$day->number}}">
+                                                                <p>Неделя {{$weekNum}}, день недели {{$day->dayWeekNum()}}</p>
                                                             </div>
-                                                        @endfor
+                                                        @endforeach
                                                     </div>
                                                 </div>
                                             </div>
