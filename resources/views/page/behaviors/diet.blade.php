@@ -79,6 +79,185 @@
                 </div>
             </div>
         </section>
+        <section class="section-95">
+            <div class="container">
+                <div class="row justify-content-sm-center">
+                    <div class="col-md-10 col-xl-6">
+                        <h1>Tabs & Accordions</h1>
+                        <p class="text-big offset-top-34">With modern and intuitive interface of tabs and accordions, you can control contents to be organised within a single frame.</p>
+                        <h3 class="offset-top-25">Horizontal tabs</h3>
+                    </div>
+                </div>
+                <div class="row justify-content-sm-center offset-top-20">
+                    <div class="col-md-10 col-xl-6">
+                        <!-- Bootstrap tabs-->
+                        <div class="tabs-custom tabs-horizontal tabs-corporate" id="tabs-1">
+                            <!-- Nav tabs-->
+                            <ul class="nav nav-link">
+                                <li class="active"><a href="#tabs-1-1" data-toggle="tab">All</a></li>
+                                <li><a href="#tabs-1-2" data-toggle="tab">Type 1</a></li>
+                                <li><a href="#tabs-1-3" data-toggle="tab">Type 2</a></li>
+                                <li><a href="#tabs-1-4" data-toggle="tab">Type 3</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-sm-center offset-top-25">
+                    <div class="col-md-10">
+                        <div class="tab-content text-left">
+                            <div class="tab-pane fade show active" id="tabs-1-1">
+                                <div class="container offset-top-65 offset-md-top-90">
+                                    <h3>Vertical tabs</h3>
+                                    <div class="row justify-content-sm-center offset-top-13">
+                                        <div class="col-md-10">
+                                            <!-- Bootstrap tabs-->
+                                            <div class="tabs-custom tabs-vertical tabs-corporate" id="tabs-2">
+                                                <!-- Nav tabs-->
+                                                <ul class="nav nav-link">
+                                                    <li class="active"><a href="#tabs-2-1" data-toggle="tab">Tab 0</a></li>
+                                                    <li><a href="#tabs-2-2" data-toggle="tab">Tab 1</a></li>
+                                                    <li><a href="#tabs-2-3" data-toggle="tab">Tab 2</a></li>
+                                                    <li><a href="#tabs-2-4" data-toggle="tab">Tab 3</a></li>
+                                                </ul>
+                                                <div class="tab-content text-left">
+                                                    <div class="tab-pane fade show active" id="tabs-2-1">
+                                                        <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly.</p>
+                                                        <p>Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click. We use only trusted, verified content, so you can believe every word we are saying. We are always happy to greet the new visitors on our site.</p>
+                                                    </div>
+                                                    <div class="tab-pane fade" id="tabs-2-2">
+                                                        <p>The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click.</p>
+                                                        <p>We use only trusted, verified content, so you can believe every word we are saying. We are always happy to greet the new visitors on our site. Our blog and social media accounts are available to encourage communication and connection between clients and personnel and tell you more about us in the informal environments where we can have a dialogue instead of just a narrative like that.</p>
+                                                    </div>
+                                                    <div class="tab-pane fade" id="tabs-2-3">
+                                                        <p>We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers.</p>
+                                                        <p>Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click.</p>
+                                                    </div>
+                                                    <div class="tab-pane fade" id="tabs-2-4">
+                                                        <p>Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely intuitive and user-friendly.</p>
+                                                        <p>You will always know where you are now and will be able to skip from one page to another with a single mouse click. We use only trusted, verified content, so you can believe every word we are saying. We are always happy to greet the new visitors on our site. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tabs-1-2">
+                                <div class="container offset-top-65 offset-md-top-90">
+                                    <h3>Vertical tabs</h3>
+                                    <div class="row justify-content-sm-center offset-top-13">
+                                        <div class="col-md-10">
+                                            <!-- Bootstrap tabs-->
+                                            <div class="tabs-custom tabs-vertical tabs-corporate" id="tabs-2">
+                                                <!-- Nav tabs-->
+                                                <ul class="nav nav-link">
+                                                    <li class="active"><a href="#tabs-2-1" data-toggle="tab">Tab 0</a></li>
+                                                    <li><a href="#tabs-2-2" data-toggle="tab">Tab 1</a></li>
+                                                    <li><a href="#tabs-2-3" data-toggle="tab">Tab 2</a></li>
+                                                    <li><a href="#tabs-2-4" data-toggle="tab">Tab 3</a></li>
+                                                </ul>
+                                                <div class="tab-content text-left">
+                                                    <div class="tab-pane fade show active" id="tabs-2-1">
+                                                        <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly.</p>
+                                                        <p>Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click. We use only trusted, verified content, so you can believe every word we are saying. We are always happy to greet the new visitors on our site.</p>
+                                                    </div>
+                                                    <div class="tab-pane fade" id="tabs-2-2">
+                                                        <p>The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click.</p>
+                                                        <p>We use only trusted, verified content, so you can believe every word we are saying. We are always happy to greet the new visitors on our site. Our blog and social media accounts are available to encourage communication and connection between clients and personnel and tell you more about us in the informal environments where we can have a dialogue instead of just a narrative like that.</p>
+                                                    </div>
+                                                    <div class="tab-pane fade" id="tabs-2-3">
+                                                        <p>We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers.</p>
+                                                        <p>Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click.</p>
+                                                    </div>
+                                                    <div class="tab-pane fade" id="tabs-2-4">
+                                                        <p>Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely intuitive and user-friendly.</p>
+                                                        <p>You will always know where you are now and will be able to skip from one page to another with a single mouse click. We use only trusted, verified content, so you can believe every word we are saying. We are always happy to greet the new visitors on our site. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tabs-1-3">
+                                <div class="container offset-top-65 offset-md-top-90">
+                                    <h3>Vertical tabs</h3>
+                                    <div class="row justify-content-sm-center offset-top-13">
+                                        <div class="col-md-10">
+                                            <!-- Bootstrap tabs-->
+                                            <div class="tabs-custom tabs-vertical tabs-corporate" id="tabs-2">
+                                                <!-- Nav tabs-->
+                                                <ul class="nav nav-link">
+                                                    <li class="active"><a href="#tabs-2-1" data-toggle="tab">Tab 0</a></li>
+                                                    <li><a href="#tabs-2-2" data-toggle="tab">Tab 1</a></li>
+                                                    <li><a href="#tabs-2-3" data-toggle="tab">Tab 2</a></li>
+                                                    <li><a href="#tabs-2-4" data-toggle="tab">Tab 3</a></li>
+                                                </ul>
+                                                <div class="tab-content text-left">
+                                                    <div class="tab-pane fade show active" id="tabs-2-1">
+                                                        <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly.</p>
+                                                        <p>Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click. We use only trusted, verified content, so you can believe every word we are saying. We are always happy to greet the new visitors on our site.</p>
+                                                    </div>
+                                                    <div class="tab-pane fade" id="tabs-2-2">
+                                                        <p>The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click.</p>
+                                                        <p>We use only trusted, verified content, so you can believe every word we are saying. We are always happy to greet the new visitors on our site. Our blog and social media accounts are available to encourage communication and connection between clients and personnel and tell you more about us in the informal environments where we can have a dialogue instead of just a narrative like that.</p>
+                                                    </div>
+                                                    <div class="tab-pane fade" id="tabs-2-3">
+                                                        <p>We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers.</p>
+                                                        <p>Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click.</p>
+                                                    </div>
+                                                    <div class="tab-pane fade" id="tabs-2-4">
+                                                        <p>Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely intuitive and user-friendly.</p>
+                                                        <p>You will always know where you are now and will be able to skip from one page to another with a single mouse click. We use only trusted, verified content, so you can believe every word we are saying. We are always happy to greet the new visitors on our site. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tabs-1-4">
+                                <div class="container offset-top-65 offset-md-top-90">
+                                    <h3>Vertical tabs</h3>
+                                    <div class="row justify-content-sm-center offset-top-13">
+                                        <div class="col-md-10">
+                                            <!-- Bootstrap tabs-->
+                                            <div class="tabs-custom tabs-vertical tabs-corporate" id="tabs-2">
+                                                <!-- Nav tabs-->
+                                                <ul class="nav nav-link">
+                                                    <li class="active"><a href="#tabs-2-1" data-toggle="tab">Tab 0</a></li>
+                                                    <li><a href="#tabs-2-2" data-toggle="tab">Tab 1</a></li>
+                                                    <li><a href="#tabs-2-3" data-toggle="tab">Tab 2</a></li>
+                                                    <li><a href="#tabs-2-4" data-toggle="tab">Tab 3</a></li>
+                                                </ul>
+                                                <div class="tab-content text-left">
+                                                    <div class="tab-pane fade show active" id="tabs-2-1">
+                                                        <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly.</p>
+                                                        <p>Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click. We use only trusted, verified content, so you can believe every word we are saying. We are always happy to greet the new visitors on our site.</p>
+                                                    </div>
+                                                    <div class="tab-pane fade" id="tabs-2-2">
+                                                        <p>The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click.</p>
+                                                        <p>We use only trusted, verified content, so you can believe every word we are saying. We are always happy to greet the new visitors on our site. Our blog and social media accounts are available to encourage communication and connection between clients and personnel and tell you more about us in the informal environments where we can have a dialogue instead of just a narrative like that.</p>
+                                                    </div>
+                                                    <div class="tab-pane fade" id="tabs-2-3">
+                                                        <p>We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers.</p>
+                                                        <p>Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click.</p>
+                                                    </div>
+                                                    <div class="tab-pane fade" id="tabs-2-4">
+                                                        <p>Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely intuitive and user-friendly.</p>
+                                                        <p>You will always know where you are now and will be able to skip from one page to another with a single mouse click. We use only trusted, verified content, so you can believe every word we are saying. We are always happy to greet the new visitors on our site. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- Welcome!-->
         <section class="section-95">
             <div class="container">
