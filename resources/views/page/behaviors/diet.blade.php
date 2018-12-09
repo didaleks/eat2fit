@@ -92,8 +92,8 @@
                     <div class="col-md-10 col-xl-6">
                         <div class="tabs-custom tabs-horizontal tabs-corporate" id="tabs-1">
                             <ul class="nav nav-link">
-                                @for ($i = 1; $i < 7; $i++)
-                                    <li class="{{($i == 1)? 'active': '' }}"><a href="#tabs-1-{{$i}}" data-toggle="tab">{{$i}} неделя</a></li>
+                                @for ($weekNum = 1; $weekNum <= $model->weeksCount(); $weekNum++)
+                                    <li class="{{($weekNum == 1)? 'active': '' }}"><a href="#tabs-1-{{$weekNum}}" data-toggle="tab">{{$weekNum}} неделя</a></li>
                                 @endfor
                             </ul>
                         </div>
@@ -102,7 +102,7 @@
                 <div class="row justify-content-sm-center offset-top-25">
                     <div class="col-md-10">
                         <div class="tab-content text-left">
-                            @for ($weekNum = 1; $weekNum < 7; $weekNum++)
+                            @for ($weekNum = 1; $weekNum <= $model->weeksCount(); $weekNum++)
                                 @php($j = $weekNum + 1)
                                 <div class="tab-pane fade {{($weekNum==1)?'show active':''}}" id="tabs-1-{{$weekNum}}">
                                     <div class="container offset-top-65 offset-md-top-90">
