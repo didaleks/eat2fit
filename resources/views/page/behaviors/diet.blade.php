@@ -83,21 +83,18 @@
             <div class="container">
                 <div class="row justify-content-sm-center">
                     <div class="col-md-10 col-xl-6">
-                        <h1>Tabs & Accordions</h1>
+                        <h1>Меню</h1>
                         <p class="text-big offset-top-34">With modern and intuitive interface of tabs and accordions, you can control contents to be organised within a single frame.</p>
-                        <h3 class="offset-top-25">Horizontal tabs</h3>
+                        <h3 class="offset-top-25">Недели</h3>
                     </div>
                 </div>
                 <div class="row justify-content-sm-center offset-top-20">
                     <div class="col-md-10 col-xl-6">
-                        <!-- Bootstrap tabs-->
                         <div class="tabs-custom tabs-horizontal tabs-corporate" id="tabs-1">
-                            <!-- Nav tabs-->
                             <ul class="nav nav-link">
                                 @for ($i = 1; $i < 7; $i++)
-                                    <li class="{{($i == 1)? 'active': '' }}"><a href="#tabs-1-{{$i}}" data-toggle="tab">Tab #{{$i}}</a></li>
+                                    <li class="{{($i == 1)? 'active': '' }}"><a href="#tabs-1-{{$i}}" data-toggle="tab">{{$i}} неделя</a></li>
                                 @endfor
-
                             </ul>
                         </div>
                     </div>
@@ -109,19 +106,18 @@
                                 @php($j = $weekNum + 1)
                                 <div class="tab-pane fade {{($weekNum==1)?'show active':''}}" id="tabs-1-{{$weekNum}}">
                                     <div class="container offset-top-65 offset-md-top-90">
-                                        <h3>Vertical tabs</h3>
                                         <div class="row justify-content-sm-center offset-top-13">
                                             <div class="col-md-10">
                                                 <div class="tabs-custom tabs-vertical tabs-corporate" id="tabs-{{$j}}">
                                                     <ul class="nav nav-link">
-                                                        @for ($k = 1; $k <= 7; $k++)
-                                                            <li class="{{($k==1)?'active':''}}"><a href="#tabs-{{$j}}-{{$k}}" data-toggle="tab">Tab {{$k}}</a></li>
+                                                        @for ($dayNum = 1; $dayNum <= 7; $dayNum++)
+                                                            <li class="{{($dayNum==1)?'active':''}}"><a href="#tabs-{{$j}}-{{$dayNum}}" data-toggle="tab">{{$dayNum}} день</a></li>
                                                         @endfor
                                                     </ul>
                                                     <div class="tab-content text-left">
-                                                        @for ($k = 1; $k <= 7; $k++)
-                                                            <div class="tab-pane fade {{($k==1)?'show active':''}}" id="tabs-{{$j}}-{{$k}}">
-                                                                <p>Неделя {{$weekNum}}, день недели {{$k}}</p>
+                                                        @for ($dayNum = 1; $dayNum <= 7; $dayNum++)
+                                                            <div class="tab-pane fade {{($dayNum==1)?'show active':''}}" id="tabs-{{$j}}-{{$dayNum}}">
+                                                                <p>Неделя {{$weekNum}}, день недели {{$dayNum}}</p>
                                                             </div>
                                                         @endfor
                                                     </div>
