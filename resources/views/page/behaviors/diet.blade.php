@@ -108,43 +108,49 @@
             <div class="tabs-custom tabs-horizontal tabs-corporate" id="tabs-1">
               <ul class="nav nav-link">
                 @for ($weekNum = 1; $weekNum <= $model->weeksCount(); $weekNum++)
-                  <li class="{{($weekNum == 1)? 'active': '' }}"><a href="#tabs-1-{{$weekNum}}"
-                                                                    data-toggle="tab">{{$weekNum}} неделя</a></li>
+                  <li class="{{($weekNum == 1)? 'active': '' }}"><a href="#tabs-1-{{$weekNum}}" data-toggle="tab">{{$weekNum}} неделя</a></li>
                 @endfor
               </ul>
             </div>
           </div>
         </div>
         <div class="row justify-content-sm-center offset-top-25">
-          <div class="col-md-10">
+          <div class="col-md-12">
             <div class="tab-content text-left">
               @for ($weekNum = 1; $weekNum <= $model->weeksCount(); $weekNum++)
                 @php($j = $weekNum + 1)
                 <div class="tab-pane fade {{($weekNum==1)?'show active':''}}" id="tabs-1-{{$weekNum}}">
                   <div class="container offset-top-65 offset-md-top-90">
                     <div class="row justify-content-sm-center offset-top-13">
-                      <div class="col-md-10">
+                      <div class="col-md-12">
                         <div class="tabs-custom tabs-vertical tabs-corporate" id="tabs-{{$j}}">
-                          <ul class="nav nav-link">
+                          {{-- Табы дней --}}
+                          <ul class="nav nav-link col-md-1">
                             @foreach($model->getWeek($weekNum) as $day)
-                              <li class="{{($day->dayWeekNum()==1)?'active':''}}"><a
-                                    href="#tabs-{{$j}}-{{$day->number}}" data-toggle="tab">{{$day->dayWeekNum()}}
-                                  день</a></li>
+                              <li class="{{($day->dayWeekNum()==1)?'active':''}}"><a href="#tabs-{{$j}}-{{$day->number}}" data-toggle="tab">{{$day->dayWeekNum()}} день</a></li>
                             @endforeach
                           </ul>
                           <div class="tab-content text-left">
                             @foreach($model->getWeek($weekNum) as $day)
-                              <div class="tab-pane fade {{($day->dayWeekNum()==1)?'show active':''}}"
-                                   id="tabs-{{$j}}-{{$day->number}}">
-                                @foreach($day->eatings as $eating)
-                                  <p>{{$eating->name}}</p>
-                                  <ul>
-                                    @foreach($eating->dishes as $dish)
-                                      <li>{{$dish->name}}</li>
-                                    @endforeach
-                                  </ul>
-                                @endforeach
-                                <p>Неделя {{$weekNum}}, день недели {{$day->dayWeekNum()}}</p>
+                              <div class="tab-pane fade {{($day->dayWeekNum()==1)?'show active':''}}" id="tabs-{{$j}}-{{$day->number}}">
+                                
+                                  @foreach($day->eatings as $eating)
+                                  <div class="menu col-md-12 d-flex justify-content-between offset-top-10">
+                                    <div class="col-md-3">
+                                      <p>{{$eating->name}}</p>
+                                      <ul>
+                                        @foreach($eating->dishes as $dish)
+                                          <li>{{$dish->name}}</li>
+                                        @endforeach
+                                      </ul>
+                                    </div>  
+                                    <div class="col-md-3"><img class="img-responsive center-block" src="/images/pages/work-with-me-02-370x260.jpg" width="370" height="260" alt=""></div>
+                                    <div class="col-md-3"><img class="img-responsive center-block" src="/images/pages/work-with-me-02-370x260.jpg" width="370" height="260" alt=""></div>
+                                    <div class="col-md-3"><img class="img-responsive center-block" src="/images/pages/work-with-me-02-370x260.jpg" width="370" height="260" alt=""></div>
+                                  </div>
+                                  @endforeach
+                                  {{--<p>Неделя {{$weekNum}}, день недели {{$day->dayWeekNum()}}</p>--}}
+                                
                               </div>
                             @endforeach
                           </div>
