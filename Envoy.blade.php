@@ -236,8 +236,8 @@
 			{{ $cmdPhp }} composer.phar self-update 2>&1
 		fi
 
-		echo "{{ $cmdPhp }} composer.phar install --verbose --prefer-dist --optimize-autoloader --no-progress --no-interaction" 1>&2;
-		{{ $cmdPhp }} composer.phar install --verbose --prefer-dist --optimize-autoloader --no-progress --no-interaction 2>&1
+		echo "{{ $cmdPhp }} composer.phar install --no-dev --verbose --prefer-dist --optimize-autoloader --no-progress --no-interaction" 1>&2;
+		{{ $cmdPhp }} composer.phar install --no-dev --verbose --prefer-dist --optimize-autoloader --no-progress --no-interaction 2>&1
 	fi
 @endtask
 
