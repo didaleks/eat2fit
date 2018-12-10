@@ -10,10 +10,14 @@
 }
 
 main.diet__content {
-  .recommend-section__message {
-    position: relative;
-    top: -60px;
-    text-align: left;
+  .recommend-section {
+    &__number {
+      color: #a9dcf3;
+    }
+
+    &__message {
+      text-align: left;
+    }
   }
   .icon-target {}
   .icon-bowl {}
