@@ -19,10 +19,11 @@ class EatingController extends \LaravelAdmin\Controllers\BaseAdminController
         $model->eating_type_id = $request->eating_type_id;
         $model->day_id = $request->day_id;
 
-        $rules = $this->model::find($id)->validatorRules($request);
+        $rules = $this->model::find($id)->validatorRulesUpdate($request);
         $validator = Validator::make(Input::all(), $rules);
 
         if (!$this->isValid($validator)){
+            $this->generateFlashes($validator);
             return back()->withInput()->withErrors($validator);
         };
 

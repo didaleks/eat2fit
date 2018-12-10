@@ -34,6 +34,13 @@ class Eating extends Page
         ];
     }
 
+    public function validatorRulesUpdate($data)
+    {
+        return [
+            'day_id' => 'required'
+        ];
+    }
+
     public function formFields()
     {
         $fields = [
