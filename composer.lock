@@ -1804,11 +1804,10 @@
         {
             "name": "support/laravel-admin",
             "version": "dev-master",
-            "dist": {
-                "type": "path",
-                "url": "/Users/i/Desktop/www/eattofit/laravel-admin",
-                "reference": "58a12dfdedf2977b2e62554fb67ed2c1b100fdda",
-                "shasum": null
+            "source": {
+                "type": "git",
+                "url": "git@gitlab.molinos.ru:support/laravel-admin.git",
+                "reference": "4d4681058d2bf6981d149d868bfd9f9bf8de5670"
             },
             "require": {
                 "intervention/image": "^2.4",
@@ -1816,16 +1815,6 @@
                 "wapmorgan/morphos-blade": "^1.6"
             },
             "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "LaravelAdmin\\Providers\\AdminServiceProvider",
-                        "LaravelAdmin\\Providers\\EventServiceProvider",
-                        "LaravelAdmin\\Providers\\BladeServiceProvider",
-                        "morphos\\MorphosBladeProvider"
-                    ]
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "LaravelAdmin\\": "src/"
@@ -1838,7 +1827,8 @@
             "keywords": [
                 "admin",
                 "laravel"
-            ]
+            ],
+            "time": "2018-11-29T14:38:57+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

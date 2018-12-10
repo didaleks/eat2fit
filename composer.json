@@ -16,8 +16,8 @@
     },
     "repositories": [
         {
-            "type": "path",
-            "url":  "/Users/i/Desktop/www/eattofit/laravel-admin"
+            "type": "git",
+            "url":  "git@gitlab.molinos.ru:support/laravel-admin.git"
         }
     ],
     "require-dev": {
