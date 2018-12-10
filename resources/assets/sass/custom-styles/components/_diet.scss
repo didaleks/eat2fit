@@ -20,52 +20,75 @@ main.diet__content {
   .icon-person {}
 
   .menu {
-    .tabs-custom.tabs-corporate .nav-link li a {
-      padding: 8px 10px;
-      font: 700 14px/14px "Open Sans", Helvetica, Arial, sans-serif;
-      border-radius: 0px;
-      color: $gray-light;
-      background: transparent;
-      border: 0px solid #f0f0f0;
-      text-align: center;
-      vertical-align: middle;
-      -webkit-transition: .3s all ease;
-      transition: .3s all ease;
-      padding-left: 12px;
+    .tabs-custom.tabs-corporate {
+      &  .nav-link li a {
+        padding: 8px 10px;
+        font: 700 14px/14px "Open Sans", Helvetica, Arial, sans-serif;
+        border-radius: 0px;
+        color: $gray-light;
+        background: transparent;
+        border: 0px solid #f0f0f0;
+        text-align: center;
+        vertical-align: middle;
+        -webkit-transition: .3s all ease;
+        transition: .3s all ease;
+        padding-left: 12px;
 
 
-      &.active,&:hover {
-        color: $primary;
+        &.active,&:hover {
+          color: $primary;
+          &:before {
+            background: $primary;
+            border: 2px solid $primary;
+          }
+        }
+
         &:before {
-          background: $primary;
-          border: 2px solid $primary;
+          content: '';
+          position: relative;
+          left: -7px;
+          top: 0px;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          border: 2px solid $gray-light;
+          pointer-events: none;
+          opacity: 1;
+          visibility: visible;
+          -webkit-transform: translateX(0);
+          transform: translateX(0);
+          display: inline-block;
         }
       }
-
-      &:before {
-        content: '';
-        position: relative;
-        left: -7px;
-        top: 0px;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        border: 2px solid $gray-light;
-        pointer-events: none;
-        opacity: 1;
-        visibility: visible;
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-        display: inline-block;
+      &.tabs-vertical .nav-link li a {
+        &:before {
+          opacity: 0;
+          visibility: hidden;
+        }
       }
     }
 
-    .tabs-custom.tabs-corporate.tabs-vertical .nav-link li a {
-      &:before {
-        opacity: 0;
-        visibility: hidden;
+    .menu_row {
+      color: $gray-base;
+      &__dish-name span {
+        &:before {
+          content: '';
+          position: relative;
+          left: -7px;
+          top: -2px;
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          border: 2px solid $primary;
+          background: $primary;
+          pointer-events: none;
+          opacity: 1;
+          visibility: visible;
+          -webkit-transform: translateX(0);
+          transform: translateX(0);
+          display: inline-block;
+        }
       }
     }
-
   }
 }
