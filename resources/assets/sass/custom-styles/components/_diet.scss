@@ -38,6 +38,7 @@ main.diet__content {
         color: $primary;
         &:before {
           background: $primary;
+          border: 2px solid $primary;
         }
       }
 
@@ -45,17 +46,24 @@ main.diet__content {
         content: '';
         position: relative;
         left: -7px;
-        top: -2px;
-        width: 6px;
-        height: 6px;
-        background: $gray-light;
+        top: 0px;
+        width: 10px;
+        height: 10px;
         border-radius: 50%;
+        border: 2px solid $gray-light;
         pointer-events: none;
         opacity: 1;
         visibility: visible;
         -webkit-transform: translateX(0);
         transform: translateX(0);
         display: inline-block;
+      }
+    }
+
+    .tabs-custom.tabs-corporate.tabs-vertical .nav-link li a {
+      &:before {
+        opacity: 0;
+        visibility: hidden;
       }
     }
 
