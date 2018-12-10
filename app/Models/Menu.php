@@ -49,4 +49,9 @@ class Menu extends \LaravelAdmin\Models\Menu
 
         return $fields;
     }
+
+    public function page()
+    {
+        return $this->belongsTo('App\Models\Page');
+    }
 }
