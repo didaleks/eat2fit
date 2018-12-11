@@ -1,0 +1,11 @@
+.main {
+  &__features {
+    background-color: $gray-lighter;
+    &__list {
+      background-color: $white;
+    }
+  }
+  &__feedbacks {
+    background-color: $gray-lighter;
+  }
+}
