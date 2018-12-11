@@ -41,6 +41,20 @@
                     </div>
                 </div>
             </div>
+            <div class="swiper-button swiper-button-prev d-none d-lg-block">
+                <div class="wrap"><span class="swiper-button__arrow"><span class="icon material-icons-ico material-icons-chevron_left"></span></span>
+                    <div class="preview">
+                        <div class="preview__img"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button swiper-button-next d-none d-lg-block">
+                <div class="wrap"><span class="swiper-button__arrow"><span class="icon material-icons-ico material-icons-chevron_right"></span></span>
+                    <div class="preview">
+                        <div class="preview__img"></div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="container section-relative">
             <!-- Swiper Pagination-->
