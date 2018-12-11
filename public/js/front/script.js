@@ -2217,5 +2217,6 @@
 		$(this).toggleClass('active');
     })
 
+	$('.advice__button').click();
 
 }());

@@ -172,8 +172,19 @@ main.diet__content {
       }
     }
     .product-buttons__cart-remove {
-      border-color: $gray-light;
       color: $gray-base;
+    }
+  }
+
+  .advice {
+    &__button {
+      cursor: pointer;
+      border-color: $primary;
+      color: $gray-base;
+      &:hover, &:focus {
+        border-color: $gray-light;
+        color: $white;
+      }
     }
   }
 }
