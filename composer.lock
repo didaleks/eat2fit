@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "73a691387f000bc9bb2d266b1decf437",
+    "content-hash": "17c5b8c9b9b0f74b93b8984023b0bc47",
     "packages": [
         {
             "name": "barryvdh/laravel-debugbar",
@@ -1803,11 +1803,11 @@
         },
         {
             "name": "support/laravel-admin",
-            "version": "dev-master",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "git@gitlab.molinos.ru:support/laravel-admin.git",
-                "reference": "4d4681058d2bf6981d149d868bfd9f9bf8de5670"
+                "reference": "2b2e4678a0a0dfa39aac27d6d8950327ddc88f5f"
             },
             "require": {
                 "intervention/image": "^2.4",
@@ -1828,7 +1828,7 @@
                 "admin",
                 "laravel"
             ],
-            "time": "2018-11-29T14:38:57+00:00"
+            "time": "2018-12-04T09:04:11+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
