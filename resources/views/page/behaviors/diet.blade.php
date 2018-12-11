@@ -69,8 +69,8 @@
         <div class="row no-gutters justify-content-sm-center offset-top-40 shadow-drop-sm">
           <div class="col-md-6 col-lg-4 feature__item first">
             <!-- Box-->
-            <div class="box-xs inset-xl-left-35 inset-xl-right-35"><span
-                  class="icon fl-great-icon-set-ico fl-great-icon-set-crosshair15 text-primary"></span>
+            <div class="box-xs inset-xl-left-35 inset-xl-right-35">
+              <span class="icon icon-target"></span>
               <p class="text-big font-weight-bold offset-top-20 title">
                   Цель программы</p>
               <p>Предлагаем вашему вниманию специальное постное меню, которое обеспечит сбалансированное и разнообразное
@@ -80,7 +80,7 @@
           <div class="col-md-6 col-lg-4 feature__item second">
             <!-- Box-->
             <div class="box-xs inset-xl-left-35 inset-xl-right-35">
-              <span class="icon material-icons-person fl-great-icon-set-pencil107 text-primary"></span>
+              <span class="icon icon-bowl"></span>
               <p class="text-big font-weight-bold offset-top-20 title">Индивидуальный подход</p>
               <p>Индивидуальные рекомендации для Вас. Мы подберем оптимальную программу. Вас ждет разнообразие вкусов и
                 прекрасное самочувствие!</p>
@@ -89,8 +89,8 @@
           </div>
           <div class="col-md-6 col-lg-4 feature__item third">
             <!-- Box-->
-            <div class="box-xs inset-xl-left-35 inset-xl-right-35"><span
-                  class="icon material-icons-person flfeature-great-icon-set-pencil107 text-primary"></span>
+            <div class="box-xs inset-xl-left-35 inset-xl-right-35">
+              <span class="icon icon-person"></span>
               <p class="text-big font-weight-bold offset-top-20 title">Индивидуальный подход</p>
               <p>Индивидуальные рекомендации для Вас. Мы подберем оптимальную программу. Вас ждет разнообразие вкусов и
                 прекрасное самочувствие!</p>
