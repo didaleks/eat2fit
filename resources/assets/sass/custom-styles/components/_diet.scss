@@ -12,16 +12,38 @@
 main.diet__content {
   .recommend-section {
     &__number {
-      color: #a9dcf3;
+      color: $primary-blue;
     }
 
     &__message {
       text-align: left;
     }
   }
-  .icon-target {}
-  .icon-bowl {}
-  .icon-person {}
+
+  .feature {
+    .box-xs {
+      padding: 33px 33px;
+    }
+    &__item {
+      &.second {
+        background-image: url("/images/pages/events-03-390x289.jpg");
+        background-repeat: round;
+        p.title, p,span.icon {color: $white}
+      }
+      height: 300px;
+      span.icon {
+        color: $primary-blue-darker;
+        font-size: 50px;
+      }
+      background-color: $gray-lighter;
+      color: $gray-base;
+      p.title {color: $gray-base}
+      p {text-align: left}
+    }
+    .icon-target {}
+    .icon-bowl {}
+    .icon-person {}
+  }
 
   .menu {
     .tabs-custom.tabs-corporate {
