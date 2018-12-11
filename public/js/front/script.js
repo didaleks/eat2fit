@@ -2212,6 +2212,10 @@
         });
     });
 
+	/* Diet page */
+	$('.addictions__item').click(function () {
+		$(this).toggleClass('active');
+    })
 
 
 }());

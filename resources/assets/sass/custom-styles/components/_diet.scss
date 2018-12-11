@@ -131,4 +131,49 @@ main.diet__content {
       }
     }
   }
+
+  .addictions {
+    &__item {
+      cursor: pointer;
+      color: $gray-base;
+      font-weight: bold;
+      span {
+        &:before {
+          cursor: pointer;
+          content: '';
+          position: relative;
+          left: -12px;
+          top: -2px;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          border: 3px solid $gray-light;
+          pointer-events: none;
+          opacity: 1;
+          visibility: visible;
+          -webkit-transform: translateX(0);
+          transform: translateX(0);
+          display: inline-block;
+          box-shadow:
+                  0 0 0 4px hsl(0, 0%, 100%),
+                  0 0 0 5px $gray-light;
+        }
+      }
+      &.active {
+        span {
+          &:before {
+            background: $primary;
+            border: 2px solid $primary;
+            box-shadow:
+                    0 0 0 4px hsl(0, 0%, 100%),
+                    0 0 0 5px $primary;
+          }
+        }
+      }
+    }
+    .product-buttons__cart-remove {
+      border-color: $gray-light;
+      color: $gray-base;
+    }
+  }
 }
