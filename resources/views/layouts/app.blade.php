@@ -6,9 +6,9 @@
 
     @yield('content')
 
-    @include('blocks.footer_contact_form')
-
     @include('blocks.footer')
+
+    @include('shared.modals')
 
     @include('blocks.js')
 

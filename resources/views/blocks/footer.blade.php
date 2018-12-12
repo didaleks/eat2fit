@@ -1,3 +1,4 @@
+@include('blocks.contact_section')
 <!-- Page Footer-->
 <footer class="page-footer section-30 section-xs-15 bg-gray-lighter">
     <div class="container">

@@ -47,6 +47,17 @@
 	margin: $modal-dialog-margin;
 	// allow clicks to pass through for custom click handling to close modal
 	pointer-events: none;
+
+	&-centered {
+		min-height: calc(100vh - 60px);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		overflow: auto;
+		@media(max-width: 768px) {
+			min-height: calc(100vh - 20px);
+		}
+	}
 }
 
 // Actual modal

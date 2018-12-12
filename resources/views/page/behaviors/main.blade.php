@@ -474,7 +474,7 @@
               <p class="text-big">Start working on your body today, and with the individual fitness program, already in
                 90 days <br class="d-none d-xl-inline-block"> you will see a totally different girl in the mirror!</p>
               <div class="group-xs offset-top-20 offset-lg-top-40"><a class="btn btn-primary" href="/catalog">Перейти в
-                  каталог</a><a class="btn btn-white-outline" href="contact-me.html">Заказать обратный звонок</a></div>
+                  каталог</a><button class="btn btn-white-outline" data-toggle="modal" data-target="#modalCallback">Заказать обратный звонок</button></div>
             </div>
           </div>
         </div>
