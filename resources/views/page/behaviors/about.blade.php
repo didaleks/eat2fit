@@ -204,7 +204,8 @@
       </div>
     </section>
 
-    <section class="section-bottom-95">
+    {{-- Задать вопрос диетологу --}}
+    <section class="section-bottom-95 about__paralax-question">
       <div class="row justify-content-sm-center offset-top-50">
         <div class="col-md-10">
           <div class="parallax-container context-dark" data-parallax-img="images/backgrounds/background-02-970x800.jpg">
@@ -215,23 +216,38 @@
               <div class="bg-overlay-black section-45">
                 <h1>Subscribe to my newsletter</h1>
                 <form class="rd-mailform text-left offset-top-34" data-form-output="form-output-global"
-                      data-form-type="contact" method="post" action="bat/rd-mailform.php" novalidate="novalidate">
-                  <div
-                      class="row justify-content-sm-center align-items-sm-center inset-left-25 inset-right-25 inset-lg-left-0 inset-lg-right-0">
-                    <div class="col-lg-4 text-lg-right">
+                      data-form-type="contact" method="post" action="{{ route('feedback.store') }}" novalidate="novalidate">
+                  @csrf
+                  <input type="hidden" name="type" value="question">
+                  <div class="row justify-content-sm-center">
+                    <div class="col-lg-4 text-center">
                       <div class="inset-lg-left-10 inset-xl-left-40">
                         <p>Keep up with the latest school news and events. Enter your e-mail and subscribe to our
                           newsletter.</p>
                       </div>
                     </div>
-                    <div class="col-lg-5">
-                      <div class="form-wrap form-wrap-transparent has-error">
-                        <input class="form-input form-control-has-validation form-control-last-child" type="email"
-                               name="email" data-constraints="@Email @Required" id="regula-generated-433216"><span
-                            class="form-validation">Поле обязательно для заполнения.</span>
-                      </div>
+                  </div>
+                  <div class="row justify-content-sm-center p-3 align-items-sm-center inset-left-25 inset-right-25 inset-lg-left-0 inset-lg-right-0">
+                    <div class="col-3 form-wrap form-wrap-transparent has-error">
+                      <input class="form-input form-control-has-validation form-control-last-child"
+                             type="text"
+                             placeholder="Имя"
+                             name="name" data-constraints="@Required" id=""><span
+                          class="form-validation">Поле обязательно для заполнения.</span>
                     </div>
-                    <div class="col-lg-3 text-center text-lg-left offset-top-10 offset-md-top-0">
+                    <div class="col-3 form-wrap form-wrap-transparent has-error">
+                      <input class="form-input form-control-has-validation form-control-last-child" type="text"
+                             placeholder="E-mail"
+                             name="email" data-constraints="@Email @Required" id=""><span
+                          class="form-validation">Поле обязательно для заполнения.</span>
+                    </div>
+                    <div class="col-3 form-wrap form-wrap-transparent has-error">
+                      <input class="form-input form-control-has-validation form-control-last-child" type="text"
+                             placeholder="Ваш вопрос"
+                             name="message" data-constraints="@Required" id=""><span
+                          class="form-validation">Поле обязательно для заполнения.</span>
+                    </div>
+                    <div class="col-3 text-center offset-top-10 offset-md-top-0">
                       <button class="btn btn-primary" type="submit">Задать вопрос</button>
                     </div>
                   </div>
@@ -341,8 +357,8 @@
              data-dots="true">
           <a href="#">
             <img class="img-responsive img-semi-transparent-inverse center-block"
-                           src="images/partners/partner-01-96x21.jpg" width="96" height="21"
-                           alt=""></a><a href="#"><img
+                 src="images/partners/partner-01-96x21.jpg" width="96" height="21"
+                 alt=""></a><a href="#"><img
                 class="img-responsive img-semi-transparent-inverse center-block"
                 src="images/partners/partner-02-101x20.jpg" width="101" height="20" alt=""></a><a href="#"><img
                 class="img-responsive img-semi-transparent-inverse center-block"

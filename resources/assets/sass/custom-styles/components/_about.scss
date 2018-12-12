@@ -2,5 +2,14 @@
   &__how-cook, &__team {
     background-color: $gray-lighter;
   }
-
+  &__paralax-question {
+    .form {
+      &-input {
+        &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+          color: $white;
+          opacity: 1; /* Firefox */
+        }
+      }
+    }
+  }
 }

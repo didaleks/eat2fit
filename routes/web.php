@@ -23,7 +23,7 @@ Route::middleware(['web'])->group(function () {
         Route::resource('eating', 'Admin\EatingController');
         Route::resource('eating_type', 'Admin\EatingTypeController');
         Route::resource('category', 'Admin\CategoryController');
-        Route::get('feedback', 'Admin\FeedbackController@index')->name('feedback.index');
+        Route::resource('feedback', 'Admin\FeedbackController')->only(['index', 'show']);
         Route::resource('order', 'Admin\OrderController')->only(['index', 'show']);
 
         Route::prefix('diet')->group(function () {

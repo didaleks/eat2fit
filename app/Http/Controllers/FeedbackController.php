@@ -16,6 +16,12 @@ class FeedbackController extends Controller
     {
         $data = $request->all();
         $model = new Feedback();
+        if ($data['type'] == 'question') {
+            $model->fill($data);
+            if ($model->save())
+                return response('Спасибо за Ваш вопрос. Мы с Вами скоро свяжемся.')->setStatusCode(200);
+        }
+
         $validator = Validator::make($data, $model->validatorRules($data), $model->validatorMessages($data));
         if ($validator->fails()) {
             $errors = [];
