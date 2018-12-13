@@ -2216,9 +2216,6 @@
 		$(this).toggleClass('active');
     })
 
-	$('.advice__button').click();
-
-
 	/* Accordions About */
     $('#collapseFiveImg').collapse('show');
     $('.panel-collapse').on('show.bs.collapse', function () {
