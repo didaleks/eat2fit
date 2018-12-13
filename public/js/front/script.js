@@ -2206,7 +2206,6 @@
             },
             success: function (response) {
                 // remove_liked();
-				console.log('success motherfu**')
                 let order_number = response.order_number;
             }
         });
@@ -2218,5 +2217,15 @@
     })
 
 	$('.advice__button').click();
+
+	/* Accordions About */
+    $('.panel-collapse').on('show.bs.collapse', function () {
+    	let imgId = '#'+ $(this).attr('id') + 'Img';
+		$(imgId).collapse('show');
+    })
+
+    $('.panel-collapse').on('hide.bs.collapse', function () {
+        $('.about__how-cook__img').collapse('hide');
+    })
 
 }());

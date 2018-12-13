@@ -75,7 +75,7 @@
     {{-- Блок «Как готовим и храним продукты» --}}
     <section class="section-95 about__how-cook">
       <h3>Блок «Как готовим и храним продукты»</h3>
-      <div class="container d-flex justify-content-center offset-top-65 offset-md-top-90">
+      <div class="container d-flex justify-content-center offset-top-65">
         <div class="col-md-10 col-lg-6">
           <div class="about__how-cook__img collapse  panel-collapse-one" id="collapseOneImg">
             <span>1</span>
@@ -150,117 +150,7 @@
           </div>
         </div>
       </div>
-
     </section>
-
-    {{-- Блок "Лицензии"
-    <section class="section-95">
-      <div class="container">
-        <h2>Наши лицензии</h2>
-        <div class="row justify-content-sm-center offset-top-40">
-          <div class="col-md-10 col-lg-8 col-xl-6">
-            <div class="row justify-content-sm-center">
-              <div class="col-sm-6">
-                <img class="img-responsive center-block" src="images/pages/praise-01-269x278.jpg"
-                     width="269" height="278" alt="">
-              </div>
-              <div class="col-sm-6 offset-top-30 offset-xs-top-0">
-                <img class="img-responsive center-block" src="images/pages/praise-02-269x278.jpg"
-                     width="269" height="278" alt=""></div>
-            </div>
-          </div>
-          <div class="col-md-10 col-lg-8 col-xl-6 offset-top-40 offset-lg-top-0 text-left">
-            <!-- Owl Carousel-->
-            <div class="owl-carousel" data-autoplay="true" data-items="1" data-stage-padding="15" data-loop="true"
-                 data-margin="30" data-mouse-drag="false" data-dots-custom=".owl-custom-pagination" data-nav="false">
-              <div class="owl-item">
-                <p class="text-big font-weight-bold text-primary">Rita Jefferson lost 10 pounds and 1 size</p>
-                <p>Joanna is unlike most nutritionists. She allows you to use foods that work with your lifestyle to
-                  address your concerns. I felt that I had a choice in what I ate and how I ate it rather than being on
-                  a strict diet. She was there with constant support, offering recipe recommendations or checking to
-                  make sure I was staying on track.</p>
-                <!-- Blockquote-->
-                <blockquote class="quote quote-classic text-left offset-top-20 offset-md-top-25">
-                  <p class="text-gray">
-                    <q>Working with her changed the way I look at food - I not only feel better and healthier, but I
-                      also enjoy going to the grocery store and putting meals together using ingredients I previously
-                      overlooked. I completed the program having fixed all of my original concerns, and I enjoyed every
-                      session. </q>
-                  </p>
-                  <div class="offset-top-20">
-                    <p class="font-weight-bold"><a class="link-decoration-none text-hover-primary text-gray"
-                                                   href="my-philosophy.html">Rita Jefferson</a></p>
-                  </div>
-                  <div class="offset-top-0">
-                    <p class="text-gray">(writer)</p>
-                  </div>
-                </blockquote>
-              </div>
-              <div class="owl-item">
-                <p class="text-big font-weight-bold text-primary">Lola Jordon lost 20 pounds and 2 sizes</p>
-                <p>Working with Joanna has allowed me to tune into how I eat, why I eat, and how it makes me feel. I'm
-                  more aware of times when I eat not because I'm hungry but because something else is bothering me or
-                  causing stress. Not focusing on food to make me feel better has improved my relationships with others
-                  and with myself.</p>
-                <!-- Blockquote-->
-                <blockquote class="quote quote-classic text-left offset-top-20 offset-md-top-25">
-                  <p class="text-gray">
-                    <q>She’s helped me better manage stress. I've also noticed more balance in my life, including making
-                      room for creativity and relaxation; time with family and friends; better time management; and
-                      things I never thought I'd do like running my first 5k race! I feel more confident that I can set
-                      goals.</q>
-                  </p>
-                  <div class="offset-top-20">
-                    <p class="font-weight-bold"><a class="link-decoration-none text-hover-primary text-gray"
-                                                   href="my-philosophy.html">Lola Jordon</a></p>
-                  </div>
-                  <div class="offset-top-0">
-                    <p class="text-gray">(artist)</p>
-                  </div>
-                </blockquote>
-              </div>
-              <div class="owl-item">
-                <p class="text-big font-weight-bold text-primary">Jina Green lost 30 pounds and 3 sizes</p>
-                <p>I originally contacted Joanna because I was having trouble getting my eating habits under control,
-                  and was finally ready to admit that I couldn't do it on my own. After our initial consultation, I was
-                  convinced that if anyone could help, it was Joanna; and this turned out to be true. In six months, I
-                  lost approximately 30 pounds and 3 sizes.</p>
-                <!-- Blockquote-->
-                <blockquote class="quote quote-classic text-left offset-top-20 offset-md-top-25">
-                  <p class="text-gray">
-                    <q>More importantly, I am making far more healthy food choices, and my self-confidence has never
-                      been better. But working with Joanna is not just about losing weight. Her personalized approach
-                      also addresses improving fitness levels, diversifying one's diet and managing stress.</q>
-                  </p>
-                  <div class="offset-top-20">
-                    <p class="font-weight-bold"><a class="link-decoration-none text-hover-primary text-gray"
-                                                   href="my-philosophy.html">Jina Green</a></p>
-                  </div>
-                  <div class="offset-top-0">
-                    <p class="text-gray">(actress)</p>
-                  </div>
-                </blockquote>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row justify-content-sm-center offset-top-25">
-          <div class="col-md-6 col-xl-4">
-            <div class="section-hidden">
-              <div class="text-both-lines">
-                <div class="owl-custom-pagination">
-                  <div class="owl-dot" data-owl-item="0"></div>
-                  <div class="owl-dot" data-owl-item="1"></div>
-                  <div class="owl-dot" data-owl-item="2"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-     --}}
-
 
     {{-- Задать вопрос диетологу --}}
     <section class="section-bottom-95 about__paralax-question">
