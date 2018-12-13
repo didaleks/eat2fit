@@ -31,7 +31,7 @@ class CatalogController extends Controller
         if ($url != '/')
             $url = '/catalog/' . $url;
 
-        $model = Diet::published()->where(['url' => $url])->with('days.eatings.dishes')->first();
+        $model = Diet::published()->where(['url' => $url])->with('days.eatings.dishes', 'days.eatings.eating_type')->first();
         $weeksCount = $model->weeksCount();
 
         if (!$model)
