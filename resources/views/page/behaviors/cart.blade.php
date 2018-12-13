@@ -138,10 +138,16 @@
                   <div class="col-sm-6 offset-top-10 text-xl-left datepicker-wrapper">
                     <input required value="31 декабря" class="form-input" id="datepicker" width="300" name="shipping_date"/>
                     <script>
+                        var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
                         $('#datepicker').datepicker({
                             uiLibrary: 'bootstrap4',
+                            minDate: today,
                             locale: 'ru-ru',
-                            format: 'dd mmm yyyy'
+                            format: 'dd mmm yyyy',
+                            weekStartDay: 1
+                            // change: function (e) {
+                            //     console.log($(this).val())
+                            // }
                         });
                     </script>
                   </div>
@@ -152,8 +158,8 @@
                              name="shipping_hour"
                              type="number"
                              readonly
-                             min="09"
-                             max="22"
+                             min="07"
+                             max="23"
                              data-check="^\d+$"
                              value="09">
                       <input class="form-input" id="contact-us-time"
