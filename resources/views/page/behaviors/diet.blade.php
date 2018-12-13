@@ -110,7 +110,7 @@
           <div class="col-md-10 col-xl-6">
             <div class="tabs-custom tabs-horizontal tabs-corporate" id="tabs-1">
               <ul class="nav nav-link">
-                @for ($weekNum = 1; $weekNum <= $model->weeksCount(); $weekNum++)
+                @for ($weekNum = 1; $weekNum <= $weeksCount; $weekNum++)
                   <li class="{{($weekNum == 1)? 'active': '' }}">
                     <a href="#tabs-1-{{$weekNum}}"
                        class="{{($weekNum == 1)? 'active': '' }}"
@@ -124,8 +124,14 @@
         <div class="row justify-content-sm-center">
           <div class="col-md-12">
             <div class="tab-content text-left">
-              @for ($weekNum = 1; $weekNum <= $model->weeksCount(); $weekNum++)
-                @php($j = $weekNum + 1)
+              @for ($weekNum = 1; $weekNum <= $weeksCount; $weekNum++)
+
+                @php
+                  $j = $weekNum + 1;
+                  $lastDayNum = $weekNum * 7;
+                  $firstDayNum = $lastDayNum - 6;
+                @endphp
+
                 <div class="tab-pane fade {{($weekNum==1)?'show active':''}}" id="tabs-1-{{$weekNum}}">
                   <div class="container">
                     <div class="row justify-content-sm-center offset-top-13">
@@ -133,7 +139,7 @@
                         <div class="tabs-custom tabs-vertical tabs-corporate" id="tabs-{{$j}}">
                           {{-- Табы дней --}}
                           <ul class="nav nav-link col-md-1">
-                            @foreach($model->getWeek($weekNum) as $day)
+                            @foreach($model->days->whereIn('number', range($firstDayNum,$lastDayNum)) as $day)
                               <li class="{{($day->dayWeekNum()==1)?'active':''}} pt-4">
                                 <a href="#tabs-{{$j}}-{{$day->number}}"
                                    data-toggle="tab"

@@ -157,9 +157,9 @@ class Diet extends Page
 
     public function weeksCount()
     {
-        $daysCount = count($this->days);
+        $daysCount = $this->days_count;
         $weeksCount = $daysCount / 7;
-        if ($weeksCount - floor($weeksCount) > 0){
+        if ($weeksCount - floor($weeksCount) > 0) {
             $weeksCount++;
         }
         return intval($weeksCount);
