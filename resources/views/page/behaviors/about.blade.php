@@ -151,6 +151,45 @@
       </div>
     </section>
 
+    {{-- Блок "Лицензии" --}}
+    <section class="section-45">
+      <h3>Блок «Наши лицензии»</h3>
+      <div class="container d-flex justify-content-center offset-top-30">
+        <div class="col-md-6">
+          <div class="swiper-container swiper-slider">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 2</div>
+              <div class="swiper-slide">Slide 3</div>
+              ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+          </div>
+        </div>
+        <div class="col-md-10 col-lg-6 offset-top-25">
+          <div class="col-md-10">
+            <h2>Are you ready to harness the power of vibrant health to fuel <br class="d-none d-xl-inline-block"> your
+              extraordinary life?</h2>
+            <p>I'm a health and lifestyle coach to smart (and busy!) women who want to look and feel their best, but who
+              don't have a ton of time to exercise, shop for speciality foods, or cook tons of meals every week. I
+              stumbled upon this path by accident, and it changed my life. Learn what good health can do and how
+              extraordinary your life can be!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
     {{-- Задать вопрос диетологу --}}
     <section class="section-bottom-95 about__paralax-question">
       <div class="row justify-content-sm-center offset-top-50">
