@@ -3,8 +3,8 @@
 namespace App\Providers;
 
 use App\Models\Diet;
+use App\Models\Order;
 use App\Models\Page;
-use Illuminate\Support\Facades\Event;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -61,6 +61,10 @@ class EventServiceProvider extends ServiceProvider
 
         Page::saved(function ($model) {
             self::setChildrensUrl($model);
+        });
+
+        Order::saved(function ($model) {
+            $model->sendMailAdmin($model);
         });
     }
 }

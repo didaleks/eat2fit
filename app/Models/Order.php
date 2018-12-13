@@ -6,6 +6,8 @@ use App\Traits\BaseMethods;
 use App\Traits\ControllerValidateMethods;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use LaravelAdmin\Models\Settings;
+use Illuminate\Support\Facades\Mail;
 
 class Order extends Model
 {
@@ -46,5 +48,35 @@ class Order extends Model
             'privacy-policy.accepted' => 'Необходимо согласиться с условиями обработки данных'
         ];
     }
+
+    public function sendMailAdmin($model)
+    {
+        $data = array('model'=>$model);
+        try {
+            Mail::send('emails.admin_mail', $data, function($message) use ($model) {
+                $settings = new Settings;
+                $subject = 'Новый заказ №'. $model->id .' со страницы Корзина';
+                $message
+                    ->to($settings->admin_email)
+                    ->subject($subject);
+                $message->from('aleshka-didenko@yandex.ru',config('app.name'));
+            });
+        } catch (\Exception $e) {}
+    }
+
+    public function sendMailUser($model)
+    {
+        $data = array('model'=>$model);
+        try {
+            Mail::send('emails.customer_mail', $data, function($message) use ($model) {
+                $subject = 'Формирование заказа №'. $model->id .' на сайте '.config('app.name');
+                $message->to($model->email)
+                    ->subject($subject);
+                $message->from('aleshka-didenko@yandex.ru',config('app.name'));
+            });
+        } catch (\Exception $e) {}
+    }
+
+
 
 }
