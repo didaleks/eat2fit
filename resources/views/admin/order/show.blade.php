@@ -25,7 +25,7 @@
         <th scope="row">{{$item->id}}</th>
         <td><a href="{{$item->url}}" target="_blank">{{$item->name}}</a></td>
         <td>{{$product_data->qty}}</td>
-        <td>{{$product_data->price}} рублей</td>
+        <td>{{$product_data->price}} &#x20bd;</td>
       </tr>
     @endforeach
     </tbody>
@@ -74,11 +74,11 @@
       </tr>
       <tr>
         <th scope="row">Cумма заказа без учета доставки:</th>
-        <td>{{$cart->totalPrice}} рублей</td>
+        <td>{{$cart->totalPrice}} &#x20bd;</td>
       </tr>
       <tr>
         <th scope="row">Сумма заказа с учетом доставки:</th>
-        <td>{{$cart->totalFullPrice}} рублей</td>
+        <td>{{$cart->totalFullPrice}} &#x20bd;</td>
       </tr>
     </tbody>
   </table>

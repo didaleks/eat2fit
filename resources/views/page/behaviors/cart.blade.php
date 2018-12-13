@@ -52,7 +52,7 @@
                         </div>
                       </div>
                     </td>
-                    <td class="text-gray cart__item_price">{{$item->price}}</td>
+                    <td class="text-gray"><span class="cart__item_price">{{$item->price}}</span> &#x20bd;</td>
                     <td>
                       <div class="form-wrap form-wrap-border-none">
                         <input class="form-input input-sm cart__item_qty" type="number"
@@ -60,7 +60,7 @@
                                value="{{$diet['qty']}}" min="1" max="60">
                       </div>
                     </td>
-                    <td class="text-gray cart__item_summ">{{$item->price * $diet['qty']}}</td>
+                    <td class="text-gray"><span class="cart__item_summ">{{$item->price * $diet['qty']}}</span> &#x20bd;</td>
                   </tr>
                 @endforeach
 
@@ -201,8 +201,7 @@
                              type="text" name="coupon" placeholder="" value=""><span class="form-validation"></span>
                     </div>
                   </div>
-                  <div class="col-md-4"></div>
-                  <div class="col-md-4 col-lg-5 col-xl-4 offset-top-40 justify-content-sm-end">
+                  <div class="col-md-4 col-lg-5 col-xl-8 offset-top-40 justify-content-sm-end">
                     <div class="table-responsive total-cart">
                       <table class="table table-custom-md table-default table-bordered-custom text-left">
                         <tbody>
@@ -212,15 +211,15 @@
                         </tr>
                         <tr>
                           <td>Стоимость доставки:</td>
-                          <td class="font-weight-bold text-gray">{{$cart->shippingPrice}}</td>
+                          <td class="font-weight-bold text-gray">{{$cart->shippingPrice}} &#x20bd;</td>
                         </tr>
                         <tr>
                           <td>Стоимость товаров:</td>
-                          <td class="font-weight-bold text-gray total-cart__items-summ">{{$cart->getTotalPrice()}}</td>
+                          <td class="font-weight-bold text-gray"><span class="total-cart__items-summ">{{$cart->getTotalPrice()}}</span> &#x20bd;</td>
                         </tr>
                         <tr>
                           <td>Итого к оплате:</td>
-                          <td class="font-weight-bold text-gray total-cart__full-summ">{{$cart->getFullPrice()}}</td>
+                          <td class="font-weight-bold text-gray"><span class="total-cart__full-summ">{{$cart->getFullPrice()}}</span> &#x20bd;</td>
                         </tr>
                         </tbody>
                       </table>
@@ -233,7 +232,7 @@
                       <label class="checkbox-inline text-primary">
                         <input name="privacy-policy" value="0" type="hidden">
                         <input name="privacy-policy" value="1" type="checkbox" checked>Я
-                        согласен с <a href="/privacy-policy">условиями политики
+                        согласен с <a href="/privacy-policy" target="_blank">условиями политики
                           конфиденциальности</a>
                       </label>
                     </div>
