@@ -152,12 +152,12 @@
                           <div class="tab-content text-left offset-top-30 p-0">
                             @foreach($model->days->whereIn('number', range($firstDayNum,$lastDayNum)) as $day)
                               <div class="tab-pane fade {{($day->dayWeekNum()==1)?'show active':''}}" id="tabs-{{$j}}-{{$day->number}}">
-                                  @foreach($day->eatings as $eating)
+                                  @foreach($day->eatings->sortBy('eating_type.sort') as $eating)
                                   <div class="menu_row col-md-12 d-flex justify-content-between offset-top-10">
                                     <div class="col-md-3">
                                       <big class="font-weight-bold">{{$eating->name}}</big>
                                       <ul>
-                                        @foreach($eating->dishes as $dish)
+                                        @foreach($eating->dishes->sortBy('pivot.sort') as $dish)
                                           <li class="menu_row__dish-name"><span>{{$dish->name}}</span></li>
                                         @endforeach
                                       </ul>

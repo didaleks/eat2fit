@@ -13,7 +13,7 @@
 @section('additional')
     <div class="dd">
         <ol class="dd-list">
-            @foreach($model->eatings as $eating)
+            @foreach($model->eatings->sortBy('eating_type.sort') as $eating)
                 @include('admin.eating._row',
                 ['model' => $eating,
                 'name'=>'eating'])
