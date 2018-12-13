@@ -2218,7 +2218,9 @@
 
 	$('.advice__button').click();
 
+
 	/* Accordions About */
+    $('#collapseFiveImg').collapse('show');
     $('.panel-collapse').on('show.bs.collapse', function () {
     	let imgId = '#'+ $(this).attr('id') + 'Img';
 		$(imgId).collapse('show');

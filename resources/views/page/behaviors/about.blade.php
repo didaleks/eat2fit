@@ -22,7 +22,7 @@
     </div>
   </section>
 
-  <main class="page-content">
+  <main class="page-content about">
 
     {{-- Блок «Как отбираем продукты» --}}
     <section class="section-95 section-md-bottom-0">
@@ -77,6 +77,11 @@
       <h3>Блок «Как готовим и храним продукты»</h3>
       <div class="container d-flex justify-content-center offset-top-65">
         <div class="col-md-10 col-lg-6">
+          <div class="about__how-cook__img collapse  panel-collapse-five" id="collapseFiveImg">
+            <span>5</span>
+            <img class="img-responsive center-block" src="images/pages/praise-01-269x278.jpg"
+                 width="269" height="278" alt="">
+          </div>
           <div class="about__how-cook__img collapse  panel-collapse-one" id="collapseOneImg">
             <span>1</span>
             <img class="img-responsive center-block" src="images/pages/praise-01-269x278.jpg"
@@ -97,16 +102,18 @@
             <img class="img-responsive center-block" src="images/pages/praise-01-269x278.jpg"
                  width="269" height="278" alt="">
           </div>
-          <div class="about__how-cook__img collapse  panel-collapse-five" id="collapseFiveImg">
-            <span>5</span>
-            <img class="img-responsive center-block" src="images/pages/praise-01-269x278.jpg"
-                 width="269" height="278" alt="">
-          </div>
         </div>
 
         <div class="col-md-10 col-lg-6 offset-top-25">
-          <!-- Accordion-->
           <div class="panel-group text-left" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-custom panel-default">
+              <div class="panel-heading" id="headingFive" role="tab">
+                <p class="panel-title"><a class="d-block" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="true" aria-controls="collapseFive">Can I track my order?</a></p>
+              </div>
+              <div class="panel-collapse in collapse show" id="collapseFive" role="tabpanel" aria-labelledby="headingThree" style="">
+                <div class="panel-body">Yes, you can! After placing your order you will receive an order confirmation via email. Each order starts production 24 hours after your order is placed. Within 72 hours of you placing your order, you will receive an expected delivery date. When the order ships, you will receive another email with the tracking number and a link to trace the order online with the carrier.</div>
+              </div>
+            </div>
             <div class="panel panel-custom panel-default">
               <div class="panel-heading" id="headingOne" role="tab">
                 <p class="panel-title"><a class="d-block collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">How can I change something in my order?</a></p>
@@ -137,14 +144,6 @@
               </div>
               <div class="panel-collapse collapse" id="collapseFour" role="tabpanel" aria-labelledby="headingOne" style="">
                 <div class="panel-body">Please contact our administrators for more information on returning products purchased on our website.</div>
-              </div>
-            </div>
-            <div class="panel panel-custom panel-default">
-              <div class="panel-heading" id="headingFive" role="tab">
-                <p class="panel-title"><a class="d-block" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="true" aria-controls="collapseFive">Can I track my order?</a></p>
-              </div>
-              <div class="panel-collapse in collapse show" id="collapseFive" role="tabpanel" aria-labelledby="headingThree" style="">
-                <div class="panel-body">Yes, you can! After placing your order you will receive an order confirmation via email. Each order starts production 24 hours after your order is placed. Within 72 hours of you placing your order, you will receive an expected delivery date. When the order ships, you will receive another email with the tracking number and a link to trace the order online with the carrier.</div>
               </div>
             </div>
           </div>
