@@ -10,27 +10,27 @@
         <div class="col-md-10 col-lg-6">
           <div class="about__how-cook__img collapse  panel-collapse-five" id="collapseFiveImg">
             <span>5</span>
-            <img class="img-responsive center-block" src="images/pages/praise-01-269x278.jpg"
+            <img class="img-responsive center-block" src="/images/backgrounds/temp_banner.png"
                  width="269" height="278" alt="">
           </div>
           <div class="about__how-cook__img collapse  panel-collapse-one" id="collapseOneImg">
             <span>1</span>
-            <img class="img-responsive center-block" src="images/pages/praise-01-269x278.jpg"
+            <img class="img-responsive center-block" src="/images/backgrounds/temp_banner.png"
                  width="269" height="278" alt="">
           </div>
           <div class="about__how-cook__img collapse  panel-collapse-two" id="collapseTwoImg">
             <span>2</span>
-            <img class="img-responsive center-block" src="images/pages/praise-01-269x278.jpg"
+            <img class="img-responsive center-block" src="/images/backgrounds/temp_banner.png"
                  width="269" height="278" alt="">
           </div>
           <div class="about__how-cook__img collapse  panel-collapse-three" id="collapseThreeImg">
             <span>3</span>
-            <img class="img-responsive center-block" src="images/pages/praise-01-269x278.jpg"
+            <img class="img-responsive center-block" src="/images/backgrounds/temp_banner.png"
                  width="269" height="278" alt="">
           </div>
           <div class="about__how-cook__img collapse  panel-collapse-four" id="collapseFourImg">
             <span>4</span>
-            <img class="img-responsive center-block" src="images/pages/praise-01-269x278.jpg"
+            <img class="img-responsive center-block" src="/images/backgrounds/temp_banner.png"
                  width="269" height="278" alt="">
           </div>
         </div>
@@ -89,7 +89,7 @@
         <div class="row justify-content-sm-center">
           <div class="col-md-10 col-lg-6 offset-top-40 offset-md-top-0 text-left">
             <div class="inset-xl-left-15">
-              <h1>Имя Фамилия</h1>
+              <h1>Блок «Цитата руководителя/главного технолога» </h1>
               <p class="text-big font-weight-bold text-primary">Главный технолог Eat2Fit</p>
               <p>I believe&nbsp;that taking a conscious approach to eating is crucial in today's crazy food world. Becoming what I call a Conscious Eater begins with a change in mindset. Eating consciously simply means to eat&nbsp;with awareness, knowing what we are eating, why we are eating it, where it comes from&nbsp;and how it will make us feel.</p>
               <!-- Blockquote-->
@@ -101,7 +101,7 @@
             </div>
           </div>
           <div class="col-md-10 col-lg-6">
-            <div class="d-inline-block"><img class="img-responsive center-block" src="images/users/user-joanna-smith-550x530.jpg" width="550" height="530" alt="">
+            <div class="d-inline-block"><img class="img-responsive center-block" src="/images/backgrounds/temp_banner.png" width="550" height="530" alt="">
               <!-- Box-->
               <div class="box-xs bg-gray-lighter">
                 <!-- List Inline-->
@@ -129,10 +129,10 @@
     {{-- Блок «Процесс готовки и упаковки» --}}
     <section class="section-95">
       <div class="container">
-        <h2>Latest news</h2>
+        <h2>Блок «Процесс готовки и упаковки» </h2>
         <div class="row no-gutters justify-content-sm-center offset-top-40 shadow-drop-sm">
           <div class="col-md-6 col-lg-4"><img class="img-responsive img-fullwidth img-fullheight center-block"
-                                              src="images/pages/events-01-390x289.jpg" width="390" height="289" alt="">
+                                              src="/images/backgrounds/temp_banner.png" width="390" height="289" alt="">
           </div>
           <div class="col-md-6 col-lg-4">
             <!-- Box-->
@@ -146,7 +146,7 @@
             </div>
           </div>
           <div class="col-md-6 col-lg-4"><img class="img-responsive img-fullwidth img-fullheight center-block"
-                                              src="images/pages/events-02-390x289.jpg" width="390" height="289" alt="">
+                                              src="/images/backgrounds/temp_banner.png" width="390" height="289" alt="">
           </div>
           <div class="col-md-6 col-lg-4">
             <!-- Box-->
@@ -160,7 +160,7 @@
             </div>
           </div>
           <div class="col-md-6 col-lg-4"><img class="img-responsive img-fullwidth img-fullheight center-block"
-                                              src="images/pages/events-03-390x289.jpg" width="390" height="289" alt="">
+                                              src="/images/backgrounds/temp_banner.png" width="390" height="289" alt="">
           </div>
           <div class="col-md-6 col-lg-4">
             <!-- Box-->
@@ -179,13 +179,13 @@
 
     {{-- Блок «Призыв к действию» --}}
     <section class="section section-height-800 parallax-container context-dark"
-             data-parallax-img="images/backgrounds/background-11-1920x900.jpg">
+             data-parallax-img="/images/backgrounds/temp_banner.png">
       <div class="parallax-content">
         <div class="bg-overlay-green-leaf">
           <div class="container section-110 section-md-170">
             <div class="row justify-content-sm-center">
               <div class="col-sm-10">
-                <h1>25 Simple self care actions for a healthier life</h1>
+                <h1>Блок «Призыв к действию»</h1>
                 <p class="text-big text-uppercase text-spacing-100">I’ve had a particularly rough month. I’ve been
                   working tons and getting ready for a very big move.</p><a
                     class="btn btn-white-outline offset-top-20 offset-md-top-30" href="group-coaching.html">Start
@@ -201,7 +201,7 @@
     <!-- Featured events-->
     <section class="section-95">
       <div class="container">
-        <h2>Featured events</h2>
+        <h2>Блок «Новости производства»</h2>
         <!-- Owl Carousel-->
         <div class="owl-carousel owl-nav-modern owl-carousel-inset-bottom-20 owl-carousel-navs-primary offset-top-40"
              data-autoplay="true" data-items="1" data-md-items="2" data-stage-padding="5" data-loop="true"
@@ -209,7 +209,7 @@
           <div class="owl-item">
             <!-- Post Box-->
             <article class="post-box">
-              <div class="post-box-img-wrap"><img src="images/blog/post-01-571x234.jpg" width="571" height="234" alt="">
+              <div class="post-box-img-wrap"><img src="/images/backgrounds/temp_banner.png" width="571" height="234" alt="">
               </div>
               <div class="post-box-caption bg-default"><span
                     class="icon icon-circle fl-great-icon-set-ico fl-great-icon-set-pencil107 bg-default"></span>
@@ -226,7 +226,7 @@
           <div class="owl-item">
             <!-- Post Box-->
             <article class="post-box">
-              <div class="post-box-img-wrap"><img src="images/blog/post-02-571x234.jpg" width="571" height="234" alt="">
+              <div class="post-box-img-wrap"><img src="/images/backgrounds/temp_banner.png" width="571" height="234" alt="">
               </div>
               <div class="post-box-caption bg-default"><span
                     class="icon icon-circle fl-great-icon-set-ico fl-great-icon-set-video172 bg-default"></span>
@@ -243,7 +243,7 @@
           <div class="owl-item">
             <!-- Post Box-->
             <article class="post-box">
-              <div class="post-box-img-wrap"><img src="images/blog/post-01-571x234.jpg" width="571" height="234" alt="">
+              <div class="post-box-img-wrap"><img src="/images/backgrounds/temp_banner.png" width="571" height="234" alt="">
               </div>
               <div class="post-box-caption bg-default"><span
                     class="icon icon-circle fl-great-icon-set-ico fl-great-icon-set-pencil107 bg-default"></span>
@@ -260,7 +260,7 @@
           <div class="owl-item">
             <!-- Post Box-->
             <article class="post-box">
-              <div class="post-box-img-wrap"><img src="images/blog/post-02-571x234.jpg" width="571" height="234" alt="">
+              <div class="post-box-img-wrap"><img src="/images/backgrounds/temp_banner.png" width="571" height="234" alt="">
               </div>
               <div class="post-box-caption bg-default"><span
                     class="icon icon-circle fl-great-icon-set-ico fl-great-icon-set-video172 bg-default"></span>

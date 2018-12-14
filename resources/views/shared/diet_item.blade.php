@@ -1,8 +1,9 @@
 <div class="col-md-6 col-lg-6 mb-4 catalog__diet-item" data-calories="{{$model->calories}}">
-    <a class="thumbnail-classic" href="work-with-me.html">
+    <a class="thumbnail-classic" href="{{$model->url}}">
         <span class="thumbnail-classic-img-wrap">
+
             <img class="img-responsive center-block"
-                 src="images/pages/massage-01-370x230.jpg"
+                 src="/images/backgrounds/temp_banner.png"
                  width="370"
                  height="230"
                  alt="">

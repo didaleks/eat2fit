@@ -3,12 +3,12 @@
 @section('content')
 
   <section class="section section-height-800 parallax-container context-dark bg-gray-darkest text-xl-left"
-           data-parallax-img="images/backgrounds/background-01-1920x900.jpg">
+           data-parallax-img="/images/backgrounds/temp_banner.png">
     <div class="parallax-content">
       <div class="bg-overlay-black">
         <div class="container section-30 section-md-95 section-lg-top-120 section-lg-bottom-150">
           <div class="d-none d-lg-block">
-            <h1>Health Coaching Philosophy</h1>
+            <h1>{{$model->name}}</h1>
           </div>
           <!-- List Inline-->
           <ul class="list-inline list-inline-dashed list-white text-big p offset-md-top-13">
@@ -29,7 +29,7 @@
       <div class="container">
         <div class="row justify-content-sm-center">
           <div class="col-md-10">
-            <h2>Как отбираем продукты</h2>
+            <h2>Блок «Как отбираем продукты»</h2>
           </div>
         </div>
         <div class="row justify-content-sm-center justify-content-md-start offset-md-top-34">
@@ -66,7 +66,7 @@
             </div>
           </div>
           <div class="col-lg-6 col-xl-5"><img class="img-responsive center-block d-none d-lg-inline-block"
-                                              src="images/pages/health-coaching-philosophy-01-470x540.jpg" width="470"
+                                              src="/images/backgrounds/temp_banner.png" width="470"
                                               height="540" alt=""></div>
         </div>
       </div>
@@ -79,27 +79,27 @@
         <div class="col-md-10 col-lg-6">
           <div class="about__how-cook__img collapse  panel-collapse-five" id="collapseFiveImg">
             <span>5</span>
-            <img class="img-responsive center-block" src="images/pages/praise-01-269x278.jpg"
+            <img class="img-responsive center-block" src="/images/backgrounds/temp_banner.png"
                  width="269" height="278" alt="">
           </div>
           <div class="about__how-cook__img collapse  panel-collapse-one" id="collapseOneImg">
             <span>1</span>
-            <img class="img-responsive center-block" src="images/pages/praise-01-269x278.jpg"
+            <img class="img-responsive center-block" src="/images/backgrounds/temp_banner.png"
                  width="269" height="278" alt="">
           </div>
           <div class="about__how-cook__img collapse  panel-collapse-two" id="collapseTwoImg">
             <span>2</span>
-            <img class="img-responsive center-block" src="images/pages/praise-01-269x278.jpg"
+            <img class="img-responsive center-block" src="/images/backgrounds/temp_banner.png"
                  width="269" height="278" alt="">
           </div>
           <div class="about__how-cook__img collapse  panel-collapse-three" id="collapseThreeImg">
             <span>3</span>
-            <img class="img-responsive center-block" src="images/pages/praise-01-269x278.jpg"
+            <img class="img-responsive center-block" src="/images/backgrounds/temp_banner.png"
                  width="269" height="278" alt="">
           </div>
           <div class="about__how-cook__img collapse  panel-collapse-four" id="collapseFourImg">
             <span>4</span>
-            <img class="img-responsive center-block" src="images/pages/praise-01-269x278.jpg"
+            <img class="img-responsive center-block" src="/images/backgrounds/temp_banner.png"
                  width="269" height="278" alt="">
           </div>
         </div>
@@ -195,12 +195,12 @@
       <div class="row justify-content-sm-center offset-top-50">
         <div class="col-md-10">
           <div class="parallax-container context-dark" data-parallax-img="images/backgrounds/background-02-970x800.jpg">
-            <div class="material-parallax parallax"><img src="images/backgrounds/background-02-970x800.jpg" alt=""
+            <div class="material-parallax parallax"><img src="/images/backgrounds/temp_banner.png" alt=""
                                                          style="display: block; transform: translate3d(-50%, 230px, 0px);">
             </div>
             <div class="parallax-content">
               <div class="bg-overlay-black section-45">
-                <h1>Subscribe to my newsletter</h1>
+                <h1>Блок "Задать вопрос диетологу"</h1>
                 <form class="rd-mailform text-left offset-top-34" data-form-output="form-output-global"
                       data-form-type="contact" method="post" action="{{ route('feedback.store') }}" novalidate="novalidate">
                   @csrf
@@ -248,7 +248,7 @@
     {{-- Блок Команда --}}
     <section class="section-95 about__team">
       <div class="container">
-        <h2>Наша команда</h2>
+        <h2>Блок Команда</h2>
         <div class="row justify-content-sm-center offset-top-40">
           <div class="col-md-8 col-lg-4">
             <!-- Post Box Hover-->
@@ -328,8 +328,7 @@
       <div class="contaner">
         <div class="row justify-content-sm-center">
           <div class="col-md-10">
-            <h2>Are you ready to harness the power of vibrant health to fuel <br class="d-none d-xl-inline-block"> your
-              extraordinary life?</h2>
+            <h2>Блок «Партнеры»</h2>
             <p>I'm a health and lifestyle coach to smart (and busy!) women who want to look and feel their best, but who
               don't have a ton of time to exercise, shop for speciality foods, or cook tons of meals every week. I
               stumbled upon this path by accident, and it changed my life. Learn what good health can do and how
@@ -343,26 +342,26 @@
              data-dots="true">
           <a href="#">
             <img class="img-responsive img-semi-transparent-inverse center-block"
-                 src="images/partners/partner-01-96x21.jpg" width="96" height="21"
+                 src="/images/backgrounds/temp_banner.png" width="96" height="21"
                  alt=""></a><a href="#"><img
                 class="img-responsive img-semi-transparent-inverse center-block"
-                src="images/partners/partner-02-101x20.jpg" width="101" height="20" alt=""></a><a href="#"><img
+                src="/images/backgrounds/temp_banner.png" width="101" height="20" alt=""></a><a href="#"><img
                 class="img-responsive img-semi-transparent-inverse center-block"
-                src="images/partners/partner-03-133x29.jpg" width="133" height="29" alt=""></a><a href="#"><img
+                src="/images/backgrounds/temp_banner.png" width="133" height="29" alt=""></a><a href="#"><img
                 class="img-responsive img-semi-transparent-inverse center-block"
-                src="images/partners/partner-04-148x19.jpg" width="148" height="19" alt=""></a><a href="#"><img
+                src="/images/backgrounds/temp_banner.png" width="148" height="19" alt=""></a><a href="#"><img
                 class="img-responsive img-semi-transparent-inverse center-block"
-                src="images/partners/partner-05-133x35.jpg" width="133" height="35" alt=""></a><a href="#"><img
+                src="/images/backgrounds/temp_banner.png" width="133" height="35" alt=""></a><a href="#"><img
                 class="img-responsive img-semi-transparent-inverse center-block"
-                src="images/partners/partner-06-130x34.jpg" width="130" height="34" alt=""></a><a href="#"><img
+                src="/images/backgrounds/temp_banner.png" width="130" height="34" alt=""></a><a href="#"><img
                 class="img-responsive img-semi-transparent-inverse center-block"
-                src="images/partners/partner-07-119x26.jpg" width="119" height="26" alt=""></a><a href="#"><img
+                src="/images/backgrounds/temp_banner.png" width="119" height="26" alt=""></a><a href="#"><img
                 class="img-responsive img-semi-transparent-inverse center-block"
-                src="images/partners/partner-08-127x31.jpg" width="127" height="31" alt=""></a><a href="#"><img
+                src="/images/backgrounds/temp_banner.png" width="127" height="31" alt=""></a><a href="#"><img
                 class="img-responsive img-semi-transparent-inverse center-block"
-                src="images/partners/partner-09-154x20.jpg" width="154" height="20" alt=""></a><a href="#"><img
+                src="/images/backgrounds/temp_banner.png" width="154" height="20" alt=""></a><a href="#"><img
                 class="img-responsive img-semi-transparent-inverse center-block"
-                src="images/partners/partner-10-140x41.jpg" width="140" height="41" alt=""></a></div>
+                src="/images/backgrounds/temp_banner.png" width="140" height="41" alt=""></a></div>
       </div>
     </section>
 

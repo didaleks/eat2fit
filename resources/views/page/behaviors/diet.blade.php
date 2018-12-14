@@ -4,7 +4,7 @@
 
   <!-- Parallax-->
   <section class="section diet section-height-800 parallax-container context-dark bg-gray-darkest text-xl-left"
-           data-parallax-img="/images/backgrounds/background-01-1920x900.jpg">
+           data-parallax-img="//images/backgrounds/temp_banner.png">
     <div class="parallax-content">
       <div class="bg-overlay-black">
         <div class="container section-30 section-md-95 section-lg-top-120 section-lg-bottom-150">
@@ -162,9 +162,9 @@
                                         @endforeach
                                       </ul>
                                     </div>
-                                    <div class="col-md-3"><img class="img-responsive center-block" src="/images/pages/work-with-me-02-370x260.jpg" width="370" height="260" alt=""></div>
-                                    <div class="col-md-3"><img class="img-responsive center-block" src="/images/pages/work-with-me-02-370x260.jpg" width="370" height="260" alt=""></div>
-                                    <div class="col-md-3"><img class="img-responsive center-block" src="/images/pages/work-with-me-02-370x260.jpg" width="370" height="260" alt=""></div>
+                                    <div class="col-md-3"><img class="img-responsive center-block" src="/images/backgrounds/temp_banner.png" width="370" height="260" alt=""></div>
+                                    <div class="col-md-3"><img class="img-responsive center-block" src="/images/backgrounds/temp_banner.png" width="370" height="260" alt=""></div>
+                                    <div class="col-md-3"><img class="img-responsive center-block" src="/images/backgrounds/temp_banner.png" width="370" height="260" alt=""></div>
                                   </div>
                                   @endforeach
                               </div>

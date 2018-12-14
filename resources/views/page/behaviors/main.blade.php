@@ -88,11 +88,11 @@
       <div class="container">
         <div class="row justify-content-sm-center">
           <div class="col-md-8 col-lg-6 order-lg-1"><img class="img-responsive center-block"
-                                                         src="images/pages/home-01-570x350.jpg" width="570" height="350"
+                                                         src="/images/backgrounds/temp_banner.png" width="570" height="350"
                                                          alt=""></div>
           <div class="col-md-8 col-lg-6 offset-top-34 offset-md-top-0">
             <div class="inset-lg-left-50 inset-lg-right-50 inset-xl-left-50 inset-xl-right-50">
-              <h2>Блок "О нас"!</h2>
+              <h2>Блок "О нас"</h2>
               <p class="offset-lg-top-35">I am a Certified Health Coach, focused on women's health, bringing you
                 super-practical support to help you feel great, take care of your body, and actually enjoy the process.
                 I don’t tell my clients what to do, I teach them what to do.</p>
@@ -108,10 +108,10 @@
     {{-- Блок "Что мы предлагаем" --}}
     <section class="section-95 main__features">
       <div class="container">
-        <h2>Latest news</h2>
+        <h2>Блок "Что мы предлагаем"</h2>
         <div class="row no-gutters justify-content-sm-center offset-top-40 shadow-drop-sm main__features__list">
           <div class="col-md-6 col-lg-4"><img class="img-responsive img-fullwidth img-fullheight center-block"
-                                              src="images/pages/events-01-390x289.jpg" width="390" height="289" alt="">
+                                              src="/images/backgrounds/temp_banner.png" width="390" height="289" alt="">
           </div>
           <div class="col-md-6 col-lg-4">
             <!-- Box-->
@@ -125,7 +125,7 @@
             </div>
           </div>
           <div class="col-md-6 col-lg-4"><img class="img-responsive img-fullwidth img-fullheight center-block"
-                                              src="images/pages/events-02-390x289.jpg" width="390" height="289" alt="">
+                                              src="/images/backgrounds/temp_banner.png" width="390" height="289" alt="">
           </div>
           <div class="col-md-6 col-lg-4">
             <!-- Box-->
@@ -139,7 +139,7 @@
             </div>
           </div>
           <div class="col-md-6 col-lg-4"><img class="img-responsive img-fullwidth img-fullheight center-block"
-                                              src="images/pages/events-03-390x289.jpg" width="390" height="289" alt="">
+                                              src="/images/backgrounds/temp_banner.png" width="390" height="289" alt="">
           </div>
           <div class="col-md-6 col-lg-4">
             <!-- Box-->
@@ -161,7 +161,7 @@
       <div class="container">
         <div class="row justify-content-sm-center">
           <div class="col-md-10">
-            <h2>10 Days to Sugar Freedom will help you take control of your sugar cravings for good</h2>
+            <h2>Блок «Гарантируем результат за 10 дней»</h2>
           </div>
         </div>
         <div class="row justify-content-sm-center offset-top-40 text-left">
@@ -203,8 +203,8 @@
           <div class="box-offer box-offer-variant-2 context-dark">
             <div class="box-offer-caption"><span
                   class="icon icon-lg fl-great-icon-set-ico fl-great-icon-set-tree108"></span>
-              <h2 class="offset-top-10 offset-xs-top-20 offset-md-top-10 offset-xl-top-20">Healthy Eating is Not
-                Hard</h2>
+              <h2 class="offset-top-10 offset-xs-top-20 offset-md-top-10 offset-xl-top-20">
+                Блок «Блок выберите план»</h2>
               <p class="text-big font-weight-bold offset-top-5 offset-xs-top-10 offset-md-top-5 offset-xl-top-10">Tips
                 for planning your nutritious diet.</p><a
                   class="btn btn-white-outline offset-top-5 offset-xs-top-13 offset-md-top-5 offset-xl-top-13"
@@ -247,13 +247,13 @@
     {{-- Блок «Обращение диетолога и шеф-повара» --}}
     <section class="section-95">
       <div class="container">
-        <h2>Success stories</h2>
+        <h2>Блок «Обращение диетолога и шеф-повара»</h2>
         <div class="row justify-content-sm-center offset-top-40">
           <div class="col-md-10 col-lg-8 col-xl-12 offset-top-40 offset-lg-top-0 text-left">
             <div class="owl-carousel" data-autoplay="true" data-items="1" data-stage-padding="15" data-loop="true" data-margin="30" data-mouse-drag="false" data-dots-custom=".owl-custom-pagination" data-nav="false">
               <div class="owl-item">
                 <div class="row justify-content-sm-center">
-                  <div class="col-sm-6"><img class="img-responsive center-block" src="images/pages/praise-01-269x278.jpg" width="269" height="278" alt=""></div>
+                  <div class="col-sm-6"><img class="img-responsive center-block" src="/images/backgrounds/temp_banner.png" width="269" height="278" alt=""></div>
                   <div class="col-sm-6">
                     <p class="text-big font-weight-bold text-primary">Rita Jefferson lost 10 pounds and 1 size</p>
                     <p>Joanna is unlike most nutritionists. She allows you to use foods that work with your lifestyle to address your concerns. I felt that I had a choice in what I ate and how I ate it rather than being on a strict diet. She was there with constant support, offering recipe recommendations or checking to make sure I was staying on track.</p>
@@ -274,7 +274,7 @@
               </div>
               <div class="owl-item">
                 <div class="row justify-content-sm-center">
-                  <div class="col-sm-6"><img class="img-responsive center-block" src="images/pages/praise-01-269x278.jpg" width="269" height="278" alt=""></div>
+                  <div class="col-sm-6"><img class="img-responsive center-block" src="/images/backgrounds/temp_banner.png" width="269" height="278" alt=""></div>
                   <div class="col-sm-6">
                     <p class="text-big font-weight-bold text-primary">Rita Jefferson lost 10 pounds and 1 size</p>
                     <p>Joanna is unlike most nutritionists. She allows you to use foods that work with your lifestyle to address your concerns. I felt that I had a choice in what I ate and how I ate it rather than being on a strict diet. She was there with constant support, offering recipe recommendations or checking to make sure I was staying on track.</p>
@@ -295,7 +295,7 @@
               </div>
               <div class="owl-item">
                 <div class="row justify-content-sm-center">
-                  <div class="col-sm-6"><img class="img-responsive center-block" src="images/pages/praise-01-269x278.jpg" width="269" height="278" alt=""></div>
+                  <div class="col-sm-6"><img class="img-responsive center-block" src="/images/backgrounds/temp_banner.png" width="269" height="278" alt=""></div>
                   <div class="col-sm-6">
                     <p class="text-big font-weight-bold text-primary">Rita Jefferson lost 10 pounds and 1 size</p>
                     <p>Joanna is unlike most nutritionists. She allows you to use foods that work with your lifestyle to address your concerns. I felt that I had a choice in what I ate and how I ate it rather than being on a strict diet. She was there with constant support, offering recipe recommendations or checking to make sure I was staying on track.</p>
@@ -336,7 +336,7 @@
     {{-- Блок «Частые вопросы» --}}
     <section class="section-bottom-95">
       <div class="container offset-top-65 offset-md-top-90">
-        <h3>Accordions</h3>
+        <h3>Блок «Частые вопросы»</h3>
         <div class="offset-top-25">
           <!-- Accordion-->
           <div class="panel-group text-left" id="accordion" role="tablist" aria-multiselectable="true">
@@ -412,7 +412,7 @@
     {{-- Блок «Отзывы» --}}
     <section class="section-95 main__feedbacks">
       <div class="container">
-        <h2>Testimonials</h2>
+        <h2>Блок «Отзывы»</h2>
         <div class="row justify-content-sm-center offset-top-34">
           <div class="col-md-10 col-lg-4">
             <p class="text-big font-weight-bold text-primary">Jina Green lost 30 pounds and 3 sizes</p>
@@ -420,7 +420,7 @@
               was finally ready to admit that I couldn't do it on my own. After our initial consultation, I was
               convinced that if anyone could help, it was Joanna.</p><img
                 class="img-responsive rounded-circle center-block offset-top-20 offset-md-top-30"
-                src="images/users/user-jina-green-172x172.jpg" width="172" height="172" alt="">
+                src="/images/backgrounds/temp_banner.png" width="172" height="172" alt="">
             <div class="offset-top-13 offset-md-top-25">
               <p class="font-weight-bold"><a class="link-decoration-none text-hover-primary text-gray"
                                              href="my-philosophy.html">Jina Green</a></p>
@@ -435,7 +435,7 @@
               aware of times when I eat not because I'm hungry but because something else is bothering me. Not focusing
               on food has improved my relationships with others.</p><img
                 class="img-responsive rounded-circle center-block offset-top-20 offset-md-top-30"
-                src="images/users/user-lola-jordon-172x172.jpg" width="172" height="172" alt="">
+                src="/images/backgrounds/temp_banner.png" width="172" height="172" alt="">
             <div class="offset-top-13 offset-md-top-25">
               <p class="font-weight-bold"><a class="link-decoration-none text-hover-primary text-gray"
                                              href="my-philosophy.html">Lola Jordon</a></p>
@@ -450,7 +450,7 @@
               your concerns. I felt that I had a choice in what I ate and how I ate it rather than being on a strict
               diet. She was there with constant support.</p><img
                 class="img-responsive rounded-circle center-block offset-top-20 offset-md-top-30"
-                src="images/users/user-rita-jefferson-172x172.jpg" width="172" height="172" alt="">
+                src="/images/backgrounds/temp_banner.png" width="172" height="172" alt="">
             <div class="offset-top-13 offset-md-top-25">
               <p class="font-weight-bold"><a class="link-decoration-none text-hover-primary text-gray"
                                              href="my-philosophy.html">Rita Jefferson</a></p>
@@ -463,14 +463,14 @@
       </div>
     </section>
 
-    {{-- Призыв к действию --}}
+    {{-- Блок "Призыв к действию" --}}
     <section class="section section-height-800 parallax-container context-dark"
-             data-parallax-img="images/backgrounds/background-15-1920x900.jpg">
+             data-parallax-img="/images/backgrounds/temp_banner.png">
       <div class="parallax-content">
         <div class="bg-overlay-gray-darken">
           <div class="container section-95">
             <div class="jumbotron-custom jumbotron-custom-variant-3">
-              <h2>3 months with a Health Coach</h2>
+              <h2>Блок "Призыв к действию"</h2>
               <p class="text-big">Start working on your body today, and with the individual fitness program, already in
                 90 days <br class="d-none d-xl-inline-block"> you will see a totally different girl in the mirror!</p>
               <div class="group-xs offset-top-20 offset-lg-top-40"><a class="btn btn-primary" href="/catalog">Перейти в
