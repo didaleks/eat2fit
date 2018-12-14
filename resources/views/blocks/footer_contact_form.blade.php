@@ -29,7 +29,7 @@
         </div>
     </div>
     <div class="row d-flex justify-content-between inset-sm-right-15 inset-sm-left-15">
-        <div class="col-sm-6 offset-top-20">
+        <div class="col-sm-12 offset-top-20">
             <div class="form-wrap">
                 <label class="checkbox-inline text-primary">
                     <input name="privacy-policy" value="0" type="hidden">

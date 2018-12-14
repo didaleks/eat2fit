@@ -4,7 +4,10 @@
     <div class="container">
         <div class="row justify-content-sm-center align-items-sm-center">
             <div class="col-sm-7 text-sm-left">
-                <p>Joanna Smith &#169; <span class="copyright-year"></span>. <a class="link-decoration-none text-hover-primary text-gray-light" href="privacy-policy.html">Privacy Policy</a></p>
+                <p>Eat2Fit &#169; <span class="copyright-year"></span>.
+                    <a class="link-decoration-none text-hover-primary text-gray-light"
+                       href="/privacy-policy">Политика конфиденциальности</a>
+                </p>
             </div>
             <div class="col-sm-5 offset-top-10 offset-xs-top-0 text-sm-right">
                 <!-- List Inline-->

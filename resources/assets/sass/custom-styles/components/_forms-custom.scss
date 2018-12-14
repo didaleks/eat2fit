@@ -4,6 +4,9 @@
 
 .rd-mailform {
 	position: relative;
+	a {
+		text-decoration: underline;
+	}
 }
 
 // Normalize non-controls

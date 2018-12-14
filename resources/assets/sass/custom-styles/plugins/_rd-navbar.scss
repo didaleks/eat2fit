@@ -90,6 +90,9 @@
 
 .rd-navbar--is-stuck {
   box-shadow: $rd-navbar-shadow;
+  .rd-navbar__cart-fixed {
+    display: inline-block;
+  }
 }
 
 .rd-navbar.rd-navbar-fixed + .rd-navbar.rd-navbar--is-clone,
