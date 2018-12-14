@@ -2249,4 +2249,8 @@
             " - до " + $( "#slider-range" ).slider( "values", 1 ) );
     } );
 
+    $('.consult__button').click(function () {
+        $('#modalConsult').modal()
+    })
+
 }());

@@ -6,7 +6,7 @@
   <div class="swiper-container swiper-slider swiper-slider-variant-1" data-autoplay="5000" data-min-height="400px"
        data-simulate-touch="false" data-slide-effect="fade">
     <div class="swiper-wrapper">
-      <div class="swiper-slide" data-slide-bg="images/backgrounds/background-12-1920x900.jpg">
+      <div class="swiper-slide" data-slide-bg="/images/backgrounds/temp_banner.png">
         <div class="swiper-slide-caption">
           <div class="container">
             <div class="row justify-content-sm-center justify-content-lg-start text-lg-left">
@@ -24,7 +24,7 @@
           </div>
         </div>
       </div>
-      <div class="swiper-slide" data-slide-bg="images/backgrounds/background-14-1920x900.jpg">
+      <div class="swiper-slide" data-slide-bg="/images/backgrounds/temp_banner.png">
         <div class="swiper-slide-caption">
           <div class="container">
             <div class="row justify-content-sm-center justify-content-lg-start text-lg-left">
@@ -42,7 +42,7 @@
           </div>
         </div>
       </div>
-      <div class="swiper-slide" data-slide-bg="images/backgrounds/background-13-1920x900.jpg">
+      <div class="swiper-slide" data-slide-bg="/images/backgrounds/temp_banner.png">
         <div class="swiper-slide-caption">
           <div class="container">
             <div class="row justify-content-sm-center justify-content-lg-start text-lg-left">
