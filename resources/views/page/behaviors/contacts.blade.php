@@ -12,13 +12,41 @@
             <p class="text-big">{{ $model->content }}</p>
           </div>
           <div class="col-10 d-flex justify-content-between">
-            <div class="col-3">
-              <address>Адрес:<p>4578 Marmora St, <br> Chicago D04 89GR.</p></address>
+            <!-- Unit-->
+            <div class="unit align-items-center flex-row unit-spacing-xs">
+              <div class="unit-left"><span class="icon icon-circle icon-primary fl-great-icon-set-ico fl-great-icon-set-placeholder34"></span></div>
+              <div class="unit-body text-left">
+                <div>
+                  <p>Address:</p>
+                </div>
+                <div class="offset-top-5">
+                  <p class="font-weight-bold"><a class="link-decoration-none text-hover-primary text-gray" href="contact-me.html">4578 Marmora St, Chicago D04 89GR.</a></p>
+                </div>
+              </div>
             </div>
-            <div class="col-3">Телефон: 8 800 555 3535</div>
-            <div class="col-3">
-              <p>E-mail:</p>
-              <span><a class="link-decoration-none" href="mailto:#">mail@demolink.org</a></span>
+            <!-- Unit-->
+            <div class="unit align-items-center flex-row unit-spacing-xs offset-top-30">
+              <div class="unit-left"><span class="icon icon-circle icon-primary fl-great-icon-set-ico fl-great-icon-set-mobile226"></span></div>
+              <div class="unit-body text-left">
+                <div>
+                  <p>General Info:</p>
+                </div>
+                <div class="offset-top-5">
+                  <p class="text-big font-weight-bold"><a class="link-decoration-none text-hover-primary text-gray" href="tel:#">+100 123 1234 1110</a></p>
+                </div>
+              </div>
+            </div>
+            <!-- Unit-->
+            <div class="unit align-items-center flex-row unit-spacing-xs offset-top-30">
+              <div class="unit-left"><span class="icon icon-circle icon-primary fl-great-icon-set-ico fl-great-icon-set-new99"></span></div>
+              <div class="unit-body text-left">
+                <div>
+                  <p>Email Address:</p>
+                </div>
+                <div class="offset-top-5">
+                  <p class="text-big font-weight-bold"><a class="link-decoration-none text-hover-primary text-gray" href="mailto:#">name@demolink.org</a></p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
