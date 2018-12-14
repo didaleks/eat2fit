@@ -81,6 +81,17 @@
   }
 }
 
+.rd-navbar__cart.toogle{display: none}
+@include media-breakpoint-down(lg) {
+  .rd-navbar__cart.toogle {
+    display: inline-block;
+    z-index: 99;
+    position: fixed;
+    right: 10px;
+    top: 13px;
+  }
+}
+
 // RD Navbar States
 .rd-navbar--has-sidebar {
   body {

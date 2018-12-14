@@ -29,8 +29,17 @@
                             </ul>
                         </div>
                     </div>
-                    <!-- RD Navbar Collaps-->
-                    <button class="rd-navbar-collapse-toggle" data-rd-navbar-toggle=".rd-navbar-panel-inner-right"><span></span></button>
+                    <div class="rd-navbar__cart toogle">
+                        <a class="icon icon-xxs icon-circle icon-gray-lighter" href="/cart">
+                            <span class="white"><i class="fa fa-shopping-basket"></i></span>
+                        </a>
+                        <a href="/cart">
+                            <sup class="title10 round dark bg-light">{{ \App\Models\Cart::getCountItems() }}</sup>
+                        </a>
+                    </div>
+
+
+                    {{--<button class="rd-navbar-collapse-toggle" data-rd-navbar-toggle=".rd-navbar-panel-inner-right"><span></span></button>--}}
                 </div>
                 <div class="rd-navbar-nav-wrap">
                     <!-- RD Navbar Nav-->
