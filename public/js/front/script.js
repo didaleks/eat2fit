@@ -2234,11 +2234,16 @@
             range: true,
             step: 50,
             min: 500,
-            max: 3000,
-            values: [ 500, 3000 ],
+            max: 6000,
+            values: [ 500, 6000 ],
             slide: function( event, ui ) {
-                $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-            }
+                $( "#amount" ).val( "От " + ui.values[ 0 ] + " - до " + ui.values[ 1 ] );
+            },
+            change: function( event, ui ) {
+				$(".catalog__diet-list .catalog__diet-item").each(function () {
+					($(this).data('calories') > ui.values[ 0 ] && ($(this).data('calories')) < ui.values[ 1 ])? $(this).fadeIn() : $(this).fadeOut()
+                })
+			}
         });
         $( "#amount" ).val( "От " + $( "#slider-range" ).slider( "values", 0 ) +
             " - до " + $( "#slider-range" ).slider( "values", 1 ) );

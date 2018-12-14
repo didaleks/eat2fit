@@ -31,7 +31,7 @@
           <div class="col-md-10 col-lg-12 col-xl-10">
             <!-- Bootstrap tabs-->
             <div class="tabs-custom tabs-vertical tabs-vertical-xs tabs-vertical-variant-2 tabs-corporate" id="tabs-2">
-              <div>
+              <div class="col-md-3">
                 <ul class="nav nav-link">
                   <li class="active"><a href="#tabs-2-1" class="active" data-toggle="tab">Все рационы</a></li>
                   <li><a href="#tabs-2-2" data-toggle="tab">Веганские</a></li>
@@ -40,8 +40,8 @@
 
                 </ul>
                 <p>
-                  <label for="amount">Price range:</label>
-                  <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                  <label for="amount">Количество килокалорий:</label>
+                  <input type="text" id="amount" readonly style="border:0; color:#a6c450; font-weight:bold;">
                 </p>
 
                 <div id="slider-range"></div>

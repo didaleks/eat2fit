@@ -84,7 +84,7 @@ class Diet extends Page
             [
                 'name' => 'calories',
                 'type' => 'number',
-                'label' => '*Среднее число калорий(от 500 до 6000)'
+                'label' => '*Среднее число килокалорий в день(от 500 до 6000)'
             ],
             'meta_title',
             'meta_description',
