@@ -32,7 +32,7 @@
                         <div class="tabs-custom tabs-vertical tabs-vertical-xs tabs-vertical-variant-2 tabs-corporate" id="tabs-2">
                             <!-- Nav tabs-->
                             <ul class="nav nav-link">
-                                <li class="active"><a href="#tabs-2-1" data-toggle="tab">Все рационы</a></li>
+                                <li class="active"><a href="#tabs-2-1" class="active" data-toggle="tab">Все рационы</a></li>
                                 <li><a href="#tabs-2-2" data-toggle="tab">Веганские</a></li>
                                 <li><a href="#tabs-2-3" data-toggle="tab">Белковые</a></li>
                                 <li><a href="#tabs-2-4" data-toggle="tab">Низкокалорийные</a></li>
