@@ -13,20 +13,12 @@
                             <!-- RD Navbar Brand-->
                             <div class="rd-navbar-brand"><a class="brand-name" href="/"><img class="img-responsive center-block" src="/images/logo.svg" width="134" height="42" alt=""></a></div>
                         </div>
-                        <div class="rd-navbar-panel-inner-right d-flex justify-content-end">
+                        <div class="rd-navbar-panel-inner-right d-flex justify-content-end align-items-center">
                             <div class="mr-3 offset-top-10">
                                 <i class="fa-mobile-phone"></i>
-                                <a href="tel:+7 (800) 555-35-35">+7 (800) 555-35-35</a></div>
-                            <ul class="list-inline list-inline-0">
-                                <li class="rd-navbar__cart">
-                                    <a class="icon icon-xxs icon-circle icon-gray-lighter" href="/cart">
-                                        <span class="white"><i class="fa fa-shopping-basket"></i></span>
-                                    </a>
-                                    <a href="/cart">
-                                        <sup class="title10 round dark bg-light">{{ \App\Models\Cart::getCountItems() }}</sup>
-                                    </a>
-                                </li>
-                            </ul>
+                                <a href="tel:+7 (800) 555-35-35">+7 (800) 555-35-35</a>
+                            </div>
+                            <button class="btn btn-xs btn-primary text-bottom"  data-toggle="modal" data-target="#modalCallback">Заказать звонок</button>
                         </div>
                     </div>
                     <div class="rd-navbar__cart toogle">
@@ -34,7 +26,7 @@
                             <span class="white"><i class="fa fa-shopping-basket"></i></span>
                         </a>
                         <a href="/cart">
-                            <sup class="title10 round dark bg-light">{{ \App\Models\Cart::getCountItems() }}</sup>
+                            <sup class="title10 round dark bg-light">{{ $cartItemsCount }}</sup>
                         </a>
                     </div>
 

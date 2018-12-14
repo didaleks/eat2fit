@@ -9,6 +9,7 @@ use App\Models\Menu;
 use App\Models\Page;
 use LaravelAdmin\Models\Settings;
 use Illuminate\Pagination\Paginator;
+use App\Models\Cart;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -27,6 +28,8 @@ class AppServiceProvider extends ServiceProvider
 
             $topMenu = Menu::where(['parent_id' => 1, 'published' => 1])->with(['childrens', 'childrens.page', 'page'])->get();
             view()->share('topMenu', $topMenu);
+
+            view()->share('cartItemsCount', Cart::getCountItems());
 
             $settings = new Settings;
             view()->share('settings', $settings);
