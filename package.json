@@ -19,5 +19,8 @@
         "popper.js": "^1.12",
         "prettier": "^1.15.3",
         "vue": "^2.5.7"
+    },
+    "dependencies": {
+        "jquery-ui": "^1.12.1"
     }
 }

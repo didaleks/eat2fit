@@ -2227,4 +2227,21 @@
         $('.about__how-cook__img').collapse('hide');
     })
 
+	/* Catalog page */
+	/* Multi Range */
+    $( function() {
+        $( "#slider-range" ).slider({
+            range: true,
+            step: 50,
+            min: 500,
+            max: 3000,
+            values: [ 500, 3000 ],
+            slide: function( event, ui ) {
+                $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+            }
+        });
+        $( "#amount" ).val( "От " + $( "#slider-range" ).slider( "values", 0 ) +
+            " - до " + $( "#slider-range" ).slider( "values", 1 ) );
+    } );
+
 }());
