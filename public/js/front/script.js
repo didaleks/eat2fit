@@ -2253,4 +2253,11 @@
         $('#modalConsult').modal()
     })
 
+	$('.about__licensees .swiper-slide').click(function () {
+		if ($(this).data('slide-bg')) {
+			$('#modalImg img').attr("src",$(this).data('slide-bg'));
+		}
+	})
+
+
 }());

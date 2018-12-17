@@ -16,3 +16,14 @@
   </div>
 </div>
 
+
+<div class="modal fade" id="modalImg">
+  <div class="modal-dialog modal-dialog-centered ">
+    <div class="modal-content">
+      <!-- Modal body -->
+      <div class="p-3">
+        <img src="" width="100%">
+      </div>
+    </div>
+  </div>
+</div>

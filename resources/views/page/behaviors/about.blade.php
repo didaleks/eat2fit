@@ -108,42 +108,71 @@
           <div class="panel-group text-left" id="accordion" role="tablist" aria-multiselectable="true">
             <div class="panel panel-custom panel-default">
               <div class="panel-heading" id="headingFive" role="tab">
-                <p class="panel-title"><a class="d-block" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="true" aria-controls="collapseFive">Can I track my order?</a></p>
+                <p class="panel-title"><a class="d-block" role="button" data-toggle="collapse" data-parent="#accordion"
+                                          href="#collapseFive" aria-expanded="true" aria-controls="collapseFive">Can I
+                    track my order?</a></p>
               </div>
-              <div class="panel-collapse in collapse show" id="collapseFive" role="tabpanel" aria-labelledby="headingThree" style="">
-                <div class="panel-body">Yes, you can! After placing your order you will receive an order confirmation via email. Each order starts production 24 hours after your order is placed. Within 72 hours of you placing your order, you will receive an expected delivery date. When the order ships, you will receive another email with the tracking number and a link to trace the order online with the carrier.</div>
+              <div class="panel-collapse in collapse show" id="collapseFive" role="tabpanel"
+                   aria-labelledby="headingThree" style="">
+                <div class="panel-body">Yes, you can! After placing your order you will receive an order confirmation
+                  via email. Each order starts production 24 hours after your order is placed. Within 72 hours of you
+                  placing your order, you will receive an expected delivery date. When the order ships, you will receive
+                  another email with the tracking number and a link to trace the order online with the carrier.
+                </div>
               </div>
             </div>
             <div class="panel panel-custom panel-default">
               <div class="panel-heading" id="headingOne" role="tab">
-                <p class="panel-title"><a class="d-block collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">How can I change something in my order?</a></p>
+                <p class="panel-title"><a class="d-block collapsed" role="button" data-toggle="collapse"
+                                          data-parent="#accordion" href="#collapseOne" aria-expanded="false"
+                                          aria-controls="collapseOne">How can I change something in my order?</a></p>
               </div>
-              <div class="panel-collapse collapse" id="collapseOne" role="tabpanel" aria-labelledby="headingOne" style="">
-                <div class="panel-body">If you need to change something in your order, please contact us immediately. We usually process orders within 2-4 hours, and once we have processed your order, we will be unable to make any changes.</div>
+              <div class="panel-collapse collapse" id="collapseOne" role="tabpanel" aria-labelledby="headingOne"
+                   style="">
+                <div class="panel-body">If you need to change something in your order, please contact us immediately. We
+                  usually process orders within 2-4 hours, and once we have processed your order, we will be unable to
+                  make any changes.
+                </div>
               </div>
             </div>
             <div class="panel panel-custom panel-default">
               <div class="panel-heading" id="headingTwo" role="tab">
-                <p class="panel-title"><a class="d-block collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">How can I pay for my order?</a></p>
+                <p class="panel-title"><a class="d-block collapsed" role="button" data-toggle="collapse"
+                                          data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
+                                          aria-controls="collapseTwo">How can I pay for my order?</a></p>
               </div>
-              <div class="panel-collapse collapse" id="collapseTwo" role="tabpanel" aria-labelledby="headingTwo" style="">
-                <div class="panel-body">We accept Visa, MasterCard, and American Express credit and debit cards for your convenience.</div>
+              <div class="panel-collapse collapse" id="collapseTwo" role="tabpanel" aria-labelledby="headingTwo"
+                   style="">
+                <div class="panel-body">We accept Visa, MasterCard, and American Express credit and debit cards for your
+                  convenience.
+                </div>
               </div>
             </div>
             <div class="panel panel-custom panel-default">
               <div class="panel-heading" id="headingThree" role="tab">
-                <p class="panel-title"><a class="d-block collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">How long will my order take to be delivered?</a></p>
+                <p class="panel-title"><a class="d-block collapsed" role="button" data-toggle="collapse"
+                                          data-parent="#accordion" href="#collapseThree" aria-expanded="false"
+                                          aria-controls="collapseThree">How long will my order take to be delivered?</a>
+                </p>
               </div>
-              <div class="panel-collapse collapse" id="collapseThree" role="tabpanel" aria-labelledby="headingOne" style="">
-                <div class="panel-body">Delivery times will depend on your location. Once payment is confirmed your order will be packaged. Delivery can be expected within 10 business days.</div>
+              <div class="panel-collapse collapse" id="collapseThree" role="tabpanel" aria-labelledby="headingOne"
+                   style="">
+                <div class="panel-body">Delivery times will depend on your location. Once payment is confirmed your
+                  order will be packaged. Delivery can be expected within 10 business days.
+                </div>
               </div>
             </div>
             <div class="panel panel-custom panel-default">
               <div class="panel-heading" id="headingFour" role="tab">
-                <p class="panel-title"><a class="d-block collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Can I return an item?</a></p>
+                <p class="panel-title"><a class="d-block collapsed" role="button" data-toggle="collapse"
+                                          data-parent="#accordion" href="#collapseFour" aria-expanded="false"
+                                          aria-controls="collapseFour">Can I return an item?</a></p>
               </div>
-              <div class="panel-collapse collapse" id="collapseFour" role="tabpanel" aria-labelledby="headingOne" style="">
-                <div class="panel-body">Please contact our administrators for more information on returning products purchased on our website.</div>
+              <div class="panel-collapse collapse" id="collapseFour" role="tabpanel" aria-labelledby="headingOne"
+                   style="">
+                <div class="panel-body">Please contact our administrators for more information on returning products
+                  purchased on our website.
+                </div>
               </div>
             </div>
           </div>
@@ -152,17 +181,18 @@
     </section>
 
     {{-- Блок "Лицензии" --}}
-    <section class="section-45">
+    <section class="section-45 about__licensees">
       <h3>Блок «Наши лицензии»</h3>
       <div class="container d-flex justify-content-center offset-top-30">
         <div class="col-md-6">
           <div class="swiper-container swiper-slider">
-            <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide">Slide 1</div>
-              <div class="swiper-slide">Slide 2</div>
-              <div class="swiper-slide">Slide 3</div>
+              <div class="swiper-slide" data-toggle="modal" data-target="#modalImg" data-slide-bg="images/backgrounds/background-12-1920x900.jpg">
+              </div>
+              <div class="swiper-slide" data-toggle="modal" data-target="#modalImg" data-slide-bg="images/backgrounds/temp_banner.png">
+              </div>
+              <div class="swiper-slide" data-toggle="modal" data-target="#modalImg" data-slide-bg="images/backgrounds/background-12-1920x900.jpg">
+              </div>
               ...
             </div>
             <!-- If we need pagination -->
@@ -202,7 +232,8 @@
               <div class="bg-overlay-black section-45">
                 <h1>Блок "Задать вопрос диетологу"</h1>
                 <form class="rd-mailform text-left offset-top-34" data-form-output="form-output-global"
-                      data-form-type="contact" method="post" action="{{ route('feedback.store') }}" novalidate="novalidate">
+                      data-form-type="contact" method="post" action="{{ route('feedback.store') }}"
+                      novalidate="novalidate">
                   @csrf
                   <input type="hidden" name="type" value="question">
                   <div class="row justify-content-sm-center">
@@ -213,7 +244,8 @@
                       </div>
                     </div>
                   </div>
-                  <div class="row justify-content-sm-center p-3 align-items-sm-center inset-left-25 inset-right-25 inset-lg-left-0 inset-lg-right-0">
+                  <div
+                      class="row justify-content-sm-center p-3 align-items-sm-center inset-left-25 inset-right-25 inset-lg-left-0 inset-lg-right-0">
                     <div class="col-3 form-wrap form-wrap-transparent has-error">
                       <input class="form-input form-control-has-validation form-control-last-child"
                              type="text"
@@ -258,10 +290,10 @@
               </div>
               <div class="post-box-xs-caption bg-default">
                 <!-- List Inline-->
-                <ul class="list-inline list-inline-22 list-inline-dashed-vertical font-weight-bold">
-                  <li><a class="text-gray text-hover-primary" href="blog-post.html"><span
-                          class="text-middle inset-right-7">Street workout</span><span
-                          class="icon icon-sm material-design-ico material-design-camera59 text-middle text-gray"></span></a>
+                <ul class="font-weight-bold">
+                  <li><a class="text-gray text-hover-primary" href="blog-post.html">
+                      <span class="text-middle inset-right-7">Street workout</span>
+                    </a>
                   </li>
                   <li>September, 12, 2018</li>
                 </ul>
@@ -281,10 +313,10 @@
               </div>
               <div class="post-box-xs-caption bg-default">
                 <!-- List Inline-->
-                <ul class="list-inline list-inline-22 list-inline-dashed-vertical font-weight-bold">
-                  <li><a class="text-gray text-hover-primary" href="blog-post.html"><span
-                          class="text-middle inset-right-7">Seasonal diets</span><span
-                          class="icon icon-xs material-design-ico material-design-create3 text-middle text-gray"></span></a>
+                <ul class="font-weight-bold">
+                  <li><a class="text-gray text-hover-primary" href="blog-post.html">
+                      <span class="text-middle inset-right-7">Seasonal diets</span>
+                    </a>
                   </li>
                   <li>September, 12, 2018</li>
                 </ul>
@@ -304,10 +336,10 @@
               </div>
               <div class="post-box-xs-caption bg-default">
                 <!-- List Inline-->
-                <ul class="list-inline list-inline-22 list-inline-dashed-vertical font-weight-bold">
-                  <li><a class="text-gray text-hover-primary" href="blog-post.html"><span
-                          class="text-middle inset-right-7">How to eat</span><span
-                          class="icon icon-xs material-design-ico material-design-create3 text-middle text-gray"></span></a>
+                <ul class="font-weight-bold">
+                  <li><a class="text-gray text-hover-primary" href="blog-post.html">
+                      <span class="text-middle inset-right-7">How to eat</span>
+                    </a>
                   </li>
                   <li>September, 12, 2018</li>
                 </ul>
@@ -323,46 +355,47 @@
       </div>
     </section>
 
-    {{-- Блок «Партнеры» --}}
+    {{-- Блок «Наши партнеры» --}}
     <section class="section-45">
-      <div class="contaner">
+      <div class="container">
         <div class="row justify-content-sm-center">
           <div class="col-md-10">
-            <h2>Блок «Партнеры»</h2>
+            <h2>Наши партнеры</h2>
             <p>I'm a health and lifestyle coach to smart (and busy!) women who want to look and feel their best, but who
               don't have a ton of time to exercise, shop for speciality foods, or cook tons of meals every week. I
               stumbled upon this path by accident, and it changed my life. Learn what good health can do and how
               extraordinary your life can be!</p>
           </div>
         </div>
+      </div>
         <div class="owl-carousel owl-carousel-centered offset-top-50"
              data-autoplay="true" data-items="2" data-sm-items="5"
-             data-xl-items="5" data-stage-padding="5" data-loop="true"
-             data-margin="30" data-mouse-drag="false"
+             data-xl-items="5" data-loop="true"
+             data-mouse-drag="false"
              data-dots="true">
           <a href="#">
             <img class="img-responsive img-semi-transparent-inverse center-block"
-                 src="/images/backgrounds/temp_banner.png" width="96" height="21"
+                 src="/images/backgrounds/temp_banner.png" width="148" height="21"
                  alt=""></a><a href="#"><img
                 class="img-responsive img-semi-transparent-inverse center-block"
-                src="/images/backgrounds/temp_banner.png" width="101" height="20" alt=""></a><a href="#"><img
+                src="/images/backgrounds/temp_banner.png" width="148" height="21" alt=""></a><a href="#"><img
                 class="img-responsive img-semi-transparent-inverse center-block"
-                src="/images/backgrounds/temp_banner.png" width="133" height="29" alt=""></a><a href="#"><img
+                src="/images/backgrounds/temp_banner.png" width="148" height="21" alt=""></a><a href="#"><img
                 class="img-responsive img-semi-transparent-inverse center-block"
-                src="/images/backgrounds/temp_banner.png" width="148" height="19" alt=""></a><a href="#"><img
+                src="/images/backgrounds/temp_banner.png" width="148" height="21" alt=""></a><a href="#"><img
                 class="img-responsive img-semi-transparent-inverse center-block"
-                src="/images/backgrounds/temp_banner.png" width="133" height="35" alt=""></a><a href="#"><img
+                src="/images/backgrounds/temp_banner.png" width="148" height="21" alt=""></a><a href="#"><img
                 class="img-responsive img-semi-transparent-inverse center-block"
-                src="/images/backgrounds/temp_banner.png" width="130" height="34" alt=""></a><a href="#"><img
+                src="/images/backgrounds/temp_banner.png" width="148" height="21" alt=""></a><a href="#"><img
                 class="img-responsive img-semi-transparent-inverse center-block"
-                src="/images/backgrounds/temp_banner.png" width="119" height="26" alt=""></a><a href="#"><img
+                src="/images/backgrounds/temp_banner.png" width="148" height="21" alt=""></a><a href="#"><img
                 class="img-responsive img-semi-transparent-inverse center-block"
-                src="/images/backgrounds/temp_banner.png" width="127" height="31" alt=""></a><a href="#"><img
+                src="/images/backgrounds/temp_banner.png" width="148" height="21" alt=""></a><a href="#"><img
                 class="img-responsive img-semi-transparent-inverse center-block"
-                src="/images/backgrounds/temp_banner.png" width="154" height="20" alt=""></a><a href="#"><img
+                src="/images/backgrounds/temp_banner.png" width="148" height="21" alt=""></a><a href="#"><img
                 class="img-responsive img-semi-transparent-inverse center-block"
-                src="/images/backgrounds/temp_banner.png" width="140" height="41" alt=""></a></div>
-      </div>
+                src="/images/backgrounds/temp_banner.png" width="148" height="21" alt=""></a></div>
+
     </section>
 
   </main>
