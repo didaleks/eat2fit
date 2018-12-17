@@ -26,7 +26,7 @@
                             <span class="white"><i class="fa fa-shopping-basket"></i></span>
                         </a>
                         <a href="/cart">
-                            <sup class="title10 round dark bg-light">{{ Cart::getCountItems() }}</sup>
+                            <sup class="title10 cart-icon round dark bg-light">{{ Cart::getCountItems() }}</sup>
                         </a>
                     </div>
 
@@ -53,7 +53,7 @@
                                     <span class="white"><i class="fa fa-shopping-basket"></i></span>
                                 </a>
                                 <a href="/cart">
-                                    <sup class="title10 round dark bg-light">{{ Cart::getCountItems() }}</sup>
+                                    <sup class="title10 cart-icon round dark bg-light">{{ Cart::getCountItems() }}</sup>
                                 </a>
                             </div>
                     </ul>

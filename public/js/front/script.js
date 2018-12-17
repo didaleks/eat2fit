@@ -2049,7 +2049,7 @@
                 console.log('cart empty');
             }
         });
-        $('.rd-navbar__cart sup.round').text(0);
+        $('sup.round.cart-icon').text(0);
     }
     
     function cartGetJson() {
@@ -2071,7 +2071,7 @@
 
 	function cartItemsCountIncrement()
 	{
-		let blocks = $('sup.round'),
+		let blocks = $('sup.round.cart-icon'),
 			count = parseInt(blocks.first().text());
 
         blocks.each(function () {
@@ -2081,9 +2081,11 @@
 
     function cartItemsCountDecrement()
     {
-        let block = $('.rd-navbar__cart sup.round'),
-            count = parseInt(block.text());
-        if (count != 0) block.text(count - 1);
+        let blocks = $('sup.round.cart-icon'),
+            count = parseInt(blocks.first().text());
+        if (count != 0) blocks.each(function () {
+			$(this).text(count - 1);
+		})
     }
 
     /**

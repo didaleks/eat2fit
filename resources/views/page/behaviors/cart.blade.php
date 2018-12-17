@@ -100,8 +100,8 @@
 
                     </div>
                   </div>
-                  <div class="col-sm-12 offset-top-10 text-xl-left form-section-heading">Доставка
-                    <label class="d-block form-label-outside">город Санкт-Петербург</label>
+                  <div class="col-sm-12 offset-top-10 text-xl-left form-section-heading d-inline-block mt-4">
+                    Доставка
                   </div>
                   <div class="col-sm-4 offset-top-10 inset-sm-right-7">
                     <div class="form-wrap">

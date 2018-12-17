@@ -1,4 +1,7 @@
 .cart {
+  label, .form-section-heading {
+    margin-top: 20px;
+  }
   .cart__message {
     display: none;
   }
@@ -7,13 +10,16 @@
       background-color: inherit;
     }
   }
-}
-
-.cart.empty {
-  .cart__message {
-    display: block;
+  .form-section-heading {
+    font-size: 18px;
   }
-  .cart-content {
-    display: none;
+
+  &.empty {
+    .cart__message {
+      display: block;
+    }
+    .cart-content {
+      display: none;
+    }
   }
 }
