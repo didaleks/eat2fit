@@ -2,7 +2,7 @@
   label, .form-section-heading {
     margin-top: 20px;
   }
-  .cart__message {
+  .cart__message, .cart__message-success {
     display: none;
   }
   form {
@@ -16,6 +16,14 @@
 
   &.empty {
     .cart__message {
+      display: block;
+    }
+    .cart-content {
+      display: none;
+    }
+  }
+  &.success {
+    .cart__message-success {
       display: block;
     }
     .cart-content {

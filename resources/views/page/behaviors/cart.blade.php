@@ -261,6 +261,7 @@
           @endif
         </div>
         @include('shared.cart_message')
+        @include('shared.cart_message_success')
       </div>
     </section>
   </main>

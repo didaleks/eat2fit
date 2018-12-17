@@ -2210,11 +2210,16 @@
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
-            success: function (response) {
-                // remove_liked();
-                let order_number = response.order_number;
-            }
+            // success: function (response) {
+            //     // remove_liked();
+            //     let order_number = response.order_number;
+            //     $('main.cart').addClass('success');
+            // },
+			// error: function (response) {
+			//  todo поставить ответ сервера json а не строку
+			// }
         });
+		$('main.cart').addClass('success');
     });
 
 	/* Diet page */
