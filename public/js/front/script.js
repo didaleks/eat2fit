@@ -2071,9 +2071,12 @@
 
 	function cartItemsCountIncrement()
 	{
-		let block = $('.rd-navbar__cart sup.round'),
-			count = parseInt(block.text());
-        block.text(count + 1);
+		let blocks = $('sup.round'),
+			count = parseInt(blocks.first().text());
+
+        blocks.each(function () {
+			$(this).text(count + 1);
+		})
 	}
 
     function cartItemsCountDecrement()
