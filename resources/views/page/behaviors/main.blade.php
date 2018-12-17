@@ -414,50 +414,130 @@
       <div class="container">
         <h2>Блок «Отзывы»</h2>
         <div class="row justify-content-sm-center offset-top-34">
-          <div class="col-md-10 col-lg-4">
-            <p class="text-big font-weight-bold text-primary">Jina Green lost 30 pounds and 3 sizes</p>
-            <p>I originally contacted Joanna because I was having trouble getting my eating habits under control, and
-              was finally ready to admit that I couldn't do it on my own. After our initial consultation, I was
-              convinced that if anyone could help, it was Joanna.</p><img
-                class="img-responsive rounded-circle center-block offset-top-20 offset-md-top-30"
-                src="/images/backgrounds/temp_banner.png" width="172" height="172" alt="">
-            <div class="offset-top-13 offset-md-top-25">
-              <p class="font-weight-bold"><a class="link-decoration-none text-hover-primary text-gray"
-                                             href="my-philosophy.html">Jina Green</a></p>
+          <div class="owl-carousel owl-nav-modern owl-carousel-inset-bottom-20 owl-carousel-navs-primary offset-top-40"
+               data-autoplay="true"
+               data-items="1"
+               data-md-items="3"
+               data-stage-padding="5"
+               data-loop="true"
+               data-margin="30"
+               data-mouse-drag="false"
+               data-dots="true"
+               data-nav="true">
+            <div class="owl-item">
+              <p class="text-big font-weight-bold text-primary">Слайд 1</p>
+              <p>I originally contacted Joanna because I was having trouble getting my eating habits under control, and
+                was finally ready to admit that I couldn't do it on my own. After our initial consultation, I was
+                convinced that if anyone could help, it was Joanna.</p><img
+                  class="img-responsive rounded-circle center-block offset-top-20 offset-md-top-30"
+                  src="/images/backgrounds/temp_banner.png" width="172" height="172" alt="">
+              <div class="offset-top-13 offset-md-top-25">
+                <p class="font-weight-bold"><a class="link-decoration-none text-hover-primary text-gray"
+                                               href="my-philosophy.html">Jina Green</a></p>
+              </div>
+              <div class="offset-top-0">
+                <p class="text-gray">(actress)</p>
+              </div>
             </div>
-            <div class="offset-top-0">
-              <p class="text-gray">(actress)</p>
+            <div class="owl-item">
+              <p class="text-big font-weight-bold text-primary">Слайд 2</p>
+              <p>Working with Joanna has allowed me to tune into how I eat, why I eat, and how it makes me feel. I'm more
+                aware of times when I eat not because I'm hungry but because something else is bothering me. Not focusing
+                on food has improved my relationships with others.</p><img
+                  class="img-responsive rounded-circle center-block offset-top-20 offset-md-top-30"
+                  src="/images/backgrounds/temp_banner.png" width="172" height="172" alt="">
+              <div class="offset-top-13 offset-md-top-25">
+                <p class="font-weight-bold"><a class="link-decoration-none text-hover-primary text-gray"
+                                               href="my-philosophy.html">Lola Jordon</a></p>
+              </div>
+              <div class="offset-top-0">
+                <p class="text-gray">(artist)</p>
+              </div>
             </div>
-          </div>
-          <div class="col-md-10 col-lg-4 offset-top-45 offset-md-top-0">
-            <p class="text-big font-weight-bold text-primary">Lola Jordon lost 20 pounds and 2 sizes</p>
-            <p>Working with Joanna has allowed me to tune into how I eat, why I eat, and how it makes me feel. I'm more
-              aware of times when I eat not because I'm hungry but because something else is bothering me. Not focusing
-              on food has improved my relationships with others.</p><img
-                class="img-responsive rounded-circle center-block offset-top-20 offset-md-top-30"
-                src="/images/backgrounds/temp_banner.png" width="172" height="172" alt="">
-            <div class="offset-top-13 offset-md-top-25">
-              <p class="font-weight-bold"><a class="link-decoration-none text-hover-primary text-gray"
-                                             href="my-philosophy.html">Lola Jordon</a></p>
+            <div class="owl-item">
+              <p class="text-big font-weight-bold text-primary">Слайд 3</p>
+              <p>Joanna is unlike most nutritionists. She allows you to use foods that work with your lifestyle to address
+                your concerns. I felt that I had a choice in what I ate and how I ate it rather than being on a strict
+                diet. She was there with constant support.</p><img
+                  class="img-responsive rounded-circle center-block offset-top-20 offset-md-top-30"
+                  src="/images/backgrounds/temp_banner.png" width="172" height="172" alt="">
+              <div class="offset-top-13 offset-md-top-25">
+                <p class="font-weight-bold"><a class="link-decoration-none text-hover-primary text-gray"
+                                               href="my-philosophy.html">Rita Jefferson</a></p>
+              </div>
+              <div class="offset-top-0">
+                <p class="text-gray">(writer)</p>
+              </div>
             </div>
-            <div class="offset-top-0">
-              <p class="text-gray">(artist)</p>
+            <div class="owl-item">
+              <p class="text-big font-weight-bold text-primary">Слайд 4</p>
+              <p>Joanna is unlike most nutritionists. She allows you to use foods that work with your lifestyle to address
+                your concerns. I felt that I had a choice in what I ate and how I ate it rather than being on a strict
+                diet. She was there with constant support.</p><img
+                  class="img-responsive rounded-circle center-block offset-top-20 offset-md-top-30"
+                  src="/images/backgrounds/temp_banner.png" width="172" height="172" alt="">
+              <div class="offset-top-13 offset-md-top-25">
+                <p class="font-weight-bold"><a class="link-decoration-none text-hover-primary text-gray"
+                                               href="my-philosophy.html">Rita Jefferson</a></p>
+              </div>
+              <div class="offset-top-0">
+                <p class="text-gray">(writer)</p>
+              </div>
             </div>
-          </div>
-          <div class="col-md-10 col-lg-4 offset-top-45 offset-md-top-0">
-            <p class="text-big font-weight-bold text-primary">Rita Jefferson lost 10 pounds and 1 size</p>
-            <p>Joanna is unlike most nutritionists. She allows you to use foods that work with your lifestyle to address
-              your concerns. I felt that I had a choice in what I ate and how I ate it rather than being on a strict
-              diet. She was there with constant support.</p><img
-                class="img-responsive rounded-circle center-block offset-top-20 offset-md-top-30"
-                src="/images/backgrounds/temp_banner.png" width="172" height="172" alt="">
-            <div class="offset-top-13 offset-md-top-25">
-              <p class="font-weight-bold"><a class="link-decoration-none text-hover-primary text-gray"
-                                             href="my-philosophy.html">Rita Jefferson</a></p>
+            {{--
+            <div class="owl-item">
+              <!-- Post Box-->
+              <article class="post-box">
+                <div class="post-box-img-wrap"><img src="images/blog/post-01-571x234.jpg" width="571" height="234" alt=""></div>
+                <div class="post-box-caption bg-default"><span class="icon icon-circle fl-great-icon-set-ico fl-great-icon-set-pencil107 bg-default"></span>
+                  <div class="post-meta font-weight-bold">September, 12, 2018</div>
+                  <p class="post-box-title text-big font-weight-bold text-uppercase text-spacing-100 offset-top-5"><a class="link-decoration-none" href="blog-post.html">Seasonal diets</a></p>
+                  <div class="post-box-caption-hidden">
+                    <p>Ever wondered why you crave certain foods? One reason is the change in seasons. Our bodies seek foods that balance out the elements of the season…</p>
+                  </div>
+                </div>
+              </article>
             </div>
-            <div class="offset-top-0">
-              <p class="text-gray">(writer)</p>
+            <div class="owl-item">
+              <!-- Post Box-->
+              <article class="post-box">
+                <div class="post-box-img-wrap"><img src="images/blog/post-02-571x234.jpg" width="571" height="234" alt=""></div>
+                <div class="post-box-caption bg-default"><span class="icon icon-circle fl-great-icon-set-ico fl-great-icon-set-video172 bg-default"></span>
+                  <div class="post-meta font-weight-bold">September, 12, 2018</div>
+                  <p class="post-box-title text-big font-weight-bold text-uppercase text-spacing-100 offset-top-5"><a class="link-decoration-none" href="blog-post.html">How to eat</a></p>
+                  <div class="post-box-caption-hidden">
+                    <p>We tend to be so conscious about WHAT to eat - fruits and vegetables, nuts, seeds, quality fats and proteins, sprouts, herbs etc. But HOW to eat is just as important, if not more. </p>
+                  </div>
+                </div>
+              </article>
             </div>
+            <div class="owl-item">
+              <!-- Post Box-->
+              <article class="post-box">
+                <div class="post-box-img-wrap"><img src="images/blog/post-01-571x234.jpg" width="571" height="234" alt=""></div>
+                <div class="post-box-caption bg-default"><span class="icon icon-circle fl-great-icon-set-ico fl-great-icon-set-pencil107 bg-default"></span>
+                  <div class="post-meta font-weight-bold">September, 12, 2018</div>
+                  <p class="post-box-title text-big font-weight-bold text-uppercase text-spacing-100 offset-top-5"><a class="link-decoration-none" href="blog-post.html">Seasonal diets</a></p>
+                  <div class="post-box-caption-hidden">
+                    <p>Ever wondered why you crave certain foods? One reason is the change in seasons. Our bodies seek foods that balance out the elements of the season…</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="owl-item">
+              <!-- Post Box-->
+              <article class="post-box">
+                <div class="post-box-img-wrap"><img src="images/blog/post-02-571x234.jpg" width="571" height="234" alt=""></div>
+                <div class="post-box-caption bg-default"><span class="icon icon-circle fl-great-icon-set-ico fl-great-icon-set-video172 bg-default"></span>
+                  <div class="post-meta font-weight-bold">September, 12, 2018</div>
+                  <p class="post-box-title text-big font-weight-bold text-uppercase text-spacing-100 offset-top-5"><a class="link-decoration-none" href="blog-post.html">How to eat</a></p>
+                  <div class="post-box-caption-hidden">
+                    <p>We tend to be so conscious about WHAT to eat - fruits and vegetables, nuts, seeds, quality fats and proteins, sprouts, herbs etc. But HOW to eat is just as important, if not more. </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            --}}
           </div>
         </div>
       </div>
