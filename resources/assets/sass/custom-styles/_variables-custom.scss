@@ -11,6 +11,7 @@ $gray-light:              #9f9f9f;
 $gray-lighter:            #f3f3f3;
 
 $primary:                 #a6c550;
+$primary-darker:          #7c9732;
 $primary-blue:            #a9dcf3;
 $primary-blue-darker:     #4db9e4;
 $brand-success:           #5cb85c;
@@ -59,7 +60,7 @@ $transition-base: all .3s ease-in-out;
 
 $font-family-sans-serif:  "Open Sans", Helvetica, Arial, sans-serif;
 $font-family-sans-serif-custom:  "Open Sans", "Oregano", Georgia, "Times New Roman", Times, serif;
-$font-family-serif:       "Oregano", Georgia, "Times New Roman", Times, serif;
+$font-family-serif:       "Open Sans", "Oregano", Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 
