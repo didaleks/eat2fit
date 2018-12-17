@@ -229,7 +229,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
-        'Cart' => \App\Models\Cart::class
+        'Cart' => \App\Models\Cart::class,
+        'Page' => \App\Models\Page::class
 
     ],
 

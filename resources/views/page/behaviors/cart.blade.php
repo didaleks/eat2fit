@@ -132,47 +132,53 @@
 
                     </div>
                   </div>
-                  <div class="col-sm-12 offset-top-10 text-xl-left">
-                    <label class="form-label-outside">Дата доставки</label>
-                  </div>
-                  <div class="col-sm-6 offset-top-10 text-xl-left datepicker-wrapper">
-                    <input required value="31 декабря" class="form-input" id="datepicker" width="300" name="shipping_date"/>
-                    <script>
-                        var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
-                        $('#datepicker').datepicker({
-                            uiLibrary: 'bootstrap4',
-                            minDate: today,
-                            locale: 'ru-ru',
-                            format: 'dd mmm yyyy',
-                            weekStartDay: 1
-                            // change: function (e) {
-                            //     console.log($(this).val())
-                            // }
-                        });
-                    </script>
-                  </div>
-                  <div class="col-sm-6 offset-top-10 text-xl-left form-time">
-                    <div class="form-wrap">
-                      <label class="form-label-outside" for="contact-us-first-name">Время:</label>
-                      <input class="form-input" id="contact-us-email"
-                             name="shipping_hour"
-                             type="number"
-                             readonly
-                             min="07"
-                             max="23"
-                             data-check="^\d+$"
-                             value="09">
-                      <input class="form-input" id="contact-us-time"
-                             name="shipping_minutes"
-                             type="number"
-                             readonly
-                             min="00"
-                             max="60"
-                             step="10"
-                             data-check="^\d+$"
-                             value="00">
+                  <div class="col-sm-12 d-md-flex justify-content-between offset-top-10 text-xl-left p-0">
+                    <div class="col-sm-6">
+                      <label class="form-label-outside">Дата доставки</label>
+                      <div class="col-sm-12 offset-0 p-0 text-xl-left datepicker-wrapper">
+                        <input required value="31 декабря" class="form-input" id="datepicker" width="300" name="shipping_date"/>
+                        <script>
+                            var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
+                            $('#datepicker').datepicker({
+                                uiLibrary: 'bootstrap4',
+                                minDate: today,
+                                locale: 'ru-ru',
+                                format: 'dd mmm yyyy',
+                                weekStartDay: 1
+                                // change: function (e) {
+                                //     console.log($(this).val())
+                                // }
+                            });
+                        </script>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 p-0">
+                      <label class="form-label-outside ml-3" for="contact-us-first-name">Время</label>
+                      <div class="col-sm-12 p-0 offset-top-0 text-xl-left form-time">
+                        <div class="form-wrap">
+                          <input class="form-input" id="contact-us-email"
+                                 name="shipping_hour"
+                                 type="number"
+                                 readonly
+                                 min="07"
+                                 max="23"
+                                 data-check="^\d+$"
+                                 value="09">
+                          <input class="form-input" id="contact-us-time"
+                                 name="shipping_minutes"
+                                 type="number"
+                                 readonly
+                                 min="00"
+                                 max="60"
+                                 step="10"
+                                 data-check="^\d+$"
+                                 value="00">
+                        </div>
+                      </div>
                     </div>
                   </div>
+
+
                   <div class="col-md-4 col-sm-6 ml-3 box-xxs box-pay text-left offset-top-20 active">
                     <div class="form-wrap">
                       <label class="radio-inline font-weight-bold text-gray">
@@ -189,9 +195,8 @@
                       <p class="offset-top-20">VISA/MasterCard/Мир</p>
                     </div>
                   </div>
-                  <div class="col-sm-3 d-inline-block offset-top-20 ml-3 p-0">
-                    <a href="#">Подробности об оплате</a>
-                    <a href="#">Подробности о доставке</a>
+                  <div class="col-md-12 offset-top-20 ml-3 p-0">
+                    <a href="{{Page::find(8)->url}}" target="_blank">Подробнее об оплате и доставке</a>
                   </div>
                   <div class="col-sm-12 offset-top-10 text-center text-xl-left">
                     <div class="form-wrap">
@@ -207,7 +212,7 @@
                              type="text" name="coupon" placeholder="" value=""><span class="form-validation"></span>
                     </div>
                   </div>
-                  <div class="col-md-4 col-lg-5 col-xl-8 offset-top-40 justify-content-sm-end">
+                  <div class="col-md-12 col-lg-12 offset-top-40">
                     <div class="table-responsive total-cart">
                       <table class="table table-custom-md table-default table-bordered-custom text-left">
                         <tbody>
@@ -233,7 +238,7 @@
                   </div>
                 </div>
                 <div class="row d-flex justify-content-between inset-sm-right-15 inset-sm-left-15">
-                  <div class="col-sm-6 offset-top-20">
+                  <div class="col-sm-12 offset-top-20">
                     <div class="form-wrap">
                       <label class="checkbox-inline text-primary">
                         <input name="privacy-policy" value="0" type="hidden">
@@ -243,7 +248,7 @@
                       </label>
                     </div>
                   </div>
-                  <div class="text-center text-lg-right offset-top-10">
+                  <div class="text-center text-lg-right offset-top-20">
                     <button class="btn btn-primary" type="submit">Подтвердить заказ</button>
                   </div>
                 </div>

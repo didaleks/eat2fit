@@ -57,3 +57,7 @@ html:not(.lt-ie10) {
     @include make-text-alignment("lg");
   }
 }
+
+a[href="/privacy-policy"] {
+  text-decoration: underline;
+}
