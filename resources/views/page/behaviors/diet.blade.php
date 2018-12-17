@@ -218,7 +218,7 @@
         </div>
         <div class="row justify-content-sm-center">
           <div class="col-md-10 col-xl-6 offset-top-30">
-            <button class="btn btn-white-gray-outline btn-icon btn-icon-variant-2 consult__button">
+            <button class="btn btn-primary consult__button">
               Записаться на консультацию
             </button>
           </div>

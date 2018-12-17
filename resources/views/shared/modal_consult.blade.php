@@ -3,13 +3,13 @@
     <div class="modal-content">
       <!-- Modal Header -->
       <div class="modal-header bg-overlay-green-leaf">
-        <h5 class="modal-title">Записаться на консультацию</h5>
+        <h5 class="modal-title">Контактная форма</h5>
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
 
       <!-- Modal body -->
       <div class="p-3">
-        @include('blocks.footer_contact_form', ['type' => 'consult', 'heading' => 'Оставьте ваши контакты'])
+        @include('blocks.footer_contact_form', ['type' => 'consult', 'heading' => 'Запись на консультацию'])
       </div>
     </div>
   </div>

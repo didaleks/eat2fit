@@ -175,16 +175,4 @@ main.diet__content {
       color: $gray-base;
     }
   }
-
-  .consult {
-    &__button {
-      cursor: pointer;
-      border-color: $primary;
-      color: $gray-base;
-      &:hover, &:focus {
-        border-color: $gray-light;
-        color: $white;
-      }
-    }
-  }
 }

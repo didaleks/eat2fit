@@ -628,12 +628,20 @@ $vertical-tab-offset: 10px;
   }
 }
 
-//.rd-navbar__cart-fixed {
-//  display: inline-block;
-//}
 
 .rd-navbar__cart, .rd-navbar__cart-fixed {
+  &:hover {
+    a.icon-gray-lighter {
+      color: #fff;
+      background: #a6c550;
+    }
+    sup {
+      color: #585858;
+    }
+  }
+
   sup {
+    display: inline-block;
     border-radius: 50%;
     width: 20px;
     height: 20px;
