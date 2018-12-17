@@ -2181,10 +2181,11 @@
         (val == 0) ? $(this).val('00') : '';
     })
 
-	$('.box-xxs input[type=radio]').change(function () {
-		$('.box-xxs').toggleClass('active');
-        }
-	)
+	$('.box-xxs').click(function () {
+		$(this).find('input[type=radio]').prop( "checked", true );
+		$('.box-xxs').removeClass('active');
+		$(this).addClass('active');
+	});
 
     $('form.order-form').submit(function (event) {
         event.preventDefault();
