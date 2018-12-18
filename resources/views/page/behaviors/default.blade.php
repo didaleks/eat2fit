@@ -2,6 +2,8 @@
 
 @section('content')
 
+    @include('blocks.parallax')
+
     <main class="page-content">
         <section class="section-95">
             <div class="container">

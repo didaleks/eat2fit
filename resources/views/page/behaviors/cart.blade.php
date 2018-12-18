@@ -1,24 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-  <!-- Parallax-->
-  <section class="section section-height-800 parallax-container context-dark bg-gray-darkest text-xl-left" data-parallax-img="/images/backgrounds/temp_banner.png">
-    <div class="parallax-content">
-      <div class="bg-overlay-black">
-        <div class="container section-30 section-md-95 section-lg-top-120 section-lg-bottom-150">
-          <div class="d-none d-lg-block">
-            <h1>Корзина</h1>
-          </div>
-          <ul class="list-inline list-inline-dashed list-white text-big p offset-md-top-13">
-            <li><a href="/">Главная</a></li>
-            <li>Корзина</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Page Content-->
+  @include('blocks.parallax')
+
   <main class="page-content cart {{(isset($cart) && count($cart->items))? '': 'empty'}}">
     <section class="section-95">
       <div class="container">

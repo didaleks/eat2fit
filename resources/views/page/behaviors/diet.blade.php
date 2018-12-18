@@ -8,7 +8,7 @@
     <div class="parallax-content">
       <div class="bg-overlay-black">
         <div class="container section-30 section-md-95 section-lg-top-120 section-lg-bottom-150">
-          <!-- List Inline-->
+          <!-- Breadcrumbs -->
           <ul class="list-inline list-inline-dashed list-white p offset-md-top-13">
             <li><a href="/">Главная</a></li>
             <li><a href="{{$catalogPage->url}}">{{$catalogPage->name}}</a></li>

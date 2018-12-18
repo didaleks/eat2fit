@@ -2,7 +2,7 @@
     $position = 2;
     $objs = collect([]);
 @endphp
-<ul class="list-inline list-inline-dashed list-white text-big p offset-md-top-13">
+<ul class="list-inline list-inline-dashed list-white text-big p offset-md-top-13 breadcrumbs">
     <li><a href="/">Главная</a></li>
 
     @if(($parent = $model->parent))
