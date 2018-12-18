@@ -25,7 +25,7 @@
   </div>
 
   <main class="page-content"
-        style="background: #191919 url(images/backgrounds/background-08-1920x1019.jpg) center/cover no-repeat">
+        style="background: #191919 url(/images/backgrounds/background-08-1920x1019.jpg) center/cover no-repeat">
     <div class="bg-overlay-gray-darken">
       <div class="one-page">
         <div class="container">
