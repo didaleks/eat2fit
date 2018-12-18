@@ -10,13 +10,7 @@
           <div class="d-none d-lg-block">
             <h1>{{$model->name}}</h1>
           </div>
-          <!-- List Inline-->
-          <ul class="list-inline list-inline-dashed list-white text-big p offset-md-top-13">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="health-philosophy.html">About Me</a></li>
-            <li>Health Coaching Philosophy
-            </li>
-          </ul>
+          @includeIf('blocks.breadcrumb')
         </div>
       </div>
     </div>

@@ -11,9 +11,8 @@
           <!-- List Inline-->
           <ul class="list-inline list-inline-dashed list-white p offset-md-top-13">
             <li><a href="/">Главная</a></li>
-            <li><a href="/catalog">Рационы</a></li>
-            <li>{{$model->name}}
-            </li>
+            <li><a href="{{$catalogPage->url}}">{{$catalogPage->name}}</a></li>
+            <li>{{$model->name}}</li>
           </ul>
           <div class="d-none d-lg-block offset-top-20">
             <h1>{{$model->name}}</h1>

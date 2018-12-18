@@ -33,12 +33,14 @@ class CatalogController extends Controller
 
         $model = Diet::published()->where(['url' => $url])->with('days.eatings.dishes', 'days.eatings.eating_type')->first();
         $weeksCount = $model->weeksCount();
+        $catalogPage = Page::where('slug', 'catalog')->first();
 
-        if (!$model)
+        if (!$model or !$catalogPage)
             abort(404, 'Страница не найдена');
         return view('page.behaviors.diet', [
             'model' => $model,
-            'weeksCount' => $weeksCount
+            'weeksCount' => $weeksCount,
+            'catalogPage' => $catalogPage
         ]);
     }
 

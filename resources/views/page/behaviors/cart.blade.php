@@ -7,14 +7,11 @@
       <div class="bg-overlay-black">
         <div class="container section-30 section-md-95 section-lg-top-120 section-lg-bottom-150">
           <div class="d-none d-lg-block">
-            <h1>Shopping Cart</h1>
+            <h1>Корзина</h1>
           </div>
-          <!-- List Inline-->
           <ul class="list-inline list-inline-dashed list-white text-big p offset-md-top-13">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="shop-category.html">Shop</a></li>
-            <li>Shopping Cart
-            </li>
+            <li><a href="/">Главная</a></li>
+            <li>Корзина</li>
           </ul>
         </div>
       </div>
