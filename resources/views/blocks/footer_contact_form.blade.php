@@ -37,7 +37,7 @@
                 </label>
             </div>
         </div>
-        <div class="text-center text-lg-right offset-top-10">
+        <div class="col-4 text-center text-lg-right offset-top-10">
             <button class="btn btn-primary" type="submit">Отправить</button>
         </div>
     </div>

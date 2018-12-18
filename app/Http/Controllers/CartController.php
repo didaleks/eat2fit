@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Cart;
 use App\Models\Diet;
+use App\Models\Page;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -17,7 +18,12 @@ class CartController extends Controller
     public function index()
     {
         $cart = $this->get();
-        return view('page.behaviors.cart', ['cart' => $cart]);
+        $model = new Page();
+        $model->name = 'Корзина';
+        return view('page.behaviors.cart', [
+            'cart' => $cart,
+            'model' => $model
+        ]);
     }
 
     public function get()
