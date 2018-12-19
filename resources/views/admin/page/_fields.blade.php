@@ -120,8 +120,14 @@
                 ])
                 @break
             @case('multi_images')
-{{--                @dd($field)--}}
                 @include('admin.ui.form.multi_images', [
+                    'label' => field_label($field),
+                    'name'  => $field['name'],
+                    'value' => field_value($model, $field)
+                ])
+                @break
+            @case('multi_team')
+                @include('admin.ui.form.multi_team', [
                     'label' => field_label($field),
                     'name'  => $field['name'],
                     'value' => field_value($model, $field)

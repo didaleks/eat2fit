@@ -5,13 +5,13 @@
     @if(isset($value) && count($value))
       @foreach($value as $key => $item)
         <div class="item">
-          @component('admin::ui.form.image', ['name' => ''.$name.'['.$key.'][image]', 'label' => 'Фото лицензии', 'value' => $item['image']])
+          @component('admin::ui.form.image', ['name' => ''.$name.'['.$key.'][image]', 'label' => 'Картинка', 'value' => $item['image']])
           @endcomponent
         </div>
       @endforeach
     @else
       <div class="item">
-        @component('admin::ui.form.image', ['name' => ''.$name.'[0][image]', 'label' => 'Фото лицензии'])
+        @component('admin::ui.form.image', ['name' => ''.$name.'[0][image]', 'label' => 'Картинка'])
         @endcomponent
       </div>
     @endif
