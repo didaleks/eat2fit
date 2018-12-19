@@ -49,6 +49,56 @@ class Page extends \LaravelAdmin\Models\Page
                     'meta_keywords',
                 ];
                 break;
+            case "about":
+                $fields = [
+                    [
+                        'name' => 'name',
+                        'type' => 'input',
+                        'label' => 'Название'
+                    ],
+                    [
+                        'name' => 'behavior',
+                        'type' => 'input ',
+                        'readonly' => 'readonly',
+                        'label' => 'Behavior(todo скрыть потом)'
+                    ],
+                    [
+                        'name' => 'published',
+                        'type' => 'checkbox',
+                        'label' => 'Опубликован'
+                    ],
+                    [
+                        'name' => 'url',
+                        'type' => 'input',
+                        'readonly' => 'readonly',
+                        'label' => 'URL'
+                    ],
+                    [
+                        'name' => 'slug',
+                        'type' => 'input',
+                        'label' => 'Slug'
+                    ],
+                    'image' =>  [
+                        'name' => 'fields[image]',
+                        'type' => 'image',
+                        'label' => 'Картинка'
+                    ],
+                    'slides' =>  [
+                        'name' => 'fields[images]',
+                        'type' => 'multi_images',
+                        'multi' => true,
+                        'label' => 'Лицензии'
+                    ],
+                    [
+                        'name' => 'content',
+                        'type' => 'editor',
+                        'label' => 'Текст'
+                    ],
+                    'meta_title',
+                    'meta_description',
+                    'meta_keywords',
+                ];
+                break;
             default:
                 $fields = [
                     [
