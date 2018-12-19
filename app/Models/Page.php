@@ -95,6 +95,12 @@ class Page extends \LaravelAdmin\Models\Page
                         'multi' => true,
                         'label' => 'Блок "Команда"'
                     ],
+                    'partners' =>  [
+                        'name' => 'fields[partners]',
+                        'type' => 'multi_images',
+                        'multi' => true,
+                        'label' => 'Логотипы партнеров'
+                    ],
                     [
                         'name' => 'content',
                         'type' => 'editor',
