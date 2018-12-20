@@ -29,7 +29,7 @@
             }
             if (! function_exists('image')) {
               function image($id) {
-                  return \LaravelAdmin\Models\Image::findOrNew((int)$id);
+                  return \App\Models\Image::findOrNew((int)$id);
               }
             }
         }
