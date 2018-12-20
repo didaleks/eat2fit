@@ -4,7 +4,7 @@
 
   <!-- Parallax-->
   <section class="section diet section-height-800 parallax-container context-dark bg-gray-darkest text-xl-left"
-           data-parallax-img="/images/backgrounds/temp_banner.png">
+           data-parallax-img="{{$model->image}}">
     <div class="parallax-content">
       <div class="bg-overlay-black">
         <div class="container section-30 section-md-95 section-lg-top-120 section-lg-bottom-150">
@@ -19,7 +19,7 @@
           </div>
           <div class="diet__parallax-description">{!! $model->content !!}</div>
 
-          <p class="offset-top-40">1 день питания - от <span class="diet__parallax-price-number">2900 &#x20bd;</span>
+          <p class="offset-top-40">1 день питания - от <span class="diet__parallax-price-number">{{$model->price}} &#x20bd;</span>
           </p>
 
           <div class="group-xs offset-top-10 offset-lg-top-20 product-buttons {{ inCart($model->id)? 'added' : '' }}">
