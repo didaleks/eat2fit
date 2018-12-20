@@ -139,6 +139,13 @@
                     'value' => field_value($model, $field)
                 ])
                 @break
+            @case('multi_feedback')
+                @include('admin.ui.form.multi_feedback', [
+                    'label' => field_label($field),
+                    'name'  => $field['name'],
+                    'value' => field_value($model, $field)
+                ])
+                @break
             @default
                 @input([
                     'type' => $field['type'],

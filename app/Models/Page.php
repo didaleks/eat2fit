@@ -153,6 +153,44 @@ class Page extends \LaravelAdmin\Models\Page
                     'meta_keywords',
                 ];
                 break;
+            case "main":
+                $fields = [
+                    [
+                        'name' => 'name',
+                        'type' => 'input',
+                        'label' => 'Название'
+                    ],
+                    [
+                        'name' => 'behavior',
+                        'type' => 'readonly ',
+                        'label' => 'Тип'
+                    ],
+                    [
+                        'name' => 'published',
+                        'type' => 'checkbox',
+                        'label' => 'Опубликован'
+                    ],
+                    [
+                        'name' => 'slug',
+                        'type' => 'input',
+                        'label' => 'Url'
+                    ],
+                    [
+                        'name' => 'content',
+                        'type' => 'editor',
+                        'label' => '???'
+                    ],
+                    'team' =>  [
+                        'name' => 'fields[feedbacks]',
+                        'type' => 'multi_feedback',
+                        'multi' => true,
+                        'label' => 'Блок "Отзывы"'
+                    ],
+                    'meta_title',
+                    'meta_description',
+                    'meta_keywords',
+                ];
+                break;
             default:
                 $fields = [
                     [

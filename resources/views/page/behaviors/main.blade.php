@@ -88,7 +88,8 @@
       <div class="container">
         <div class="row justify-content-sm-center">
           <div class="col-md-8 col-lg-6 order-lg-1"><img class="img-responsive center-block"
-                                                         src="/images/backgrounds/temp_banner.png" width="570" height="350"
+                                                         src="/images/backgrounds/temp_banner.png" width="570"
+                                                         height="350"
                                                          alt=""></div>
           <div class="col-md-8 col-lg-6 offset-top-34 offset-md-top-0">
             <div class="inset-lg-left-50 inset-lg-right-50 inset-xl-left-50 inset-xl-right-50">
@@ -197,6 +198,7 @@
 
     {{-- Блок «Блок выберите план» --}}
     <section class="section-xs-bottom-95 section-md-bottom-0">
+      <h2>Блок «Блок выберите план»</h2>
       <div class="row no-gutters justify-content-sm-center" style="font-size:0;">
         <div class="col-sm-10 col-md-8 col-lg-4 section-relative bg-image bg-image-3 bg-image-overlay bg-image-hover">
           <!-- Box Offer-->
@@ -204,7 +206,7 @@
             <div class="box-offer-caption"><span
                   class="icon icon-lg fl-great-icon-set-ico fl-great-icon-set-tree108"></span>
               <h2 class="offset-top-10 offset-xs-top-20 offset-md-top-10 offset-xl-top-20">
-                Блок «Блок выберите план»</h2>
+                The Best Fitness Advice and Info</h2>
               <p class="text-big font-weight-bold offset-top-5 offset-xs-top-10 offset-md-top-5 offset-xl-top-10">Tips
                 for planning your nutritious diet.</p><a
                   class="btn btn-white-outline offset-top-5 offset-xs-top-13 offset-md-top-5 offset-xl-top-13"
@@ -424,66 +426,22 @@
                data-mouse-drag="false"
                data-dots="true"
                data-nav="true">
-            <div class="owl-item">
-              <p class="text-big font-weight-bold text-primary">Слайд 1</p>
-              <p>I originally contacted Joanna because I was having trouble getting my eating habits under control, and
-                was finally ready to admit that I couldn't do it on my own. After our initial consultation, I was
-                convinced that if anyone could help, it was Joanna.</p><img
-                  class="img-responsive rounded-circle center-block offset-top-20 offset-md-top-30"
-                  src="/images/backgrounds/temp_banner.png" width="172" height="172" alt="">
-              <div class="offset-top-13 offset-md-top-25">
-                <p class="font-weight-bold"><a class="link-decoration-none text-hover-primary text-gray"
-                                               href="my-philosophy.html">Jina Green</a></p>
+            @foreach($model->fields['feedbacks'] as $item)
+              <div class="owl-item">
+                <p class="text-big font-weight-bold text-primary">{{$item['head']}}</p>
+                <p>{{$item['text']}}</p>
+                <img class="img-responsive rounded-circle center-block offset-top-20 offset-md-top-30"
+                     src="{{image($item['image'])->getResized(200,200)}}" width="172" height="172" alt="">
+                <div class="offset-top-13 offset-md-top-25">
+                  <p class="font-weight-bold">
+                    <span class="text-hover-primary text-gray">{{$item['name']}}</span>
+                  </p>
+                </div>
+                <div class="offset-top-0">
+                  <p class="text-gray">({{$item['position']}})</p>
+                </div>
               </div>
-              <div class="offset-top-0">
-                <p class="text-gray">(actress)</p>
-              </div>
-            </div>
-            <div class="owl-item">
-              <p class="text-big font-weight-bold text-primary">Слайд 2</p>
-              <p>Working with Joanna has allowed me to tune into how I eat, why I eat, and how it makes me feel. I'm more
-                aware of times when I eat not because I'm hungry but because something else is bothering me. Not focusing
-                on food has improved my relationships with others.</p><img
-                  class="img-responsive rounded-circle center-block offset-top-20 offset-md-top-30"
-                  src="/images/backgrounds/temp_banner.png" width="172" height="172" alt="">
-              <div class="offset-top-13 offset-md-top-25">
-                <p class="font-weight-bold"><a class="link-decoration-none text-hover-primary text-gray"
-                                               href="my-philosophy.html">Lola Jordon</a></p>
-              </div>
-              <div class="offset-top-0">
-                <p class="text-gray">(artist)</p>
-              </div>
-            </div>
-            <div class="owl-item">
-              <p class="text-big font-weight-bold text-primary">Слайд 3</p>
-              <p>Joanna is unlike most nutritionists. She allows you to use foods that work with your lifestyle to address
-                your concerns. I felt that I had a choice in what I ate and how I ate it rather than being on a strict
-                diet. She was there with constant support.</p><img
-                  class="img-responsive rounded-circle center-block offset-top-20 offset-md-top-30"
-                  src="/images/backgrounds/temp_banner.png" width="172" height="172" alt="">
-              <div class="offset-top-13 offset-md-top-25">
-                <p class="font-weight-bold"><a class="link-decoration-none text-hover-primary text-gray"
-                                               href="my-philosophy.html">Rita Jefferson</a></p>
-              </div>
-              <div class="offset-top-0">
-                <p class="text-gray">(writer)</p>
-              </div>
-            </div>
-            <div class="owl-item">
-              <p class="text-big font-weight-bold text-primary">Слайд 4</p>
-              <p>Joanna is unlike most nutritionists. She allows you to use foods that work with your lifestyle to address
-                your concerns. I felt that I had a choice in what I ate and how I ate it rather than being on a strict
-                diet. She was there with constant support.</p><img
-                  class="img-responsive rounded-circle center-block offset-top-20 offset-md-top-30"
-                  src="/images/backgrounds/temp_banner.png" width="172" height="172" alt="">
-              <div class="offset-top-13 offset-md-top-25">
-                <p class="font-weight-bold"><a class="link-decoration-none text-hover-primary text-gray"
-                                               href="my-philosophy.html">Rita Jefferson</a></p>
-              </div>
-              <div class="offset-top-0">
-                <p class="text-gray">(writer)</p>
-              </div>
-            </div>
+            @endforeach
           </div>
         </div>
       </div>
