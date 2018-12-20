@@ -95,6 +95,9 @@
     position: relative;
     height: 260px;
     transition: .3s all ease;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
     &:before {
       content: '';

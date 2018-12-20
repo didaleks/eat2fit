@@ -27,8 +27,10 @@
 
                 return $name;
             }
-            function image($id) {
-                return \LaravelAdmin\Models\Image::findOrNew((int)$id);
+            if (! function_exists('image')) {
+              function image($id) {
+                  return \LaravelAdmin\Models\Image::findOrNew((int)$id);
+              }
             }
         }
     @endphp

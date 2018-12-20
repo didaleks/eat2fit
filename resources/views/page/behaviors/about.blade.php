@@ -254,82 +254,7 @@
     </section>
 
     {{-- Блок Команда --}}
-    <section class="section-95 about__team">
-      <div class="container">
-        <h2>Блок Команда</h2>
-        <div class="row justify-content-sm-center offset-top-40">
-          <div class="col-md-8 col-lg-4">
-            <!-- Post Box Hover-->
-            <article class="post-box-xs">
-              <div class="post-box-xs-img-wrap">
-                <div class="bg-image bg-image-1"></div>
-              </div>
-              <div class="post-box-xs-caption bg-default">
-                <!-- List Inline-->
-                <ul class="font-weight-bold">
-                  <li><a class="text-gray text-hover-primary" href="blog-post.html">
-                      <span class="text-middle inset-right-7">Street workout</span>
-                    </a>
-                  </li>
-                  <li>September, 12, 2018</li>
-                </ul>
-                <div class="post-box-xs-hidden">
-                  <p class="offset-top-13">Daily movement, in some form, will make you feel better each and every day.
-                    Your body craves moment. It was built to move. That means, we...</p>
-                </div>
-                <p class="text-big font-weight-bold offset-top-5">. . .</p>
-              </div>
-            </article>
-          </div>
-          <div class="col-md-8 col-lg-4 offset-top-30 offset-md-top-0">
-            <!-- Post Box Hover-->
-            <article class="post-box-xs">
-              <div class="post-box-xs-img-wrap">
-                <div class="bg-image bg-image-2"></div>
-              </div>
-              <div class="post-box-xs-caption bg-default">
-                <!-- List Inline-->
-                <ul class="font-weight-bold">
-                  <li><a class="text-gray text-hover-primary" href="blog-post.html">
-                      <span class="text-middle inset-right-7">Seasonal diets</span>
-                    </a>
-                  </li>
-                  <li>September, 12, 2018</li>
-                </ul>
-                <div class="post-box-xs-hidden">
-                  <p class="offset-top-13">Ever wondered why you crave certain foods? One reason is the change in
-                    seasons. Our bodies seek foods that balance out the elements of the...</p>
-                </div>
-                <p class="text-big font-weight-bold offset-top-5">. . .</p>
-              </div>
-            </article>
-          </div>
-          <div class="col-md-8 col-lg-4 offset-top-30 offset-md-top-0">
-            <!-- Post Box Hover-->
-            <article class="post-box-xs">
-              <div class="post-box-xs-img-wrap">
-                <div class="bg-image bg-image-3"></div>
-              </div>
-              <div class="post-box-xs-caption bg-default">
-                <!-- List Inline-->
-                <ul class="font-weight-bold">
-                  <li><a class="text-gray text-hover-primary" href="blog-post.html">
-                      <span class="text-middle inset-right-7">How to eat</span>
-                    </a>
-                  </li>
-                  <li>September, 12, 2018</li>
-                </ul>
-                <div class="post-box-xs-hidden">
-                  <p class="offset-top-13">We tend to be so conscious about WHAT to eat - fruits and vegetables, nuts,
-                    seeds, quality fats and proteins, sprouts, herbs etc. But HOW to...</p>
-                </div>
-                <p class="text-big font-weight-bold offset-top-5">. . .</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
+    @include('blocks.block_team', ['team' => $model->fields['team']])
 
     {{-- Блок «Наши партнеры» --}}
     <section class="section-45">
@@ -349,28 +274,14 @@
              data-xl-items="5" data-loop="true"
              data-mouse-drag="false"
              data-dots="true">
+          @foreach($model->fields['partners'] as $partner)
           <a href="#">
             <img class="img-responsive img-semi-transparent-inverse center-block"
-                 src="/images/backgrounds/temp_banner.png" width="148" height="21"
-                 alt=""></a><a href="#"><img
-                class="img-responsive img-semi-transparent-inverse center-block"
-                src="/images/backgrounds/temp_banner.png" width="148" height="21" alt=""></a><a href="#"><img
-                class="img-responsive img-semi-transparent-inverse center-block"
-                src="/images/backgrounds/temp_banner.png" width="148" height="21" alt=""></a><a href="#"><img
-                class="img-responsive img-semi-transparent-inverse center-block"
-                src="/images/backgrounds/temp_banner.png" width="148" height="21" alt=""></a><a href="#"><img
-                class="img-responsive img-semi-transparent-inverse center-block"
-                src="/images/backgrounds/temp_banner.png" width="148" height="21" alt=""></a><a href="#"><img
-                class="img-responsive img-semi-transparent-inverse center-block"
-                src="/images/backgrounds/temp_banner.png" width="148" height="21" alt=""></a><a href="#"><img
-                class="img-responsive img-semi-transparent-inverse center-block"
-                src="/images/backgrounds/temp_banner.png" width="148" height="21" alt=""></a><a href="#"><img
-                class="img-responsive img-semi-transparent-inverse center-block"
-                src="/images/backgrounds/temp_banner.png" width="148" height="21" alt=""></a><a href="#"><img
-                class="img-responsive img-semi-transparent-inverse center-block"
-                src="/images/backgrounds/temp_banner.png" width="148" height="21" alt=""></a><a href="#"><img
-                class="img-responsive img-semi-transparent-inverse center-block"
-                src="/images/backgrounds/temp_banner.png" width="148" height="21" alt=""></a></div>
+                 src="{{asset(image($partner['image'])->url)}}" width="148" height="21">
+          </a>
+          @endforeach
+
+        </div>
 
     </section>
 
