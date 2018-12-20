@@ -7,6 +7,10 @@
                     $value = $model->{$m[1]}->{$m[2]} ?? '';
                 else if (preg_match('/\[(\w+)\]/', $name, $m))
                     $value = $model->{$m[1]};
+                else if (strpos($name,'fields') !== false) {
+                    $name = str_replace(']','',str_replace('[','',str_replace('fields', '', $name))); //Строку типа "fields[some]" приводит к виду 'some'
+                    $value = $model->fields{$name}; //По этому ключу цепляет из fields
+                }
                 else
                     $value = $model->{$name};
 
