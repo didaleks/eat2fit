@@ -169,12 +169,12 @@
         <div class="col-md-6">
           <div class="swiper-container swiper-slider">
             <div class="swiper-wrapper">
-              <div class="swiper-slide" data-toggle="modal" data-target="#modalImg" data-slide-bg="images/backgrounds/background-12-1920x900.jpg">
-              </div>
-              <div class="swiper-slide" data-toggle="modal" data-target="#modalImg" data-slide-bg="images/backgrounds/temp_banner.png">
-              </div>
-              <div class="swiper-slide" data-toggle="modal" data-target="#modalImg" data-slide-bg="images/backgrounds/background-12-1920x900.jpg">
-              </div>
+              @foreach($model->fields['images'] as $item)
+                <div class="swiper-slide"
+                     data-toggle="modal"
+                     data-target="#modalImg"
+                     data-slide-bg="{{asset(image($item['image'])->url)}}"></div>
+              @endforeach
               ...
             </div>
             <!-- If we need pagination -->
@@ -203,51 +203,52 @@
 
 
     {{-- Задать вопрос диетологу --}}
-    <section class="section about__paralax-question section-height-800 parallax-container context-dark bg-gray-darkest text-xl-left"
-             data-parallax-img="/images/backgrounds/temp_banner.png">
+    <section
+        class="section about__paralax-question section-height-800 parallax-container context-dark bg-gray-darkest text-xl-left"
+        data-parallax-img="/images/backgrounds/temp_banner.png">
       <div class="parallax-content">
         <div class="bg-overlay-black section-45 d-flex justify-content-center text-center">
           <div class="col-md-10">
-          <h1>Блок "Задать вопрос диетологу"</h1>
-          <form class="rd-mailform text-left offset-top-34" data-form-output="form-output-global"
-                data-form-type="contact" method="post" action="{{ route('feedback.store') }}"
-                novalidate="novalidate">
-            @csrf
-            <input type="hidden" name="type" value="question">
-            <div class="row justify-content-sm-center">
-              <div class="col-lg-4 text-center">
-                <div class="inset-lg-left-10 inset-xl-left-40">
-                  <p>Keep up with the latest school news and events. Enter your e-mail and subscribe to our
-                    newsletter.</p>
+            <h1>Блок "Задать вопрос диетологу"</h1>
+            <form class="rd-mailform text-left offset-top-34" data-form-output="form-output-global"
+                  data-form-type="contact" method="post" action="{{ route('feedback.store') }}"
+                  novalidate="novalidate">
+              @csrf
+              <input type="hidden" name="type" value="question">
+              <div class="row justify-content-sm-center">
+                <div class="col-lg-4 text-center">
+                  <div class="inset-lg-left-10 inset-xl-left-40">
+                    <p>Keep up with the latest school news and events. Enter your e-mail and subscribe to our
+                      newsletter.</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div
-                class="row justify-content-sm-center p-3 align-items-sm-center inset-left-25 inset-right-25 inset-lg-left-0 inset-lg-right-0">
-              <div class="col-3 form-wrap form-wrap-transparent has-error">
-                <input class="form-input form-control-has-validation form-control-last-child"
-                       type="text"
-                       placeholder="Имя"
-                       name="name" data-constraints="@Required" id=""><span
-                    class="form-validation">Поле обязательно для заполнения.</span>
+              <div
+                  class="row justify-content-sm-center p-3 align-items-sm-center inset-left-25 inset-right-25 inset-lg-left-0 inset-lg-right-0">
+                <div class="col-3 form-wrap form-wrap-transparent has-error">
+                  <input class="form-input form-control-has-validation form-control-last-child"
+                         type="text"
+                         placeholder="Имя"
+                         name="name" data-constraints="@Required" id=""><span
+                      class="form-validation">Поле обязательно для заполнения.</span>
+                </div>
+                <div class="col-3 form-wrap form-wrap-transparent has-error">
+                  <input class="form-input form-control-has-validation form-control-last-child" type="text"
+                         placeholder="E-mail"
+                         name="email" data-constraints="@Email @Required" id=""><span
+                      class="form-validation">Поле обязательно для заполнения.</span>
+                </div>
+                <div class="col-3 form-wrap form-wrap-transparent has-error">
+                  <input class="form-input form-control-has-validation form-control-last-child" type="text"
+                         placeholder="Ваш вопрос"
+                         name="message" data-constraints="@Required" id=""><span
+                      class="form-validation">Поле обязательно для заполнения.</span>
+                </div>
+                <div class="col-3 text-center offset-top-10 offset-md-top-0">
+                  <button class="btn btn-primary" type="submit">Задать вопрос</button>
+                </div>
               </div>
-              <div class="col-3 form-wrap form-wrap-transparent has-error">
-                <input class="form-input form-control-has-validation form-control-last-child" type="text"
-                       placeholder="E-mail"
-                       name="email" data-constraints="@Email @Required" id=""><span
-                    class="form-validation">Поле обязательно для заполнения.</span>
-              </div>
-              <div class="col-3 form-wrap form-wrap-transparent has-error">
-                <input class="form-input form-control-has-validation form-control-last-child" type="text"
-                       placeholder="Ваш вопрос"
-                       name="message" data-constraints="@Required" id=""><span
-                    class="form-validation">Поле обязательно для заполнения.</span>
-              </div>
-              <div class="col-3 text-center offset-top-10 offset-md-top-0">
-                <button class="btn btn-primary" type="submit">Задать вопрос</button>
-              </div>
-            </div>
-          </form>
+            </form>
           </div>
         </div>
       </div>
@@ -269,19 +270,19 @@
           </div>
         </div>
       </div>
-        <div class="owl-carousel owl-carousel-centered offset-top-50"
-             data-autoplay="true" data-items="2" data-sm-items="5"
-             data-xl-items="5" data-loop="true"
-             data-mouse-drag="false"
-             data-dots="true">
-          @foreach($model->fields['partners'] as $partner)
+      <div class="owl-carousel owl-carousel-centered offset-top-50"
+           data-autoplay="true" data-items="2" data-sm-items="5"
+           data-xl-items="5" data-loop="true"
+           data-mouse-drag="false"
+           data-dots="true">
+        @foreach($model->fields['partners'] as $partner)
           <a href="#">
             <img class="img-responsive img-semi-transparent-inverse center-block"
                  src="{{asset(image($partner['image'])->getResized(148))}}" width="148">
           </a>
-          @endforeach
+        @endforeach
 
-        </div>
+      </div>
 
     </section>
 
