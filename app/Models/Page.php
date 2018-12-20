@@ -111,6 +111,48 @@ class Page extends \LaravelAdmin\Models\Page
                     'meta_keywords',
                 ];
                 break;
+            case "shipping":
+                $fields = [
+                    [
+                        'name' => 'name',
+                        'type' => 'input',
+                        'label' => 'Название'
+                    ],
+                    [
+                        'name' => 'behavior',
+                        'type' => 'readonly ',
+                        'label' => 'Тип'
+                    ],
+                    [
+                        'name' => 'published',
+                        'type' => 'checkbox',
+                        'label' => 'Опубликован'
+                    ],
+                    [
+                        'name' => 'slug',
+                        'type' => 'input',
+                        'label' => 'Url'
+                    ],
+                    [
+                        'name' => 'content',
+                        'type' => 'editor',
+                        'label' => 'Общий текст'
+                    ],
+                    'shipping-text' =>  [
+                        'name' => 'fields[shipping-text]',
+                        'type' => 'editor',
+                        'label' => 'Доставка'
+                    ],
+                    'paying-text' =>  [
+                        'name' => 'fields[paying-text]',
+                        'type' => 'editor',
+                        'label' => 'Способы оплаты'
+                    ],
+                    'meta_title',
+                    'meta_description',
+                    'meta_keywords',
+                ];
+                break;
             default:
                 $fields = [
                     [
