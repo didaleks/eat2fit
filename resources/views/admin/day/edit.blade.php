@@ -3,7 +3,7 @@
 @section('action', route($name . '.update', ['id' => $model->id]))
 
 @section('controls')
-    <button type="submit" class="btn btn-outline-primary"><i class="far fa-save"></i> Сохранить</button>
+    {{--<button type="submit" class="btn btn-outline-primary"><i class="far fa-save"></i> Сохранить</button>--}}
 @endsection
 
 @section('fields')

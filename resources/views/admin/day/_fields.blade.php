@@ -14,9 +14,4 @@
                type="number" name="number"
                value="{{$number}}">
     </div>
-    <div class="col-md-2">
-        <div class="control-buttons">
-            <button type="submit" class="btn btn-outline-primary"><i class="far fa-save"></i> Сохранить</button>
-        </div>
-    </div>
 </div>

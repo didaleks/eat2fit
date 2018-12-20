@@ -31,11 +31,6 @@
 
                 return $name;
             }
-            if (! function_exists('image')) {
-              function image($id) {
-                  return \App\Models\Image::findOrNew((int)$id);
-              }
-            }
         }
     @endphp
 
