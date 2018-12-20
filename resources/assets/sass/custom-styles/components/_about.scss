@@ -70,6 +70,13 @@
     .swiper-container {
       cursor: zoom-in;
       height: 400px;
+      .swiper-slide {
+          background-size: contain !important;
+          background-repeat: no-repeat !important;
+        &:after {
+          //background: rgba(10, 10, 10, 0);
+        }
+      }
     }
   }
 }

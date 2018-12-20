@@ -175,7 +175,6 @@
                      data-target="#modalImg"
                      data-slide-bg="{{asset(image($item['image'])->url)}}"></div>
               @endforeach
-              ...
             </div>
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
