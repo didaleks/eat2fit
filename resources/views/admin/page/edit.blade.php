@@ -8,16 +8,4 @@
 
 @section('fields')
     @includeFirst(["admin.{$name}._fields", "admin.base._fields", "admin::{$name}._fields", "admin::base._fields"])
-    @include('admin.diet._categories')
-@endsection
-
-
-@section('additional')
-    <div class="dd">
-        <ol class="dd-list">
-            @foreach($model->daysList() as $day_item)
-                @include("admin.day._row", ['model' => $day_item, 'diet' => $model])
-            @endforeach
-        </ol>
-    </div>
 @endsection

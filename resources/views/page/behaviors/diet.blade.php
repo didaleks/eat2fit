@@ -71,7 +71,7 @@
             <div class="box-xs inset-xl-left-35 inset-xl-right-35">
               <span class="icon icon-target"></span>
               <p class="text-big font-weight-bold offset-top-20 title">
-                  Цель программы</p>
+                Цель программы</p>
               <p>Предлагаем вашему вниманию специальное постное меню, которое обеспечит сбалансированное и разнообразное
                 питание во время поста.</p>
             </div>
@@ -150,9 +150,10 @@
                           </ul>
                           <div class="tab-content text-left offset-top-30 p-0">
                             @foreach($model->days->whereIn('number', range($firstDayNum,$lastDayNum)) as $day)
-                              <div class="tab-pane fade {{($day->dayWeekNum()==1)?'show active':''}}" id="tabs-{{$j}}-{{$day->number}}">
-                                  @foreach($day->eatings->sortBy('eating_type.sort') as $eating)
-                                  <div class="menu_row col-md-12 d-flex justify-content-between offset-top-10">
+                              <div class="tab-pane fade {{($day->dayWeekNum()==1)?'show active':''}}"
+                                   id="tabs-{{$j}}-{{$day->number}}">
+                                @foreach($day->eatings->sortBy('eating_type.sort') as $eating)
+                                  <div class="menu_row col-md-12 d-flex justify-content-start offset-top-10">
                                     <div class="col-md-3">
                                       <big class="font-weight-bold">{{$eating->name}}</big>
                                       <ul>
@@ -161,11 +162,18 @@
                                         @endforeach
                                       </ul>
                                     </div>
-                                    <div class="col-md-3"><img class="img-responsive center-block" src="/images/backgrounds/temp_banner.png" width="370" height="260" alt=""></div>
-                                    <div class="col-md-3"><img class="img-responsive center-block" src="/images/backgrounds/temp_banner.png" width="370" height="260" alt=""></div>
-                                    <div class="col-md-3"><img class="img-responsive center-block" src="/images/backgrounds/temp_banner.png" width="370" height="260" alt=""></div>
+                                    @foreach($eating->dishes->sortBy('pivot.sort') as $dish)
+                                      @if(isset($dish->fields['image']))
+                                        @break($loop->iteration == 4)
+                                        <div class="col-md-3">
+                                          <img class="img-responsive center-block"
+                                               src="{{ asset(image($dish->fields['image'])->getResized(205,125)) }}"
+                                               width="193" height="125" alt="">
+                                        </div>
+                                      @endif
+                                    @endforeach
                                   </div>
-                                  @endforeach
+                                @endforeach
                               </div>
                             @endforeach
                           </div>
