@@ -8,7 +8,7 @@
         <div class="owl-item offset-top-30 offset-md-top-0">
           <article class="post-box-xs">
             <div class="post-box-xs-img-wrap">
-              <div class="bg-image" style="background-image: url({{dd(resize(image($item['image'])->url,148,23))}})"></div>
+              <div class="bg-image" style="background-image: url({{asset(image($item['image'])->getResized(300))}})"></div>
             </div>
             <div class="post-box-xs-caption bg-default">
               <ul class="font-weight-bold">

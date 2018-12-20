@@ -277,7 +277,7 @@
           @foreach($model->fields['partners'] as $partner)
           <a href="#">
             <img class="img-responsive img-semi-transparent-inverse center-block"
-                 src="{{asset(image($partner['image'])->url)}}" width="148" height="21">
+                 src="{{asset(image($partner['image'])->getResized(148))}}" width="148">
           </a>
           @endforeach
 
