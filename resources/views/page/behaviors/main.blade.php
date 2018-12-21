@@ -6,6 +6,26 @@
   <div class="swiper-container swiper-slider swiper-slider-variant-1" data-autoplay="5000" data-min-height="400px"
        data-simulate-touch="false" data-slide-effect="fade">
     <div class="swiper-wrapper">
+      @foreach($model->fields['slides'] as $slide)
+        {{--@dd($slide)--}}
+        <div class="swiper-slide" data-slide-bg="{{ asset(image($slide['image'])->url) }}">
+          <div class="swiper-slide-caption">
+            <div class="container">
+              <div class="row justify-content-sm-center justify-content-lg-start text-lg-left">
+                <div class="col-md-10 col-lg-8 col-xl-5">
+                  <div class="text-big-80 font-accent" data-caption-animate="fadeInDown" data-caption-delay="50"
+                       data-caption-duration="700">{{ $slide['head'] }}
+                  </div>
+                  <p class="text-big font-weight-bold offset-top-13" data-caption-animate="fadeIn"
+                     data-caption-delay="200" data-caption-duration="700">{{ $slide['text'] }}</p><a
+                      class="btn btn-white-outline offset-top-20 offset-sm-top-13 offset-lg-top-30" href="{{ $slide['link'] }}"
+                      data-caption-animate="fadeInUp" data-caption-delay="50" data-caption-duration="700">Перейти</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      @endforeach
       <div class="swiper-slide" data-slide-bg="/images/backgrounds/temp_banner.png">
         <div class="swiper-slide-caption">
           <div class="container">
@@ -18,7 +38,7 @@
                    data-caption-delay="200" data-caption-duration="700">Health and Nutrition Coach. <br
                       class="d-none d-lg-inline-block"> Yoga Teacher. Writer. Consultant.</p><a
                     class="btn btn-white-outline offset-top-20 offset-sm-top-13 offset-lg-top-30" href="contact-me.html"
-                    data-caption-animate="fadeInUp" data-caption-delay="50" data-caption-duration="700">Subscribe</a>
+                    data-caption-animate="fadeInUp" data-caption-delay="50" data-caption-duration="700">Перейти</a>
               </div>
             </div>
           </div>

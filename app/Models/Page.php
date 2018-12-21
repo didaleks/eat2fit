@@ -180,6 +180,12 @@ class Page extends \LaravelAdmin\Models\Page
                         'type' => 'editor',
                         'label' => '???'
                     ],
+                    'slides' =>  [
+                        'name' => 'fields[slides]',
+                        'type' => 'multi_slides_extended',
+                        'multi' => true,
+                        'label' => 'Слайды'
+                    ],
                     'team' =>  [
                         'name' => 'fields[feedbacks]',
                         'type' => 'multi_feedback',
