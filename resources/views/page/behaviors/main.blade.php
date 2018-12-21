@@ -53,13 +53,13 @@
     <section class="section-95">
       <div class="container">
         <div class="row justify-content-sm-center">
-          <div class="col-md-8 col-lg-6 order-lg-1"><img class="img-responsive center-block"
-                                                         src="/images/backgrounds/temp_banner.png" width="570"
-                                                         height="350"
-                                                         alt=""></div>
+          <div class="col-md-8 col-lg-6 order-lg-1">
+            <img class="img-responsive center-block" src="/images/backgrounds/temp_banner.png" width="570"
+                 height="350"
+                 alt=""></div>
           <div class="col-md-8 col-lg-6 offset-top-34 offset-md-top-0">
             <div class="inset-lg-left-50 inset-lg-right-50 inset-xl-left-50 inset-xl-right-50">
-              <h2>Блок "О нас"</h2>
+              <h2>EAT2FIT – Ваш личный диетолог и шеф — повар!</h2>
               <p class="offset-lg-top-35">I am a Certified Health Coach, focused on women's health, bringing you
                 super-practical support to help you feel great, take care of your body, and actually enjoy the process.
                 I don’t tell my clients what to do, I teach them what to do.</p>
@@ -200,20 +200,20 @@
             <div class="owl-carousel" data-autoplay="true" data-items="1" data-stage-padding="15" data-loop="true" data-margin="30" data-mouse-drag="false" data-dots-custom=".owl-custom-pagination" data-nav="false">
               <div class="owl-item">
                 <div class="row justify-content-sm-center">
-                  <div class="col-sm-6"><img class="img-responsive center-block" src="/images/backgrounds/temp_banner.png" width="269" height="278" alt=""></div>
+                  <div class="col-sm-6"><img class="img-responsive center-block" src="{{asset(image(79)->url)}}" width="269" height="278" alt=""></div>
                   <div class="col-sm-6">
-                    <p class="text-big font-weight-bold text-primary">Rita Jefferson lost 10 pounds and 1 size</p>
-                    <p>Joanna is unlike most nutritionists. She allows you to use foods that work with your lifestyle to address your concerns. I felt that I had a choice in what I ate and how I ate it rather than being on a strict diet. She was there with constant support, offering recipe recommendations or checking to make sure I was staying on track.</p>
-                    <!-- Blockquote-->
+                    <p class="text-big font-weight-bold text-primary">Профессор кафедры гастроэнтерологии и диетологии СЗГМУ им. Мечникова, Д.М.Н.</p>
+
                     <blockquote class="quote quote-classic text-left offset-top-20 offset-md-top-25">
                       <p class="text-gray">
-                        <q>Working with her changed the way I look at food - I not only feel better and healthier, but I also enjoy going to the grocery store and putting meals together using ingredients I previously overlooked. I completed the program having fixed all of my original concerns, and I enjoyed every session. </q>
+                        <q>Еда во многом определяет самочувствие человека. Рационы EAT2FIT помогают людям сохранять и улучшать здоровье, успевать больше, вести правильный образ жизни и всегда оставаться в форме. Все меню EAT2FIT разработано при участии врачей кафедры диетологии и гастроэнтерологии СЗГМУ им. Мечникова.</q>
                       </p>
                       <div class="offset-top-20">
-                        <p class="font-weight-bold"><a class="link-decoration-none text-hover-primary text-gray" href="my-philosophy.html">Rita Jefferson</a></p>
+                        <p class="font-weight-bold"><span class="link-decoration-none text-hover-primary text-gray">
+                            Людмила Ивановна Назаренко</span></p>
                       </div>
                       <div class="offset-top-0">
-                        <p class="text-gray">(writer)</p>
+                        <p class="text-gray">(Врач-диетолог)</p>
                       </div>
                     </blockquote>
                   </div>
@@ -221,41 +221,19 @@
               </div>
               <div class="owl-item">
                 <div class="row justify-content-sm-center">
-                  <div class="col-sm-6"><img class="img-responsive center-block" src="/images/backgrounds/temp_banner.png" width="269" height="278" alt=""></div>
+                  <div class="col-sm-6"><img class="img-responsive center-block" src="{{asset(image(78)->url)}}" width="269" height="278" alt=""></div>
                   <div class="col-sm-6">
-                    <p class="text-big font-weight-bold text-primary">Rita Jefferson lost 10 pounds and 1 size</p>
-                    <p>Joanna is unlike most nutritionists. She allows you to use foods that work with your lifestyle to address your concerns. I felt that I had a choice in what I ate and how I ate it rather than being on a strict diet. She was there with constant support, offering recipe recommendations or checking to make sure I was staying on track.</p>
-                    <!-- Blockquote-->
+                    <p class="text-big font-weight-bold text-primary">Профессор кафедры гастроэнтерологии и диетологии СЗГМУ им. Мечникова, Д.М.Н.</p>
                     <blockquote class="quote quote-classic text-left offset-top-20 offset-md-top-25">
                       <p class="text-gray">
-                        <q>Working with her changed the way I look at food - I not only feel better and healthier, but I also enjoy going to the grocery store and putting meals together using ingredients I previously overlooked. I completed the program having fixed all of my original concerns, and I enjoyed every session. </q>
+                        <q>Опыт работы нашего шеф-повара Кирилла Музыченко (ресторан "Летний Дворец") дал возможность сделать кухню Eat2Fit изысканной, способной приятно удивить настоящего гурмана. Кирилл отвечает за качество, вкус и разнообразие нашего меню. Совместно с врачом-диетологом он проработал каждый рецепт и продумал технологию приготовления блюд. Так что, каждый день Вы получаете абсолютно сбалансированный и правильно приготовленный рацион.</q>
                       </p>
                       <div class="offset-top-20">
-                        <p class="font-weight-bold"><a class="link-decoration-none text-hover-primary text-gray" href="my-philosophy.html">Rita Jefferson</a></p>
+                        <p class="font-weight-bold"><span class="link-decoration-none text-hover-primary text-gray">
+                            Кирилл Музыченко</span></p>
                       </div>
                       <div class="offset-top-0">
-                        <p class="text-gray">(writer)</p>
-                      </div>
-                    </blockquote>
-                  </div>
-                </div>
-              </div>
-              <div class="owl-item">
-                <div class="row justify-content-sm-center">
-                  <div class="col-sm-6"><img class="img-responsive center-block" src="/images/backgrounds/temp_banner.png" width="269" height="278" alt=""></div>
-                  <div class="col-sm-6">
-                    <p class="text-big font-weight-bold text-primary">Rita Jefferson lost 10 pounds and 1 size</p>
-                    <p>Joanna is unlike most nutritionists. She allows you to use foods that work with your lifestyle to address your concerns. I felt that I had a choice in what I ate and how I ate it rather than being on a strict diet. She was there with constant support, offering recipe recommendations or checking to make sure I was staying on track.</p>
-                    <!-- Blockquote-->
-                    <blockquote class="quote quote-classic text-left offset-top-20 offset-md-top-25">
-                      <p class="text-gray">
-                        <q>Working with her changed the way I look at food - I not only feel better and healthier, but I also enjoy going to the grocery store and putting meals together using ingredients I previously overlooked. I completed the program having fixed all of my original concerns, and I enjoyed every session. </q>
-                      </p>
-                      <div class="offset-top-20">
-                        <p class="font-weight-bold"><a class="link-decoration-none text-hover-primary text-gray" href="my-philosophy.html">Rita Jefferson</a></p>
-                      </div>
-                      <div class="offset-top-0">
-                        <p class="text-gray">(writer)</p>
+                        <p class="text-gray">(Шеф-повар)</p>
                       </div>
                     </blockquote>
                   </div>

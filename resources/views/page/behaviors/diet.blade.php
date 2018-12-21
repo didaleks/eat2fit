@@ -167,7 +167,7 @@
                                         @break($loop->iteration == 4)
                                         <div class="col-md-3">
                                           <img class="img-responsive center-block"
-                                               src="{{ asset(image($dish->fields['image'])->getResized(205,125)) }}"
+                                               src="{{ asset(image($dish->fields['image'])->getResized(200,200)) }}"
                                                width="193" height="125" alt="">
                                         </div>
                                       @endif
