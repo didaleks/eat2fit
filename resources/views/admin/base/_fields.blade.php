@@ -112,7 +112,7 @@
             'value' => field_value($model, $field)
         ])
     @elseif(isset($field['type']))
-        @if(in_array($field['type'],['multi_slides', 'multi_images', 'multi_team', 'multi_feedback', 'multi_slides_extended', 'choose_plan']))
+        @if(in_array($field['type'],['multi_slides', 'multi_images', 'multi_team', 'multi_feedback', 'multi_slides_extended', 'choose_plan', 'multi_slides_news']))
             @include('admin.ui.form.'.$field['type'], [
                         'label' => field_label($field),
                         'name'  => $field['name'],

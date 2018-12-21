@@ -191,74 +191,22 @@
         <div class="owl-carousel owl-nav-modern owl-carousel-inset-bottom-20 owl-carousel-navs-primary offset-top-40"
              data-autoplay="true" data-items="1" data-md-items="2" data-stage-padding="5" data-loop="true"
              data-margin="30" data-mouse-drag="false" data-dots="true" data-nav="true">
-          <div class="owl-item">
-            <!-- Post Box-->
-            <article class="post-box">
-              <div class="post-box-img-wrap"><img src="/images/backgrounds/temp_banner.png" width="571" height="234" alt="">
-              </div>
-              <div class="post-box-caption bg-default"><span
-                    class="icon icon-circle fl-great-icon-set-ico fl-great-icon-set-pencil107 bg-default"></span>
-                <div class="post-meta font-weight-bold">September, 12, 2018</div>
-                <p class="post-box-title text-big font-weight-bold text-uppercase text-spacing-100 offset-top-5"><a
-                      class="link-decoration-none" href="blog-post.html">Seasonal diets</a></p>
-                <div class="post-box-caption-hidden">
-                  <p>Ever wondered why you crave certain foods? One reason is the change in seasons. Our bodies seek
-                    foods that balance out the elements of the season…</p>
+          @foreach($model->fields['news'] as $item)
+            <div class="owl-item">
+              <article class="post-box">
+                <div class="post-box-img-wrap"><img src="{{ asset(image($item['image'])->getResized(571,274)) }}" width="571" height="234" alt="">
                 </div>
-              </div>
-            </article>
-          </div>
-          <div class="owl-item">
-            <!-- Post Box-->
-            <article class="post-box">
-              <div class="post-box-img-wrap"><img src="/images/backgrounds/temp_banner.png" width="571" height="234" alt="">
-              </div>
-              <div class="post-box-caption bg-default"><span
-                    class="icon icon-circle fl-great-icon-set-ico fl-great-icon-set-video172 bg-default"></span>
-                <div class="post-meta font-weight-bold">September, 12, 2018</div>
-                <p class="post-box-title text-big font-weight-bold text-uppercase text-spacing-100 offset-top-5"><a
-                      class="link-decoration-none" href="blog-post.html">How to eat</a></p>
-                <div class="post-box-caption-hidden">
-                  <p>We tend to be so conscious about WHAT to eat - fruits and vegetables, nuts, seeds, quality fats and
-                    proteins, sprouts, herbs etc. But HOW to eat is just as important, if not more. </p>
+                <div class="post-box-caption bg-default"><span class="icon icon-circle fl-great-icon-set-ico fl-great-icon-set-pencil107 bg-default"></span>
+                  <div class="post-meta font-weight-bold">{{ $item['date'] }}</div>
+                  <p class="post-box-title text-big font-weight-bold text-uppercase text-spacing-100 offset-top-5"><a
+                        class="link-decoration-none" href="{{ $item['link'] }}">{{ $item['head'] }}</a></p>
+                  <div class="post-box-caption-hidden">
+                    <p>{{ $item['text'] }}</p>
+                  </div>
                 </div>
-              </div>
-            </article>
-          </div>
-          <div class="owl-item">
-            <!-- Post Box-->
-            <article class="post-box">
-              <div class="post-box-img-wrap"><img src="/images/backgrounds/temp_banner.png" width="571" height="234" alt="">
-              </div>
-              <div class="post-box-caption bg-default"><span
-                    class="icon icon-circle fl-great-icon-set-ico fl-great-icon-set-pencil107 bg-default"></span>
-                <div class="post-meta font-weight-bold">September, 12, 2018</div>
-                <p class="post-box-title text-big font-weight-bold text-uppercase text-spacing-100 offset-top-5"><a
-                      class="link-decoration-none" href="blog-post.html">Seasonal diets</a></p>
-                <div class="post-box-caption-hidden">
-                  <p>Ever wondered why you crave certain foods? One reason is the change in seasons. Our bodies seek
-                    foods that balance out the elements of the season…</p>
-                </div>
-              </div>
-            </article>
-          </div>
-          <div class="owl-item">
-            <!-- Post Box-->
-            <article class="post-box">
-              <div class="post-box-img-wrap"><img src="/images/backgrounds/temp_banner.png" width="571" height="234" alt="">
-              </div>
-              <div class="post-box-caption bg-default"><span
-                    class="icon icon-circle fl-great-icon-set-ico fl-great-icon-set-video172 bg-default"></span>
-                <div class="post-meta font-weight-bold">September, 12, 2018</div>
-                <p class="post-box-title text-big font-weight-bold text-uppercase text-spacing-100 offset-top-5"><a
-                      class="link-decoration-none" href="blog-post.html">How to eat</a></p>
-                <div class="post-box-caption-hidden">
-                  <p>We tend to be so conscious about WHAT to eat - fruits and vegetables, nuts, seeds, quality fats and
-                    proteins, sprouts, herbs etc. But HOW to eat is just as important, if not more. </p>
-                </div>
-              </div>
-            </article>
-          </div>
+              </article>
+            </div>
+          @endforeach
         </div>
       </div>
     </section>
