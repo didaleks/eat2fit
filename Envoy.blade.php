@@ -245,6 +245,10 @@
 
 		echo "{{ $cmdPhp }} composer.phar install --no-dev --verbose --prefer-dist --optimize-autoloader --no-progress --no-interaction" 1>&2;
 		{{ $cmdPhp }} composer.phar install --no-dev --verbose --prefer-dist --optimize-autoloader --no-progress --no-interaction 2>&1
+
+		echo "Update latest laravel-admin"
+		echo "{{ $cmdPhp }} composer.phar update support/laravel-admin --no-dev --verbose --prefer-dist --optimize-autoloader --no-progress --no-interaction" 1>&2;
+		{{ $cmdPhp }} composer.phar update support/laravel-admin --no-dev --verbose --prefer-dist --optimize-autoloader --no-progress --no-interaction 2>&1
 	fi
 @endtask
 
