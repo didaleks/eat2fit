@@ -17,10 +17,10 @@
               <div class="unit-left"><span class="icon icon-circle icon-primary fl-great-icon-set-ico fl-great-icon-set-placeholder34"></span></div>
               <div class="unit-body text-left">
                 <div>
-                  <p>Address:</p>
+                  <p>Адрес:</p>
                 </div>
                 <div class="offset-top-5">
-                  <p class="font-weight-bold"><a class="link-decoration-none text-hover-primary text-gray" href="contact-me.html">4578 Marmora St, Chicago D04 89GR.</a></p>
+                  <p class="font-weight-bold"><span class="link-decoration-none text-hover-primary text-gray">{{ $settings->address }}</span></p>
                 </div>
               </div>
             </div>
@@ -29,10 +29,13 @@
               <div class="unit-left"><span class="icon icon-circle icon-primary fl-great-icon-set-ico fl-great-icon-set-mobile226"></span></div>
               <div class="unit-body text-left">
                 <div>
-                  <p>General Info:</p>
+                  <p>Телефоны:</p>
                 </div>
                 <div class="offset-top-5">
-                  <p class="text-big font-weight-bold"><a class="link-decoration-none text-hover-primary text-gray" href="tel:#">+100 123 1234 1110</a></p>
+                  <p class="text-big font-weight-bold"><a class="link-decoration-none text-hover-primary text-gray" href="tel:{{ $settings->phone }}">{{ $settings->phone }}</a></p>
+                </div>
+                <div class="offset-top-5">
+                  <p class="text-big font-weight-bold"><a class="link-decoration-none text-hover-primary text-gray" href="tel:{{ $settings->phone2 }}">{{ $settings->phone2 }}</a></p>
                 </div>
               </div>
             </div>
@@ -44,7 +47,7 @@
                   <p>Email Address:</p>
                 </div>
                 <div class="offset-top-5">
-                  <p class="text-big font-weight-bold"><a class="link-decoration-none text-hover-primary text-gray" href="mailto:#">name@demolink.org</a></p>
+                  <p class="text-big font-weight-bold"><a class="link-decoration-none text-hover-primary text-gray" href="mailto:{{ $settings->contact_email }}">{{ $settings->contact_email }}</a></p>
                 </div>
               </div>
             </div>

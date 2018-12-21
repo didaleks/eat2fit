@@ -16,7 +16,7 @@
                         <div class="rd-navbar-panel-inner-right d-flex justify-content-end align-items-center">
                             <div class="mr-3 offset-top-10">
                                 <i class="fa-mobile-phone"></i>
-                                <a href="tel:+7 (800) 555-35-35">+7 (800) 555-35-35</a>
+                                <a href="tel:{{ $settings->phone }}">{{ $settings->phone }}</a>
                             </div>
                             <button class="btn btn-xs btn-primary text-bottom"  data-toggle="modal" data-target="#modalCallback">Заказать звонок</button>
                         </div>
