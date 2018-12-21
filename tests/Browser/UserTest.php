@@ -17,7 +17,7 @@ class UserTest extends DuskTestCase
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('/')
-                    ->assertSee('Блок');
+                    ->assertDontSee('Error');
         });
     }
 
@@ -25,7 +25,7 @@ class UserTest extends DuskTestCase
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('/cart')
-                ->assertSee('Корзина');
+                ->assertDontSee('Error');
         });
     }
 
@@ -33,7 +33,7 @@ class UserTest extends DuskTestCase
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('/about')
-                ->assertSee('компании');
+                ->assertDontSee('Error');
         });
     }
 
@@ -41,7 +41,7 @@ class UserTest extends DuskTestCase
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('/contacts')
-                ->assertSee('Контакты');
+                ->assertDontSee('Error');
         });
     }
 
@@ -49,7 +49,7 @@ class UserTest extends DuskTestCase
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('/catalog')
-                ->assertSee('рацион');
+                ->assertDontSee('ErrorException');
         });
     }
 }
