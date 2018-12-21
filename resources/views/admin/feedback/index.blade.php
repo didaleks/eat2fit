@@ -7,6 +7,10 @@
     {{ $models->links() }}
 @endsection
 
+@section('h1')
+  Обратная связь
+@endsection
+
 @section('list')
     @foreach ($models as $model)
         @includeFirst(["admin.{$name}._row", "admin::{$name}._row", "admin::base._row"])
