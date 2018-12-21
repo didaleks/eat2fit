@@ -7,7 +7,6 @@
        data-simulate-touch="false" data-slide-effect="fade">
     <div class="swiper-wrapper">
       @foreach($model->fields['slides'] as $slide)
-        {{--@dd($slide)--}}
         <div class="swiper-slide" data-slide-bg="{{ asset(image($slide['image'])->url) }}">
           <div class="swiper-slide-caption">
             <div class="container">
@@ -18,7 +17,8 @@
                   </div>
                   <p class="text-big font-weight-bold offset-top-13" data-caption-animate="fadeIn"
                      data-caption-delay="200" data-caption-duration="700">{{ $slide['text'] }}</p><a
-                      class="btn btn-white-outline offset-top-20 offset-sm-top-13 offset-lg-top-30" href="{{ $slide['link'] }}"
+                      class="btn btn-white-outline offset-top-20 offset-sm-top-13 offset-lg-top-30"
+                      href="{{ $slide['link'] }}"
                       data-caption-animate="fadeInUp" data-caption-delay="50" data-caption-duration="700">Перейти</a>
                 </div>
               </div>
@@ -26,60 +26,6 @@
           </div>
         </div>
       @endforeach
-      <div class="swiper-slide" data-slide-bg="/images/backgrounds/temp_banner.png">
-        <div class="swiper-slide-caption">
-          <div class="container">
-            <div class="row justify-content-sm-center justify-content-lg-start text-lg-left">
-              <div class="col-md-10 col-lg-8 col-xl-5">
-                <div class="text-big-80 font-accent" data-caption-animate="fadeInDown" data-caption-delay="50"
-                     data-caption-duration="700">Best Green Eats
-                </div>
-                <p class="text-big font-weight-bold offset-top-13" data-caption-animate="fadeIn"
-                   data-caption-delay="200" data-caption-duration="700">Health and Nutrition Coach. <br
-                      class="d-none d-lg-inline-block"> Yoga Teacher. Writer. Consultant.</p><a
-                    class="btn btn-white-outline offset-top-20 offset-sm-top-13 offset-lg-top-30" href="contact-me.html"
-                    data-caption-animate="fadeInUp" data-caption-delay="50" data-caption-duration="700">Перейти</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="swiper-slide" data-slide-bg="/images/backgrounds/temp_banner.png">
-        <div class="swiper-slide-caption">
-          <div class="container">
-            <div class="row justify-content-sm-center justify-content-lg-start text-lg-left">
-              <div class="col-md-10 col-lg-8 col-xl-6">
-                <div class="text-big-80 font-accent" data-caption-animate="fadeInDown" data-caption-delay="50"
-                     data-caption-duration="700">Enjoy a Healthy Life
-                </div>
-                <p class="text-big font-weight-bold offset-top-13" data-caption-animate="fadeIn"
-                   data-caption-delay="200" data-caption-duration="700">With advice and methods available here, <br
-                      class="d-none d-lg-inline-block"> you can easily improve your life!</p><a
-                    class="btn btn-white-outline offset-top-20 offset-sm-top-13 offset-lg-top-30" href="contact-me.html"
-                    data-caption-animate="fadeInUp" data-caption-delay="50" data-caption-duration="700">Subscribe</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="swiper-slide" data-slide-bg="/images/backgrounds/temp_banner.png">
-        <div class="swiper-slide-caption">
-          <div class="container">
-            <div class="row justify-content-sm-center justify-content-lg-start text-lg-left">
-              <div class="col-md-10 col-lg-8 col-xl-6">
-                <div class="text-big-80 font-accent" data-caption-animate="fadeInDown" data-caption-delay="50"
-                     data-caption-duration="700">Choose Your Diet
-                </div>
-                <p class="text-big font-weight-bold offset-top-13" data-caption-animate="fadeIn"
-                   data-caption-delay="200" data-caption-duration="700">I can help you make your life healthier and your
-                  body stronger in no time.</p><a
-                    class="btn btn-white-outline offset-top-20 offset-sm-top-13 offset-lg-top-30" href="contact-me.html"
-                    data-caption-animate="fadeInUp" data-caption-delay="50" data-caption-duration="700">Subscribe</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="swiper-button swiper-button-prev d-none d-lg-block">
         <div class="wrap"><span class="swiper-button__arrow"><span
                 class="icon material-icons-ico material-icons-chevron_left"></span></span>
@@ -220,49 +166,28 @@
     <section class="section-xs-bottom-95 section-md-bottom-0">
       <h2>Блок «Блок выберите план»</h2>
       <div class="row no-gutters justify-content-sm-center" style="font-size:0;">
-        <div class="col-sm-10 col-md-8 col-lg-4 section-relative bg-image bg-image-3 bg-image-overlay bg-image-hover">
-          <!-- Box Offer-->
-          <div class="box-offer box-offer-variant-2 context-dark">
-            <div class="box-offer-caption"><span
-                  class="icon icon-lg fl-great-icon-set-ico fl-great-icon-set-tree108"></span>
-              <h2 class="offset-top-10 offset-xs-top-20 offset-md-top-10 offset-xl-top-20">
-                The Best Fitness Advice and Info</h2>
-              <p class="text-big font-weight-bold offset-top-5 offset-xs-top-10 offset-md-top-5 offset-xl-top-10">Tips
-                for planning your nutritious diet.</p><a
-                  class="btn btn-white-outline offset-top-5 offset-xs-top-13 offset-md-top-5 offset-xl-top-13"
-                  href="welness.html">Click here</a>
+        @foreach($model->fields['planes'] as $item)
+          <div class="col-sm-10 col-md-8 col-lg-4
+              offset-xs-top-30 offset-md-top-0
+              section-relative bg-image
+              bg-image-overlay bg-image-hover" style="background-image: url({{asset(image($item['image'])->getResized(600,600))}})">
+            <!-- Box Offer-->
+            <div class="box-offer box-offer-variant-2 context-dark">
+              <div class="box-offer-caption">
+                <span class="icon icon-lg fl-great-icon-set-ico fl-great-icon-set-tree108"></span>
+                <h2 class="offset-top-10 offset-xs-top-20 offset-md-top-10 offset-xl-top-20">
+                  {{ $item['head'] }}
+                </h2>
+                <p class="text-big
+                font-weight-bold
+                offset-top-5
+                offset-xs-top-10 offset-md-top-5 offset-xl-top-10">{{ $item['text'] }}</p>
+                <a class="btn btn-white-outline offset-top-5 offset-xs-top-13 offset-md-top-5 offset-xl-top-13"
+                   href="{{$item['link']}}">Перейти</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div
-            class="col-sm-10 col-md-8 col-lg-4 offset-xs-top-30 offset-md-top-0 section-relative bg-image bg-image-4 bg-image-overlay bg-image-hover">
-          <!-- Box Offer-->
-          <div class="box-offer box-offer-variant-2 context-dark">
-            <div class="box-offer-caption"><span
-                  class="icon icon-lg fl-great-icon-set-ico fl-great-icon-set-tree108"></span>
-              <h2 class="offset-top-10 offset-xs-top-20 offset-md-top-10 offset-xl-top-20">The Best Fitness Advice and
-                Info</h2>
-              <p class="text-big font-weight-bold offset-top-5 offset-xs-top-10 offset-md-top-5 offset-xl-top-10">
-                Resource for health and fitness tips.</p><a
-                  class="btn btn-white-outline offset-top-5 offset-xs-top-13 offset-md-top-5 offset-xl-top-13"
-                  href="welness.html">Click here</a>
-            </div>
-          </div>
-        </div>
-        <div
-            class="col-sm-10 col-md-8 col-lg-4 offset-xs-top-30 offset-md-top-0 section-relative bg-image bg-image-5 bg-image-overlay bg-image-hover">
-          <!-- Box Offer-->
-          <div class="box-offer box-offer-variant-2 context-dark">
-            <div class="box-offer-caption"><span
-                  class="icon icon-lg fl-great-icon-set-ico fl-great-icon-set-tree108"></span>
-              <h2 class="offset-top-10 offset-xs-top-20 offset-md-top-10 offset-xl-top-20">Tea Weight Loss Diet</h2>
-              <p class="text-big font-weight-bold offset-top-5 offset-xs-top-10 offset-md-top-5 offset-xl-top-10">Tea
-                diet is a method of losing weight by drinking tea.</p><a
-                  class="btn btn-white-outline offset-top-5 offset-xs-top-13 offset-md-top-5 offset-xl-top-13"
-                  href="welness.html">Click here</a>
-            </div>
-          </div>
-        </div>
+        @endforeach
       </div>
     </section>
 

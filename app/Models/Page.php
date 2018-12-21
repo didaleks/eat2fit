@@ -184,7 +184,13 @@ class Page extends \LaravelAdmin\Models\Page
                         'name' => 'fields[slides]',
                         'type' => 'multi_slides_extended',
                         'multi' => true,
-                        'label' => 'Слайды'
+                        'label' => 'Слайдер'
+                    ],
+                    'planes' =>  [
+                        'name' => 'fields[planes]',
+                        'type' => 'choose_plan',
+                        'multi' => true,
+                        'label' => 'Блок"Выберите план"'
                     ],
                     'team' =>  [
                         'name' => 'fields[feedbacks]',
