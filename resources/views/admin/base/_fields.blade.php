@@ -112,50 +112,26 @@
             'value' => field_value($model, $field)
         ])
     @elseif(isset($field['type']))
-        @switch($field['type'])
-            @case('multi_slides')
-                @include('admin.ui.form.multi_slides', [
-                    'label' => field_label($field),
-                    'name'  => $field['name'],
-                    'value' => field_value($model, $field)
-                ])
-                @break
-            @case('multi_images')
-                @include('admin.ui.form.multi_images', [
-                    'label' => field_label($field),
-                    'name'  => $field['name'],
-                    'value' => field_value($model, $field)
-                ])
-                @break
-            @case('multi_team')
-                @include('admin.ui.form.multi_team', [
-                    'label' => field_label($field),
-                    'name'  => $field['name'],
-                    'value' => field_value($model, $field)
-                ])
-                @break
-            @case('multi_feedback')
-                @include('admin.ui.form.multi_feedback', [
-                    'label' => field_label($field),
-                    'name'  => $field['name'],
-                    'value' => field_value($model, $field)
-                ])
-                @break
-            @default
-                @input([
-                    'type' => $field['type'],
-                    'label' => field_label($field),
-                    'name' => $field['name'],
-                    'custom' => isset($field['custom']) ? $field['custom'] :  [],
-                    'step' => isset($field['step']) ? $field['step'] :  '',
-                    'min' => isset($field['min']) ? $field['min'] :  '',
-                    'readonly' => isset($field['readonly']) ? $field['readonly'] :  '',
-                    'required' => isset($field['required']) ? $field['required'] :  '',
-                    'disabled' => isset($field['disabled']) ? $field['disabled'] :  '',
-                    'value' => field_value($model, $field)
-                ])
-        @endswitch
-
+        @if(in_array($field['type'],['multi_slides', 'multi_images', 'multi_team', 'multi_feedback', 'multi_slides_extended']))
+            @include('admin.ui.form.'.$field['type'], [
+                        'label' => field_label($field),
+                        'name'  => $field['name'],
+                        'value' => field_value($model, $field)
+                    ])
+        @else
+            @input([
+                'type' => $field['type'],
+                'label' => field_label($field),
+                'name' => $field['name'],
+                'custom' => isset($field['custom']) ? $field['custom'] :  [],
+                'step' => isset($field['step']) ? $field['step'] :  '',
+                'min' => isset($field['min']) ? $field['min'] :  '',
+                'readonly' => isset($field['readonly']) ? $field['readonly'] :  '',
+                'required' => isset($field['required']) ? $field['required'] :  '',
+                'disabled' => isset($field['disabled']) ? $field['disabled'] :  '',
+                'value' => field_value($model, $field)
+            ])
+        @endif
     @else
         @input([
             'label' => field_label($field),
