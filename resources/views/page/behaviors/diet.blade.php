@@ -120,9 +120,8 @@
             </div>
           </div>
         </div>
-        <div class="row justify-content-sm-center">
-          <div class="col-md-12">
-            <div class="tab-content text-left">
+        <div class="row justify-content-sm-center col-12">
+            <div class="col-12 tab-content text-left">
               @for ($weekNum = 1; $weekNum <= $weeksCount; $weekNum++)
 
                 @php
@@ -153,8 +152,8 @@
                               <div class="tab-pane fade {{($day->dayWeekNum()==1)?'show active':''}}"
                                    id="tabs-{{$j}}-{{$day->number}}">
                                 @foreach($day->eatings->sortBy('eating_type.sort') as $eating)
-                                  <div class="menu_row col-md-12 d-flex justify-content-start offset-top-10">
-                                    <div class="col-md-3">
+                                  <div class="menu_row col-md-12 col-lg-12 d-flex flex-md-column flex-lg-row justify-content-lg-start justify-content-md-center offset-top-10">
+                                    <div class="col-lg-3">
                                       <big class="font-weight-bold">{{$eating->name}}</big>
                                       <ul>
                                         @foreach($eating->dishes->sortBy('pivot.sort') as $dish)
@@ -162,16 +161,18 @@
                                         @endforeach
                                       </ul>
                                     </div>
-                                    @foreach($eating->dishes->sortBy('pivot.sort') as $dish)
-                                      @if(isset($dish->fields['image']))
-                                        @break($loop->iteration == 4)
-                                        <div class="col-md-3">
-                                          <img class="img-responsive center-block"
-                                               src="{{ asset(image($dish->fields['image'])->getResized(200,200)) }}"
-                                               width="193" height="125" alt="">
-                                        </div>
-                                      @endif
-                                    @endforeach
+                                    <div class="col-lg-9 col-md-12 d-md-flex justify-content-md-start">
+                                      @foreach($eating->dishes->sortBy('pivot.sort') as $dish)
+                                        @if(isset($dish->fields['image']))
+                                          @break($loop->iteration == 4)
+                                          <div class="col-md-4">
+                                            <img class="img-responsive center-block"
+                                                 src="{{ asset(image($dish->fields['image'])->getResized(200,200)) }}"
+                                                 width="193" height="125" alt="">
+                                          </div>
+                                        @endif
+                                      @endforeach
+                                    </div>
                                   </div>
                                 @endforeach
                               </div>
@@ -184,7 +185,6 @@
                 </div>
               @endfor
             </div>
-          </div>
         </div>
       </div>
     </section>

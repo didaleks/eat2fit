@@ -28,6 +28,11 @@ class Day extends Page
         return $this->hasMany('App\Models\Eating');
     }
 
+    public function scopeOrdered($query)
+    {
+        return $query->orderBy('number')->get();
+    }
+
     /**
      * Нельзя создать 2 одинаковых дня для одного рациона
      * @param $data

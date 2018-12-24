@@ -137,7 +137,7 @@ class Diet extends Page
 
     public function days()
     {
-        return $this->hasMany('App\Models\Day');
+        return $this->hasMany('App\Models\Day')->orderBy('number');
     }
 
     public function daysNumbers()
