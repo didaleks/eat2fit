@@ -115,7 +115,7 @@ main.diet__content {
         &.tabs-vertical {
           display: unset;
           .nav {
-            flex-wrap: nowrap;
+            flex-wrap: wrap;
           }
       //    flex-direction: row;
       //    flex-wrap: nowrap;
@@ -131,7 +131,7 @@ main.diet__content {
             padding: 0px;
       //
             li {
-              width: 100%;
+              width: 55px;
               margin-top: 0px;
               a {
                 text-align: -webkit-match-parent;
