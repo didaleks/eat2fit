@@ -108,8 +108,15 @@ main.diet__content {
       }
 
       @include media-breakpoint-down(md) {
+        .tab-content div {
+          margin: 0px;
+          padding: 0px;
+        }
         &.tabs-vertical {
           display: unset;
+          .nav {
+            flex-wrap: nowrap;
+          }
       //    flex-direction: row;
       //    flex-wrap: nowrap;
       //    align-items: flex-start;
@@ -121,10 +128,14 @@ main.diet__content {
       //      //align-items: stretch;
       //      //flex-shrink: 0;
             max-width: 100%;
+            padding: 0px;
       //
             li {
               width: 100%;
               margin-top: 0px;
+              a {
+                text-align: -webkit-match-parent;
+              }
             }
       //
       //      //li a {

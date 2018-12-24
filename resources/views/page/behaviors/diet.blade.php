@@ -120,7 +120,7 @@
             </div>
           </div>
         </div>
-        <div class="row justify-content-sm-center col-12">
+        <div class="row col-12 m-0 p-0">
             <div class="col-12 tab-content text-left">
               @for ($weekNum = 1; $weekNum <= $weeksCount; $weekNum++)
 
@@ -131,12 +131,11 @@
                 @endphp
 
                 <div class="tab-pane fade {{($weekNum==1)?'show active':''}}" id="tabs-1-{{$weekNum}}">
-                  <div class="container">
-                    <div class="row justify-content-sm-center offset-top-13">
-                      <div class="col-md-12">
-                        <div class="tabs-custom tabs-vertical tabs-corporate" id="tabs-{{$j}}">
+                  <div class="container p-0">
+                    <div class="row offset-top-13">
+                        <div class="col-12 tabs-custom tabs-vertical tabs-corporate" id="tabs-{{$j}}">
                           {{-- Табы дней --}}
-                          <ul class="nav nav-link col-md-1">
+                          <ul class="nav nav-link d-flex col-md-1 justify-content-sm-between">
                             @foreach($model->days->whereIn('number', range($firstDayNum,$lastDayNum)) as $day)
                               <li class="{{($day->dayWeekNum()==1)?'active':''}} pt-4">
                                 <a href="#tabs-{{$j}}-{{$day->number}}"
@@ -147,13 +146,13 @@
                               </li>
                             @endforeach
                           </ul>
-                          <div class="tab-content text-left offset-top-30 p-0">
+                          <div class="tab-content text-left offset-top-30">
                             @foreach($model->days->whereIn('number', range($firstDayNum,$lastDayNum)) as $day)
                               <div class="tab-pane fade {{($day->dayWeekNum()==1)?'show active':''}}"
                                    id="tabs-{{$j}}-{{$day->number}}">
                                 @foreach($day->eatings->sortBy('eating_type.sort') as $eating)
-                                  <div class="menu_row col-md-12 col-lg-12 d-flex flex-md-column flex-lg-row justify-content-lg-start justify-content-md-center offset-top-10">
-                                    <div class="col-lg-3">
+                                  <div class="menu_row col-sm-12 col-lg-12 d-lg-flex flex-sm-column flex-lg-row justify-content-lg-start justify-content-sm-center offset-top-10">
+                                    <div class="col-lg-3 col-sm-12">
                                       <big class="font-weight-bold">{{$eating->name}}</big>
                                       <ul>
                                         @foreach($eating->dishes->sortBy('pivot.sort') as $dish)
@@ -161,11 +160,11 @@
                                         @endforeach
                                       </ul>
                                     </div>
-                                    <div class="col-lg-9 col-md-12 d-md-flex justify-content-md-start">
+                                    <div class="col-lg-9 col-sm-12 d-flex justify-content-sm-start">
                                       @foreach($eating->dishes->sortBy('pivot.sort') as $dish)
                                         @if(isset($dish->fields['image']))
                                           @break($loop->iteration == 4)
-                                          <div class="col-md-4">
+                                          <div class="col-sm-4">
                                             <img class="img-responsive center-block"
                                                  src="{{ asset(image($dish->fields['image'])->getResized(200,200)) }}"
                                                  width="193" height="125" alt="">
@@ -179,7 +178,6 @@
                             @endforeach
                           </div>
                         </div>
-                      </div>
                     </div>
                   </div>
                 </div>
