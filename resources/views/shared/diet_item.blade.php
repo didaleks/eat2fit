@@ -3,7 +3,7 @@
         <span class="thumbnail-classic-img-wrap">
 
             <img class="img-responsive center-block"
-                 src="/images/backgrounds/temp_banner.png"
+                 src="{{ isset($model->fields['preview'])? asset(image($model->fields['preview'])->getResized(370,230)) : '/images/backgrounds/temp_banner.png' }}"
                  width="370"
                  height="230"
                  alt="">

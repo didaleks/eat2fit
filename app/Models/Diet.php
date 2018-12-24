@@ -64,7 +64,12 @@ class Diet extends Page
             'image' => [
                 'name' => 'fields[image]',
                 'type' => 'image',
-                'label' => 'Картинка'
+                'label' => 'Картинка на странице рациона'
+            ],
+            'preview' => [
+                'name' => 'fields[preview]',
+                'type' => 'image',
+                'label' => 'Картинка на превью в каталоге'
             ],
             [
                 'name' => 'content',
