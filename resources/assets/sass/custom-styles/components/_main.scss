@@ -7,5 +7,9 @@
   }
   &__feedbacks {
     background-color: $gray-lighter;
+    .owl-carousel .owl-stage {
+      display: flex;
+      align-items: center;
+    }
   }
 }
