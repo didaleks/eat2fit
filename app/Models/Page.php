@@ -89,12 +89,6 @@ class Page extends \LaravelAdmin\Models\Page
                         'multi' => true,
                         'label' => 'Лицензии'
                     ],
-                    'team' =>  [
-                        'name' => 'fields[team]',
-                        'type' => 'multi_team',
-                        'multi' => true,
-                        'label' => 'Блок "Команда"'
-                    ],
                     'partners' =>  [
                         'name' => 'fields[partners]',
                         'type' => 'multi_images',

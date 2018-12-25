@@ -293,7 +293,7 @@
 		font-weight: 700;
 		color: $gray;
 
-		> a {
+		> a, > span {
 			position: relative;
 			padding: 16px 57px 13px 57px;
 			transition: .3s all ease;

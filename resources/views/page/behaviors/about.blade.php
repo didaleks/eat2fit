@@ -59,30 +59,10 @@
       <h3>Блок «Как готовим и храним продукты»</h3>
       <div class="container d-flex justify-content-center offset-top-65">
         <div class="col-md-10 col-lg-6">
-          <div class="about__how-cook__img collapse  panel-collapse-five" id="collapseFiveImg">
-            <span>5</span>
-            <img class="img-responsive center-block" src="/images/backgrounds/temp_banner.png"
-                 width="269" height="278" alt="">
-          </div>
-          <div class="about__how-cook__img collapse  panel-collapse-one" id="collapseOneImg">
+          <div class="about__how-cook__img">
             <span>1</span>
             <img class="img-responsive center-block" src="/images/backgrounds/temp_banner.png"
-                 width="269" height="278" alt="">
-          </div>
-          <div class="about__how-cook__img collapse  panel-collapse-two" id="collapseTwoImg">
-            <span>2</span>
-            <img class="img-responsive center-block" src="/images/backgrounds/temp_banner.png"
-                 width="269" height="278" alt="">
-          </div>
-          <div class="about__how-cook__img collapse  panel-collapse-three" id="collapseThreeImg">
-            <span>3</span>
-            <img class="img-responsive center-block" src="/images/backgrounds/temp_banner.png"
-                 width="269" height="278" alt="">
-          </div>
-          <div class="about__how-cook__img collapse  panel-collapse-four" id="collapseFourImg">
-            <span>4</span>
-            <img class="img-responsive center-block" src="/images/backgrounds/temp_banner.png"
-                 width="269" height="278" alt="">
+                 width="80%" height="278" alt="">
           </div>
         </div>
 
@@ -90,70 +70,17 @@
           <div class="panel-group text-left" id="accordion" role="tablist" aria-multiselectable="true">
             <div class="panel panel-custom panel-default">
               <div class="panel-heading" id="headingFive" role="tab">
-                <p class="panel-title"><a class="d-block" role="button" data-toggle="collapse" data-parent="#accordion"
-                                          href="#collapseFive" aria-expanded="true" aria-controls="collapseFive">Can I
-                    track my order?</a></p>
+                <p class="panel-title">
+                  <span class="d-block">
+                    Can I track my order?</span>
+                </p>
               </div>
-              <div class="panel-collapse in collapse show" id="collapseFive" role="tabpanel"
+              <div class="panel-collapse in collapse show" id="" role="tabpanel"
                    aria-labelledby="headingThree" style="">
                 <div class="panel-body">Yes, you can! After placing your order you will receive an order confirmation
                   via email. Each order starts production 24 hours after your order is placed. Within 72 hours of you
                   placing your order, you will receive an expected delivery date. When the order ships, you will receive
                   another email with the tracking number and a link to trace the order online with the carrier.
-                </div>
-              </div>
-            </div>
-            <div class="panel panel-custom panel-default">
-              <div class="panel-heading" id="headingOne" role="tab">
-                <p class="panel-title"><a class="d-block collapsed" role="button" data-toggle="collapse"
-                                          data-parent="#accordion" href="#collapseOne" aria-expanded="false"
-                                          aria-controls="collapseOne">How can I change something in my order?</a></p>
-              </div>
-              <div class="panel-collapse collapse" id="collapseOne" role="tabpanel" aria-labelledby="headingOne"
-                   style="">
-                <div class="panel-body">If you need to change something in your order, please contact us immediately. We
-                  usually process orders within 2-4 hours, and once we have processed your order, we will be unable to
-                  make any changes.
-                </div>
-              </div>
-            </div>
-            <div class="panel panel-custom panel-default">
-              <div class="panel-heading" id="headingTwo" role="tab">
-                <p class="panel-title"><a class="d-block collapsed" role="button" data-toggle="collapse"
-                                          data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
-                                          aria-controls="collapseTwo">How can I pay for my order?</a></p>
-              </div>
-              <div class="panel-collapse collapse" id="collapseTwo" role="tabpanel" aria-labelledby="headingTwo"
-                   style="">
-                <div class="panel-body">We accept Visa, MasterCard, and American Express credit and debit cards for your
-                  convenience.
-                </div>
-              </div>
-            </div>
-            <div class="panel panel-custom panel-default">
-              <div class="panel-heading" id="headingThree" role="tab">
-                <p class="panel-title"><a class="d-block collapsed" role="button" data-toggle="collapse"
-                                          data-parent="#accordion" href="#collapseThree" aria-expanded="false"
-                                          aria-controls="collapseThree">How long will my order take to be delivered?</a>
-                </p>
-              </div>
-              <div class="panel-collapse collapse" id="collapseThree" role="tabpanel" aria-labelledby="headingOne"
-                   style="">
-                <div class="panel-body">Delivery times will depend on your location. Once payment is confirmed your
-                  order will be packaged. Delivery can be expected within 10 business days.
-                </div>
-              </div>
-            </div>
-            <div class="panel panel-custom panel-default">
-              <div class="panel-heading" id="headingFour" role="tab">
-                <p class="panel-title"><a class="d-block collapsed" role="button" data-toggle="collapse"
-                                          data-parent="#accordion" href="#collapseFour" aria-expanded="false"
-                                          aria-controls="collapseFour">Can I return an item?</a></p>
-              </div>
-              <div class="panel-collapse collapse" id="collapseFour" role="tabpanel" aria-labelledby="headingOne"
-                   style="">
-                <div class="panel-body">Please contact our administrators for more information on returning products
-                  purchased on our website.
                 </div>
               </div>
             </div>
@@ -252,9 +179,6 @@
         </div>
       </div>
     </section>
-
-    {{-- Блок Команда --}}
-    @include('blocks.block_team', ['team' => $model->fields['team']])
 
     {{-- Блок «Наши партнеры» --}}
     <section class="section-45">
