@@ -190,19 +190,6 @@
       <div class="container">
         <div class="row justify-content-sm-center">
           <div class="col-md-10 col-xl-6">
-            <h3 class="offset-top-25">Дополнительные товары</h3>
-          </div>
-        </div>
-        <div class="row justify-content-sm-center">
-          <div class="col-md-10 col-xl-6">
-            <ul class="list-inline">
-              <li class="addictions__item m-3"><span>Вода</span></li>
-              <li class="addictions__item m-3"><span>Столовые приборы</span></li>
-            </ul>
-          </div>
-        </div>
-        <div class="row justify-content-sm-center">
-          <div class="col-md-10 col-xl-6">
             <div class="group-xs offset-top-10 offset-lg-top-20 product-buttons {{ inCart($model->id)? 'added' : '' }}">
               <span class="btn btn-primary product-buttons__item product-buttons__cart-full pl-5 pr-5"
                     data-id="{{$model->id}}"
