@@ -187,13 +187,6 @@
                       <textarea class="form-input" id="contact-us-message" name="message">mail@demolink.org</textarea>
                     </div>
                   </div>
-                  <div class="col-sm-4 offset-top-10 inset-sm-right-7">
-                    <div class="form-wrap">
-                      <label class="form-label-outside" for="contact-us-first-name">Есть купон?</label>
-                      <input class="form-input form-control-has-validation form-control-last-child" id="contact-us-"
-                             type="text" name="coupon" placeholder="" value=""><span class="form-validation"></span>
-                    </div>
-                  </div>
                   <div class="col-md-12 col-lg-12 offset-top-40">
                     <div class="table-responsive total-cart">
                       <table class="table table-custom-md table-default table-bordered-custom text-left">
@@ -203,7 +196,7 @@
                           <th></th>
                         </tr>
                         <tr>
-                          <td>Стоимость доставки:</td>
+                          <td>Залоговая стоимость сумки:</td>
                           <td class="font-weight-bold text-gray">{{$cart->shippingPrice}} &#x20bd;</td>
                         </tr>
                         <tr>
