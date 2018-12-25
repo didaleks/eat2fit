@@ -175,11 +175,11 @@ class Page extends \LaravelAdmin\Models\Page
                         'type' => 'input',
                         'label' => 'Url'
                     ],
-                    [
-                        'name' => 'content',
-                        'type' => 'editor',
-                        'label' => '???'
-                    ],
+//                    [
+//                        'name' => 'content',
+//                        'type' => 'editor',
+//                        'label' => 'Общий текст(нигде не используется)'
+//                    ],
                     'slides' =>  [
                         'name' => 'fields[slides]',
                         'type' => 'multi_slides_extended',
@@ -191,12 +191,6 @@ class Page extends \LaravelAdmin\Models\Page
                         'type' => 'choose_plan',
                         'multi' => true,
                         'label' => 'Блок"Выберите план"'
-                    ],
-                    'team' =>  [
-                        'name' => 'fields[feedbacks]',
-                        'type' => 'multi_feedback',
-                        'multi' => true,
-                        'label' => 'Блок "Отзывы"'
                     ],
                     'meta_title',
                     'meta_description',
