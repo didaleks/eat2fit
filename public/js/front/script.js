@@ -2187,6 +2187,26 @@
 		$(this).addClass('active');
 	});
 
+	function openWindowWithPost(url, data) {
+		var form = document.createElement("form");
+		// form.target = "_blank";
+		form.method = "POST";
+		form.action = url;
+		form.style.display = "none";
+
+		for (var key in data) {
+			var input = document.createElement("input");
+			input.type = "hidden";
+			input.name = key;
+			input.value = data[key];
+			form.appendChild(input);
+		}
+
+		document.body.appendChild(form);
+		form.submit();
+		document.body.removeChild(form);
+	}
+
     $('form.order-form').submit(function (event) {
         event.preventDefault();
         let form = $(this),
@@ -2210,14 +2230,20 @@
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
-            // success: function (response) {
-            //     // remove_liked();
-            //     let order_number = response.order_number;
-            //     $('main.cart').addClass('success');
-            // },
-			// error: function (response) {
-			//  todo поставить ответ сервера json а не строку
-			// }
+            success: function (response) {
+                // remove_liked(); todo очищать корзину
+                let cart = JSON.parse(JSON.parse(response.cart)),
+					amount = parseFloat(cart.totalFullPrice + '00'),
+					orderNumber = response.order_number;
+				setTimeout(
+					openWindowWithPost("/bank/pay", {
+						orderNumber: orderNumber,
+						amount: amount,
+					}, "_self"), 5000);
+            },
+			error: function (response) {
+            	console.log('error')
+			}
         });
 		$('main.cart').addClass('success');
     });

@@ -24,14 +24,18 @@ class OrderController extends Controller
                 $errors[$error] = $error;
 
             $info =  implode('</br>', $errors);
-            dd($info);
+
             return response($info)->setStatusCode(400);
         } else {
             $cartController = new CartController();
             $model->fill($data);
             $model->cart = json_encode($cartController->get());
             if ($model->save())
-                return response('Спасибо за заказ. Мы с Вами скоро свяжемся.')->setStatusCode(200);
+                return response()->json([
+                    'status' => 'true',
+                    'cart' => json_encode($model->cart),
+                    'order_number' => $model->id
+                ]);
 
             return response('Something went wrong, try again later.');
         }

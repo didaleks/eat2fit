@@ -55,5 +55,6 @@ Route::post('/feedback/store', 'FeedbackController@store')->name('feedback.store
 
 // Order Form on cart page
 Route::post('/order/store', 'OrderController@store')->name('order.store');
+Route::match(array('GET', 'POST'),'/bank/pay', 'BankController@pay')->name('bank.pay');
 
 Route::get('{url?}', 'PageController@show')->where('url', '[A-Za-z0-9/-]+')->name('page.show');
