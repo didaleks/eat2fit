@@ -55,11 +55,67 @@
         </div>
       </div>
     </section>
+    <section class="section-bottom-95">
+      <div class="container">
+        <div class="row justify-content-sm-center">
+          <div class="col-md-10">
+            <h2>Юридическая информация</h2>
+          </div>
+          <div class="col-10 d-flex justify-content-between">
+            <!-- Unit-->
+            <div class="unit align-items-center flex-row unit-spacing-xs">
+              <div class="unit-left"><span class="icon icon-circle icon-primary fl-great-icon-set-ico fl-great-icon-set-placeholder34"></span></div>
+              <div class="unit-body text-left">
+                <div>
+                  <p>Юридический адрес:</p>
+                </div>
+                <div class="offset-top-5">
+                  <p class="font-weight-bold"><span class="link-decoration-none text-hover-primary text-gray">198510, г.Санкт-Петербург, г.Петергоф, Санкт-Петербургское ш., д.130, корп.7, литер А.</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="unit align-items-center flex-row unit-spacing-xs">
+              <div class="unit-left"><span class="icon icon-circle icon-primary fl-great-icon-set-book207"></span></div>
+              <div class="unit-body text-left">
+                <div>
+                  <p>Юридические данные:</p>
+                </div>
+                <div class="offset-top-5">
+                  <p class="font-weight-bold"><span class="link-decoration-none text-hover-primary text-gray">ИНН: 7819315486, <br>ОГРН: 1127847162178</span></p>
+                </div>
+              </div>
+            </div>
+            <!-- Unit-->
+            <div class="unit align-items-center flex-row unit-spacing-xs offset-top-30">
+              <div class="unit-left"><span class="icon icon-circle icon-primary fl-great-icon-set-ico fl-great-icon-set-mobile226"></span></div>
+              <div class="unit-body text-left">
+                <div>
+                  <p>Телефон:</p>
+                </div>
+                <div class="offset-top-5">
+                  <p class="text-big font-weight-bold"><a class="link-decoration-none text-hover-primary text-gray" href="tel:+7 (812) 604-02-64">+7 (812) 604-02-64</a></p>
+                </div>
+              </div>
+            </div>
+            <!-- Unit-->
+            <div class="unit align-items-center flex-row unit-spacing-xs offset-top-30">
+              <div class="unit-left"><span class="icon icon-circle icon-primary fl-great-icon-set-ico fl-great-icon-set-new99"></span></div>
+              <div class="unit-body text-left">
+                <div>
+                  <p>Email Address:</p>
+                </div>
+                <div class="offset-top-5">
+                  <p class="text-big font-weight-bold"><a class="link-decoration-none text-hover-primary text-gray" href="mailto:info@eat2fit.ru">info@eat2fit.ru</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section>
       <div class="yandex-map">
-        <iframe
-            src="https://yandex.ru/map-widget/v1/?um=constructor%3A3357130d999ac1d8854d38aea97b47a675e2b51cd5a942ec7f2f45ee558bf588&amp;source=constructor"
-            width="100%" height="411" frameborder="0"></iframe>
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab99875a5c0c0ca9acb1acbb388b7d211fd647b6823cc62434e26db25caea6c57&amp;source=constructor" width="100%" height="411" frameborder="0"></iframe>
       </div>
     </section>
   </main>

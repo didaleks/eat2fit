@@ -12,6 +12,9 @@ npm-debug.log
 yarn-error.log
 /template
 template.zip
+temp.html
+*.sql
+*.dump
 .env
 .idea
 .phpunit.result.cache
