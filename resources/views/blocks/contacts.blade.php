@@ -21,8 +21,8 @@
     </dd>
   </dl>
 </address>
-<div class="d-flex justify-content-center offset-top-20">
-  <img class="" title="МИР" src="/images/logos/mir.png" alt="МИР">
-  <img class="" title="VISA International" src="/images/logos/visa.png" alt="VISA International">
-  <img class="" title="MasterCard Worldwide" src="/images/logos/mastercard.png" alt="MasterCard Worldwide">
+<div class="bank-logos d-flex justify-content-lg-start justify-content-md-center offset-top-20">
+  <img class="" title="МИР" src="/images/logos/mir-logo.png" alt="МИР">
+  <img class="" title="VISA International" src="/images/logos/visa_logo.png" alt="VISA International">
+  <img class="" title="MasterCard Worldwide" src="/images/logos/mastercard_logo.png" alt="MasterCard Worldwide">
 </div>
