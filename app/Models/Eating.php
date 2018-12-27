@@ -82,6 +82,12 @@ class Eating extends Page
         return $this->belongsToMany('App\Models\Dish')->withPivot('sort');
     }
 
+    public function scopeOrdered($query)
+    {
+        return $query->join('eating_types', 'eating_types.id', '=', 'eatings.eating_type_id')
+            ->orderBy('eating_types.sort');
+    }
+
     public function getDishesIdsAttribute()
     {
         return $this->dishes->sortBy('pivot.sort')->pluck('id')->all();
