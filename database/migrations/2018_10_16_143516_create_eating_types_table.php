@@ -16,8 +16,8 @@ class CreateEatingTypesTable extends Migration
         Schema::create('eating_types', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('slug');
-            $table->integer('sort')->default(0);
+            $table->string('slug')->nullable();
+            $table->tinyInteger('sort')->default('0');
             $table->softDeletes();
             $table->timestamps();
         });

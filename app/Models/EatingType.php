@@ -38,17 +38,7 @@ class EatingType extends Page
                 'name' => 'name',
                 'type' => 'input',
                 'label' => 'Название'
-            ],
-            [
-                'name' => 'slug',
-                'type' => 'input',
-                'label' => 'Slug'
-            ],
-            [
-                'name' => 'sort',
-                'type' => 'number',
-                'label' => 'Сортировка'
-            ],
+            ]
         ];
 
 

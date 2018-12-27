@@ -5,7 +5,6 @@
 @endsection
 
 @section('fields')
-{{--  @dd(json_decode($model->cart) )--}}
   <h4>Данные о товарах в корзине</h4>
   <table class="table table-bordered">
     <thead>
@@ -20,10 +19,12 @@
 
     @php($cart = json_decode($model->cart))
     @foreach($cart->items as $product_data)
-      @php($item = $product_data->item)
+      @php($item = Diet::withTrashed()
+                ->where('id', $product_data->item->id)
+                ->first())
       <tr>
         <th scope="row">{{$item->id}}</th>
-        <td><a href="{{$item->url}}" target="_blank">{{$item->name}}</a></td>
+        <td><a href="{{$item->url}}" target="_blank">{{$item->name}} {{$item->trashed()? '(Удален)':''}}</a></td>
         <td>{{$product_data->qty}}</td>
         <td>{{$product_data->price}} &#x20bd;</td>
       </tr>

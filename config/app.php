@@ -229,6 +229,11 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        'Diet' => \App\Models\Diet::class,
+        'Dish' => \App\Models\Dish::class,
+        'Day' => \App\Models\Day::class,
+        'Eating' => \App\Models\Eating::class,
+        'EatingType' => \App\Models\EatingType::class,
         'Cart' => \App\Models\Cart::class,
         'Page' => \App\Models\Page::class,
         'Resizer' => Intervention\Image\Facades\Image::class

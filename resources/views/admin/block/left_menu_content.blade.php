@@ -10,6 +10,12 @@
             Блюда
         </a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('eating_type.index') }}">
+            <i class="fas fa-mortar-pestle"></i>
+            Приемы пищи
+        </a>
+    </li>
 
     <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
         <span>Информация</span>
@@ -17,7 +23,7 @@
 
     <li class="nav-item">
         <a class="nav-link" href="{{ route('feedback.index') }}">
-            <i class="fas fa-utensils"></i>
+            <i class="fas fa-comments"></i>
             Обратная связь({{\App\Models\Feedback::count()}})
         </a>
     </li>
