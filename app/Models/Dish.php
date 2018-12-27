@@ -64,6 +64,6 @@ class Dish extends Page
         $diets = collect([]);
         foreach ($this->eatings()->get() as $eating)
             $diets->push($eating->day()->first()->diet()->first());
-        return $diets;
+        return $diets->filter();
     }
 }
