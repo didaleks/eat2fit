@@ -21,8 +21,8 @@ class Page extends \LaravelAdmin\Models\Page
                     ],
                     [
                         'name' => 'behavior',
-                        'type' => 'readonly ',
-                        'label' => 'Тип'
+                        'type' => 'hidden',
+                        'label' => 'Behavior'
                     ],
                     [
                         'name' => 'published',
@@ -58,9 +58,8 @@ class Page extends \LaravelAdmin\Models\Page
                     ],
                     [
                         'name' => 'behavior',
-                        'type' => 'input ',
-                        'readonly' => 'readonly',
-                        'label' => 'Behavior(todo скрыть потом)'
+                        'type' => 'hidden',
+                        'label' => 'Behavior'
                     ],
                     [
                         'name' => 'published',
@@ -114,8 +113,8 @@ class Page extends \LaravelAdmin\Models\Page
                     ],
                     [
                         'name' => 'behavior',
-                        'type' => 'readonly ',
-                        'label' => 'Тип'
+                        'type' => 'hidden',
+                        'label' => 'Behavior'
                     ],
                     [
                         'name' => 'published',
@@ -156,8 +155,8 @@ class Page extends \LaravelAdmin\Models\Page
                     ],
                     [
                         'name' => 'behavior',
-                        'type' => 'readonly ',
-                        'label' => 'Тип'
+                        'type' => 'hidden',
+                        'label' => 'Behavior'
                     ],
                     [
                         'name' => 'published',
@@ -200,8 +199,8 @@ class Page extends \LaravelAdmin\Models\Page
                     ],
                     [
                         'name' => 'behavior',
-                        'type' => 'readonly ',
-                        'label' => 'Тип'
+                        'type' => 'hidden',
+                        'label' => 'Behavior'
                     ],
                     [
                         'name' => 'published',
@@ -238,9 +237,8 @@ class Page extends \LaravelAdmin\Models\Page
                     ],
                     [
                         'name' => 'behavior',
-                        'type' => 'input ',
-                        'readonly' => 'readonly',
-                        'label' => 'Behavior(todo скрыть потом)'
+                        'type' => 'hidden',
+                        'label' => 'Behavior'
                     ],
                     [
                         'name' => 'published',
