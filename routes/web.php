@@ -19,7 +19,7 @@ Route::middleware(['web'])->group(function () {
     Route::prefix('admin')->group(function () {
         Route::resource('diet', 'Admin\DietController');
         Route::resource('dish', 'Admin\DishController');
-        Route::resource('day', 'Admin\DayController');
+        Route::resource('day', 'Admin\DayController',['except' => ['destroy' ]]);
         Route::resource('eating', 'Admin\EatingController');
         Route::resource('eating_type', 'Admin\EatingTypeController');
         Route::resource('category', 'Admin\CategoryController');
