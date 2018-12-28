@@ -151,28 +151,30 @@
                               <div class="tab-pane fade {{($day->dayWeekNum()==1)?'show active':''}}"
                                    id="tabs-{{$j}}-{{$day->number}}">
                                 @foreach($day->eatings->sortBy('eating_type.sort') as $eating)
-                                  <div class="menu_row col-sm-12 col-lg-12 d-lg-flex flex-sm-column flex-lg-row justify-content-lg-start justify-content-sm-center offset-top-10">
-                                    <div class="col-lg-3 col-sm-12">
-                                      <big class="font-weight-bold">{{$eating->name}}</big>
-                                      <ul>
+                                  @if(!$eating->eating_type->trashed())
+                                    <div class="menu_row col-sm-12 col-lg-12 d-lg-flex flex-sm-column flex-lg-row justify-content-lg-start justify-content-sm-center offset-top-10">
+                                      <div class="col-lg-3 col-sm-12">
+                                        <big class="font-weight-bold">{{$eating->name}}</big>
+                                        <ul>
+                                          @foreach($eating->dishes->sortBy('pivot.sort') as $dish)
+                                            <li class="menu_row__dish-name"><span>{{$dish->name}}</span></li>
+                                          @endforeach
+                                        </ul>
+                                      </div>
+                                      <div class="col-lg-9 col-sm-12 d-flex justify-content-sm-start">
                                         @foreach($eating->dishes->sortBy('pivot.sort') as $dish)
-                                          <li class="menu_row__dish-name"><span>{{$dish->name}}</span></li>
+                                          @if(isset($dish->fields['image']))
+                                            @break($loop->iteration == 4)
+                                            <div class="col-sm-4">
+                                              <img class="img-responsive center-block"
+                                                   src="{{ asset(image($dish->fields['image'])->getResized(200,200)) }}"
+                                                   width="193" height="125" alt="">
+                                            </div>
+                                          @endif
                                         @endforeach
-                                      </ul>
+                                      </div>
                                     </div>
-                                    <div class="col-lg-9 col-sm-12 d-flex justify-content-sm-start">
-                                      @foreach($eating->dishes->sortBy('pivot.sort') as $dish)
-                                        @if(isset($dish->fields['image']))
-                                          @break($loop->iteration == 4)
-                                          <div class="col-sm-4">
-                                            <img class="img-responsive center-block"
-                                                 src="{{ asset(image($dish->fields['image'])->getResized(200,200)) }}"
-                                                 width="193" height="125" alt="">
-                                          </div>
-                                        @endif
-                                      @endforeach
-                                    </div>
-                                  </div>
+                                  @endif
                                 @endforeach
                               </div>
                             @endforeach
