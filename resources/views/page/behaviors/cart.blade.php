@@ -61,7 +61,7 @@
                       <label class="form-label-outside required"
                              for="contact-us-name">ФИО:</label>
                       <input class="form-input" id="contact-us-name" type="text" name="name"
-                             value="NAMENAME" data-constraints="@Required">
+                             value="" data-constraints="@Required">
                     </div>
                   </div>
                   <div class="col-sm-6 offset-top-10 inset-sm-right-7">
@@ -69,7 +69,7 @@
                       <label class="form-label-outside required" for="contact-us-phone">Телефон:</label>
                       <input class="form-input" id="contact-us-phone" type="text" name="phone"
                              placeholder="Телефон"
-                             data-constraints="@Required" value="9999999999">
+                             data-constraints="@Required" value="">
                     </div>
                   </div>
                   <div class="col-sm-6 offset-top-10 inset-sm-left-7">
@@ -78,7 +78,7 @@
                       <input placeholder="E-mail" class="form-input" id="contact-us-email"
                              type="email" name="email"
                              data-constraints="@Required"
-                             value="mail@demolink.org">
+                             value="">
 
                     </div>
                   </div>
@@ -89,7 +89,7 @@
                     <div class="form-wrap">
                       <label class="form-label-outside required" for="contact-us-street">Улица:</label>
                       <input class="form-input" id="contact-us-street" type="text" name="street"
-                             value="пр.Просвещения"
+                             value=""
                              placeholder=""
                              data-constraints="@Required" value="">
                     </div>
@@ -100,7 +100,7 @@
                       <input placeholder="" class="form-input" id="contact-us-home"
                              type="text" name="home"
                              data-constraints="@Required"
-                             value="64 к.5">
+                             value="">
 
                     </div>
                   </div>
@@ -110,7 +110,7 @@
                       <input placeholder="" class="form-input" id="contact-us-flat"
                              type="text" name="flat"
                              data-constraints="@Required"
-                             value="33">
+                             value="">
 
                     </div>
                   </div>
@@ -118,7 +118,7 @@
                     <div class="col-sm-6">
                       <label class="form-label-outside">Дата доставки</label>
                       <div class="col-sm-12 offset-0 p-0 text-xl-left datepicker-wrapper">
-                        <input required value="31 декабря" class="form-input" id="datepicker" width="300" name="shipping_date"/>
+                        <input required value="" class="form-input" id="datepicker" width="300" name="shipping_date"/>
                         <script>
                             var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
                             $('#datepicker').datepicker({

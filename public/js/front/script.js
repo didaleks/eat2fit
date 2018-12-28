@@ -2016,9 +2016,6 @@
             method: 'POST',
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            },
-			success: function () {
-                console.log('product setted');
             }
         });
 
@@ -2030,9 +2027,6 @@
             method: 'POST',
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            },
-			success: function () {
-                console.log('product removed');
             }
         });
 
@@ -2044,9 +2038,6 @@
             method: 'POST',
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            },
-			success: function () {
-                console.log('cart empty');
             }
         });
         $('sup.round.cart-icon').text(0);

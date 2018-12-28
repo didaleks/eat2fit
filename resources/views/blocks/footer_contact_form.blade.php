@@ -8,13 +8,13 @@
         <div class="col-sm-12 inset-sm-right-15 inset-sm-left-15">
             <div class="form-wrap">
                 <input class="form-input" id="contact-us-first-name" type="text" name="name" placeholder="Имя и фамилия"
-                       data-constraints="@Required" value="mail@demolink.org">
+                       data-constraints="@Required" value="">
             </div>
         </div>
         <div class="col-sm-6 offset-top-10 inset-sm-right-7">
             <div class="form-wrap">
                 <input class="form-input" id="contact-us-email" type="email" name="email" placeholder="Email"
-                       data-constraints="@Email @Required" value="mail@demolink.org">
+                       data-constraints="@Email @Required" value="">
             </div>
         </div>
         <div class="col-sm-6 offset-top-10 inset-sm-left-7">
@@ -24,7 +24,7 @@
         </div>
         <div class="col-sm-12 offset-top-10 text-center text-xl-left">
             <div class="form-wrap">
-                <textarea class="form-input" id="contact-us-message" name="message" placeholder="Ваше сообщение(необязательно)">mail@demolink.org</textarea>
+                <textarea class="form-input" id="contact-us-message" name="message" placeholder="Ваше сообщение(необязательно)"></textarea>
             </div>
         </div>
     </div>

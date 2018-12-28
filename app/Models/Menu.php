@@ -41,9 +41,8 @@ class Menu extends \LaravelAdmin\Models\Menu
             ],
             [
                 'name' => 'url',
-                'type' => 'readonly',
-                'readonly' => 'readonly',
-                'label' => 'Url(todo скрыть)'
+                'type' => 'hidden',
+                'label' => 'Url'
             ],
         ];
 
