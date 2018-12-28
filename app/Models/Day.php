@@ -25,7 +25,7 @@ class Day extends Page
 
     public function eatings()
     {
-        return $this->hasMany('App\Models\Eating')->ordered();
+        return $this->hasMany('App\Models\Eating');
     }
 
     public function scopeOrdered($query)

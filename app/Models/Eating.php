@@ -64,7 +64,7 @@ class Eating extends Page
 
     public function getNameAttribute()
     {
-        return $this->eating_type->name??'';
+        return $this->eating_type->trashed()? $this->eating_type->name. ' (Прием пищи удален)'  : $this->eating_type->name;
     }
 
     public function day()
@@ -74,18 +74,12 @@ class Eating extends Page
 
     public function eating_type()
     {
-        return $this->belongsTo('App\Models\EatingType');
+        return $this->belongsTo('App\Models\EatingType')->withTrashed();
     }
 
     public function dishes()
     {
         return $this->belongsToMany('App\Models\Dish')->withPivot('sort');
-    }
-
-    public function scopeOrdered($query)
-    {
-        return $query->join('eating_types', 'eating_types.id', '=', 'eatings.eating_type_id')
-            ->orderBy('eating_types.sort');
     }
 
     public function getDishesIdsAttribute()
