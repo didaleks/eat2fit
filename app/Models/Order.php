@@ -49,6 +49,20 @@ class Order extends Model
         ];
     }
 
+    public function getPaymentTypeAttribute($value)
+    {
+        switch (intval($value)) {
+            case 'personally':
+                return "Лично курьеру";
+                break;
+            case 'online':
+                return "Онлайн платеж";
+                break;
+            default:
+                return "";
+        }
+    }
+
     public function sendMailAdmin($model)
     {
         $data = array('model'=>$model);
