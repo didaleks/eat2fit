@@ -2009,7 +2009,6 @@
 
 	});
 
-	//todo console.log убрать потом
     function cartSet(id, days_count) {
         $.ajax({
             url: `/cart-add/${id}/${days_count}`,
@@ -2207,10 +2206,41 @@
 		document.body.removeChild(form);
 	}
 
+	function isValidated(elements, captcha) {
+		var results, errors = 0;
+
+		if (elements.length) {
+			for (var j = 0; j < elements.length; j++) {
+
+				var $input = $(elements[j]);
+				if ((results = $input.regula('validate')).length) {
+					for (let k = 0; k < results.length; k++) {
+						errors++;
+						$input.siblings(".form-validation").text(results[k].message).parent().addClass("has-error");
+					}
+				} else {
+					$input.siblings(".form-validation").text("").parent().removeClass("has-error")
+				}
+			}
+
+			if (captcha) {
+				if (captcha.length) {
+					return validateReCaptcha(captcha) && errors === 0
+				}
+			}
+
+			return errors === 0;
+		}
+		return true;
+	}
+
     $('form.order-form').submit(function (event) {
         event.preventDefault();
         let form = $(this),
             formData = form.serializeArray(),
+			inputs = form.find("[data-constraints]"),
+			output = $("#" + form.attr("data-form-output")),
+			captcha = form.find('.recaptcha'),
             street = formData.find(item => item.name === 'street').value,
             home = formData.find(item => item.name === 'home').value,
             flat = formData.find(item => item.name === 'flat').value,
@@ -2218,9 +2248,22 @@
 			shippingHour = formData.find(item => item.name === 'shipping_hour').value,
             shippingMinutes = formData.find(item => item.name === 'shipping_minutes').value;
 
+		output.removeClass("active error success");
+
         formData.push({name: 'address', value: `Улица: ${street}, Дом: ${home}, Квартира: ${flat}`});
         formData.push({name: 'shipping_datetime', value: `Дата: ${shippingDate}, время: ${shippingHour}:${shippingMinutes}`});
 
+		if (isValidated(inputs, captcha)) {
+
+			form.addClass('form-in-process');
+
+			if (output.hasClass("snackbars")) {
+				output.html('<p><span class="icon text-middle fa fa-circle-o-notch fa-spin icon-xxs"></span><span>Отправка</span></p>');
+				output.addClass("active");
+			}
+		} else {
+			return false;
+		}
 
         $.ajax({
             url: '/order/store',
@@ -2235,6 +2278,10 @@
                 let cart = JSON.parse(JSON.parse(response.cart)),
 					amount = parseFloat(cart.totalFullPrice + '00'),
 					orderNumber = response.order_number;
+				form
+					.addClass('success')
+					.removeClass('form-in-process');
+				$('main.cart').addClass('success');
 				setTimeout(
 					openWindowWithPost("/bank/pay", {
 						orderNumber: orderNumber,
@@ -2245,7 +2292,7 @@
             	console.log('error')
 			}
         });
-		$('main.cart').addClass('success');
+
     });
 
 	/* Diet page */

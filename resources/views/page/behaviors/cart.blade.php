@@ -34,7 +34,7 @@
                         </div>
                       </div>
                     </td>
-                    <td class="text-gray"><span class="cart__item_price">{{$item->price}}</span> &#x20bd;</td>
+                    <td class="text-gray text-nowrap"><span class="cart__item_price">{{$item->price}}</span> &#x20bd;</td>
                     <td>
                       <div class="form-wrap form-wrap-border-none">
                         <input class="form-input input-sm cart__item_qty" type="number"
@@ -185,7 +185,7 @@
                     <div class="form-wrap">
                       <label class="form-label-outside" for="contact-us-message">Комментарии к
                         заказу:</label>
-                      <textarea class="form-input" id="contact-us-message" name="message">mail@demolink.org</textarea>
+                      <textarea class="form-input" id="contact-us-message" name="message"></textarea>
                     </div>
                   </div>
                   <div class="col-md-12 col-lg-12 offset-top-40">
@@ -198,15 +198,15 @@
                         </tr>
                         <tr>
                           <td>Залоговая стоимость сумки:</td>
-                          <td class="font-weight-bold text-gray">{{$cart->shippingPrice}} &#x20bd;</td>
+                          <td class="font-weight-bold text-gray text-nowrap">{{$cart->shippingPrice}} &#x20bd;</td>
                         </tr>
                         <tr>
                           <td>Стоимость товаров:</td>
-                          <td class="font-weight-bold text-gray"><span class="total-cart__items-summ">{{$cart->getTotalPrice()}}</span> &#x20bd;</td>
+                          <td class="font-weight-bold text-gray d-flex"><span class="total-cart__items-summ">{{$cart->getTotalPrice()}}</span> &#x20bd;</td>
                         </tr>
                         <tr>
                           <td>Итого к оплате:</td>
-                          <td class="font-weight-bold text-gray"><span class="total-cart__full-summ">{{$cart->getFullPrice()}}</span> &#x20bd;</td>
+                          <td class="font-weight-bold text-gray d-flex"><span class="total-cart__full-summ">{{$cart->getFullPrice()}}</span> &#x20bd;</td>
                         </tr>
                         </tbody>
                       </table>
