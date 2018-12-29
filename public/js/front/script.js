@@ -2161,6 +2161,15 @@
 			summBlock = tableItem.find('.cart__item_summ'),
             price = parseInt(tableItem.find('.cart__item_price').text());
 
+		if(qty == 2) {
+			$(this).val(7)
+			qty = parseInt($(this).val())
+		};
+		if(qty == 6) {
+			$(this).val(1)
+			qty = parseInt($(this).val())
+		};
+
 		summBlock.text(qty * price);
         reloadTotal();
 		cartSet(id, qty);

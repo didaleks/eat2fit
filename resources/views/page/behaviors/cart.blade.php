@@ -38,6 +38,7 @@
                     <td>
                       <div class="form-wrap form-wrap-border-none">
                         <input class="form-input input-sm cart__item_qty" type="number"
+                               readonly
                                data-zeros="true"
                                value="{{$diet['qty']}}" min="1" max="60">
                       </div>

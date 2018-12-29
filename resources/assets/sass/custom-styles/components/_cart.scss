@@ -30,4 +30,7 @@
       display: none;
     }
   }
+  .form-input[readonly] {
+    background-color: $white;
+  }
 }
