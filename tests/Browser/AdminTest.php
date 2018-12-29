@@ -97,7 +97,7 @@ class AdminTest extends DuskTestCase
     {
         $this->testLogin();
         $this->browse(function (Browser $browser) {
-            $browser->visit('/admin/dish/4/edit')
+            $browser->visit('/admin/dish/1/edit')
                 ->assertSee('Название')
             ;
         });
@@ -107,7 +107,7 @@ class AdminTest extends DuskTestCase
     {
         $this->testLogin();
         $this->browse(function (Browser $browser) {
-            $browser->visit('/admin/day/4/edit')
+            $browser->visit('/admin/day/1/edit')
                 ->assertSee('День')
             ;
         });
@@ -118,7 +118,7 @@ class AdminTest extends DuskTestCase
     {
         $this->testLogin();
         $this->browse(function (Browser $browser) {
-            $browser->visit('/admin/eating/76/edit')
+            $browser->visit('/admin/eating/1/edit')
                 ->assertSee('Тип приема пищи')
             ;
         });

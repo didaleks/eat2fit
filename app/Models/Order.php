@@ -73,9 +73,9 @@ class Order extends Model
                 $message
                     ->to($settings->admin_email)
                     ->subject($subject);
-                $message->from('aleshka-didenko@yandex.ru',config('app.name'));
+                $message->from(config('mail.username'),config('app.name'));
             });
-        } catch (\Exception $e) {}
+        } catch (\Exception $e) {dd($e);}
     }
 
     public function sendMailUser($model)
@@ -86,7 +86,7 @@ class Order extends Model
                 $subject = 'Формирование заказа №'. $model->id .' на сайте '.config('app.name');
                 $message->to($model->email)
                     ->subject($subject);
-                $message->from('aleshka-didenko@yandex.ru',config('app.name'));
+                $message->from(config('mail.username'),config('app.name'));
             });
         } catch (\Exception $e) {}
     }

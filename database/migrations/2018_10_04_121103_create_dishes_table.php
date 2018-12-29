@@ -15,7 +15,7 @@ class CreateDishesTable extends Migration
     {
         Schema::create('dishes', function (Blueprint $table) {
             $table->increments('id');
-            $table->smallInteger('published');
+            $table->smallInteger('published')->default(1);
             $table->integer('sort')->default(0);
             $table->string('name');
             $table->json('fields');

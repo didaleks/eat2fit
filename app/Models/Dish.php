@@ -25,11 +25,6 @@ class Dish extends Page
                 'type' => 'input',
                 'label' => 'Название'
             ],
-            [
-                'name' => 'published',
-                'type' => 'checkbox',
-                'label' => 'Опубликован'
-            ],
             'image' => [
                 'name' => 'fields[image]',
                 'type' => 'image',
