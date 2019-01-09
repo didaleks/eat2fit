@@ -162,7 +162,7 @@
               <div class="owl-item">
                 <div class="row justify-content-sm-center">
                   <div class="col-sm-6"><img class="img-responsive center-block" src="{{asset(image(79)->url)}}" width="269" height="278" alt=""></div>
-                  <div class="col-sm-6">
+                  <div class="col-sm-6 pt-5 pt-lg-0">
                     <p class="text-big font-weight-bold text-primary">Профессор кафедры гастроэнтерологии и диетологии СЗГМУ им. Мечникова, Д.М.Н.</p>
 
                     <blockquote class="quote quote-classic text-left offset-top-20 offset-md-top-25">
@@ -183,7 +183,7 @@
               <div class="owl-item">
                 <div class="row justify-content-sm-center">
                   <div class="col-sm-6"><img class="img-responsive center-block" src="{{asset(image(78)->url)}}" width="269" height="278" alt=""></div>
-                  <div class="col-sm-6">
+                  <div class="col-sm-6 pt-5 pt-lg-0">
                     <p class="text-big font-weight-bold text-primary">Профессор кафедры гастроэнтерологии и диетологии СЗГМУ им. Мечникова, Д.М.Н.</p>
                     <blockquote class="quote quote-classic text-left offset-top-20 offset-md-top-25">
                       <p class="text-gray">
@@ -210,7 +210,6 @@
                 <div class="owl-custom-pagination">
                   <div class="owl-dot" data-owl-item="0"></div>
                   <div class="owl-dot" data-owl-item="1"></div>
-                  <div class="owl-dot" data-owl-item="2"></div>
                 </div>
               </div>
             </div>
@@ -230,9 +229,9 @@
               <h2>Блок "Призыв к действию"</h2>
               <p class="text-big">Start working on your body today, and with the individual fitness program, already in
                 90 days <br class="d-none d-xl-inline-block"> you will see a totally different girl in the mirror!</p>
-              <div class="group-xs offset-top-20 offset-lg-top-40"><a class="btn btn-primary" href="/catalog">Перейти в
-                  каталог</a>
-                <button class="btn btn-white-outline" data-toggle="modal" data-target="#modalCallback">Заказать обратный звонок</button>
+              <div class="group-xs">
+                <a class="btn btn-primary offset-top-20" href="/catalog">Перейти в каталог</a>
+                <button class="btn btn-white-outline offset-top-20" data-toggle="modal" data-target="#modalCallback">Заказать обратный звонок</button>
               </div>
             </div>
           </div>
