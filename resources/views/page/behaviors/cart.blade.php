@@ -126,7 +126,8 @@
                                 minDate: today,
                                 locale: 'ru-ru',
                                 format: 'dd mmm yyyy',
-                                weekStartDay: 1
+                                weekStartDay: 1,
+                                width: '100%'
                                 // change: function (e) {
                                 //     console.log($(this).val())
                                 // }
