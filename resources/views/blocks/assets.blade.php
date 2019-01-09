@@ -1,4 +1,4 @@
-<link rel="icon" href="{{asset('images/favicon.ico')}}" type="image/x-icon">
+<link rel="icon" href="{{asset('favicon.ico')}}" type="image/x-icon">
 <!-- Stylesheets-->
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Oregano:400%7COpen+Sans:300,400,700">
 <link rel="stylesheet" href="{{asset('css/libs/bootstrap.css')}}">
