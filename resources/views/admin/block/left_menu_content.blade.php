@@ -5,6 +5,12 @@
         </a>
     </li>
     <li class="nav-item">
+        <a class="nav-link" href="{{ route('category.index') }}">
+            <i class="fas fa-book"></i>
+            Категории рационов
+        </a>
+    </li>
+    <li class="nav-item">
         <a class="nav-link" href="{{ route('dish.index') }}">
             <i class="fas fa-utensils"></i>
             Блюда

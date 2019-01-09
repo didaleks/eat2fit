@@ -15,6 +15,7 @@ class Category extends Page
         'published',
         'slug',
         'description',
+        'sort'
     ];
 
     protected $attributes = [
@@ -84,6 +85,11 @@ class Category extends Page
         }
 
         $this->attributes['slug'] = $value;
+    }
+
+    public function scopeSorted($query)
+    {
+        return $query->orderBy('sort');
     }
 
     public function parent()
