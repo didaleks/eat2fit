@@ -57,8 +57,8 @@
     {{-- Блок «Как готовим и храним продукты» --}}
     <section class="section-95 about__how-cook">
       <h3>Блок «Как готовим и храним продукты»</h3>
-      <div class="container d-flex justify-content-center offset-top-65">
-        <div class="col-md-10 col-lg-6">
+      <div class="container d-flex justify-content-center flex-wrap offset-top-65">
+        <div class="col-10 col-lg-6">
           <div class="about__how-cook__img">
             <span>1</span>
             <img class="img-responsive center-block" src="/images/backgrounds/temp_banner.png"
@@ -92,7 +92,7 @@
     {{-- Блок "Лицензии" --}}
     <section class="section-45 about__licensees">
       <h3>Блок «Наши лицензии»</h3>
-      <div class="container d-flex justify-content-center offset-top-30">
+      <div class="container d-flex justify-content-center flex-wrap offset-top-30">
         <div class="col-md-6">
           <div class="swiper-container swiper-slider">
             <div class="swiper-wrapper">
@@ -151,26 +151,26 @@
               </div>
               <div
                   class="row justify-content-sm-center p-3 align-items-sm-center inset-left-25 inset-right-25 inset-lg-left-0 inset-lg-right-0">
-                <div class="col-3 form-wrap form-wrap-transparent has-error">
+                <div class="col-lg-3 pt-1 pt-lg-0 form-wrap form-wrap-transparent has-error">
                   <input class="form-input form-control-has-validation form-control-last-child"
                          type="text"
                          placeholder="Имя"
                          name="name" data-constraints="@Required" id=""><span
                       class="form-validation">Поле обязательно для заполнения.</span>
                 </div>
-                <div class="col-3 form-wrap form-wrap-transparent has-error">
+                <div class="col-lg-3 pt-1 pt-lg-0 form-wrap form-wrap-transparent has-error">
                   <input class="form-input form-control-has-validation form-control-last-child" type="text"
                          placeholder="E-mail"
                          name="email" data-constraints="@Email @Required" id=""><span
                       class="form-validation">Поле обязательно для заполнения.</span>
                 </div>
-                <div class="col-3 form-wrap form-wrap-transparent has-error">
+                <div class="col-lg-3 pt-1 pt-lg-0 form-wrap form-wrap-transparent has-error">
                   <input class="form-input form-control-has-validation form-control-last-child" type="text"
                          placeholder="Ваш вопрос"
                          name="message" data-constraints="@Required" id=""><span
                       class="form-validation">Поле обязательно для заполнения.</span>
                 </div>
-                <div class="col-3 text-center offset-top-10 offset-md-top-0">
+                <div class="col-lg-3 pt-1 pt-lg-0 text-center offset-top-10 offset-md-top-0">
                   <button class="btn btn-primary" type="submit">Задать вопрос</button>
                 </div>
               </div>
@@ -197,12 +197,12 @@
            data-autoplay="true" data-items="2" data-sm-items="5"
            data-xl-items="5" data-loop="true"
            data-mouse-drag="false"
-           data-dots="true">
+           data-dots="false">
         @foreach($model->fields['partners'] as $partner)
-          <a href="#">
-            <img class="img-responsive img-semi-transparent-inverse center-block"
+          {{--<a href="#">--}}
+            <img alt="" class="img-responsive img-semi-transparent-inverse center-block"
                  src="{{asset(image($partner['image'])->getResized(148))}}" width="148">
-          </a>
+          {{--</a>--}}
         @endforeach
 
       </div>
