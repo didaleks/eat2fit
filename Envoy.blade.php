@@ -315,7 +315,7 @@
 
 @task('deploy:migrate', ['on' => 'web'])
 
-	php {{ $releasePath }}/artisan migrate
+	php {{ $releasePath }}/artisan migrate --force
 
 @endtask
 
