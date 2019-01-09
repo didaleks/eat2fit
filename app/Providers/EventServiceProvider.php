@@ -65,6 +65,7 @@ class EventServiceProvider extends ServiceProvider
 
         Order::saved(function ($model) {
             $model->sendMailAdmin($model);
+            $model->sendMailUser($model);
         });
     }
 }
