@@ -7,9 +7,7 @@ use Illuminate\Support\Facades\Session;
 class Cart
 {
     public $items;
-
-    //I mean $totalQuantity
-    public $totalQt = 0; //Количество дней из всех рационов в корзине
+    public $totalQt = 0; //Количество дней из всех рационов в корзине (totalQuantity)
     public $totalItemsQt = 0; //Количество рационов в корзине
     public $totalPrice = 0; //Цена за все дни
     public $totalFullPrice = 0; //Цена за все дни + доставка
@@ -29,12 +27,12 @@ class Cart
 
     public function set($item, $id, int $count)
     {
-        $storedItem = ['qty' => $count, 'price' => $item->price, 'item' => $item];
+        $storedItem = ['qty' => $count, 'price' => $item->getPrice($count) * $count, 'item' => $item];
 
         if ($this->items && array_key_exists($id, $this->items)) {
             $storedItem = $this->items[$id];
             $storedItem['qty'] = $count;
-            $storedItem['price'] = $item->price * $storedItem['qty'];
+            $storedItem['price'] = $item->getPrice($count) * $count;
         }
 
         $this->items[$id] = $storedItem;
@@ -72,7 +70,8 @@ class Cart
     {
         $summ = 0;
         foreach ($this->items as $diet) {
-            $summ += ($diet['qty'] * $diet['item']->price);
+            $price = $diet['item']->getPrice($diet['qty']);
+            $summ += ($diet['qty'] * $price);
         };
         return $summ;
     }

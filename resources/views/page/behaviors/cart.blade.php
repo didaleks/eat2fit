@@ -22,7 +22,7 @@
 
                 @foreach($cart->items as $diet)
                   @php($item = $diet['item'])
-                  <tr data-id="{{$item->id}}" class="table-cart__item">
+                  <tr data-id="{{$item->id}}" data-test-price="{{$item->test_price}}" data-price="{{$item->price}}" class="table-cart__item">
                     <td>
                       <div class="unit align-items-center flex-row unit-spacing-xs">
                         <div class="unit-left">
@@ -34,7 +34,7 @@
                         </div>
                       </div>
                     </td>
-                    <td class="text-gray text-nowrap"><span class="cart__item_price">{{$item->price}}</span> &#x20bd;</td>
+                    <td class="text-gray text-nowrap"><span class="cart__item_price">{{$item->getPrice($diet['qty'])}}</span> &#x20bd;</td>
                     <td>
                       <div class="form-wrap form-wrap-border-none">
                         <input class="form-input input-sm cart__item_qty" type="number"
@@ -43,7 +43,7 @@
                                value="{{$diet['qty']}}" min="1" max="60">
                       </div>
                     </td>
-                    <td class="text-gray"><span class="cart__item_summ">{{$item->price * $diet['qty']}}</span> &#x20bd;</td>
+                    <td class="text-gray"><span class="cart__item_summ">{{$item->getPrice($diet['qty']) * $diet['qty']}}</span> &#x20bd;</td>
                   </tr>
                 @endforeach
 

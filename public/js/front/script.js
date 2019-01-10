@@ -2157,17 +2157,23 @@
 		let qty = parseInt($(this).val()),
 			id = parseInt($(this).closest('tr').data('id')),
         	tableItem = $(this).closest('tr'),
+			priceBlock = tableItem.find('.cart__item_price'),
 			summBlock = tableItem.find('.cart__item_summ'),
-            price = parseInt(tableItem.find('.cart__item_price').text());
+            price = tableItem.data('price'),
+			testPrice = tableItem.data('test-price')
 
 		if(qty == 2) {
 			$(this).val(7)
-			qty = parseInt($(this).val())
-		};
+			qty = 7
+			priceBlock.text(price)
+		}
+
 		if(qty == 6) {
 			$(this).val(1)
-			qty = parseInt($(this).val())
-		};
+			qty = 1
+			priceBlock.text(testPrice)
+			price = testPrice
+		}
 
 		summBlock.text(qty * price);
         reloadTotal();

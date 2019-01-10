@@ -15,6 +15,7 @@ class Diet extends Page
         'behavior',
         'days_count',
         'price',
+        'test_price',
         'slug',
         'calories',
         'content',
@@ -84,7 +85,12 @@ class Diet extends Page
             [
                 'name' => 'price',
                 'type' => 'number',
-                'label' => '*Минимальная цена за один день'
+                'label' => '*Минимальная цена за один обычный день'
+            ],
+            [
+                'name' => 'test_price',
+                'type' => 'number',
+                'label' => 'Цена за один тестовый день'
             ],
             [
                 'name' => 'calories',
@@ -187,27 +193,6 @@ class Diet extends Page
 
     }
 
-    public function scopeVegan($query)
-    {
-        return $query->whereHas('categories', function ($query) {
-            $query->where('slug', 'like', 'veg%');
-        });
-    }
-
-    public function scopeProtein($query)
-    {
-        return $query->whereHas('categories', function ($query) {
-            $query->where('slug', 'like', 'prote%');
-        });
-    }
-
-    public function scopeLowCalories($query)
-    {
-        return $query->whereHas('categories', function ($query) {
-            $query->where('slug', 'like', 'low-cal%');
-        });
-    }
-
     public function fullUrl()
     {
         return '/' . 'catalog/' . trim($this->slug, '/');
@@ -232,5 +217,14 @@ class Diet extends Page
     public function hasCategory($category)
     {
         return $this->categories->contains($category);
+    }
+
+    public function getTestPriceAttribute($value)
+    {
+        return (empty($value)?$this->price:$value);
+    }
+
+    public function getPrice($qty) {
+        return (intval($qty) == 1)? $this->test_price : $this->price;
     }
 }
