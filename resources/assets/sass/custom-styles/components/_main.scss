@@ -3,6 +3,9 @@
     background-color: $gray-lighter;
     &__list {
       background-color: $white;
+      img {
+        object-fit: cover;
+      }
     }
   }
   &__feedbacks {
