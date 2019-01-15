@@ -244,8 +244,8 @@
             <div class="section-hidden">
               <div class="text-both-lines">
                 <div class="owl-custom-pagination">
-                  <div class="owl-dot active" data-owl-item="0"></div>
-                  <div class="owl-dot" data-owl-item="1"></div>
+                  <div class="owl-dot active" data-owl-item="2"></div>
+                  <div class="owl-dot" data-owl-item="3"></div>
                 </div>
               </div>
             </div>
