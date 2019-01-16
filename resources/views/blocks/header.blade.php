@@ -11,12 +11,16 @@
                     <div class="rd-navbar-panel-inner">
                         <div class="rd-navbar-panel-inner-left">
                             <!-- RD Navbar Brand-->
-                            <div class="rd-navbar-brand"><a class="brand-name" href="/"><img class="img-responsive center-block" src="/images/logo.svg" width="134" height="42" alt=""></a></div>
+                            <div class="rd-navbar-brand"><a class="brand-name" href="/"><img class="img-responsive center-block" src="/images/logo.svg" width="170" height="42" alt=""></a></div>
                         </div>
-                        <div class="rd-navbar-panel-inner-right d-flex justify-content-end align-items-center">
+                        <div class="rd-navbar-panel-inner-right d-flex justify-content-end align-items-center page-header__phones">
                             <div class="mr-3 offset-top-10">
                                 <i class="fa-mobile-phone"></i>
                                 <a href="tel:{{ $settings->phone }}">{{ $settings->phone }}</a>
+                            </div>
+                            <div class="mr-3 offset-top-10">
+                                <i class="fa-mobile-phone"></i>
+                                <a href="tel:{{ $settings->phone2 }}">{{ $settings->phone2 }}</a>
                             </div>
                             <button class="btn btn-xs btn-primary text-bottom"  data-toggle="modal" data-target="#modalCallback">Заказать звонок</button>
                         </div>

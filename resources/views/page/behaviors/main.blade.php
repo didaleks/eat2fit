@@ -92,7 +92,6 @@
           <div class="col-md-6 col-lg-4">
             <!-- Box-->
             <div class="box-xs inset-xl-left-35 inset-xl-right-35">
-              <span class="icon fl-great-icon-set-ico fl-great-icon-set-pencil107 text-primary"></span>
               <p class="text-big font-weight-bold">
                 <span class="link-decoration-none text-primary">
                   Инструмент достижения целей
@@ -110,8 +109,7 @@
           </div>
           <div class="col-md-6 col-lg-4">
             <!-- Box-->
-            <div class="box-xs inset-xl-left-35 inset-xl-right-35"><span
-                  class="icon fl-great-icon-set-ico fl-great-icon-set-video172 text-primary"></span>
+            <div class="box-xs inset-xl-left-35 inset-xl-right-35">
               <p class="text-big font-weight-bold"><span class="link-decoration-none text-primary">Разнообразие и удобство</span></p>
               <p>С Eat2Fit вы можете поставить перед собой самые амбициозные задачи и достигнуть намеченных целей.<br/>Похудеть или поддержать спортивную форму, сформировать здоровые привычки или улучшить здоровье — всего этого легко добиться вместе с личным диетологом и программами Eat2Fit.</p>
               <p class="text-big font-weight-bold offset-top-10">. . .</p>
@@ -123,8 +121,7 @@
           </div>
           <div class="col-md-6 col-lg-4">
             <!-- Box-->
-            <div class="box-xs inset-xl-left-35 inset-xl-right-35"><span
-                  class="icon fl-great-icon-set-ico fl-great-icon-set-pencil107 text-primary"></span>
+            <div class="box-xs inset-xl-left-35 inset-xl-right-35">
               <p class="text-big font-weight-bold"><span class="link-decoration-none text-primary">Красота и здоровье</span>
               </p>
               <p>Курс из диетических и полезных блюд, разработанных диетологом и приготовленных шеф-поваром.<br/>Это не просто здоровая и вкусная еда с доставкой на дом, это настоящий проводник по здоровой жизни!</p>
@@ -140,7 +137,6 @@
           <div class="col-md-6 col-lg-4">
             <!-- Box-->
             <div class="box-xs inset-xl-left-35 inset-xl-right-35">
-              <span class="icon fl-great-icon-set-ico fl-great-icon-set-pencil107 text-primary"></span>
               <p class="text-big font-weight-bold">
                 <span class="link-decoration-none text-primary">Профессионализм и уверенность</span>
               </p>
@@ -183,6 +179,7 @@
           </div>
         @endforeach
       </div>
+      <a class="btn btn-primary offset-top-20" href="/catalog">Все рационы</a>
     </section>
 
     {{-- Блок «Обращение диетолога и шеф-повара» --}}

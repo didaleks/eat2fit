@@ -1,7 +1,8 @@
-<h6>Адрес</h6>
+<h6>Контактные данные</h6>
 <!-- Contact Info-->
 <address class="contact-info p offset-top-20">
-  <p>{{$settings->address}}</p>
+  <p>Адрес: {{$settings->address}}</p>
+  <p>Юридический адрес: 198510, г.Петергоф, Санкт-Петербургское ш., д.130, корп.7, литер А.</p>
   <dl>
     <dt>Телефон:</dt>
     <dd>
