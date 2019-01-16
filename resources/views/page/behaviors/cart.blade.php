@@ -30,7 +30,7 @@
                         </div>
                         <div class="unit-body">
                           <p><a class="table-cart__item-name link-decoration-none"
-                                href="{{$item->url}}">{{$item->name}} <span class="{{($diet['qty'] == 1)?'':'d-none'}}">(Пробный день)</span></a></p>
+                                href="{{$item->url}}">{{$item->name}}<span class="{{($diet['qty'] == 1)?'':'d-none'}}"> (Пробный день)</span></a></p>
                         </div>
                       </div>
                     </td>
@@ -62,7 +62,7 @@
                       <label class="form-label-outside required"
                              for="contact-us-name">ФИО:</label>
                       <input class="form-input" id="contact-us-name" type="text" name="name"
-                             value="" data-constraints="@Required" value="wwwwwww">
+                             data-constraints="@Required" value="wwwwwww">
                     </div>
                   </div>
                   <div class="col-sm-6 offset-top-10 inset-sm-right-7">
