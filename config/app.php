@@ -236,6 +236,7 @@ return [
         'EatingType' => \App\Models\EatingType::class,
         'Cart' => \App\Models\Cart::class,
         'Page' => \App\Models\Page::class,
+        'Extra' => \App\Models\Extra::class,
         'Resizer' => Intervention\Image\Facades\Image::class
 
     ],

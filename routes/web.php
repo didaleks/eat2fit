@@ -25,6 +25,7 @@ Route::middleware(['web'])->group(function () {
         Route::resource('category', 'Admin\CategoryController');
         Route::resource('feedback', 'Admin\FeedbackController')->only(['index', 'show']);
         Route::resource('order', 'Admin\OrderController')->only(['index', 'show']);
+        Route::resource('extra', 'Admin\ExtraController');
 
         Route::prefix('diet')->group(function () {
             Route::get('copy/{id}', add_controller_ns('DietController@copy'))->name("diet.copy");
@@ -40,6 +41,10 @@ Route::middleware(['web'])->group(function () {
 //Cart routes
 Route::match(array('GET', 'POST'),'cart-add/{id}/{days_count}', 'CartController@set')->name('cart.set');
 Route::post('cart-remove/{id}', 'CartController@remove')->name('cart.remove');
+
+Route::match(array('GET', 'POST'),'cart-add-extra/{id}/{days_count}', 'CartController@set')->name('cart.set-extra');
+Route::post('cart-remove-extra/{id}', 'CartController@remove')->name('cart.remove-extra');
+
 Route::post('cart-clear', 'CartController@clear')->name('cart.clear');
 Route::get('cart', 'CartController@index')->name('cart.index');
 Route::get('cart-get', 'CartController@get')->name('cart.get');

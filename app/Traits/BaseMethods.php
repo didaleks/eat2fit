@@ -28,6 +28,11 @@ trait BaseMethods
         return $query->where('published', 1);
     }
 
+    public function scopeSorted($query)
+    {
+        return $query->orderBy('sort');
+    }
+
     public function scopeWithoutParents($query)
     {
         return $query->where('parent_id', null);
