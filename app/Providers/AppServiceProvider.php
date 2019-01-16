@@ -10,7 +10,7 @@ use App\Models\Page;
 use LaravelAdmin\Models\Settings;
 use Illuminate\Pagination\Paginator;
 use App\Models\Cart;
-
+use Illuminate\Support\Facades\Cache;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -34,6 +34,9 @@ class AppServiceProvider extends ServiceProvider
             $settings = new Settings;
             view()->share('settings', $settings);
 
+            $insta = $this->getInsta();
+            view()->share('insta', $insta);
+
             if (!starts_with(request()->path(), 'admin'))
                 Paginator::defaultView('pagination::default');
 
@@ -50,5 +53,28 @@ class AppServiceProvider extends ServiceProvider
         if ($this->app->environment('local', 'testing')) {
             $this->app->register(DuskServiceProvider::class);
         }
+    }
+
+    public function getInsta()
+    {
+        if ($insta = Cache::get('insta', []))
+            return $insta;
+
+        try {
+            $client = new \czPechy\instagramProfileCrawler\Client('_eat2fit_');
+            $profile = $client->getProfile();
+            foreach($profile->getMedia() as $k => $media) {
+                if ($k >= 6)
+                    break;
+
+                $insta[$k]['link'] = $media->toArray()['link'];
+                $insta[$k]['thumbnail'] = $media->toArray()['thumbnail'];
+            }
+            Cache::put('insta', $insta, 180);
+        } catch (\Exception $e) {
+            $insta = [];
+        }
+
+        return $insta;
     }
 }
