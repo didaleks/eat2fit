@@ -14,7 +14,6 @@
 <!-- Page-->
 <div class="page text-center">
     @yield('body')
-
 </div>
 <!-- Global Mailform Output-->
 <div class="snackbars" id="form-output-global"></div>

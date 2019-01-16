@@ -1196,33 +1196,6 @@
 		}
 
 		/**
-		 * RD Flickr Feed
-		 * @description Enables RD Flickr Feed plugin
-		 */
-		if (plugins.flickrfeed.length > 0) {
-			var i;
-			for (i = 0; i < plugins.flickrfeed.length; i++) {
-				var flickrfeedItem = $(plugins.flickrfeed[i]);
-				flickrfeedItem.RDFlickr({
-					callback: function () {
-						var items = flickrfeedItem.find("[data-photo-swipe-item]");
-
-						if (items.length) {
-							for (var j = 0; j < items.length; j++) {
-								var image = new Image();
-								image.setAttribute('data-index', j);
-								image.onload = function () {
-									items[this.getAttribute('data-index')].setAttribute('data-size', this.naturalWidth + 'x' + this.naturalHeight);
-								};
-								image.src = items[j].getAttribute('href');
-							}
-						}
-					}
-				});
-			}
-		}
-
-		/**
 		 * Progress bar
 		 * @description  Enable progress bar
 		 */
