@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Diet;
+use App\Models\Extra;
 use App\Models\Page;
 use Illuminate\Support\Facades\Request;
 
@@ -30,13 +31,15 @@ class CatalogController extends Controller
 
         $model = Diet::published()->where(['url' => $url])->with('days.eatings.dishes', 'days.eatings.eating_type')->first();
         $catalogPage = Page::where('slug', 'catalog')->first();
+        $extras = Extra::sorted()->published()->get();
 
         if (!$model or !$catalogPage)
             abort(404, 'Страница не найдена');
         return view('page.behaviors.diet', [
             'model' => $model,
             'weeksCount' => $model->weeksCount(),
-            'catalogPage' => $catalogPage
+            'catalogPage' => $catalogPage,
+            'extras' => $extras
         ]);
     }
 

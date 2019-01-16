@@ -1990,8 +1990,17 @@
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
         });
-
     }
+
+	function cartSetExtra(id, count) {
+		$.ajax({
+			url: `/cart-add-extra/${id}/${count}`,
+			method: 'POST',
+			headers: {
+				'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+			}
+		});
+	}
 
     function cartRemove(id) {
         $.ajax({
@@ -2003,6 +2012,17 @@
         });
 
     }
+
+	function cartRemoveExtra(id) {
+		$.ajax({
+			url: `/cart-remove-extra/${id}`,
+			method: 'POST',
+			headers: {
+				'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+			}
+		});
+
+	}
 
     function cartClear() {
         $.ajax({
@@ -2114,9 +2134,9 @@
      */
 	$('.table-cart .unit-left span.fa-trash').click(function () {
 		let tableItem = $(this).closest('tr'),
-			id = tableItem.data('id');
-
-		cartRemove(id);
+			id = tableItem.data('id'),
+			isExtra = tableItem.hasClass('table-cart__item-extra');
+		(isExtra)? cartRemoveExtra(id) : cartRemove(id);
 		tableItem.remove();
         cartItemsCountDecrement();
         reloadTotal();
@@ -2156,6 +2176,22 @@
         reloadTotal();
 		cartSet(id, qty);
     })
+
+	$('.cart-content input.cart__item-extra_qty').change(function () {
+		let qty = parseInt($(this).val()),
+			id = parseInt($(this).closest('tr').data('id')),
+			tableItem = $(this).closest('tr'),
+			priceBlock = tableItem.find('.cart__item_price'),
+			nameBlock = tableItem.find('.table-cart__item-name'),
+			descBlock = nameBlock.find('span'),
+			summBlock = tableItem.find('.cart__item_summ'),
+			price = tableItem.data('price')
+
+
+		summBlock.text(qty * price);
+		reloadTotal();
+		cartSetExtra(id, qty);
+	})
 
 	$('#contact-us-time').change(function () {
 		let val = $(this).val();
@@ -2279,8 +2315,10 @@
     });
 
 	/* Diet page */
-	$('.addictions__item').click(function () {
+	/* Extras */
+	$('.extras__item').click(function () {
 		$(this).toggleClass('active');
+
     })
 
 	/* Accordions About */

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Cart;
 use App\Models\Diet;
+use App\Models\Extra;
 use App\Models\Page;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -38,24 +39,28 @@ class CartController extends Controller
     }
 
     public function getJsonData() {
-        return json_encode($this->get()->items);
+        $data = $this->get()->items;
+        $data['extras'] = $this->get()->extras;
+        return json_encode($data);
     }
 
     public function set(Request $request, $id, $days_count)
     {
-        $diet = Diet::find($id);
+        $is_extra = $this->isExtra($request);
+        $item = ($is_extra)? Extra::find($id) : Diet::find($id);
         $oldCart = $this->get();
         $cart = new Cart($oldCart);
-        $cart->set($diet, $diet->id, $days_count);
+        $cart->set($item, $item->id, $days_count, $is_extra);
         $request->session()->put('cart', $cart);
         return $this->getJsonData();
     }
 
     public function remove(Request $request, $id)
     {
+        $is_extra = $this->isExtra($request);
         $oldCart = $request->session()->has('cart') ? $request->session()->get('cart') : null;
         $cart = new Cart($oldCart);
-        $cart->remove($id);
+        ($is_extra)? $cart->removeExtra($id) : $cart->remove($id);
         $request->session()->put('cart', $cart);
         return redirect()->back();
     }
@@ -63,5 +68,12 @@ class CartController extends Controller
     public function clear()
     {
         Session::forget('cart');
+    }
+
+    public function isExtra(Request $request) {
+        if(strpos($request->getRequestUri(), 'extra')){
+            return true;
+        };
+        return false;
     }
 }

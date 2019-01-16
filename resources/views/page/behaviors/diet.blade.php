@@ -188,8 +188,24 @@
         </div>
       </div>
     </section>
-    <section class="section-45 addictions">
+    <section class="section-45 extras">
       <div class="container">
+        @if(!empty($extras))
+        <div class="row justify-content-sm-center">
+          <div class="col-md-10 col-xl-6">
+            <h3 class="offset-top-25">Дополнительные товары</h3>
+          </div>
+        </div>
+        <div class="row justify-content-sm-center">
+          <div class="col-md-10 col-xl-6">
+            <ul class="list-inline">
+              @foreach($extras as $item)
+                <li class="extras__item m-3"><span>{{$item->name}}</span></li>
+              @endforeach
+            </ul>
+          </div>
+        </div>
+        @endif
         <div class="row justify-content-sm-center">
           <div class="col-md-10 col-xl-6">
             <div class="group-xs offset-top-10 offset-lg-top-20 product-buttons {{ inCart($model->id)? 'added' : '' }}">
