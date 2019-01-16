@@ -6,8 +6,8 @@
       </div>
       <div class="unit-body">
         <p>
-          <a class="table-cart__item-name link-decoration-none"
-              href="{{$item->url}}">{{$item->name}}</a>
+          <span class="table-cart__item-name link-decoration-none text-primary"
+              href="{{$item->url}}">{{$item->name}}</span>
         </p>
       </div>
     </div>

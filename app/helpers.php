@@ -72,6 +72,19 @@ if (! function_exists('inCart')) {
     }
 }
 
+if (! function_exists('inCartExtra')) {
+    function inCartExtra($id){
+        $id = intval($id);
+        if (session()->has('cart')) {
+            $cart = session()->get('cart');
+            if ($cart->extras && array_key_exists($id, $cart->extras)) {
+                return true;
+            }
+        }
+        return false;
+    }
+}
+
 if (! function_exists('image')) {
     function image($id)
     {

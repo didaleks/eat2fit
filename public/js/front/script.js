@@ -2317,8 +2317,11 @@
 	/* Diet page */
 	/* Extras */
 	$('.extras__item').click(function () {
-		$(this).toggleClass('active');
+		let id = $(this).data('id'),
+			isAdded = $(this).hasClass('active');
 
+		(isAdded)? cartRemoveExtra(id) : cartSetExtra(id,1)
+		$(this).toggleClass('active');
     })
 
 	/* Accordions About */

@@ -198,9 +198,12 @@
         </div>
         <div class="row justify-content-sm-center">
           <div class="col-md-10 col-xl-6">
-            <ul class="list-inline">
+            <ul class="list-inline d-flex justify-content-center">
               @foreach($extras as $item)
-                <li class="extras__item m-3"><span>{{$item->name}}</span></li>
+                <li data-id="{{$item->id}}" class="extras__item m-3 d-flex flex-column justify-content-center {{ inCartExtra($item->id)? 'active' : '' }}">
+                  <img width="50" class="align-self-center" src="{{asset(image($item['image'])->getResized(50))}}" alt="">
+                  <span>{{$item->name}}</span>
+                </li>
               @endforeach
             </ul>
           </div>
