@@ -29,8 +29,8 @@
                           <span class="icon icon-xs fa fa-trash text-hover-primary"></span>
                         </div>
                         <div class="unit-body">
-                          <p><a class="link-decoration-none"
-                                href="{{$item->url}}">{{$item->name}}</a></p>
+                          <p><a class="table-cart__item-name link-decoration-none"
+                                href="{{$item->url}}">{{$item->name}} <span class="{{($diet['qty'] == 1)?'':'d-none'}}">(Пробный день)</span></a></p>
                         </div>
                       </div>
                     </td>

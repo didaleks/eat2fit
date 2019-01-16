@@ -2131,6 +2131,8 @@
 			id = parseInt($(this).closest('tr').data('id')),
         	tableItem = $(this).closest('tr'),
 			priceBlock = tableItem.find('.cart__item_price'),
+			nameBlock = tableItem.find('.table-cart__item-name'),
+			descBlock = nameBlock.find('span'),
 			summBlock = tableItem.find('.cart__item_summ'),
             price = tableItem.data('price'),
 			testPrice = tableItem.data('test-price')
@@ -2138,12 +2140,14 @@
 		if(qty == 2) {
 			$(this).val(7)
 			qty = 7
+			descBlock.addClass('d-none')
 			priceBlock.text(price)
 		}
 
 		if(qty == 6) {
 			$(this).val(1)
 			qty = 1
+			descBlock.removeClass('d-none')
 			priceBlock.text(testPrice)
 			price = testPrice
 		}
