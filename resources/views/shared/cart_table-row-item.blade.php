@@ -1,4 +1,4 @@
-<tr data-id="{{$item->id}}" data-test-price="{{$item->test_price}}" data-price="{{$item->price}}" class="table-cart__item">
+<tr data-id="{{$item->id}}" data-test-price="{{$item->test_price}}" data-price="{{$item->price}}" class="table-cart__item table-cart__item-diet">
   <td>
     <div class="unit align-items-center flex-row unit-spacing-xs">
       <div class="unit-left">

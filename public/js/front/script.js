@@ -2141,7 +2141,7 @@
         cartItemsCountDecrement();
         reloadTotal();
 
-		if ($('.table-cart__item').length == 0) {
+		if ($('.table-cart__item-diet').length == 0) {
 			$('main.cart').toggleClass('empty');
 		}
     })
