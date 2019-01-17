@@ -196,9 +196,9 @@
             <h3 class="offset-top-25">Дополнительные товары</h3>
           </div>
         </div>
-        <div class="row justify-content-sm-center">
+        <div class="row justify-content-sm-center offset-top-30">
           <div class="col-md-10 col-xl-6">
-            <ul class="list-inline d-flex justify-content-center">
+            <ul class="list-inline d-flex justify-content-center align-items-end">
               @foreach($extras as $item)
                 <li data-id="{{$item->id}}" class="extras__item m-3 d-flex flex-column justify-content-center {{ inCartExtra($item->id)? 'active' : '' }}">
                   <img width="50" class="align-self-center" src="{{asset(image($item['image'])->getResized(50))}}" alt="">

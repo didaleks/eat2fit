@@ -30,6 +30,7 @@
     </tbody>
   </table>
 
+  @if(!empty($cart->extras))
   <h4>Данные о дополнительных товарах</h4>
   <table class="table table-bordered">
     <thead>
@@ -54,7 +55,7 @@
     @endforeach
     </tbody>
   </table>
-
+  @endif
   <h4>Данные о доставке</h4>
   <table class="table table-bordered">
     <thead>
