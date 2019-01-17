@@ -64,7 +64,7 @@ class AppServiceProvider extends ServiceProvider
             $client = new \czPechy\instagramProfileCrawler\Client('_eat2fit_');
             $profile = $client->getProfile();
             foreach($profile->getMedia() as $k => $media) {
-                if ($k >= 6)
+                if ($k >= 9)
                     break;
 
                 $insta[$k]['link'] = $media->toArray()['link'];

@@ -2,6 +2,8 @@
 
 @section('content')
 
+  @include('blocks.parallax')
+
   <main class="page-content">
     <!-- Contact Info-->
     <section class="section-95">
@@ -11,7 +13,7 @@
             <h2 class="pb-5">{{$model->name}}</h2>
           </div>
           <div class="col-10 d-flex flex-wrap justify-content-between">
-            <div class="col-lg-4 unit pt-3 align-items-top flex-row unit-spacing-xs">
+            <div class="col-lg-3 unit pt-3 align-items-top flex-row unit-spacing-xs">
               <div class="unit-left"><span class="icon icon-circle icon-primary fl-great-icon-set-ico fl-great-icon-set-placeholder34"></span></div>
               <div class="unit-body text-left">
                 <div>
@@ -22,7 +24,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 unit pt-3 align-items-top flex-row unit-spacing-xs">
+            <div class="col-lg-3 unit pt-3 align-items-top flex-row unit-spacing-xs">
               <div class="unit-left"><span class="icon icon-circle icon-primary fl-great-icon-set-ico fl-great-icon-set-mobile226"></span></div>
               <div class="unit-body text-left">
                 <div>
@@ -36,7 +38,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 unit pt-3 align-items-top flex-row unit-spacing-xs">
+            <div class="col-lg-3 unit pt-3 align-items-top flex-row unit-spacing-xs">
               <div class="unit-left"><span class="icon icon-circle icon-primary fl-great-icon-set-ico fl-great-icon-set-new99"></span></div>
               <div class="unit-body text-left">
                 <div>
@@ -47,66 +49,22 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section-bottom-95">
-      <div class="container">
-        <div class="row justify-content-sm-center">
-          <div class="col-md-10">
-            <h2 class="pb-5">Юридическая информация</h2>
-          </div>
-          <div class="col-10 d-flex flex-wrap justify-content-between">
-            <div class="col-lg-6">
-              <div class="unit pt-3 align-items-top flex-row unit-spacing-xs">
-                <div class="unit-left"><span class="icon icon-circle icon-primary fl-great-icon-set-ico fl-great-icon-set-placeholder34"></span></div>
-                <div class="unit-body text-left">
-                  <div>
-                    <p>Юридический адрес:</p>
-                  </div>
-                  <div class="offset-top-5">
-                    <p class="font-weight-bold"><span class="link-decoration-none text-hover-primary text-gray">198510, г.Санкт-Петербург, г.Петергоф, Санкт-Петербургское ш., д.130, корп.7, литер А.</span></p>
-                  </div>
+            <div class="col-lg-3 unit pt-3 align-items-top flex-row unit-spacing-xs">
+              <div class="unit-left"><span class="icon icon-circle icon-primary fl-great-icon-set-ico fl-great-icon-set-chronometer24"></span></div>
+              <div class="unit-body text-left">
+                <div>
+                  <p>Время работы:</p>
                 </div>
-              </div>
-              <div class="unit pt-3 align-items-top flex-row unit-spacing-xs">
-                <div class="unit-left"><span class="icon icon-circle icon-primary fl-great-icon-set-book207"></span></div>
-                <div class="unit-body text-left">
-                  <div>
-                    <p>Юридические данные:</p>
-                  </div>
-                  <div class="offset-top-5">
-                    <p class="font-weight-bold"><span class="link-decoration-none text-hover-primary text-gray">ИНН: 7819315486, <br>ОГРН: 1127847162178</span></p>
-                  </div>
+                <div class="offset-top-5">
+                  <p class="font-weight-bold"><span class="link-decoration-none text-hover-primary text-gray">09:00–21:00 — <br/>Пн – Пт</span></p>
                 </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="unit pt-3 align-items-top flex-row unit-spacing-xs">
-                <div class="unit-left"><span class="icon icon-circle icon-primary fl-great-icon-set-ico fl-great-icon-set-mobile226"></span></div>
-                <div class="unit-body text-left">
-                  <div>
-                    <p>Телефон:</p>
-                  </div>
-                  <div class="offset-top-5">
-                    <p class="font-weight-bold"><a class="link-decoration-none text-hover-primary text-gray" href="tel:+7 (812) 604-02-64">+7 (812) 604-02-64</a></p>
-                  </div>
-                </div>
-              </div>
-              <div class="unit pt-3 align-items-top flex-row unit-spacing-xs">
-                <div class="unit-left"><span class="icon icon-circle icon-primary fl-great-icon-set-ico fl-great-icon-set-new99"></span></div>
-                <div class="unit-body text-left">
-                  <div>
-                    <p>Email Address:</p>
-                  </div>
-                  <div class="offset-top-5">
-                    <p class="font-weight-bold"><a class="link-decoration-none text-hover-primary text-gray" href="mailto:info@eat2fit.ru">info@eat2fit.ru</a></p>
-                  </div>
+                <div class="offset-top-5">
+                  <p class="font-weight-bold"><span class="link-decoration-none text-hover-primary text-gray">10:00–19:00 — <br/>Сб – Вс</span></p>
                 </div>
               </div>
             </div>
           </div>
+          <p class="offset-top-30">Мы ждем Вас в Центре диетологии и правильного питания Eat2Fit на улице Марата, д. 49. Вы сможете получить консультацию диетолога, подобрать и заказать программу здорового питания за один визит.</p>
         </div>
       </div>
     </section>

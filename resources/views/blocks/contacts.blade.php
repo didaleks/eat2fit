@@ -4,7 +4,7 @@
   <p>Адрес: {{$settings->address}}</p>
   <p>Юридический адрес: 198510, г.Петергоф, Санкт-Петербургское ш., д.130, корп.7, литер А.</p>
   <dl>
-    <dt>Телефон:</dt>
+    <dt>Телефоны:</dt>
     <dd>
       <a class="text-gray-light link-decoration-none text-hover-primary"
            href="tel:{{ $settings->phone }}">{{ $settings->phone }}
@@ -15,10 +15,21 @@
            href="tel:{{ $settings->phone2 }}">{{ $settings->phone2 }}
       </a>
     </dd>
+    <dd>
+      <a class="text-gray-light link-decoration-none text-hover-primary"
+         href="tel:+7 (812) 604-02-64">+7 (812) 604-02-64
+      </a>
+    </dd>
   </dl>
   <dl class="offset-top-10">
     <dt>E-mail:</dt>
     <dd><a class="link-decoration-none" href="mailto:{{ $settings->contact_email }}">{{ $settings->contact_email }}</a>
+    </dd>
+  </dl>
+  <dl class="offset-top-10">
+    <dt>Юридические данные::</dt>
+    <dd>
+      ИНН: 7819315486, <br>ОГРН: 1127847162178
     </dd>
   </dl>
 </address>

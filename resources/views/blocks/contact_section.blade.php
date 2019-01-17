@@ -7,7 +7,7 @@
       <div class="col-md-10 col-lg-5 offset-top-40 offset-md-top-0">
         @include('blocks.footer_contact_form', ['type'=>'footer', 'heading' => 'Свяжитесь с нами'])
       </div>
-      <div class="col-sm-10 col-lg-3 offset-lg-1 offset-top-40 offset-md-top-0">
+      <div class="col-sm-10 col-lg-3 offset-lg-1 offset-top-40 offset-md-top-0 p-0">
         @include('blocks.swipper_gallery')
       </div>
     </div>
