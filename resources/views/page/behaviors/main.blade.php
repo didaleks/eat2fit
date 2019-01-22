@@ -246,18 +246,13 @@
     <section class="section section-height-800 parallax-container context-dark"
              data-parallax-img="{{asset('images/main/call_1.png')}}">
       <div class="parallax-content">
-        <div class="bg-overlay-gray-darken">
-          <div class="container section-95">
-            <div class="jumbotron-custom jumbotron-custom-variant-3">
-              <h2>Вы приняли решение правильно питаться?</h2>
-              <p>Вы выбираете программу сбалансированного питания сами или с диетологом</p>
-              <p>Шеф-повар готовит вкусный и правильный рацион по разработанному меню</p>
-              <p>Курьер привозит сумку-холодильник к вам домой или в офис</p>
-              <p><span class="text-uppercase text-big">ВЫ ПИТАЕТЕСЬ РАЗНООБРАЗНО И ПРАВИЛЬНО!</span><br/>А наш диетолог всегда к вашим услугам</p>
-              <div class="group-xs">
-                <a class="btn btn-primary offset-top-20" href="/catalog">Перейти в каталог</a>
-                <button class="btn btn-white-outline offset-top-20" data-toggle="modal" data-target="#modalCallback">Заказать обратный звонок</button>
-              </div>
+        <div class="container section-95">
+          <div class="jumbotron-custom jumbotron-custom-variant-3">
+            <h2>Вы приняли решение правильно питаться?</h2>
+            <img src="{{asset('images/main/vy-prinyali-reshenie.png')}}" alt="">
+            <div class="group-xs">
+              <a class="btn btn-primary offset-top-20" href="/catalog">Перейти в каталог</a>
+              <button class="btn btn-white-outline offset-top-20" data-toggle="modal" data-target="#modalCallback">Заказать обратный звонок</button>
             </div>
           </div>
         </div>
