@@ -80,11 +80,11 @@
     {{-- Блок "Что мы предлагаем" --}}
     <section class="section-95 main__features">
       <div class="container">
-        {{--<h2>Что мы предлагаем</h2>--}}
+        <h2>О компании</h2>
         <div class="row no-gutters justify-content-sm-center offset-top-40 shadow-drop-sm main__features__list">
           <div class="col-md-6 col-lg-4">
             <img class="img-responsive img-fullwidth img-fullheight center-block"
-                 src="{{asset('images/main/features1.jpg')}}"
+                 src="{{image(125)->getResized(500)}}"
                  width="390"
                  height="289" alt="">
           </div>
@@ -104,7 +104,7 @@
           </div>
           <div class="col-md-6 col-lg-4">
             <img class="img-responsive img-fullwidth img-fullheight center-block"
-                 src="{{asset('images/main/features2.jpg')}}" width="390" height="289" alt="">
+                 src="{{image(129)->getResized(500)}}" width="390" height="289" alt="">
           </div>
           <div class="col-md-6 col-lg-4">
             <!-- Box-->
@@ -116,7 +116,7 @@
           </div>
           <div class="col-md-6 col-lg-4">
             <img class="img-responsive img-fullwidth img-fullheight center-block"
-                 src="{{asset('images/main/features3.jpg')}}" width="390" height="289" alt="">
+                 src="{{image(127)->getResized(500)}}" width="390" height="289" alt="">
           </div>
           <div class="col-md-6 col-lg-4">
             <!-- Box-->
@@ -129,7 +129,7 @@
           </div>
           <div class="col-md-6 col-lg-4">
             <img class="img-responsive img-fullwidth img-fullheight center-block"
-                 src="{{asset('images/main/features1.jpg')}}"
+                 src="{{image(126)->getResized(500)}}"
                  width="390"
                  height="289" alt="">
           </div>
@@ -145,7 +145,7 @@
           </div>
           <div class="col-md-6 col-lg-4">
             <img class="img-responsive img-fullwidth img-fullheight center-block"
-                 src="{{asset('images/main/features2.jpg')}}" width="390" height="289" alt="">
+                 src="{{image(128)->getResized(500)}}" width="390" height="289" alt="">
           </div>
         </div>
       </div>
@@ -153,7 +153,7 @@
 
     {{-- Блок «Блок выберите план» --}}
     <section class="section-30">
-      {{--<h2 class="pb-4">Блок «Блок выберите план»</h2>--}}
+      <h2 class="pb-4">Рационы питания</h2>
       <div class="row no-gutters justify-content-sm-center" style="font-size:0;">
         @foreach($model->fields['planes'] as $item)
           <div class="col-sm-10 col-md-8 col-lg-4
@@ -184,7 +184,7 @@
     {{-- Блок «Обращение диетолога и шеф-повара» --}}
     <section class="section-45">
       <div class="container">
-        {{--<h2>Блок «Обращение диетолога и шеф-повара»</h2>--}}
+        <h2>Наши специалисты</h2>
         <div class="row justify-content-sm-center offset-top-40">
           <div class="col-md-10 col-lg-8 col-xl-12 offset-top-40 offset-lg-top-0 text-left">
             <div class="owl-carousel" data-autoplay="true" data-items="1" data-stage-padding="15" data-loop="true" data-margin="30" data-mouse-drag="false" data-dots-custom=".owl-custom-pagination" data-nav="false">
@@ -213,6 +213,8 @@
                 <div class="row justify-content-sm-center">
                   <div class="col-sm-6"><img class="img-responsive center-block" src="{{asset('images/main/kirill_muzychenko.jpg')}}" width="269" height="278" alt=""></div>
                   <div class="col-sm-6 pt-5 pt-lg-0">
+                    <p class="text-big font-weight-bold text-primary">Шеф-повар ресторанного комплекса «Летний дворец»</p>
+
                     <blockquote class="quote quote-classic text-left offset-top-20 offset-md-top-25">
                       <p class="text-gray">
                         <q>Опыт работы нашего шеф-повара Кирилла Музыченко (ресторан "Летний Дворец") дал возможность сделать кухню Eat2Fit изысканной, способной приятно удивить настоящего гурмана. Кирилл отвечает за качество, вкус и разнообразие нашего меню. Совместно с врачом-диетологом он проработал каждый рецепт и продумал технологию приготовления блюд. Так что, каждый день Вы получаете абсолютно сбалансированный и правильно приготовленный рацион.</q>

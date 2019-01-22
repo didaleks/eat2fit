@@ -36,6 +36,9 @@
                     </div>
                 </div>
             </div>
+            <div class="row offset-top-30">
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa267f2d1d1cb9104f67657ed2c4978ba0aad8f10487426456c0565d09b04dcfd&source=constructor" width="100%" height="400" frameborder="0"></iframe>
+            </div>
         </section>
     </main>
 
