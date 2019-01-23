@@ -126,6 +126,11 @@ class Page extends \LaravelAdmin\Models\Page
                         'type' => 'input',
                         'label' => 'Url'
                     ],
+                    'image' =>  [
+                        'name' => 'fields[image]',
+                        'type' => 'image',
+                        'label' => 'Картинка'
+                    ],
                     [
                         'name' => 'content',
                         'type' => 'editor',
