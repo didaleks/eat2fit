@@ -2,7 +2,9 @@
 
 @section('content')
 
-    <main class="page-content">
+    @include('blocks.parallax')
+
+    <main class="page-content shipping">
         <section class="section-95 bg-white">
             <div class="container">
                 <div class="row justify-content-sm-center">
