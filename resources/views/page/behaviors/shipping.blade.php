@@ -5,7 +5,7 @@
     @include('blocks.parallax')
 
     <main class="page-content shipping">
-        <section class="section-95 bg-white">
+        <section class="section-top-95 bg-white">
             <div class="container">
                 <div class="row justify-content-sm-center">
                     <div class="col-md-10">
