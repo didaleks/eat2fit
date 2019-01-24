@@ -25,7 +25,7 @@ class Feedback extends Model
     {
         return [
             'name' => 'required|string|max:255',
-            'email' => 'required|string|max:255|regex:/^.+@.+$/i',
+            'email' => 'string|max:255|regex:/^.+@.+$/i',
             'phone' => 'required|string|max:255',
             'privacy-policy' => 'required|accepted'
         ];
