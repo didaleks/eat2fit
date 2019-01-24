@@ -244,8 +244,8 @@
 
     {{-- Блок "Призыв к действию" --}}
     <section class="section section-height-800 parallax-container context-dark"
-             data-parallax-img="{{asset('images/main/call_1.png')}}">
-      <div class="parallax-content">
+             data-parallax-img="{{asset('images/main/call_bg-blue.jpg')}}">
+      <div class="parallax-content bg-overlay-black">
         <div class="container section-95">
           <div class="jumbotron-custom jumbotron-custom-variant-3">
             <h2>Вы приняли решение правильно питаться?</h2>

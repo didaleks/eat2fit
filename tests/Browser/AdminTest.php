@@ -97,7 +97,7 @@ class AdminTest extends DuskTestCase
     {
         $this->testLogin();
         $this->browse(function (Browser $browser) {
-            $browser->visit('/admin/dish/1/edit')
+            $browser->visit('/admin/dish/2/edit')
                 ->assertSee('Название')
             ;
         });

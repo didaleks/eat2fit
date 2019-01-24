@@ -7,24 +7,26 @@
     <div class="row justify-content-sm-center">
         <div class="col-sm-12 inset-sm-right-15 inset-sm-left-15">
             <div class="form-wrap">
-                <input class="form-input" id="contact-us-first-name" type="text" name="name" placeholder="Имя и фамилия"
+                <input class="form-input" id="{{$type}}-contact-form-first-name" type="text" name="name" placeholder="Имя и фамилия"
                        data-constraints="@Required" value="">
             </div>
         </div>
-        <div class="col-sm-6 offset-top-10 inset-sm-right-7">
+        @if($type != 'callback')
+        <div class="col-sm-6 offset-top-10">
             <div class="form-wrap">
-                <input class="form-input" id="contact-us-email" type="email" name="email" placeholder="Email"
+                <input class="form-input" id="{{$type}}-contact-form-email" type="email" name="email" placeholder="Email"
                        data-constraints="@Email @Required" value="">
             </div>
         </div>
-        <div class="col-sm-6 offset-top-10 inset-sm-left-7">
+        @endif
+        <div class="{{($type == 'callback')?'col-sm-12':'col-sm-6'}} offset-top-10">
             <div class="form-wrap">
-                <input class="form-input" id="contact-us-phone" type="text" name="phone" placeholder="Телефон" required value="">
+                <input class="form-input" id="{{$type}}-contact-form-phone" type="text" name="phone" placeholder="Телефон" required value="">
             </div>
         </div>
         <div class="col-sm-12 offset-top-10 text-center text-xl-left">
             <div class="form-wrap">
-                <textarea class="form-input" id="contact-us-message" name="message" placeholder="Ваше сообщение(необязательно)"></textarea>
+                <textarea class="form-input" id="{{$type}}-contact-form-message" name="message" placeholder="Ваше сообщение(необязательно)"></textarea>
             </div>
         </div>
     </div>

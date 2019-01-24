@@ -6,7 +6,7 @@
 
   <main class="page-content">
     <!-- Contact Info-->
-    <section class="section-95">
+    <section class="section-top-95">
       <div class="container">
         <div class="row justify-content-sm-center">
           <div class="col-md-10">
