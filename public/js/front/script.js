@@ -1868,6 +1868,7 @@
 						.removeClass('form-in-process');
 
 						output.text(result);
+						formTargetSend();
 
 
 						if (output.hasClass("snackbars")) {
@@ -2253,6 +2254,28 @@
 		return true;
 	}
 
+	function cartTargetSend() {
+		if (typeof ym === "function")
+		{
+			ym(29979519, 'reachGoal', 'buy_order_success');
+		}
+		if (typeof ga === "function")
+		{
+			ga('event', '1 - Покупка', {'event_category': 'buy', 'event_action': 'order_success'})
+		}
+	}
+
+	function formTargetSend() {
+		if (typeof ym === "function")
+		{
+			ym(29979519, 'reachGoal', 'lead_form');
+		}
+		if (typeof ga === "function")
+		{
+			ga('event', '1 - Лид', {'event_category': 'lead', 'event_action': 'form'})
+		}
+	}
+
     $('form.order-form').submit(function (event) {
         event.preventDefault();
         let form = $(this),
@@ -2294,6 +2317,7 @@
             },
             success: function (response) {
                 // remove_liked(); todo очищать корзину
+				cartTargetSend();
                 let cart = JSON.parse(JSON.parse(response.cart)),
 					amount = parseFloat(cart.totalFullPrice + '00'),
 					orderNumber = response.order_number;

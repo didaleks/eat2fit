@@ -6,9 +6,10 @@
   <dl>
     <dt>Телефоны:</dt>
     <dd>
-      <a class="text-gray-light link-decoration-none text-hover-primary"
+      <span class="ya-phone"><a class="ya-phone text-gray-light link-decoration-none text-hover-primary"
            href="tel:{{ $settings->phone }}">{{ $settings->phone }}
-      </a>
+        </a>
+      </span>
     </dd>
     <dd>
       <a class="text-gray-light link-decoration-none text-hover-primary"
