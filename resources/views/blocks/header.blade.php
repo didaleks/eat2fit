@@ -16,7 +16,7 @@
                         <div class="rd-navbar-panel-inner-right d-flex justify-content-end align-items-center page-header__phones">
                             <div class="mr-3 offset-top-10">
                                 <i class="fa-mobile-phone"></i>
-                                <a href="tel:{{ $settings->phone }}">{{ $settings->phone }}</a>
+                                <span class="ya-phone"><a href="tel:{{ $settings->phone }}">{{ $settings->phone }}</a></span>
                             </div>
                             <div class="mr-3 offset-top-10">
                                 <i class="fa-mobile-phone"></i>
