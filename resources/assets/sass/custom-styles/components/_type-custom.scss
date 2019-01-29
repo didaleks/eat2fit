@@ -409,6 +409,25 @@ dl {
 	}
 }
 
+.list-text {
+	li {
+		position: relative;
+		padding-left: 16px;
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 8px;
+			display: inline-block;
+			width: 4px;
+			height: 4px;
+			border-radius: 50%;
+			background: $gray-light;
+		}
+	}
+}
+
 // List marked
 //
 
