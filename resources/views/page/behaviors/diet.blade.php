@@ -17,7 +17,7 @@
           <div class="d-none d-lg-block offset-top-20">
             <h1>{{$model->name}}</h1>
           </div>
-          <div class="diet__parallax-description">{!! $model->content !!}</div>
+          <div class="diet__parallax-description offset-md-top-20">{!! $model->content !!}</div>
 
           <p class="offset-top-40">1 день питания - от <span class="diet__parallax-price-number">{{$model->price}} &#x20bd;</span>
           </p>
@@ -39,7 +39,7 @@
 
   <!-- Page Content-->
   <main class="page-content diet__content">
-    <section class="section-top-95 recommend-section">
+    {{--<section class="section-top-95 recommend-section">
       <div class="container">
         <h2>Программа предназначена:</h2>
         <div class="row d-flex offset-top-34">
@@ -98,6 +98,7 @@
         </div>
       </div>
     </section>
+    --}}
     <section class="section-45 menu">
       <div class="container">
         <div class="row justify-content-sm-center">
@@ -105,6 +106,8 @@
             <h3 class="offset-top-25">Меню программы</h3>
           </div>
         </div>
+        {{-- Табы недель --}}
+        {{--
         <div class="row justify-content-sm-center offset-top-20">
           <div class="col-md-10 col-xl-6">
             <div class="tabs-custom tabs-horizontal tabs-corporate" id="tabs-1">
@@ -120,6 +123,7 @@
             </div>
           </div>
         </div>
+        --}}
         <div class="row col-12 m-0 p-0">
             <div class="col-12 tab-content text-left">
               @for ($weekNum = 1; $weekNum <= $weeksCount; $weekNum++)
