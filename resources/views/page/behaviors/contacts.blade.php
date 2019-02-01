@@ -13,7 +13,7 @@
             <h2 class="pb-5">{{$model->name}}</h2>
           </div>
           <div class="col-10 d-flex flex-wrap justify-content-between">
-            <div class="col-lg-3 unit pt-3 align-items-top flex-row unit-spacing-xs">
+            <div class="col-lg-6 col-md-6 unit pt-3 align-items-top flex-row unit-spacing-xs">
               <div class="unit-left"><span class="icon icon-circle icon-primary fl-great-icon-set-ico fl-great-icon-set-placeholder34"></span></div>
               <div class="unit-body text-left">
                 <div>
@@ -24,7 +24,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 unit pt-3 align-items-top flex-row unit-spacing-xs">
+            <div class="col-lg-6 col-md-6 unit pt-3 align-items-top flex-row unit-spacing-xs">
               <div class="unit-left"><span class="icon icon-circle icon-primary fl-great-icon-set-ico fl-great-icon-set-mobile226"></span></div>
               <div class="unit-body text-left">
                 <div>
@@ -38,7 +38,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 unit pt-3 align-items-top flex-row unit-spacing-xs">
+            <div class="col-lg-6 col-md-6 unit pt-3 align-items-top flex-row unit-spacing-xs">
               <div class="unit-left"><span class="icon icon-circle icon-primary fl-great-icon-set-ico fl-great-icon-set-new99"></span></div>
               <div class="unit-body text-left">
                 <div>
@@ -49,17 +49,17 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 unit pt-3 align-items-top flex-row unit-spacing-xs">
+            <div class="col-lg-6 col-md-6 unit pt-3 align-items-top flex-row unit-spacing-xs">
               <div class="unit-left"><span class="icon icon-circle icon-primary fl-great-icon-set-ico fl-great-icon-set-chronometer24"></span></div>
               <div class="unit-body text-left">
                 <div>
                   <p>Время работы:</p>
                 </div>
                 <div class="offset-top-5">
-                  <p class="font-weight-bold"><span class="link-decoration-none text-hover-primary text-gray">09:00–21:00 — <br/>Пн – Пт</span></p>
+                  <p class="font-weight-bold"><span class="link-decoration-none text-hover-primary text-gray">09:00–21:00 — Пн – Пт</span></p>
                 </div>
                 <div class="offset-top-5">
-                  <p class="font-weight-bold"><span class="link-decoration-none text-hover-primary text-gray">10:00–19:00 — <br/>Сб – Вс</span></p>
+                  <p class="font-weight-bold"><span class="link-decoration-none text-hover-primary text-gray">10:00–19:00 — Сб – Вс</span></p>
                 </div>
               </div>
             </div>
