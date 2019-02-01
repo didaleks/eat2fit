@@ -1,0 +1,26 @@
+.main {
+  &__features {
+    background-color: $gray-lighter;
+    &__list {
+      background-color: $white;
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+  &__feedbacks {
+    background-color: $gray-lighter;
+    .owl-carousel .owl-stage {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__planes {
+    .main__plane {
+      border-left: 5px solid #fff;
+    }
+    .main__plane:first-child {
+      border-left: 0px;
+    }
+  }
+}

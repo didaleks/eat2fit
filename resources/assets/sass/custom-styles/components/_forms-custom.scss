@@ -1,0 +1,413 @@
+//
+// Custom form styles
+// --------------------------------------------------
+
+.rd-mailform {
+	position: relative;
+	a {
+		text-decoration: underline;
+	}
+}
+
+// Normalize non-controls
+// --------------------------------------------------
+
+label {
+	margin-bottom: 10px;
+	font-weight: 400;
+}
+
+form {
+	button.btn {
+		cursor: pointer;
+	}
+}
+
+// Common form controls
+// --------------------------------------------------
+
+.input-sm,
+.input-lg,
+.form-input {
+	font-size: $input-font-size;
+
+	&, &:focus {
+		box-shadow: none;
+	}
+}
+
+textarea.form-input {
+	height: $textarea-default-height;
+	min-height: $textarea-default-min-height;
+	max-height: $textarea-default-max-height;
+	padding-top: 15px;
+	resize: vertical;
+}
+
+.form-input {
+	padding: 7px 15px;
+	-webkit-appearance: none;
+	line-height: $input-height-base - ($padding-base-vertical + 1px)*2;
+
+	&:focus {
+		outline: 0;
+	}
+}
+
+.form-wrap-transparent {
+	.form-input {
+		color: $white;
+		background: transparent;
+		border-color: rgba($white, .4);
+	}
+
+	&.has-error .form-validation {
+		color: $white;
+	}
+}
+
+// Form groups
+// -------------------------
+
+.form-wrap {
+	position: relative;
+}
+
+// Form labels
+// -------------------------
+
+.form-label {
+	position: absolute;
+	top: 22px;
+	left: 17px;
+	font-size: $input-font-size;
+	color: $input-color-placeholder;
+	pointer-events: none;
+	z-index: 9;
+	transition: .3s;
+	@include transform(translateY(-50%));
+
+	&.focus {
+		opacity: 0;
+	}
+
+	&.auto-fill {
+		color: $input-color;
+	}
+}
+
+.form-label-outside {
+	@media (min-width: $screen-sm-min) {
+		position: static;
+		&, &.focus, &.auto-fill {
+			@include transform(none);
+			color: $input-color-placeholder;
+			font-size: $input-font-size;
+		}
+	}
+}
+
+.form-label-outside.required:after {
+	content: "*";
+	color: $primary;
+	font-size: 17px;
+}
+
+.form-section-heading {
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.2;
+	color: #585858;
+}
+
+.form-time {
+	.stepper {
+		margin-bottom: 0px;
+	}
+}
+
+.box-xxs {
+  cursor: pointer;
+  border: 1px solid $gray-300;
+  &.active {
+	  border: 1px solid $primary;
+  }
+
+  &.box-pay {
+    .form-wrap {
+
+    }
+  }
+}
+
+.datepicker-wrapper {
+	input {
+		cursor: pointer;
+	}
+	span.input-group-append {
+		button.btn {
+			max-width: 38px;
+			min-width: 38px;
+			padding: 0px;
+			border-radius: 0px;
+			height: 100%;
+			cursor: pointer;
+		}
+	}
+}
+
+// Form validation
+// -------------------------
+.form-validation {
+	position: absolute;
+	right: 4px;
+	top: 2px;
+	font-size: 10px;
+	line-height: 12px;
+	color: $brand-danger;
+	margin-top: 2px;
+	transition: .3s;
+	z-index: 11;
+}
+
+.about {
+	.form-validation {
+		right: 17px;
+	}
+}
+
+.form-validation-left {
+	.form-validation {
+		right: auto;
+		top: 100%;
+		left: 0;
+	}
+}
+
+// Error Styling
+//
+.has-error {
+	@include form-input-validation-custom($state-danger-text, $state-danger-bg, $state-danger-bg);
+}
+
+// Success Styling
+//
+.has-success {
+	@include form-input-validation-custom($state-success-text, $state-success-bg, $state-success-bg);
+}
+
+// Warning Styling
+//
+.has-warning {
+	@include form-input-validation-custom($state-warning-text, $state-warning-bg, $state-warning-bg);
+}
+
+// Info Styling
+//
+.has-info {
+	@include form-input-validation-custom($state-info-text, $state-info-bg, $state-info-bg);
+}
+
+// Form output
+// -------------------------
+
+#form-output-global {
+	position: fixed;
+	bottom: 30px;
+	left: 15px;
+	visibility: hidden;
+	@include transform(translateX(-500px));
+	transition: .3s all ease;
+	z-index: 9999999;
+
+	&.active {
+		@include transform(translateX(0));
+		visibility: visible;
+	}
+
+	@media (min-width: $screen-xs) {
+		left: 30px;
+	}
+}
+
+.form-output {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	font-size: 14px;
+	line-height: 1.5;
+	margin-top: 2px;
+	transition: .3s;
+	opacity: 0;
+	visibility: hidden;
+
+	&.active {
+		opacity: 1;
+		visibility: visible;
+	}
+	&.error {
+		color: $brand-danger;
+	}
+	&.success {
+		color: $brand-success;
+	}
+}
+
+// Radio and Checkbox Custom
+// -------------------------
+
+// Base Styles
+//
+.radio .radio-custom,
+.radio-inline .radio-custom,
+.checkbox .checkbox-custom,
+.checkbox-inline .checkbox-custom {
+	opacity: 0;
+
+	&, &-dummy {
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		margin-left: -20px;
+		margin-top: 0;
+		outline: none;
+		cursor: pointer;
+	}
+
+	&-dummy {
+		pointer-events: none;
+		background: $gray-lighter;
+		box-shadow: none;
+
+		&:after {
+			position: absolute;
+			opacity: 0;
+		}
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.radio-custom:checked + .radio-custom-dummy:after,
+.checkbox-custom:checked + .checkbox-custom-dummy:after {
+	opacity: 1;
+}
+
+// Custom Radio Styles
+//
+.radio,
+.radio-inline {
+	padding-left: 35px;
+
+	.radio-custom-dummy {
+		width: 14px;
+		height: 14px;
+		margin-top: 3px;
+		margin-left: -35px;
+		border-radius: 50%;
+		background: $white;
+		border: 3px solid #b1b1b1;
+
+		&:after {
+			content: '';
+			top: -1px;
+			right: -1px;
+			bottom: -1px;
+			left: -1px;
+			background: #b1b1b1;
+			border-radius: 50%;
+		}
+	}
+}
+
+// Custom Checkbox Styles
+//
+.checkbox,
+.checkbox-inline {
+	padding-left: 30px;
+	.checkbox-custom-dummy {
+		pointer-events: none;
+		border-radius: 50%;
+		margin-left: 0;
+		left: 0;
+
+		&:after {
+			content: '\f00c';
+			font-family: 'FontAwesome';
+			font-size: 10px;
+			line-height: 10px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			color: $primary;
+			@include transform(translate(-50%, -50%));
+		}
+	}
+}
+
+.form-wrap-border-none {
+	margin-left: -10px;
+
+	.form-input {
+		height: auto;
+		padding: 0;
+		border: none;
+	}
+
+	.stepper {
+		margin-left: 0;
+	}
+
+	.stepper input[type="number"] {
+		padding: 0;
+	}
+}
+
+.form-input {
+	display: block;
+	width: 100%;
+	height: $input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+	padding: $padding-base-vertical $padding-base-horizontal;
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+	color: $input-color;
+	background-color: $input-bg;
+	background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+	border: 1px solid $input-border;
+	border-radius: $input-border-radius; // Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
+	@include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
+	@include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
+
+	// Customize the `:focus` state to imitate native WebKit styles.
+	@include form-control-focus;
+
+	// Placeholder
+	@include placeholder;
+
+	// Unstyle the caret on `<select>`s in IE10+.
+	&::-ms-expand {
+		border: 0;
+		background-color: transparent;
+	}
+
+	// Disabled and read-only inputs
+	//
+	// HTML5 says that controls under a fieldset > legend:first-child won't be
+	// disabled if the fieldset is disabled. Due to implementation difficulty, we
+	// don't honor that edge case; we style them as disabled anyway.
+	&[disabled],
+	&[readonly],
+	fieldset[disabled] & {
+		background-color: $input-bg-disabled;
+		opacity: 1; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
+	}
+
+	&[disabled],
+	fieldset[disabled] & {
+		cursor: $cursor-disabled;
+	}
+
+	// [converter] extracted textarea& to textarea.form-control
+}

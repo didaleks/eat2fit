@@ -1,0 +1,158 @@
+//
+// Boxes
+// --------------------------------------------------
+
+.box-xs {
+	padding: 33px 20px;
+}
+
+.box-sm {
+	padding: 40px 30px;
+
+	@include media-breakpoint-up(md) {
+		padding: 42px 66px 45px;
+	}
+}
+
+.box-xxs {
+	padding: 16px 57px 25px;
+
+	&.box-pay {
+		.form-wrap {
+			margin-left: -37px;
+		}
+	}
+}
+
+// Box Offers
+// --------------------------------------------------
+
+.box-offer {
+	position: relative;
+	min-height: 460px;
+	z-index: 1;
+
+	.box-offer-caption {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 100%;
+		padding: 20px;
+		transform: translate(-50%, -50%);
+	}
+
+	@include media-breakpoint-up(xxl) {
+		.box-offer-caption {
+			padding-left: 120px;
+			padding-right: 120px;
+		}
+	}
+}
+
+.box-offer-variant-2 {
+	//@media (min-width: $screen-md-min) and (max-width: $screen-lg-min - 1) {
+	//  h1 {
+	//    font-size: 45px;
+	//  }
+	//}
+}
+
+// Box Hover
+// --------------------------------------------------
+
+.box-hover {
+	@include media-breakpoint-down(lg) {
+		padding: 28px;
+	}
+
+	@include media-breakpoint-up(xl) {
+		overflow: hidden;
+
+		&, &-hidden, &-hidden p, &-inner {
+			transition: .4s all ease;
+		}
+
+		&-hidden {
+			position: relative;
+			will-change: transform;
+
+			p {
+				&:first-child {
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					opacity: 0;
+					visibility: hidden;
+					transform: translateY(90%);
+				}
+
+				&:last-child {
+					transform: translateY(-30%);
+				}
+			}
+		}
+
+		&:hover {
+			box-shadow: 0 3px 11px 0 rgba($black, .04);
+
+			.box-hover-inner {
+				transform: translateY(-16%);
+			}
+
+			.box-hover-hidden {
+				p {
+					&:first-child {
+						opacity: 1;
+						visibility: visible;
+						transform: translateY(80%);
+						transition-delay: .3s;
+					}
+
+					&:last-child {
+						opacity: 0;
+						visibility: hidden;
+						transform: translateY(0) scale(0);
+					}
+				}
+			}
+		}
+	}
+}
+
+// Box Comment
+// --------------------------------------------------
+
+.box-comment {
+	.unit-body {
+		width: 100%;
+	}
+
+	.box-comment-body {
+		padding: 20px 30px;
+		border: 1px solid $gray-lighter;
+	}
+
+	@include media-breakpoint-up(sm) {
+		.box-comment-body {
+			position: relative;
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: -11px;
+				width: 12px;
+				height: 17px;
+				background-image: url("../images/icon-01-12x17.jpg");
+				transform: translateY(-50%);
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+		.box-comment-body {
+			&:before {
+				margin-top: -5px;
+			}
+		}
+	}
+}

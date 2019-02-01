@@ -1,0 +1,70 @@
+@mixin center-block() {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@mixin img-responsive($display: block) {
+	display: $display;
+	max-width: 100%; // Part 1: Set a maximum relative to the parent
+	height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
+}
+
+// Responsive images (ensure images don't scale beyond their parents)
+.img-responsive {
+	@include img-responsive;
+}
+
+.center-block {
+	@include center-block;
+}
+
+// Visibility Utilities
+
+@mixin make-visible( $type: block, $resolution: null) {
+	@if ($resolution == null) {
+		$resolution: ''
+	} @else {
+		$resolution: str_insert($resolution, '-', str_length($resolution) + 1);
+	}
+
+	@if ($type == flex) {
+		.reveal-#{$resolution}#{$type} {
+			display: -ms-flexbox !important;
+			display: -webkit-flex !important;
+			display: flex !important;
+		}
+	} @else {
+		.reveal-#{$resolution}#{$type} {
+			display: $type !important;
+		}
+	}
+}
+
+@mixin make-hidden($resolution: null) {
+	@if ($resolution == null) {
+		$resolution: ''
+	} @else {
+		$resolution: str_insert($resolution, '-', 0);
+	}
+
+	.veil#{$resolution} {
+		display: none !important;
+	}
+}
+
+.tablet {
+	.veil-tablet {
+		display: none !important;
+	}
+
+	.reveal-tablet {
+		&-block {
+			display: block !important;
+		}
+
+		&-inline-block {
+			display: inline-block !important;
+		}
+	}
+}

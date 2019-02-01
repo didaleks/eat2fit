@@ -1,0 +1,123 @@
+//
+// Products
+// --------------------------------------------------
+
+
+.product-item {
+  position: relative;
+  padding: 26px 15px 0;
+  border: 1px solid $gray-lighter;
+
+  .btn {
+    margin-bottom: -21px;
+  }
+
+  .product-title a {
+    transition: .3s all ease;
+  }
+}
+
+
+// Single Product
+// --------------------------------------------------
+
+.product-image {
+  &-img-wrap {
+    position: relative;
+    overflow: hidden;
+    padding: 42px 30px;
+    border: 1px solid $gray-lighter;
+
+    img {
+      will-change: transform;
+    }
+
+    .product-label {
+      position: absolute;
+      top: -15px;
+      right: -63px;
+      padding: 33px 63px 10px;
+      will-change: content;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.product-single {
+  .product-thumbnails {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+    li {
+      position: relative;
+      width: 50px;
+      height: 50px;
+      display: inline-block;
+      border: 1px solid $gray-lighter;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &, img {
+        transition: .3s all ease;
+      }
+
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 80%;
+        opacity: .6;
+        will-change: opacity;
+        transform: translate(-50%,-50%);
+      }
+
+      &.active {
+        img {
+          opacity: 1;
+        }
+      }
+
+      @include media-breakpoint-up(sm) {
+        width: 62px;
+        height: 62px;
+
+        img {
+          width: auto;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    .product-btn, .product-number {
+      display: inline-block;
+    }
+
+    .product-btn {
+      margin-left: 20px;
+    }
+  }
+}
+
+.product, .product:before,
+.product-thumbnails, .product-image-area {
+  transition: .3s all ease;
+}
+
+.zoomWindow {
+  background: $gray-lighter;
+}
+
+.animateImageIn {
+  opacity: 1;
+  visibility: visible;
+}
+
+.animateImageOut {
+  opacity: 0;
+  visibility: hidden;
+}

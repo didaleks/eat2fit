@@ -1,0 +1,136 @@
+//
+// Icons
+// --------------------------------------------------
+
+// Base styles
+// --------------------------------------------------
+
+.page .icon {
+	font-size: 36px;
+	display: inline-block;
+
+	&.icon-circle {
+		width: 55px;
+		height: 55px;
+		line-height: 55px;
+	}
+
+	&:before {
+		position: relative;
+		display: inline-block;
+		font-weight: 400;
+		font-style: normal;
+		speak: none;
+		text-transform: none;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+}
+
+// Alternate icons
+// --------------------------------------------------
+
+.page {
+	.icon-primary {
+		color: $white;
+		background: $primary;
+	}
+
+	.icon-white {
+		color: $primary;
+		background: $white;
+	}
+
+	.icon-gray-lighter {
+		color: $primary;
+		background: $gray-lighter;
+	}
+
+	.icon-transparent {
+		color: $primary;
+		background: transparent;
+		border-color: rgba($white, .2);
+	}
+
+	.icon-white-transparent {
+		color: $white;
+		background: transparent;
+		border-color: rgba($white, .2);
+	}
+
+	a.icon-gray-lighter, a.icon-white,
+	a.icon-transparent, a.icon-white-transparent {
+		transition: .3s all ease;
+
+		&:hover {
+			color: $white;
+			background: $primary;
+		}
+	}
+}
+
+// Icon Sizes
+// --------------------------------------------------
+
+.page {
+	.icon-xxs {
+		font-size: 14px;
+
+		&.icon-circle {
+			width: 34px;
+			height: 34px;
+			line-height: 32px;
+		}
+	}
+
+	.icon-xs {
+		font-size: 18px;
+
+		&.icon-circle {
+			width: 28px;
+			height: 28px;
+			line-height: 28px;
+		}
+	}
+
+	.icon-sm {
+		font-size: 24px;
+
+		&.icon-circle {
+			width: 36px;
+			height: 36px;
+			line-height: 26px;
+		}
+	}
+
+	.icon-lg {
+		font-size: 48px;
+
+		&.icon-circle {
+			width: 60px;
+			height: 60px;
+			line-height: 60px;
+		}
+	}
+
+	.icon-xl {
+		font-size: 60px;
+
+		&.icon-circle {
+			width: 85px;
+			height: 85px;
+			line-height: 81px;
+		}
+	}
+}
+
+// Icon Shapes
+// --------------------------------------------------
+
+.icon-circle {
+	border-radius: 50%;
+}
+
+.icon-bordered {
+	border: 1px solid;
+}

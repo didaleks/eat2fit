@@ -1,0 +1,104 @@
+//
+// Offsets
+// --------------------------------------------------
+
+
+// Insets
+// -------------------------
+
+$insets: (0, 4px, 7px, 10px, 15px, 20px, 25px, 35px, 40px, 50px, 90px, 104px, 125px);
+
+.page {
+  @include indent-responsive(inset, left, padding-left, $medias, $insets);
+  @include indent-responsive(inset, right, padding-right, $medias, $insets);
+}
+
+50
+// Base Offsets
+// -------------------------
+
+p + p {
+  margin-top: 15px;
+}
+
+h1 + p {
+  margin-top: 16px;
+}
+
+h2 +  p,
+h3 + p,
+h5 + p {
+  margin-top: 24px;
+}
+
+h4 + p {
+  margin-top: 26px;
+}
+
+h6 + p {
+  margin-top: 11px;
+}
+
+h1 + h2,
+h5 + h6 {
+  margin-top: 11px;
+}
+
+h2 + h3,
+h3 + h4,
+h4 + h5 {
+  margin-top: 8px;
+}
+
+img + p {
+  margin-top: 14px;
+}
+
+@include media-breakpoint-up(xl) {
+  p + p {
+    margin-top: 20px;
+  }
+
+  h1 + p {
+    margin-top: 29px;
+  }
+
+  h2 +  p,
+  h3 + p,
+  h5 + p {
+    margin-top: 34px;
+  }
+
+  h4 + p {
+    margin-top: 39px;
+  }
+
+  h6 + p {
+    margin-top: 22px;
+  }
+
+  h1 + h2,
+  h5 + h6 {
+    margin-top: 22px;
+  }
+
+  h2 + h3,
+  h3 + h4,
+  h4 + h5 {
+    margin-top: 12px;
+  }
+
+  img + p {
+    margin-top: 25px;
+  }
+}
+
+
+// Responsive
+// -------------------------
+
+$offsets: (0, 5px, 10px, 13px, 20px, 25px, 30px, 34px, 40px, 45px, 50px, 55px, 60px, 65px, 70px, 75px, 85px, 90px, 95px, 100px, 115px, 140px);
+
+html .page{
+  @include indent-responsive(offset, top, margin-top, $medias, $offsets);
+}

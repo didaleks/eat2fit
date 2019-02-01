@@ -1,0 +1,41 @@
+//
+// Dividers
+// --------------------------------------------------
+
+.hr-left-0 {
+  margin-left: 0;
+}
+
+.hr-right-0 {
+  margin-right: 0;
+}
+
+// Text Both Lines
+// --------------------------------------------------
+
+.text-both-lines {
+  position: relative;
+  display: inline-block;
+  padding-right: 40px;
+  padding-left: 40px;
+
+
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 1000%;
+    height: 1px;
+    margin-top: 1px;
+    background: $gray-lighter;
+    transform: translateY(-50%);
+  }
+
+  &:before {
+    right: 100%;
+  }
+
+  &:after {
+    left: 100%;
+  }
+}

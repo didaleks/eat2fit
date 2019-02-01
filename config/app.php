@@ -65,7 +65,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Europe/Moscow',
 
     /*
     |--------------------------------------------------------------------------
@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'ru',
 
     /*
     |--------------------------------------------------------------------------
@@ -159,10 +159,17 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
+        Gverschuur\RobotsTxt\RobotsTxtProvider::class,
 
         /*
          * Package Service Providers...
          */
+        LaravelAdmin\Providers\AdminServiceProvider::class,
+        LaravelAdmin\Providers\EventServiceProvider::class,
+        LaravelAdmin\Providers\BladeServiceProvider::class,
+        morphos\MorphosBladeProvider::class,
 
         /*
          * Application Service Providers...
@@ -221,6 +228,17 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
+        'Diet' => \App\Models\Diet::class,
+        'Dish' => \App\Models\Dish::class,
+        'Day' => \App\Models\Day::class,
+        'Eating' => \App\Models\Eating::class,
+        'EatingType' => \App\Models\EatingType::class,
+        'Cart' => \App\Models\Cart::class,
+        'Page' => \App\Models\Page::class,
+        'Extra' => \App\Models\Extra::class,
+        'Resizer' => Intervention\Image\Facades\Image::class
 
     ],
 

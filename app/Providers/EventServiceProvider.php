@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\Facades\Event;
+use App\Models\Diet;
+use App\Models\Order;
+use App\Models\Page;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -20,6 +22,22 @@ class EventServiceProvider extends ServiceProvider
         ],
     ];
 
+    public static function setUrl($model)
+    {
+        $newUrl = $model->fullUrl();
+        if ($newUrl != $model->url) {
+            $model->url = $newUrl;
+        }
+    }
+
+    public static function setChildrensUrl($model)
+    {
+        if (count($model->childrens))
+            foreach ($model->childrens as $children)
+                if ($children->url != $children->fullUrl())
+                    $children->save();
+    }
+
     /**
      * Register any events for your application.
      *
@@ -29,6 +47,25 @@ class EventServiceProvider extends ServiceProvider
     {
         parent::boot();
 
-        //
+        Diet::saving(function ($model) {
+            self::setUrl($model);
+        });
+
+        Diet::saved(function ($model) {
+            $model->syncCategories();
+        });
+
+        Page::saving(function ($model) {
+            self::setUrl($model);
+        });
+
+        Page::saved(function ($model) {
+            self::setChildrensUrl($model);
+        });
+
+        Order::saved(function ($model) {
+            $model->sendMailAdmin($model);
+            $model->sendMailUser($model);
+        });
     }
 }

@@ -1,0 +1,39 @@
+.cart {
+  label, .form-section-heading {
+    margin-top: 20px;
+  }
+  .cart__message, .cart__message-success {
+    display: none;
+  }
+  form {
+    .form-input[readonly] {
+      background-color: inherit;
+    }
+  }
+  .form-section-heading {
+    font-size: 18px;
+  }
+
+  &.empty {
+    .cart__message {
+      display: block;
+    }
+    .cart-content {
+      display: none;
+    }
+  }
+  &.success {
+    .cart__message-success {
+      display: block;
+    }
+    .cart-content {
+      display: none;
+    }
+  }
+  .form-input[readonly] {
+    background-color: $white;
+  }
+  .form-validation {
+    top: 39px;
+  }
+}
