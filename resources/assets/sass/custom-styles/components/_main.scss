@@ -15,4 +15,12 @@
       align-items: center;
     }
   }
+  &__planes {
+    .main__plane {
+      border-left: 5px solid #fff;
+    }
+    .main__plane:first-child {
+      border-left: 0px;
+    }
+  }
 }

@@ -152,11 +152,11 @@
     </section>
 
     {{-- Блок «Блок выберите план» --}}
-    <section class="section-30">
+    <section class="section-30 main__planes">
       <h2 class="pb-4">Рационы питания</h2>
       <div class="row no-gutters justify-content-sm-center" style="font-size:0;">
         @foreach($model->fields['planes'] as $item)
-          <div class="col-sm-10 col-md-8 col-lg-4
+          <div class="main__plane col-sm-10 col-md-8 col-lg-4
               offset-xs-top-30 offset-md-top-0
               section-relative bg-image
               bg-image-overlay bg-image-hover" style="background-image: url({{asset(image($item['image'])->getResized(600,600))}})">
