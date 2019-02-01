@@ -65,6 +65,18 @@ return [
 			 * Temporary directory used during deployments to store data.
 			 */
 			'tmp_dir' => '/tmp',
-		]
+		],
+        'production' => [
+            'server' => 'app@185.43.7.2',
+            'deploy_to' => '/home/app/production',
+            'repo_url' => 'git@gitlab.molinos.ru:support/eat2fit.git',
+            'repo_branch' => 'master',
+            'commit_hash' => 'HEAD',
+            'repo_tree' => '',
+            'linked_files' => ['.env'],
+            'linked_dirs' => ['storage/logs', 'storage/app/public'],
+            'keep_releases' => 5,
+            'tmp_dir' => '/tmp',
+        ],
 	],
 ];

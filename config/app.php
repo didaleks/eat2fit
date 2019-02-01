@@ -161,6 +161,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+        Gverschuur\RobotsTxt\RobotsTxtProvider::class,
 
         /*
          * Package Service Providers...
