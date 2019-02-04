@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="{{ app()->getLocale() }}">
 <head>
+    @if(config('app.env') == 'production')
+        {!! $settings['script'] !!}
+    @endif
     <title>{{$model->meta_title ?? $model->name}}</title>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport"
@@ -9,9 +12,6 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta charset="utf-8">
     @include('blocks.assets')
-    @if(config('app.env') == 'production')
-    {!! $settings['script'] !!}
-    @endif
 </head>
 <body>
 <!-- Page-->
