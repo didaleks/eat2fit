@@ -4,6 +4,9 @@ php artisan tinker </br>
 
 $diets = factory(\App\Models\Diet::class, 1)->create();
 
+To run tests:
+
+`php artisan dusk`
 
 **Deploy** 
 

@@ -17,6 +17,7 @@ class Diet extends Page
         'price',
         'test_price',
         'slug',
+        'sort',
         'calories',
         'content',
         'fields',
