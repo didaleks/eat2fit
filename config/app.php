@@ -162,6 +162,7 @@ return [
         Barryvdh\Debugbar\ServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Gverschuur\RobotsTxt\RobotsTxtProvider::class,
+        Laravel\Dusk\DuskServiceProvider::class,
 
         /*
          * Package Service Providers...
