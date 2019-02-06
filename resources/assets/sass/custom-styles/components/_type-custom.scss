@@ -5,9 +5,38 @@
 // Page
 // -------------------------
 
+@font-face {
+	font-family: Iskra;
+	src: url('../../fonts/Iskra/IskraCYR-Regular.otf') format("opentype");
+}
+
+@font-face {
+	font-family: Iskra;
+	src: url('../../fonts/Iskra/IskraCYR-Bold.otf') format("opentype");
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: Iskra;
+	src: url('../../fonts/Iskra/IskraCYR-Light.otf') format("opentype");
+	font-weight: 200;
+}
+
+@font-face {
+	font-family: Iskra;
+	src: url('../../fonts/Iskra/IskraCYR-Thin.otf') format("opentype");
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: Iskra;
+	src: url('../../fonts/Iskra/IskraCYR-Medium.otf') format("opentype");
+	font-weight: 400;
+}
+
 // Body
 body {
-	font-family: $font-family-base;
+	font-family: Iskra ,$font-family-base;
 	font-size: $font-size-base;
 	line-height: $line-height-base;
 	font-weight: $font-weight-base;
