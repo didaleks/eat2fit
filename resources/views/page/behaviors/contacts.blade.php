@@ -68,7 +68,7 @@
         </div>
       </div>
     </section>
-    <section class="section-45">
+    <section class="section-top-45">
       <div class="yandex-map">
         <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab99875a5c0c0ca9acb1acbb388b7d211fd647b6823cc62434e26db25caea6c57&amp;source=constructor" width="100%" height="411" frameborder="0"></iframe>
       </div>
