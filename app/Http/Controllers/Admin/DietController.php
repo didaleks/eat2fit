@@ -12,6 +12,15 @@ class DietController extends \LaravelAdmin\Controllers\BaseAdminController
 {
     use ControllerValidateMethods;
 
+    public function index()
+    {
+        return view()->first(["admin.{$this->name}.index", "admin::{$this->name}.index", 'admin::base.index'], [
+            'name' => $this->name,
+            'action' => $this->action,
+            'models' => $this->model::sorted()->paginate(50)
+        ]);
+    }
+
     public function edit($id = null)
     {
         return view()->first(["admin.{$this->name}.edit", "admin::{$this->name}.edit", 'admin::base.edit'], [

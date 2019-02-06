@@ -38,14 +38,13 @@
             <div class="col-md-12 col-lg-8 offset-top-40 offset-md-top-0">
               <form class="text-left offset-top-20 order-form" method="post" action="{{ route('order.store') }}">
                 @csrf
-                {{--todo убрать дефолтные значения из полей --}}
                 <div class="row justify-content-sm-left">
                   <div class="col-sm-12 inset-sm-right-15 inset-sm-left-15">
                     <div class="form-wrap">
                       <label class="form-label-outside required"
                              for="contact-us-name">ФИО:</label>
                       <input class="form-input" id="contact-us-name" type="text" name="name"
-                             data-constraints="@Required" value="wwwwwww">
+                             data-constraints="@Required">
                     </div>
                   </div>
                   <div class="col-sm-6 offset-top-10 inset-sm-right-7">
@@ -53,7 +52,7 @@
                       <label class="form-label-outside required" for="contact-us-phone">Телефон:</label>
                       <input class="form-input" id="contact-us-phone" type="text" name="phone"
                              placeholder="Телефон"
-                             data-constraints="@Required" value="89053557777">
+                             data-constraints="@Required">
                     </div>
                   </div>
                   <div class="col-sm-6 offset-top-10 inset-sm-left-7">
@@ -61,7 +60,7 @@
                       <label class="form-label-outside required" for="contact-us-email">E-mail:</label>
                       <input placeholder="E-mail" class="form-input" id="contact-us-email-cart"
                              type="email" name="email"
-                             data-constraints="@Required @Email" value="ad@molinos.ru">
+                             data-constraints="@Required @Email">
 
                     </div>
                   </div>
@@ -74,7 +73,7 @@
                       <input class="form-input" id="contact-us-street" type="text" name="street"
                              value=""
                              placeholder=""
-                             data-constraints="@Required" value="2цццц2">
+                             data-constraints="@Required">
                     </div>
                   </div>
                   <div class="col-sm-4 offset-top-10 inset-sm-left-7">
@@ -82,8 +81,7 @@
                       <label class="form-label-outside required" for="contact-us-home">Дом:</label>
                       <input placeholder="" class="form-input" id="contact-us-home"
                              type="text" name="home"
-                             data-constraints="@Required"
-                             value="22">
+                             data-constraints="@Required">
 
                     </div>
                   </div>
@@ -93,7 +91,7 @@
                       <input placeholder="" class="form-input" id="contact-us-flat"
                              type="text" name="flat"
                              data-constraints="@Required"
-                             value="22">
+                             value="">
 
                     </div>
                   </div>
@@ -144,19 +142,10 @@
                     </div>
                   </div>
 
-
                   <div class="col-md-4 col-sm-6 ml-3 box-xxs box-pay text-left offset-top-20 active">
                     <div class="form-wrap">
                       <label class="radio-inline font-weight-bold text-gray">
-                        <input name="payment_type" value="personally" type="radio" checked>При получении
-                      </label>
-                      <p class="offset-top-20">Оплата картой или наличными при получении</p>
-                    </div>
-                  </div>
-                  <div class="col-md-4 col-sm-6 ml-3 ml-md-0 d-inline-block box-xxs box-pay text-left offset-sm-top-20">
-                    <div class="form-wrap">
-                      <label class="radio-inline font-weight-bold text-gray">
-                        <input name="payment_type" value="online" type="radio">Онлайн-платеж
+                        <input name="payment_type" value="online" type="radio" checked>Онлайн-платеж
                       </label>
                       <p class="offset-top-20">VISA/MasterCard/Мир</p>
                     </div>

@@ -54,7 +54,7 @@ class BankController extends Controller
     function pay()
     {
         define('USERNAME', 'eat2fit-api');
-        define('PASSWORD', 'eat2fit');
+        define('PASSWORD', 'Password*19');
         define('GATEWAY_URL', 'https://web.rbsuat.com/ab/rest/');
         define('RETURN_URL', config('app.url').'/success');
         define('FAIL_URL', config('app.url').'/fail'); //Пока не используется

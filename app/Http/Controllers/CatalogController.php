@@ -12,7 +12,7 @@ class CatalogController extends Controller
 {
     public function index(Request $request)
     {
-        $models = Diet::published()->latest()->with('categories')->get();
+        $models = Diet::published()->sorted()->with('categories')->get();
         $categories = Category::all();
         if (!$models)
             abort(404, 'Страница не найдена');

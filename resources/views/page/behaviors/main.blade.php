@@ -62,13 +62,12 @@
               <h2>EAT2FIT – Ваш личный диетолог и шеф — повар!</h2>
               <p class="offset-lg-top-35">Eat2Fit — полноценные сбалансированные программы питания с доставкой на дом, разработанный диетологами и шеф-поварами. Но это не просто здоровая еда, это продукт, меняющий жизнь!</p>
               <ul class="list list-marked font-weight-bold text-primary text-left offset-lg-top-30">
-                <li>самые свежие продукты премиального качества</li>
                 <li>6 приемов пищи в день</li>
                 <li>3 в 1 - правильное питание, удобный сервис, медицинское сопровождение</li>
                 <li>10 дней - длительность курса каждой программы</li>
                 <li>гарантированный результат</li>
                 <li>более 30 вариантов меню</li>
-                <li>диагностика состава тела, две консультации диетолога</li>
+                <li>индивидуальное сопровождение диетолога</li>
                 <li>доставка с интервалом в 60 минут</li>
               </ul>
             </div>
@@ -190,9 +189,9 @@
             <div class="owl-carousel" data-autoplay="true" data-items="1" data-stage-padding="15" data-loop="true" data-margin="30" data-mouse-drag="false" data-dots-custom=".owl-custom-pagination" data-nav="false">
               <div class="owl-item">
                 <div class="row justify-content-sm-center">
-                  <div class="col-sm-6"><img class="img-responsive center-block" src="{{asset('images/main/nazarenko.jpg')}}" width="269" height="278" alt=""></div>
+                  <div class="col-sm-6"><img class="img-responsive center-block" src="{{asset('images/main/voronina.jpg')}}" width="269" height="278" alt=""></div>
                   <div class="col-sm-6 pt-5 pt-lg-0">
-                    <p class="text-big font-weight-bold text-primary">Профессор кафедры гастроэнтерологии и диетологии СЗГМУ им. Мечникова, Д.М.Н.</p>
+                    <p class="text-big font-weight-bold text-primary">Врач-диетолог компании EAT2FIT</p>
 
                     <blockquote class="quote quote-classic text-left offset-top-20 offset-md-top-25">
                       <p class="text-gray">
@@ -200,7 +199,7 @@
                       </p>
                       <div class="offset-top-20">
                         <p class="font-weight-bold"><span class="link-decoration-none text-hover-primary text-gray">
-                            Людмила Ивановна Назаренко</span></p>
+                            Елена Воронина</span></p>
                       </div>
                       <div class="offset-top-0">
                         <p class="text-gray">(Врач-диетолог)</p>
@@ -244,7 +243,7 @@
 
     {{-- Блок "Призыв к действию" --}}
     <section class="section section-height-800 parallax-container context-dark"
-             data-parallax-img="{{asset('images/main/call_bg-blue.jpg')}}">
+             data-parallax-img="{{asset('images/backgrounds/bg-white-fork.jpg')}}">
       <div class="parallax-content bg-overlay-black">
         <div class="container section-95">
           <div class="jumbotron-custom jumbotron-custom-variant-3">
