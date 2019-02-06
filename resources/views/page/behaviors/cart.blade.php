@@ -144,19 +144,10 @@
                     </div>
                   </div>
 
-
                   <div class="col-md-4 col-sm-6 ml-3 box-xxs box-pay text-left offset-top-20 active">
                     <div class="form-wrap">
                       <label class="radio-inline font-weight-bold text-gray">
-                        <input name="payment_type" value="personally" type="radio" checked>При получении
-                      </label>
-                      <p class="offset-top-20">Оплата картой или наличными при получении</p>
-                    </div>
-                  </div>
-                  <div class="col-md-4 col-sm-6 ml-3 ml-md-0 d-inline-block box-xxs box-pay text-left offset-sm-top-20">
-                    <div class="form-wrap">
-                      <label class="radio-inline font-weight-bold text-gray">
-                        <input name="payment_type" value="online" type="radio">Онлайн-платеж
+                        <input name="payment_type" value="online" type="radio" checked>Онлайн-платеж
                       </label>
                       <p class="offset-top-20">VISA/MasterCard/Мир</p>
                     </div>
