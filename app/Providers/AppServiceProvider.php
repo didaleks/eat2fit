@@ -3,7 +3,6 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Laravel\Dusk\DuskServiceProvider;// Importing DuskServiceProvider class
 use Illuminate\Support\Facades\Blade;
 use App\Models\Menu;
 use App\Models\Page;
@@ -50,9 +49,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        if ($this->app->environment('local', 'testing')) {
-            $this->app->register(DuskServiceProvider::class);
-        }
+//        if ($this->app->environment('local', 'testing')) {
+//            $this->app->register(DuskServiceProvider::class);
+//        }
     }
 
     public function getInsta()
