@@ -38,7 +38,6 @@
             <div class="col-md-12 col-lg-8 offset-top-40 offset-md-top-0">
               <form class="text-left offset-top-20 order-form" method="post" action="{{ route('order.store') }}">
                 @csrf
-                {{--todo убрать дефолтные значения из полей --}}
                 <div class="row justify-content-sm-left">
                   <div class="col-sm-12 inset-sm-right-15 inset-sm-left-15">
                     <div class="form-wrap">
@@ -92,7 +91,7 @@
                       <input placeholder="" class="form-input" id="contact-us-flat"
                              type="text" name="flat"
                              data-constraints="@Required"
-                             value="22">
+                             value="">
 
                     </div>
                   </div>

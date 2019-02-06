@@ -3,7 +3,6 @@
       data-form-type="contact" method="post" action="{{ route('feedback.store') }}">
     @csrf
     <input type="hidden" name="type" value="{{$type}}">
-    {{--todo убрать дефолтные значения из полей --}}
     <div class="row justify-content-sm-center">
         <div class="col-sm-12 inset-sm-right-15 inset-sm-left-15">
             <div class="form-wrap">
