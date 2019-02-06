@@ -2316,7 +2316,7 @@
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
             success: function (response) {
-                // remove_liked(); todo очищать корзину
+				cartClear();
 				cartTargetSend();
                 let cart = JSON.parse(JSON.parse(response.cart)),
 					amount = parseFloat(cart.totalFullPrice + '00'),

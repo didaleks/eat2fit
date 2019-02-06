@@ -45,7 +45,7 @@
                       <label class="form-label-outside required"
                              for="contact-us-name">ФИО:</label>
                       <input class="form-input" id="contact-us-name" type="text" name="name"
-                             data-constraints="@Required" value="wwwwwww">
+                             data-constraints="@Required">
                     </div>
                   </div>
                   <div class="col-sm-6 offset-top-10 inset-sm-right-7">
@@ -53,7 +53,7 @@
                       <label class="form-label-outside required" for="contact-us-phone">Телефон:</label>
                       <input class="form-input" id="contact-us-phone" type="text" name="phone"
                              placeholder="Телефон"
-                             data-constraints="@Required" value="89053557777">
+                             data-constraints="@Required">
                     </div>
                   </div>
                   <div class="col-sm-6 offset-top-10 inset-sm-left-7">
@@ -61,7 +61,7 @@
                       <label class="form-label-outside required" for="contact-us-email">E-mail:</label>
                       <input placeholder="E-mail" class="form-input" id="contact-us-email-cart"
                              type="email" name="email"
-                             data-constraints="@Required @Email" value="ad@molinos.ru">
+                             data-constraints="@Required @Email">
 
                     </div>
                   </div>
@@ -74,7 +74,7 @@
                       <input class="form-input" id="contact-us-street" type="text" name="street"
                              value=""
                              placeholder=""
-                             data-constraints="@Required" value="2цццц2">
+                             data-constraints="@Required">
                     </div>
                   </div>
                   <div class="col-sm-4 offset-top-10 inset-sm-left-7">
@@ -82,8 +82,7 @@
                       <label class="form-label-outside required" for="contact-us-home">Дом:</label>
                       <input placeholder="" class="form-input" id="contact-us-home"
                              type="text" name="home"
-                             data-constraints="@Required"
-                             value="22">
+                             data-constraints="@Required">
 
                     </div>
                   </div>
