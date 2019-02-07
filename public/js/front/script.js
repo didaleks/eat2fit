@@ -2158,19 +2158,15 @@
             price = tableItem.data('price'),
 			testPrice = tableItem.data('test-price')
 
-		if(qty == 2) {
-			$(this).val(7)
-			qty = 7
-			descBlock.addClass('d-none')
-			priceBlock.text(price)
-		}
-
-		if(qty == 6) {
-			$(this).val(1)
-			qty = 1
+		if (qty == 1) {
 			descBlock.removeClass('d-none')
 			priceBlock.text(testPrice)
 			price = testPrice
+		}
+
+		if (qty == 2) {
+			descBlock.addClass('d-none')
+			priceBlock.text(price)
 		}
 
 		summBlock.text(qty * price);
