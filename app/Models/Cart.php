@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Session;
 
 class Cart
 {
-    public $items;
+    public $items = [];
     public $extras = [];
     public $totalQt = 0; //Количество дней из всех рационов в корзине (totalQuantity)
     public $totalItemsQt = 0; //Количество рационов в корзине
