@@ -2255,9 +2255,9 @@
 		{
 			ym(29979519, 'reachGoal', 'buy_order_success');
 		}
-		if (typeof ga === "function")
+		if (typeof gtag === "function")
 		{
-			ga('event', '1 - Покупка', {'event_category': 'buy', 'event_action': 'order_success'})
+			gtag('event', '1 - Покупка', {'event_category': 'buy', 'event_action': 'order_success'})
 		}
 	}
 
@@ -2266,9 +2266,9 @@
 		{
 			ym(29979519, 'reachGoal', 'lead_form');
 		}
-		if (typeof ga === "function")
+		if (typeof gtag === "function")
 		{
-			ga('event', '1 - Лид', {'event_category': 'lead', 'event_action': 'form'})
+			gtag('event', '1 - Лид', {'event_category': 'lead', 'event_action': 'form'})
 		}
 	}
 
