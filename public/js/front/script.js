@@ -2298,6 +2298,7 @@
 		if (isValidated(inputs, captcha)) {
 
 			form.addClass('form-in-process');
+			$('main.cart').addClass('success');
 
 			if (output.hasClass("snackbars")) {
 				output.html('<p><span class="icon text-middle fa fa-circle-o-notch fa-spin icon-xxs"></span><span>Отправка</span></p>');
@@ -2324,7 +2325,6 @@
 				form
 					.addClass('success')
 					.removeClass('form-in-process');
-				$('main.cart').addClass('success');
 				setTimeout(
 					openWindowWithPost("/bank/pay", {
 						orderNumber: orderNumber,
