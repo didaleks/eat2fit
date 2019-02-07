@@ -31,7 +31,7 @@
                   <p>Телефоны:</p>
                 </div>
                 <div class="offset-top-5">
-                  <p class="font-weight-bold"><a class="link-decoration-none text-hover-primary text-gray" href="tel:{{ $settings->phone }}">{{ $settings->phone }}</a></p>
+                  <p class="font-weight-bold"><span class="ya-phone"><a class="link-decoration-none text-hover-primary text-gray" href="tel:{{ $settings->phone }}">{{ $settings->phone }}</a></span></p>
                 </div>
                 <div class="offset-top-5">
                   <p class="font-weight-bold"><a class="link-decoration-none text-hover-primary text-gray" href="tel:{{ $settings->phone2 }}">{{ $settings->phone2 }}</a></p>
