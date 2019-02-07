@@ -51,7 +51,7 @@ class Order extends Model
 
     public function getPaymentTypeAttribute($value)
     {
-        switch (intval($value)) {
+        switch ($value) {
             case 'personally':
                 return "Лично курьеру";
                 break;
