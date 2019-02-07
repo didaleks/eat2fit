@@ -194,7 +194,7 @@
     </section>
     <section class="section-45 extras">
       <div class="container">
-        @if(!empty($extras))
+        @if(count($extras))
         <div class="row justify-content-sm-center">
           <div class="col-md-10 col-xl-6">
             <h3 class="offset-top-25">Дополнительные товары</h3>
