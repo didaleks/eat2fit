@@ -2272,6 +2272,55 @@
 		}
 	}
 
+	$('form.pay-form').submit(function (event) {
+		event.preventDefault();
+		let form = $(this),
+			formData = form.serializeArray(),
+			summ = formData.find(item => item.name === 'summ').value,
+			inputs = form.find("[data-constraints]"),
+			output = $("#" + form.attr("data-form-output")),
+			captcha = form.find('.recaptcha');
+
+		output.removeClass("active error success");
+
+		if (isValidated(inputs, captcha)) {
+			form.addClass('form-in-process');
+			$('main.pay').addClass('success');
+			if (output.hasClass("snackbars")) {
+				output.html('<p><span class="icon text-middle fa fa-circle-o-notch fa-spin icon-xxs"></span><span>Отправка</span></p>');
+				output.addClass("active");
+			}
+		} else {
+			return false;
+		}
+
+		$.ajax({
+			url: '/order/store',
+			method: 'POST',
+			dataType: 'json',
+			data: formData,
+			headers: {
+				'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+			},
+			success: function (response) {
+				let amount = parseFloat( summ + '00'),
+					orderNumber = response.order_number;
+				form
+					.addClass('success')
+					.removeClass('form-in-process');
+				setTimeout(
+					openWindowWithPost("/bank/pay", {
+						orderNumber: orderNumber,
+						amount: amount,
+					}, "_self"), 1000);
+			},
+			error: function (response) {
+				console.log('error')
+			}
+		});
+
+	});
+
     $('form.order-form').submit(function (event) {
         event.preventDefault();
         let form = $(this),
@@ -2325,7 +2374,7 @@
 					openWindowWithPost("/bank/pay", {
 						orderNumber: orderNumber,
 						amount: amount,
-					}, "_self"), 5000);
+					}, "_self"), 1000);
             },
 			error: function (response) {
             	console.log('error')

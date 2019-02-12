@@ -21,6 +21,8 @@ class Order extends Model
         'address',
         'shipping_datetime',
         'payment_type',
+        'type',
+        'summ',
         'message',
         'coupon'
     ];
@@ -66,10 +68,16 @@ class Order extends Model
     public function sendMailAdmin($model)
     {
         $data = array('model'=>$model);
+        if ($model->isFreePay()) {
+            $view = 'emails.admin_mail_free_pay';
+            $subject = 'Новая свободная оплата №'. $model->id;
+        } else {
+            $view = 'emails.admin_mail';
+            $subject = 'Новый заказ №'. $model->id .' со страницы Корзина';
+        }
         try {
-            Mail::send('emails.admin_mail', $data, function($message) use ($model) {
+            Mail::send($view, $data, function($message) use ($model, $subject) {
                 $settings = new Settings;
-                $subject = 'Новый заказ №'. $model->id .' со страницы Корзина';
                 $message
                     ->to($settings->admin_email)
                     ->subject($subject);
@@ -89,6 +97,11 @@ class Order extends Model
                 $message->from(config('mail.username'),config('app.name'));
             });
         } catch (\Exception $e) {}
+    }
+
+    public function isFreePay()
+    {
+        return ($this->type == 'free_pay');
     }
 
 
