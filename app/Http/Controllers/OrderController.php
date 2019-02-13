@@ -17,7 +17,14 @@ class OrderController extends Controller
     {
         $data = $request->all();
         $model = new Order();
-        $validator = Validator::make($data, $model->validatorRules($data), $model->validatorMessages($data));
+        $rules = $model->validatorRules($data);
+
+        if (isset($request->type) && $request->type == 'free_pay') {
+            unset($rules['address']);
+            unset($rules['shipping_datetime']);
+        }
+
+        $validator = Validator::make($data, $rules, $model->validatorMessages($data));
         if ($validator->fails()) {
             $errors = [];
             foreach ($validator->errors()->all() as $error)

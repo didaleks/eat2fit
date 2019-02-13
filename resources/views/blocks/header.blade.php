@@ -43,9 +43,9 @@
                             @php($menuItemUrl = (!empty($menuItem->url) ? $menuItem->url : $menuItem->page->url))
                             <li class="{{ (isset($model) && $model->url == $menuItemUrl) ? 'active' : '' }}">
                                 <a href="{{$menuItemUrl}}">{{$menuItem->name}}</a>
-                                @if (count($menuItem->childrens))
+                                @if (count($menuItem->childrensPublished()))
                                     <ul class="rd-navbar-dropdown">
-                                        @foreach($menuItem->childrens as $subMenuItem)
+                                        @foreach($menuItem->childrensPublished() as $subMenuItem)
                                         <li><a href="{{$subMenuItem->page->url}}">{{$subMenuItem->name}}</a></li>
                                         @endforeach
                                     </ul>

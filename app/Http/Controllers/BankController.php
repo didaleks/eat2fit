@@ -53,9 +53,16 @@ class BankController extends Controller
 
     function pay()
     {
-        define('USERNAME', 'EAT2FIT-api');
-        define('PASSWORD', '%PEspnB@wh2p');
-        define('GATEWAY_URL', 'https://pay.alfabank.ru/payment/rest/');
+        $isTest = (config('app.env') != 'production');
+        if ($isTest) {
+            define('USERNAME', 'eat2fit-api');
+            define('PASSWORD', 'eat2fit');
+            define('GATEWAY_URL', 'https://web.rbsuat.com/ab/rest/');
+        } else {
+            define('USERNAME', 'EAT2FIT-api');
+            define('GATEWAY_URL', 'https://pay.alfabank.ru/payment/rest/');
+            define('PASSWORD', '%PEspnB@wh2p');
+        }
         define('RETURN_URL', config('app.url').'/success');
         define('FAIL_URL', config('app.url').'/fail'); //Пока не используется
         /**

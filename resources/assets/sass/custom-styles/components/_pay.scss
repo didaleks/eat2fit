@@ -1,0 +1,33 @@
+.pay {
+  .pay__message, .pay__message-success {
+    display: none;
+  }
+
+  .stepper {
+    max-width: 170px;
+    width: 170px;
+  }
+
+  &.empty {
+    .pay__message {
+      display: block;
+    }
+    .pay-content {
+      display: none;
+    }
+  }
+  &.success {
+    .pay__message-success {
+      display: block;
+    }
+    .pay-content {
+      display: none;
+    }
+  }
+  .form-input[readonly] {
+    background-color: $white;
+  }
+  .form-validation {
+    top: 39px;
+  }
+}

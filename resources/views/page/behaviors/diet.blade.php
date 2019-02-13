@@ -25,7 +25,7 @@
           <div class="group-xs offset-top-10 offset-lg-top-20 product-buttons {{ inCart($model->id)? 'added' : '' }}">
                         <span class="btn btn-primary product-buttons__item product-buttons__cart-full"
                               data-id="{{$model->id}}"
-                              data-days-count="7">Заказать рацион</span>
+                              data-days-count="10">Заказать рацион</span>
             <span class="btn btn-white-outline product-buttons__item product-buttons__cart-test"
                   data-id="{{$model->id}}"
                   data-days-count="1">Пробный день</span>
@@ -218,7 +218,7 @@
             <div class="group-xs offset-top-10 offset-lg-top-20 product-buttons {{ inCart($model->id)? 'added' : '' }}">
               <span class="btn btn-primary product-buttons__item product-buttons__cart-full pl-5 pr-5"
                     data-id="{{$model->id}}"
-                    data-days-count="7">Заказать рацион</span>
+                    data-days-count="10">Заказать рацион</span>
               <span class="btn btn-white-gray-outline product-buttons__item product-buttons__cart-remove pl-5 pr-5"
                     data-id="{{$model->id}}">Убрать из корзины</span>
             </div>
@@ -230,7 +230,7 @@
       <div class="container">
         <div class="row justify-content-sm-center">
           <div class="col-md-10 col-xl-6">
-            <h3 class="offset-top-25">Не можешь определиться с программой, закажи консультацию и диетолога</h3>
+            <h3 class="offset-top-25">Не можешь определиться с программой, закажи консультацию у диетолога</h3>
           </div>
         </div>
         <div class="row justify-content-sm-center">
