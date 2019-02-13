@@ -125,7 +125,7 @@
                                  type="number"
                                  readonly
                                  min="07"
-                                 max="23"
+                                 max="11"
                                  data-check="^\d+$"
                                  value="09">
                           <input class="form-input" id="contact-us-time"
@@ -170,7 +170,7 @@
                         </tr>
                         <tr>
                           <td>Залоговая стоимость сумки:</td>
-                          <td class="font-weight-bold text-gray text-nowrap">{{$cart->shippingPrice}} &#x20bd;</td>
+                          <td class="font-weight-bold text-gray text-nowrap"><span class="total-cart__addiction-summ">{{$cart->shippingPrice}}</span> &#x20bd;</td>
                         </tr>
                         <tr>
                           <td>Стоимость товаров:</td>

@@ -12,7 +12,7 @@ class Cart
     public $totalItemsQt = 0; //Количество рационов в корзине
     public $totalPrice = 0; //Цена за все дни
     public $totalFullPrice = 0; //Цена за все дни + доставка
-    public $shippingPrice = 1000; //Цена доставки
+    public $shippingPrice = 1000; //Залоговая стоимость сумки (не стал переименовывать поле)
 
     public function __construct($oldCart)
     {
@@ -50,6 +50,15 @@ class Cart
         $this->totalQt = $this->getTotalQt();
         $this->totalItemsQt = $this->getTotalItemsQt();
         $this->totalPrice = $this->getTotalPrice();
+    }
+
+    public function isOnlyTestDays() {
+        foreach (array_pluck($this->items, 'qty') as $qty){
+            if (intval($qty) != 1) {
+                return false;
+            }
+        }
+        return true;
     }
 
     public function remove($id)
@@ -104,6 +113,9 @@ class Cart
      */
     public function getFullPrice()
     {
+        if ($this->isOnlyTestDays()) {
+            $this->shippingPrice = 0;
+        };
         return intval($this->getTotalPrice() + $this->shippingPrice);
     }
 

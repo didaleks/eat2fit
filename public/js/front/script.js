@@ -2072,6 +2072,10 @@
 		})
     }
 
+    function getCartAddictionSumm() {
+		return (isOnlyTestDays()) ?  0 : 1000;
+	}
+
     /**
 	 * Возвращает цену товаров
      * @returns {number}
@@ -2090,11 +2094,26 @@
      * @returns {number}
      */
     function getCartFullPrice() {
-        let shipingPrice = 1000,
+        let shipingPrice = getCartAddictionSumm(),
 			summ = getCartTotalSumm();
         summ += shipingPrice;
         return parseInt(summ);
     }
+
+    function isOnlyTestDays() {
+		let cartItems = $('.table-cart__item-diet'),
+			count,
+			isOnlyTestDays;
+		cartItems.each(function () {
+			count = $(this).find('.cart__item_qty').val();
+			if (parseInt(count) != 1) {
+				isOnlyTestDays = false;
+				return;
+			}
+			isOnlyTestDays = true;
+		})
+		return isOnlyTestDays;
+	}
 
     function reloadCartTotalSumm() {
     	let totalSummBlock = $('.total-cart .total-cart__full-summ');
@@ -2106,9 +2125,15 @@
     	totalItemsBlock.text(getCartTotalSumm());
 	}
 
+	function reloadCartAddictionSumm() {
+		let totalAddictionSummBlock = $('.total-cart__addiction-summ');
+		totalAddictionSummBlock.text(getCartAddictionSumm());
+	}
+
 	function reloadTotal()
 	{
         reloadCartItemsSumm();
+		reloadCartAddictionSumm();
         reloadCartTotalSumm();
 	}
 
@@ -2158,17 +2183,20 @@
             price = tableItem.data('price'),
 			testPrice = tableItem.data('test-price')
 
-		if (qty == 1) {
-			descBlock.removeClass('d-none')
-			priceBlock.text(testPrice)
-			price = testPrice
-		}
-
-		if (qty == 2) {
+		if(qty == 2) {
+			$(this).val(10)
+			qty = 10
 			descBlock.addClass('d-none')
 			priceBlock.text(price)
 		}
 
+		if(qty == 9) {
+			$(this).val(1)
+			qty = 1
+			descBlock.removeClass('d-none')
+			priceBlock.text(testPrice)
+			price = testPrice
+		}
 		summBlock.text(qty * price);
         reloadTotal();
 		cartSet(id, qty);
