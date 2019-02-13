@@ -49,6 +49,11 @@ class Menu extends \LaravelAdmin\Models\Menu
         return $fields;
     }
 
+    public function childrensPublished()
+    {
+        return $this->childrens()->where('published', 1)->get();
+    }
+
     public function page()
     {
         return $this->belongsTo('App\Models\Page');
