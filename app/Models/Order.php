@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use LaravelAdmin\Models\Settings;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Log;
 
 class Order extends Model
 {
@@ -83,7 +84,9 @@ class Order extends Model
                     ->subject($subject);
                 $message->from(config('mail.username'),config('app.name'));
             });
-        } catch (\Exception $e) {dd($e);}
+        } catch (\Exception $e) {
+            Log::error($e);
+        }
     }
 
     public function sendMailUser($model)
@@ -96,7 +99,9 @@ class Order extends Model
                     ->subject($subject);
                 $message->from(config('mail.username'),config('app.name'));
             });
-        } catch (\Exception $e) {}
+        } catch (\Exception $e) {
+            Log::error($e);
+        }
     }
 
     public function isFreePay()
