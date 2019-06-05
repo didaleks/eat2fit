@@ -33,17 +33,6 @@ class MainTest extends DuskTestCase
         });
     }
 
-    public function testLogin()
-    {
-        $this->browse(function ($browser) {
-            $browser->visit('/admin/user/login')
-                ->type('email', 'support@molinos.ru')
-                ->type('password', 'molinosru')
-                ->press('Login')
-                ->assertPathIs('/admin/page');
-        });
-    }
-
     public function testDatabase()
     {
 
